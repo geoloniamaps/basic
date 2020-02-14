@@ -2,10 +2,6 @@
   "version": 8,
   "name": "Geolonia Basic",
   "sources": {
-    "shaded": {
-      "type": "raster",
-      "url": "https://shaded.tiles.geolonia.com/source.json"
-    },
     "openmaptiles": {
       "type": "vector",
       "url": "https://api.geolonia.com/v1/sources?key=YOUR-API-KEY"
@@ -23,24 +19,6 @@
       "type": "background",
       "paint": {
         "background-color": "rgba(238, 238, 238, 1)"
-      }
-    },
-    {
-      "id": "shaded",
-      "type": "raster",
-      "source": "shaded",
-      "maxzoom": 12,
-      "paint": {
-          "raster-opacity": {
-              "base": 0,
-              "stops": [
-                  [
-                      4,
-                      0.2
-                  ]
-              ]
-          },
-          "raster-contrast": 0
       }
     },
     {
