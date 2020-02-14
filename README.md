@@ -2,6 +2,8 @@
 
 This is a Mapbox GL JS based style for [Geolonia](https://geolonia.com/).
 
+[DEMO](https://geolonia.github.io/preview/#geolonia/basic)
+
 ## Development
 
 ### Installs the Maputnik CLI
