@@ -2,7 +2,7 @@
   "version": 8,
   "name": "Geolonia Basic",
   "sources": {
-    "openmaptiles": {
+    "geolonia": {
       "type": "vector",
       "url": "https://api.geolonia.com/v1/sources?key=YOUR-API-KEY"
     },
@@ -24,7 +24,7 @@
     {
       "id": "landcover-glacier",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landcover",
       "filter": [
         "==",
@@ -54,7 +54,7 @@
     {
       "id": "landuse-commercial",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landuse",
       "filter": [
         "all",
@@ -76,7 +76,7 @@
     {
       "id": "landuse-industrial",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landuse",
       "filter": [
         "all",
@@ -98,7 +98,7 @@
     {
       "id": "park",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "park",
       "filter": [
         "==",
@@ -125,7 +125,7 @@
     {
       "id": "park-outline",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "park",
       "filter": [
         "==",
@@ -156,7 +156,7 @@
     {
       "id": "landuse-cemetery",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landuse",
       "filter": [
         "==",
@@ -170,7 +170,7 @@
     {
       "id": "landuse-hospital",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landuse",
       "filter": [
         "==",
@@ -184,7 +184,7 @@
     {
       "id": "landuse-school",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landuse",
       "filter": [
         "==",
@@ -198,7 +198,7 @@
     {
       "id": "landuse-railway",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landuse",
       "filter": [
         "==",
@@ -212,7 +212,7 @@
     {
       "id": "landcover-wood",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landcover",
       "filter": [
         "==",
@@ -241,7 +241,7 @@
     {
       "id": "landcover-grass",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landcover",
       "filter": [
         "==",
@@ -256,7 +256,7 @@
     {
       "id": "landcover-grass-park",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "park",
       "filter": [
         "==",
@@ -271,7 +271,7 @@
     {
       "id": "waterway_tunnel",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "waterway",
       "minzoom": 14,
       "filter": [
@@ -316,7 +316,7 @@
     {
       "id": "waterway-other",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "waterway",
       "filter": [
         "!in",
@@ -348,7 +348,7 @@
     {
       "id": "waterway-stream-canal",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "waterway",
       "filter": [
         "all",
@@ -387,7 +387,7 @@
     {
       "id": "waterway-river",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "waterway",
       "filter": [
         "all",
@@ -425,7 +425,7 @@
     {
       "id": "water-offset",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "water",
       "maxzoom": 8,
       "filter": [
@@ -463,7 +463,7 @@
     {
       "id": "water",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "water",
       "layout": {
         "visibility": "visible"
@@ -475,7 +475,7 @@
     {
       "id": "water-pattern",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "water",
       "layout": {
         "visibility": "none"
@@ -491,7 +491,7 @@
     {
       "id": "landcover-ice-shelf",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "landcover",
       "filter": [
         "==",
@@ -521,7 +521,7 @@
     {
       "id": "building",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "building",
       "minzoom": 15,
       "paint": {
@@ -532,7 +532,7 @@
     {
       "id": "tunnel-railway",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -576,7 +576,7 @@
     {
       "id": "tunnel-service-track-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -623,7 +623,7 @@
     {
       "id": "tunnel-minor-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -681,7 +681,7 @@
     {
       "id": "tunnel-secondary-tertiary-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -721,7 +721,7 @@
     {
       "id": "tunnel-trunk-primary-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -768,7 +768,7 @@
     {
       "id": "tunnel-motorway-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -819,7 +819,7 @@
     {
       "id": "tunnel-path",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -866,7 +866,7 @@
     {
       "id": "tunnel-service-track",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -909,7 +909,7 @@
     {
       "id": "tunnel-minor",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -952,7 +952,7 @@
     {
       "id": "tunnel-secondary-tertiary",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -995,7 +995,7 @@
     {
       "id": "tunnel-trunk-primary",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -1038,7 +1038,7 @@
     {
       "id": "tunnel-motorway",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -1081,7 +1081,7 @@
     {
       "id": "ferry",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -1107,7 +1107,7 @@
     {
       "id": "aeroway-taxiway-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "aeroway",
       "minzoom": 12,
       "filter": [
@@ -1144,7 +1144,7 @@
     {
       "id": "aeroway-runway-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "aeroway",
       "minzoom": 12,
       "filter": [
@@ -1181,7 +1181,7 @@
     {
       "id": "aeroway-area",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "aeroway",
       "minzoom": 4,
       "filter": [
@@ -1221,7 +1221,7 @@
     {
       "id": "aeroway-taxiway",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "aeroway",
       "minzoom": 4,
       "filter": [
@@ -1275,7 +1275,7 @@
     {
       "id": "aeroway-runway",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "aeroway",
       "minzoom": 4,
       "filter": [
@@ -1329,7 +1329,7 @@
     {
       "id": "highway-area",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "==",
@@ -1349,7 +1349,7 @@
     {
       "id": "highway-motorway-link-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 12,
       "filter": [
@@ -1399,7 +1399,7 @@
     {
       "id": "highway-link-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 13,
       "filter": [
@@ -1453,7 +1453,7 @@
     {
       "id": "highway-minor-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 13,
       "filter": [
@@ -1523,7 +1523,7 @@
     {
       "id": "highway-secondary-tertiary-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -1566,7 +1566,7 @@
     {
       "id": "highway-primary-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 5,
       "filter": [
@@ -1628,7 +1628,7 @@
     {
       "id": "highway-trunk-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 5,
       "filter": [
@@ -1690,7 +1690,7 @@
     {
       "id": "highway-motorway-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 4,
       "filter": [
@@ -1756,7 +1756,7 @@
     {
       "id": "highway-path",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 16,
       "filter": [
@@ -1805,7 +1805,7 @@
     {
       "id": "highway-motorway-link",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 12,
       "filter": [
@@ -1854,7 +1854,7 @@
     {
       "id": "highway-link",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 13,
       "filter": [
@@ -1907,7 +1907,7 @@
     {
       "id": "highway-minor",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 13,
       "filter": [
@@ -1962,7 +1962,7 @@
     {
       "id": "highway-secondary-tertiary",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2008,7 +2008,7 @@
     {
       "id": "highway-primary",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2061,7 +2061,7 @@
     {
       "id": "highway-trunk",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2114,7 +2114,7 @@
     {
       "id": "highway-motorway",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 5,
       "filter": [
@@ -2168,7 +2168,7 @@
     {
       "id": "bridge-motorway-link-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2215,7 +2215,7 @@
     {
       "id": "bridge-link-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2265,7 +2265,7 @@
     {
       "id": "bridge-secondary-tertiary-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2305,7 +2305,7 @@
     {
       "id": "bridge-trunk-primary-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2352,7 +2352,7 @@
     {
       "id": "bridge-motorway-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2398,7 +2398,7 @@
     {
       "id": "bridge-path-casing",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2441,7 +2441,7 @@
     {
       "id": "bridge-path",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2488,7 +2488,7 @@
     {
       "id": "bridge-motorway-link",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2534,7 +2534,7 @@
     {
       "id": "bridge-link",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2583,7 +2583,7 @@
     {
       "id": "bridge-secondary-tertiary",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2626,7 +2626,7 @@
     {
       "id": "bridge-trunk-primary",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2669,7 +2669,7 @@
     {
       "id": "bridge-motorway",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2711,7 +2711,7 @@
     {
       "id": "railway",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2749,7 +2749,7 @@
     {
       "id": "railway-hatching",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -2791,7 +2791,7 @@
     {
       "id": "cablecar",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 13,
       "filter": [
@@ -2823,7 +2823,7 @@
     {
       "id": "cablecar-dash",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 13,
       "filter": [
@@ -2859,7 +2859,7 @@
     {
       "id": "boundary-land-level-4",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "boundary",
       "maxzoom": 14,
       "filter": [
@@ -2913,7 +2913,7 @@
     {
       "id": "boundary-land-level-2",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "boundary",
       "filter": [
         "all",
@@ -2965,7 +2965,7 @@
     {
       "id": "boundary-land-disputed",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "boundary",
       "filter": [
         "all",
@@ -3016,7 +3016,7 @@
     {
       "id": "boundary-water",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "boundary",
       "filter": [
         "all",
@@ -3076,7 +3076,7 @@
     {
       "id": "waterway-name",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "waterway",
       "minzoom": 13,
       "filter": [
@@ -3112,7 +3112,7 @@
     {
       "id": "water-name-lakeline",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "water_name",
       "filter": [
         "==",
@@ -3140,7 +3140,7 @@
     {
       "id": "water-name-ocean",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "water_name",
       "filter": [
         "all",
@@ -3176,7 +3176,7 @@
     {
       "id": "water-name-other",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "water_name",
       "filter": [
         "all",
@@ -3224,7 +3224,7 @@
     {
       "id": "poi",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "poi",
       "minzoom": 16,
       "filter": [
@@ -3269,7 +3269,7 @@
     {
       "id": "poi-primary",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "poi",
       "minzoom": 14,
       "filter": [
@@ -3314,7 +3314,7 @@
     {
       "id": "poi-railway",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "poi",
       "minzoom": 13,
       "filter": [
@@ -3370,7 +3370,7 @@
     {
       "id": "road_oneway",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 15,
       "filter": [
@@ -3419,7 +3419,7 @@
     {
       "id": "road_oneway_opposite",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation",
       "minzoom": 15,
       "filter": [
@@ -3468,7 +3468,7 @@
     {
       "id": "highway-name-path",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "transportation_name",
       "filter": [
         "in",
@@ -3509,7 +3509,7 @@
     {
       "id": "airport-label-major",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "aerodrome_label",
       "minzoom": 10,
       "filter": [
@@ -3547,7 +3547,7 @@
     {
       "id": "place-other",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "minzoom": 14,
       "filter": [
@@ -3579,7 +3579,7 @@
     {
       "id": "place-village",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "filter": [
         "==",
@@ -3616,7 +3616,7 @@
     {
       "id": "place-town",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "filter": [
         "==",
@@ -3641,7 +3641,7 @@
     {
       "id": "place-city",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "minzoom": 8,
       "filter": [
@@ -3675,7 +3675,7 @@
     {
       "id": "place-city-capital",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "filter": [
         "all",
@@ -3715,7 +3715,7 @@
     {
       "id": "place-country-other",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "filter": [
         "all",
@@ -3765,7 +3765,7 @@
     {
       "id": "place-country-3",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "filter": [
         "all",
@@ -3815,7 +3815,7 @@
     {
       "id": "place-country-2",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "filter": [
         "all",
@@ -3865,7 +3865,7 @@
     {
       "id": "place-country-1",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "filter": [
         "all",
@@ -3915,7 +3915,7 @@
     {
       "id": "place-continent",
       "type": "symbol",
-      "source": "openmaptiles",
+      "source": "geolonia",
       "source-layer": "place",
       "maxzoom": 1,
       "filter": [
