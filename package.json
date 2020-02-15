@@ -1,11 +1,19 @@
 {
-  "name": "basic",
-  "version": "1.0.0",
-  "description": "The default style for Geolonia.",
+  "name": "geolonia-basic",
+  "version": "0.1.0",
+  "description": "Default style for [Geolonia](https://geolonia.com/).",
+  "main": "style.json",
   "scripts": {
-    "start": "/usr/local/bin/maputnik --watch --file ./style.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "/usr/local/bin/maputnik --watch --file ./style.json"
   },
-  "author": "Geolonia",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geolonia/basic.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geolonia/basic/issues"
+  },
+  "homepage": "https://github.com/geolonia/basic#readme"
 }
