@@ -1,7 +1,7 @@
 {
-  "name": "basic",
+  "name": "geolonia-basic-3d",
   "version": "1.0.0",
-  "description": "The default style for Geolonia.",
+  "description": "The 3D style based on default style for Geolonia.",
   "scripts": {
     "start": "/usr/local/bin/maputnik --watch --file ./style.json",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Geolonia Basic",
+  "name": "Geolonia Basic 3D",
   "sources": {
     "openmaptiles": {
       "type": "vector",
@@ -3967,5 +3967,5 @@
       }
     }
   ],
-  "id": "geolonia-basic"
+  "id": "geolonia-basic-3d"
 }
