@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/geolonia/basic.git"
   },
-  "author": "",
+  "author": {
+    "name": "Geolonia Inc.",
+    "url": "https://geolonia.com/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/geolonia/basic/issues"
