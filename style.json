@@ -519,17 +519,6 @@
       }
     },
     {
-      "id": "building",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "building",
-      "minzoom": 15,
-      "paint": {
-        "fill-color": "#dedede",
-        "fill-outline-color": "#ffffff"
-      }
-    },
-    {
       "id": "tunnel-railway",
       "type": "line",
       "source": "geolonia",
@@ -3219,6 +3208,17 @@
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
         "text-halo-color": "rgba(255,255,255,0.7)"
+      }
+    },
+    {
+      "id": "building",
+      "type": "fill",
+      "source": "geolonia",
+      "source-layer": "building",
+      "minzoom": 15,
+      "paint": {
+        "fill-color": "#dedede",
+        "fill-outline-color": "#ffffff"
       }
     },
     {
