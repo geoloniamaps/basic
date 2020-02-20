@@ -18,7 +18,7 @@
       "id": "background",
       "type": "background",
       "paint": {
-        "background-color": "rgba(247, 247, 247, 1)"
+        "background-color": "rgba(254, 254, 254, 1)"
       }
     },
     {
@@ -3217,8 +3217,10 @@
       "source-layer": "building",
       "minzoom": 15,
       "paint": {
-        "fill-color": "rgba(238, 238, 238, 1)",
-        "fill-outline-color": "#ffffff"
+        "fill-opacity": 0.6,
+        "fill-color": "rgba(225, 225, 225, 1)",
+        "fill-outline-color": "#ffffff",
+        "fill-antialias": true
       }
     },
     {
