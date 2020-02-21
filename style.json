@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Geolonia Basic 3D",
+  "name": "Geolonia Basic",
   "sources": {
     "geolonia": {
       "type": "vector",
@@ -3969,5 +3969,5 @@
       }
     }
   ],
-  "id": "geolonia-basic-3d"
+  "id": "geolonia-basic"
 }
