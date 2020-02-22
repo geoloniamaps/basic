@@ -106,20 +106,22 @@
         "Polygon"
       ],
       "paint": {
-        "fill-color": "#d8e8c8",
+        "fill-color": "rgba(102, 170, 68, 1)",
         "fill-opacity": {
-          "base": 1.8,
           "stops": [
             [
-              9,
-              0.5
+              7,
+              0
             ],
             [
-              12,
+              9,
               0.2
             ]
           ]
         }
+      },
+      "layout": {
+        "visibility": "visible"
       }
     },
     {
@@ -132,13 +134,15 @@
         "$type",
         "Polygon"
       ],
-      "layout": {},
+      "layout": {
+        "visibility": "none"
+      },
       "paint": {
         "line-color": {
           "base": 1,
           "stops": [
             [
-              6,
+              7,
               "hsla(96, 40%, 49%, 0.36)"
             ],
             [
