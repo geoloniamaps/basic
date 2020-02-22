@@ -1,5 +1,5 @@
 {
-  "name": "geolonia-basic-3d",
+  "name": "geolonia-basic",
   "version": "0.1.0",
   "description": "3D style based on default style for [Geolonia](https://geolonia.com/).",
   "main": "style.json",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geolonia/basic-3d.git"
+    "url": "git+https://github.com/geolonia/basic.git"
   },
   "author": {
     "name": "Geolonia Inc.",
@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/geolonia/basic-3d/issues"
+    "url": "https://github.com/geolonia/basic/issues"
   },
-  "homepage": "https://github.com/geolonia/basic-3d#readme"
+  "homepage": "https://github.com/geolonia/basic#readme"
 }
