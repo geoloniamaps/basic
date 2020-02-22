@@ -3212,6 +3212,52 @@
       }
     },
     {
+      "id": "building-3d",
+      "type": "fill-extrusion",
+      "source": "geolonia",
+      "source-layer": "building",
+      "minzoom": 15,
+      "paint": {
+        "fill-extrusion-color": "#dedede",
+        "fill-extrusion-height": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.05,
+          [
+            "get",
+            "render_height"
+          ]
+        ],
+        "fill-extrusion-base": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.05,
+          [
+            "get",
+            "render_min_height"
+          ]
+        ],
+        "fill-extrusion-opacity": 0.6
+      },
+      "layout": {
+        "visibility": "none"
+      }
+    },
+    {
       "id": "poi",
       "type": "symbol",
       "source": "geolonia",
