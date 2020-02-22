@@ -473,22 +473,6 @@
       }
     },
     {
-      "id": "water-pattern",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "water",
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "fill-translate": [
-          0,
-          2.5
-        ],
-        "fill-pattern": "wave"
-      }
-    },
-    {
       "id": "landcover-ice-shelf",
       "type": "fill",
       "source": "geolonia",
