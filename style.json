@@ -5,6 +5,10 @@
     "geolonia": {
       "type": "vector",
       "url": "https://api.geolonia.com/v1/sources?key=YOUR-API-KEY"
+    },
+    "japanese-prefectures": {
+      "type": "geojson",
+      "data": "https://api.geolonia.com/v1/prefs"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
@@ -3970,6 +3974,32 @@
         "text-color": "#334",
         "text-halo-width": 2,
         "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "japanese-prefectures-label",
+      "type": "symbol",
+      "source": "japanese-prefectures",
+      "minzoom": 5,
+      "maxzoom": 9,
+      "layout": {
+        "text-field": "{name}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 16,
+        "text-anchor": "center",
+        "text-max-width": 10,
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2
       }
     }
   ],
