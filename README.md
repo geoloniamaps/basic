@@ -3,7 +3,7 @@
 This is a Mapbox GL JS based style for [Geolonia](https://geolonia.com/).
 
 * [DEMO](https://geolonia.github.io/preview/#geolonia/basic)
-* [DEMO on editor](https://geolonia.github.io/editor/?style=https://raw.githubusercontent.com/geolonia/basic/master/style.json)
+* [DEMO on editor](https://editor.geolonia.com/?style=https://raw.githubusercontent.com/geolonia/basic/master/style.json)
 
 ## Development
 
