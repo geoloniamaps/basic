@@ -3286,7 +3286,24 @@
           "Noto Sans Regular"
         ],
         "text-anchor": "top",
-        "icon-image": "{class}-11",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-11"
+            ]
+          ],
+          [
+            "image",
+            "circle-11"
+          ]
+        ],
         "text-field": "{name}",
         "text-offset": [
           0,
@@ -3331,7 +3348,24 @@
           "Noto Sans Regular"
         ],
         "text-anchor": "top",
-        "icon-image": "{class}-11",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-11"
+            ]
+          ],
+          [
+            "image",
+            "circle-11"
+          ]
+        ],
         "text-field": "{name}",
         "text-offset": [
           0,
