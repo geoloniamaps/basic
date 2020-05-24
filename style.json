@@ -1,6 +1,7 @@
 {
   "version": 8,
   "name": "Geolonia Basic",
+  "metadata": {},
   "sources": {
     "geolonia": {
       "type": "vector",
@@ -105,6 +106,9 @@
         "$type",
         "Polygon"
       ],
+      "layout": {
+        "visibility": "visible"
+      },
       "paint": {
         "fill-color": "rgba(102, 170, 68, 1)",
         "fill-opacity": {
@@ -119,9 +123,6 @@
             ]
           ]
         }
-      },
-      "layout": {
-        "visibility": "visible"
       }
     },
     {
@@ -3217,6 +3218,9 @@
       "source": "geolonia",
       "source-layer": "building",
       "minzoom": 15,
+      "layout": {
+        "visibility": "none"
+      },
       "paint": {
         "fill-extrusion-color": "#dedede",
         "fill-extrusion-height": [
@@ -3252,9 +3256,6 @@
           ]
         ],
         "fill-extrusion-opacity": 0.6
-      },
-      "layout": {
-        "visibility": "none"
       }
     },
     {
@@ -3536,45 +3537,50 @@
       }
     },
     {
-      "id": "highway-name-path",
+      "id": "road_shield",
       "type": "symbol",
+      "metadata": {},
       "source": "geolonia",
       "source-layer": "transportation_name",
+      "minzoom": 7,
       "filter": [
-        "in",
-        "class",
-        "motorway",
-        "primary",
-        "secondary",
-        "tertiary",
-        "trunk"
+        "all",
+        [
+          "<=",
+          "ref_length",
+          6
+        ]
       ],
       "layout": {
-        "text-size": {
+        "icon-image": "default_{ref_length}",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": {
           "base": 1,
           "stops": [
             [
-              13,
-              12
+              10,
+              "point"
             ],
             [
-              14,
-              13
+              11,
+              "line"
             ]
           ]
         },
+        "symbol-spacing": 500,
+        "text-field": "{ref}",
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-field": "{name}",
-        "symbol-placement": "line",
-        "text-rotation-alignment": "map"
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-rotation-alignment": "viewport",
+        "text-size": 10,
+        "icon-size": 1
       },
-      "paint": {
-        "text-halo-color": "#f8f4f0",
-        "text-color": "hsl(30, 23%, 62%)",
-        "text-halo-width": 0.5
-      }
+      "paint": {}
     },
     {
       "id": "airport-label-major",
