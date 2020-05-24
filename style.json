@@ -9,7 +9,7 @@
     },
     "japanese-prefectures": {
       "type": "geojson",
-      "data": "https://api.geolonia.com/v1/prefs"
+      "data": "https://cdn.geolonia.com/japanese-prefs/v1.geojson"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
