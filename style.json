@@ -3,13 +3,14 @@
   "name": "Geolonia Basic",
   "metadata": {},
   "sources": {
+    "natural-earth": {
+      "type": "vector",
+      "url": "https://cdn.geolonia.com/tiles/tiles.json"
+    },
     "geolonia": {
       "type": "vector",
+      "minzoom": 6,
       "url": "https://api.geolonia.com/v1/sources?key=YOUR-API-KEY"
-    },
-    "japanese-prefectures": {
-      "type": "geojson",
-      "data": "https://cdn.geolonia.com/japanese-prefs/v1.geojson"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
@@ -20,36 +21,6 @@
       "type": "background",
       "paint": {
         "background-color": "rgba(254, 254, 254, 1)"
-      }
-    },
-    {
-      "id": "landcover-glacier",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "filter": [
-        "==",
-        "subclass",
-        "glacier"
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#fff",
-        "fill-opacity": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0.9
-            ],
-            [
-              10,
-              0.3
-            ]
-          ]
-        }
       }
     },
     {
@@ -123,39 +94,6 @@
             ]
           ]
         }
-      }
-    },
-    {
-      "id": "park-outline",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "park",
-      "filter": [
-        "==",
-        "$type",
-        "Polygon"
-      ],
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "line-color": {
-          "base": 1,
-          "stops": [
-            [
-              7,
-              "hsla(96, 40%, 49%, 0.36)"
-            ],
-            [
-              8,
-              "hsla(96, 40%, 49%, 0.66)"
-            ]
-          ]
-        },
-        "line-dasharray": [
-          3,
-          3
-        ]
       }
     },
     {
@@ -428,9 +366,9 @@
       }
     },
     {
-      "id": "water-offset",
+      "id": "water-natural-earth",
       "type": "fill",
-      "source": "geolonia",
+      "source": "natural-earth",
       "source-layer": "water",
       "maxzoom": 8,
       "filter": [
@@ -442,27 +380,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-opacity": 1,
-        "fill-color": "#a0c8f0",
-        "fill-translate": {
-          "base": 1,
-          "stops": [
-            [
-              6,
-              [
-                2,
-                0
-              ]
-            ],
-            [
-              8,
-              [
-                0,
-                0
-              ]
-            ]
-          ]
-        }
+        "fill-color": "rgba(152, 209, 252, 1)"
       }
     },
     {
@@ -475,36 +393,6 @@
       },
       "paint": {
         "fill-color": "rgba(152, 209, 252, 1)"
-      }
-    },
-    {
-      "id": "landcover-ice-shelf",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "filter": [
-        "==",
-        "subclass",
-        "ice_shelf"
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#fff",
-        "fill-opacity": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0.9
-            ],
-            [
-              10,
-              0.3
-            ]
-          ]
-        }
       }
     },
     {
@@ -2835,29 +2723,28 @@
       }
     },
     {
+      "id": "boundary-natural-earth",
+      "type": "line",
+      "source": "natural-earth",
+      "source-layer": "admin",
+      "maxzoom": 6,
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#999999",
+        "line-width": 1,
+        "line-blur": 0.4
+      }
+    },
+    {
       "id": "boundary-land-level-4",
       "type": "line",
       "source": "geolonia",
       "source-layer": "boundary",
       "maxzoom": 14,
-      "filter": [
-        "all",
-        [
-          ">=",
-          "admin_level",
-          4
-        ],
-        [
-          "<=",
-          "admin_level",
-          8
-        ],
-        [
-          "!=",
-          "maritime",
-          1
-        ]
-      ],
       "layout": {
         "line-join": "round"
       },
@@ -2883,169 +2770,6 @@
             [
               12,
               2
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "boundary-land-level-2",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "boundary",
-      "filter": [
-        "all",
-        [
-          "==",
-          "admin_level",
-          2
-        ],
-        [
-          "!=",
-          "maritime",
-          1
-        ],
-        [
-          "!=",
-          "disputed",
-          1
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "hsl(248, 7%, 66%)",
-        "line-width": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0.6
-            ],
-            [
-              4,
-              1.4
-            ],
-            [
-              5,
-              2
-            ],
-            [
-              12,
-              8
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "boundary-land-disputed",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "boundary",
-      "filter": [
-        "all",
-        [
-          "!=",
-          "maritime",
-          1
-        ],
-        [
-          "==",
-          "disputed",
-          1
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "hsl(248, 7%, 70%)",
-        "line-dasharray": [
-          1,
-          3
-        ],
-        "line-width": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0.6
-            ],
-            [
-              4,
-              1.4
-            ],
-            [
-              5,
-              2
-            ],
-            [
-              12,
-              8
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "boundary-water",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "boundary",
-      "filter": [
-        "all",
-        [
-          "in",
-          "admin_level",
-          2,
-          4
-        ],
-        [
-          "==",
-          "maritime",
-          1
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "rgba(154, 189, 214, 1)",
-        "line-width": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              0.6
-            ],
-            [
-              4,
-              1.4
-            ],
-            [
-              5,
-              2
-            ],
-            [
-              12,
-              8
-            ]
-          ]
-        },
-        "line-opacity": {
-          "stops": [
-            [
-              6,
-              0.6
-            ],
-            [
-              10,
-              1
             ]
           ]
         }
@@ -3786,260 +3510,6 @@
         "text-color": "#333",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "place-country-other",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "country"
-        ],
-        [
-          ">=",
-          "rank",
-          3
-        ],
-        [
-          "!has",
-          "iso_a2"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-field": "{name}",
-        "text-size": {
-          "stops": [
-            [
-              3,
-              11
-            ],
-            [
-              7,
-              17
-            ]
-          ]
-        },
-        "text-transform": "uppercase",
-        "text-max-width": 6.25,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-halo-blur": 1,
-        "text-color": "#334",
-        "text-halo-width": 2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "place-country-3",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "country"
-        ],
-        [
-          ">=",
-          "rank",
-          3
-        ],
-        [
-          "has",
-          "iso_a2"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-field": "{name}",
-        "text-size": {
-          "stops": [
-            [
-              3,
-              11
-            ],
-            [
-              7,
-              17
-            ]
-          ]
-        },
-        "text-transform": "uppercase",
-        "text-max-width": 6.25,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-halo-blur": 1,
-        "text-color": "#334",
-        "text-halo-width": 2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "place-country-2",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "country"
-        ],
-        [
-          "==",
-          "rank",
-          2
-        ],
-        [
-          "has",
-          "iso_a2"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-field": "{name}",
-        "text-size": {
-          "stops": [
-            [
-              2,
-              11
-            ],
-            [
-              5,
-              17
-            ]
-          ]
-        },
-        "text-transform": "uppercase",
-        "text-max-width": 6.25,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-halo-blur": 1,
-        "text-color": "#334",
-        "text-halo-width": 2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "place-country-1",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "country"
-        ],
-        [
-          "==",
-          "rank",
-          1
-        ],
-        [
-          "has",
-          "iso_a2"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-field": "{name}",
-        "text-size": {
-          "stops": [
-            [
-              1,
-              11
-            ],
-            [
-              4,
-              17
-            ]
-          ]
-        },
-        "text-transform": "uppercase",
-        "text-max-width": 6.25,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-halo-blur": 1,
-        "text-color": "#334",
-        "text-halo-width": 2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "place-continent",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "maxzoom": 1,
-      "filter": [
-        "==",
-        "class",
-        "continent"
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-field": "{name}",
-        "text-size": 14,
-        "text-max-width": 6.25,
-        "text-transform": "uppercase",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-halo-blur": 1,
-        "text-color": "#334",
-        "text-halo-width": 2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "japanese-prefectures-label",
-      "type": "symbol",
-      "source": "japanese-prefectures",
-      "minzoom": 5,
-      "maxzoom": 9,
-      "layout": {
-        "text-field": "{name}",
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 16,
-        "text-anchor": "center",
-        "text-max-width": 10,
-        "text-offset": [
-          0,
-          0
-        ],
-        "text-allow-overlap": false
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 2
       }
     }
   ],
