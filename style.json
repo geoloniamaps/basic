@@ -3345,38 +3345,6 @@
       }
     },
     {
-      "id": "place-other",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "minzoom": 14,
-      "filter": [
-        "!in",
-        "class",
-        "city",
-        "town",
-        "village",
-        "country",
-        "continent"
-      ],
-      "layout": {
-        "text-letter-spacing": 0.1,
-        "text-size": 10,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-field": "{name}",
-        "text-transform": "uppercase",
-        "text-max-width": 9,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#633",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
       "id": "place-village",
       "type": "symbol",
       "source": "geolonia",
