@@ -5,6 +5,7 @@
   "sources": {
     "natural-earth": {
       "type": "vector",
+      "maxzoom": 6,
       "url": "https://cdn.geolonia.com/tiles/natural-earth.json"
     },
     "geolonia": {
