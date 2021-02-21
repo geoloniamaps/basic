@@ -2738,7 +2738,15 @@
         "line-color": "#999999",
         "line-width": 1,
         "line-blur": 0.4
-      }
+      },
+      "filter": [
+        "all",
+        [
+          "!=",
+          "class",
+          "dispute"
+        ]
+      ]
     },
     {
       "id": "boundary-land-level-4",
