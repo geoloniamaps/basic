@@ -16,14 +16,6 @@ $ curl -L https://github.com/maputnik/editor/releases/download/v1.6.1/maputnik_d
 $ chmod 755 /usr/local/bin/maputnik
 ```
 
-### Start up the Maputnik App
-
-```
-maputnik --watch --file ./style.json
-```
-
-Then access the Maputnik editor GUI at [localhost:8000](https://localhost:8000/).
-
 ### Contributing
 
 ```
