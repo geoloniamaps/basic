@@ -2729,6 +2729,14 @@
       "source": "natural-earth",
       "source-layer": "admin",
       "maxzoom": 6,
+      "filter": [
+        "all",
+        [
+          "!=",
+          "class",
+          "dispute"
+        ]
+      ],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
@@ -2738,15 +2746,7 @@
         "line-color": "#999999",
         "line-width": 1,
         "line-blur": 0.4
-      },
-      "filter": [
-        "all",
-        [
-          "!=",
-          "class",
-          "dispute"
-        ]
-      ]
+      }
     },
     {
       "id": "boundary-land-level-4",
@@ -2754,6 +2754,14 @@
       "source": "geolonia",
       "source-layer": "boundary",
       "maxzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "admin_level",
+          4
+        ]
+      ],
       "layout": {
         "line-join": "round"
       },
