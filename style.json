@@ -3,10 +3,10 @@
   "name": "Geolonia Basic",
   "metadata": {},
   "sources": {
-    "natural-earth": {
+    "oceanus": {
       "type": "vector",
       "maxzoom": 6,
-      "url": "https://cdn.geolonia.com/tiles/natural-earth.json"
+      "url": "https://cdn.geolonia.com/tiles/oceanus.json"
     },
     "geolonia": {
       "type": "vector",
@@ -367,15 +367,29 @@
       }
     },
     {
-      "id": "water-natural-earth",
+      "id": "ocean0",
       "type": "fill",
-      "source": "natural-earth",
+      "source": "oceanus",
       "source-layer": "water",
       "maxzoom": 8,
       "filter": [
-        "==",
-        "$type",
-        "Polygon"
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          0
+        ]
       ],
       "layout": {
         "visibility": "visible"
@@ -389,11 +403,420 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "water",
+      "minzoom": 8,
       "layout": {
         "visibility": "visible"
       },
       "paint": {
         "fill-color": "rgba(152, 209, 252, 1)"
+      }
+    },
+    {
+      "id": "ocean200",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          200
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(2, 183, 237, 1)"
+      }
+    },
+    {
+      "id": "ocean1000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          1000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(2, 170, 228, 1)"
+      }
+    },
+    {
+      "id": "ocean2000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          2000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(3, 147, 212, 1)"
+      }
+    },
+    {
+      "id": "ocean3000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          3000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(3, 136, 205, 1)"
+      }
+    },
+    {
+      "id": "ocean4000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          4000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(4, 121, 195, 1)"
+      }
+    },
+    {
+      "id": "ocean5000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          5000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(5, 99, 181, 1)"
+      }
+    },
+    {
+      "id": "ocean6000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          6000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(6, 69, 161, 1)"
+      }
+    },
+    {
+      "id": "ocean7000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          7000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(7, 45, 145, 1)"
+      }
+    },
+    {
+      "id": "ocean8000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          8000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(8, 26, 132, 1)"
+      }
+    },
+    {
+      "id": "ocean9000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          9000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(9, 9, 121, 1)"
+      }
+    },
+    {
+      "id": "ocean10000",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "ocean"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          10000
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(17, 17, 136, 1)"
+      }
+    },
+    {
+      "id": "land",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "land",
+      "maxzoom": 8,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#fff"
+      }
+    },
+    {
+      "id": "glacier",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "glacier",
+      "maxzoom": 8,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(241, 248, 254, 1)"
+      }
+    },
+    {
+      "id": "oceanus-landuse-commercial",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "landuse",
+      "maxzoom": 7,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Polygon"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "commercial"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#fff"
+      }
+    },
+    {
+      "id": "forest",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "forest",
+      "maxzoom": 8,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#e0edd9"
       }
     },
     {
@@ -2724,9 +3147,9 @@
       }
     },
     {
-      "id": "boundary-natural-earth",
+      "id": "boundary-oceanus",
       "type": "line",
-      "source": "natural-earth",
+      "source": "oceanus",
       "source-layer": "admin",
       "maxzoom": 6,
       "filter": [
@@ -2790,6 +3213,59 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "boundary-land-level-1",
+      "type": "line",
+      "source": "oceanus",
+      "source-layer": "boundary",
+      "minzoom": 5,
+      "maxzoom": 6,
+      "filter": [
+        "==",
+        [
+          "get",
+          "admin_level"
+        ],
+        1
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#9e9cab",
+        "line-dasharray": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "line-width": 1
+      }
+    },
+    {
+      "id": "boundary-land-level-0",
+      "type": "line",
+      "source": "oceanus",
+      "source-layer": "boundary",
+      "minzoom": 1,
+      "maxzoom": 8,
+      "filter": [
+        "==",
+        [
+          "get",
+          "admin_level"
+        ],
+        0
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#9e9cab",
+        "line-width": 1,
+        "line-blur": 0.4
       }
     },
     {
@@ -2938,6 +3414,174 @@
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
         "text-halo-color": "rgba(255,255,255,0.7)"
+      }
+    },
+    {
+      "id": "oceanus-waterway-name",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "waterway",
+      "minzoom": 6,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "has",
+          "name"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "symbol-placement": "line",
+        "symbol-spacing": 350,
+        "text-letter-spacing": 0.2
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      }
+    },
+    {
+      "id": "lake",
+      "type": "fill",
+      "source": "oceanus",
+      "source-layer": "water",
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "lakes"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(152, 209, 252, 1)"
+      }
+    },
+    {
+      "id": "label-country",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "label",
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "country"
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "label-pref",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "label",
+      "minzoom": 4,
+      "maxzoom": 13,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "pref"
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "label-town",
+      "type": "symbol",
+      "source": "oceanus",
+      "source-layer": "label",
+      "minzoom": 6,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "town"
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-image": "circle-11",
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
       }
     },
     {
