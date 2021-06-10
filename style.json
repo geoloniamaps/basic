@@ -9,12 +9,12 @@
     },
     "geolonia-water": {
       "type": "vector",
-      "url": "https://api.geolonia.com/v1/sources_v2?ver=water&key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY"
     },
     "geolonia": {
       "type": "vector",
       "minzoom": 6,
-      "url": "https://api.geolonia.com/v1/sources?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/v1/tiles.json?key=YOUR-API-KEY"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
@@ -4250,6 +4250,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "boundary",
+      "minzoom": 8,
       "maxzoom": 14,
       "filter": [
         "all",
