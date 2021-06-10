@@ -5,11 +5,11 @@
   "sources": {
     "oceanus": {
       "type": "vector",
-      "url": "mbtiles://{oceanus}"
+      "url": "https://cdn.geolonia.com/tiles/oceanus.json"
     },
     "geolonia-water": {
       "type": "vector",
-      "url": "mbtiles://{water}"
+      "url": "https://api.geolonia.com/v1/sources_v2?ver=water&key=YOUR-API-KEY"
     },
     "geolonia": {
       "type": "vector",
