@@ -13,7 +13,6 @@
     },
     "geolonia": {
       "type": "vector",
-      "minzoom": 8,
       "url": "https://tileserver.geolonia.com/v1/tiles.json?key=YOUR-API-KEY"
     }
   },
@@ -32,6 +31,29 @@
       "type": "fill",
       "source": "geolonia-water",
       "source-layer": "water",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(152, 209, 252, 1)"
+      }
+    },
+    {
+      "id": "water-river-lake-ja",
+      "type": "fill",
+      "source": "geolonia",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "lake"
+        ]
+      ],
       "layout": {
         "visibility": "visible"
       },
