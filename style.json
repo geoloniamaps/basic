@@ -956,6 +956,7 @@
       "source": "oceanus",
       "source-layer": "oc-boundary",
       "minzoom": 5,
+      "maxzoom": 8,
       "filter": [
         "all",
         [
@@ -5065,6 +5066,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -5096,8 +5098,7 @@
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
-      },
-      "minzoom": 8
+      }
     },
     {
       "id": "place-city-capital",
