@@ -40,29 +40,6 @@
       }
     },
     {
-      "id": "water-river-lake-ja",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "water",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "lake"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "rgba(152, 209, 252, 1)"
-      }
-    },
-    {
       "id": "oc-ocean200",
       "type": "fill",
       "source": "oceanus",
@@ -1786,6 +1763,29 @@
       "paint": {
         "fill-color": "#d8e8c8",
         "fill-opacity": 0.8
+      }
+    },
+    {
+      "id": "water-river-lake-ja",
+      "type": "fill",
+      "source": "geolonia",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "lake"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(152, 209, 252, 1)"
       }
     },
     {
