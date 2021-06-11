@@ -13,6 +13,7 @@
     },
     "geolonia": {
       "type": "vector",
+      "minzoom": 8,
       "url": "https://tileserver.geolonia.com/v1/tiles.json?key=YOUR-API-KEY"
     }
   },
