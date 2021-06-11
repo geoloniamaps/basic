@@ -3042,7 +3042,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 5,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3104,7 +3104,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 4,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3475,6 +3475,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3528,7 +3529,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 5,
+      "minzoom": 8,
       "filter": [
         "all",
         [
