@@ -14,7 +14,7 @@
     "geolonia": {
       "type": "vector",
       "minzoom": 8,
-      "url": "https://tileserver.geolonia.com/v1/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver-dev.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
     }
   },
   "sprite": "https://sprites.geolonia.com/basic",
