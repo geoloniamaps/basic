@@ -5,7 +5,7 @@
   "sources": {
     "oceanus": {
       "type": "vector",
-      "url": "https://cdn.geolonia.com/tiles/oceanus.json"
+      "url": "https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY"
     },
     "geolonia-water": {
       "type": "vector",
