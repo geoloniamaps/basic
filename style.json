@@ -1926,7 +1926,7 @@
         "line-cap": "round"
       },
       "paint": {
-        "line-color": "#a0c8f0",
+        "line-color": "rgba(152, 209, 252, 1)",
         "line-width": {
           "base": 1.2,
           "stops": [
