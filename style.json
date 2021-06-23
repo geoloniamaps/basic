@@ -28,6 +28,74 @@
       }
     },
     {
+      "id": "landcover-grass",
+      "type": "fill",
+      "source": "geolonia",
+      "source-layer": "landcover",
+      "filter": [
+        "==",
+        "class",
+        "grass"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#d8e8c8",
+        "fill-opacity": 1
+      }
+    },
+    {
+      "id": "landcover-wood",
+      "type": "fill",
+      "source": "geolonia",
+      "source-layer": "landcover",
+      "filter": [
+        "==",
+        "class",
+        "wood"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#6a4",
+        "fill-opacity": 0.2,
+        "fill-outline-color": "hsla(0, 0%, 0%, 0.03)",
+        "fill-antialias": {
+          "base": 1,
+          "stops": [
+            [
+              0,
+              false
+            ],
+            [
+              9,
+              true
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "landcover-grass-park",
+      "type": "fill",
+      "source": "geolonia",
+      "source-layer": "park",
+      "filter": [
+        "==",
+        "class",
+        "public_park"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#d8e8c8",
+        "fill-opacity": 0.8
+      }
+    },
+    {
       "id": "water",
       "type": "fill",
       "source": "geolonia-water",
@@ -1727,65 +1795,6 @@
       ],
       "paint": {
         "fill-color": "hsla(30, 19%, 90%, 0.4)"
-      }
-    },
-    {
-      "id": "landcover-wood",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "filter": [
-        "==",
-        "class",
-        "wood"
-      ],
-      "paint": {
-        "fill-color": "#6a4",
-        "fill-opacity": 0.2,
-        "fill-outline-color": "hsla(0, 0%, 0%, 0.03)",
-        "fill-antialias": {
-          "base": 1,
-          "stops": [
-            [
-              0,
-              false
-            ],
-            [
-              9,
-              true
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "landcover-grass",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "filter": [
-        "==",
-        "class",
-        "grass"
-      ],
-      "paint": {
-        "fill-color": "#d8e8c8",
-        "fill-opacity": 1
-      }
-    },
-    {
-      "id": "landcover-grass-park",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "park",
-      "filter": [
-        "==",
-        "class",
-        "public_park"
-      ],
-      "paint": {
-        "fill-color": "#d8e8c8",
-        "fill-opacity": 0.8
       }
     },
     {
