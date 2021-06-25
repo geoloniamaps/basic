@@ -4462,6 +4462,11 @@
           "!=",
           "disputed",
           "japan_northern_territories"
+        ],
+        [
+          "!=",
+          "subclass",
+          "moat"
         ]
       ],
       "layout": {
