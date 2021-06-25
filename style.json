@@ -5102,13 +5102,37 @@
         "all",
         [
           "==",
-          "class",
+          [
+            "get",
+            "class"
+          ],
           "island"
         ],
         [
           "!=",
-          "disputed",
+          [
+            "get",
+            "disputed"
+          ],
           "japan_northern_territories"
+        ],
+        [
+          "any",
+          [
+            "!=",
+            [
+              "get",
+              "subclass"
+            ],
+            "islet"
+          ],
+          [
+            ">=",
+            [
+              "zoom"
+            ],
+            16
+          ]
         ]
       ],
       "layout": {
