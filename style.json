@@ -941,7 +941,7 @@
       "type": "line",
       "source": "oceanus",
       "source-layer": "oc-boundary",
-      "minzoom": 5,
+      "minzoom": 4,
       "maxzoom": 8,
       "filter": [
         "all",
@@ -977,7 +977,7 @@
       "type": "line",
       "source": "oceanus",
       "source-layer": "oc-boundary",
-      "minzoom": 5,
+      "minzoom": 4,
       "maxzoom": 8,
       "filter": [
         "all",
@@ -1420,111 +1420,6 @@
         ],
         "text-anchor": "top",
         "icon-image": "circle-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "oc-port-ja",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-port",
-      "minzoom": 5,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "harbor"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "icon-image": "harbor-11"
-      }
-    },
-    {
-      "id": "oc-port",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-port",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "harbor"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "icon-image": "harbor-11"
-      }
-    },
-    {
-      "id": "oc-airport-ja",
-      "type": "symbol",
-      "source": "oceanus",
-      "source-layer": "oc-airport",
-      "minzoom": 5,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "airport"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-image": "airport-11",
         "text-field": [
           "to-string",
           [
