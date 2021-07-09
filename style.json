@@ -1605,9 +1605,17 @@
       "source": "geolonia",
       "source-layer": "park",
       "filter": [
-        "==",
-        "$type",
-        "Polygon"
+        "all",
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ],
+        [
+          "!=",
+          "class",
+          "national_park"
+        ]
       ],
       "layout": {
         "visibility": "visible"
