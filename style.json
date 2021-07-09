@@ -4850,7 +4850,7 @@
       "paint": {}
     },
     {
-      "id": "road-access-forbidden",
+      "id": "road_access_forbidden",
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
