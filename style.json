@@ -3323,9 +3323,17 @@
           "LineString"
         ],
         [
-          "==",
-          "access",
-          "no"
+          "any",
+          [
+            "==",
+            "access",
+            "no"
+          ],
+          [
+            "==",
+            "access",
+            "private"
+          ]
         ]
       ],
       "paint": {
@@ -3347,11 +3355,7 @@
             ]
           ]
         },
-        "line-opacity": 0.5,
-        "line-dasharray": [
-          2,
-          0.5
-        ]
+        "line-opacity": 0.5
       }
     },
     {
