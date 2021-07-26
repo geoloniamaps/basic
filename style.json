@@ -4816,6 +4816,11 @@
           "!=",
           "disputed",
           "japan_northern_territories"
+        ],
+        [
+          "!=",
+          "class",
+          "planned"
         ]
       ],
       "layout": {
