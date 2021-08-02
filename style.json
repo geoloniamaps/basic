@@ -489,7 +489,7 @@
       "type": "fill",
       "source": "oceanus",
       "source-layer": "oc-forest",
-      "minzoom": 5,
+      "minzoom": 0,
       "maxzoom": 8,
       "layout": {
         "visibility": "visible"
