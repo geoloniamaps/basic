@@ -4405,6 +4405,9 @@
       "source": "geolonia",
       "source-layer": "building",
       "minzoom": 15,
+      "metadata": {
+        "visible-on-3d": true
+      },
       "layout": {
         "visibility": "none"
       },
