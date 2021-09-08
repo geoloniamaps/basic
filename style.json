@@ -5329,7 +5329,7 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 14,
+        "text-size": 18,
         "text-field": "{name}",
         "text-max-width": 8,
         "icon-image": "star-11",
