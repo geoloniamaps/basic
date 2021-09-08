@@ -5224,7 +5224,9 @@
         "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "symbol-placement": "line-center",
+        "symbol-spacing": 250
       },
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
