@@ -4402,12 +4402,12 @@
     {
       "id": "building-3d",
       "type": "fill-extrusion",
-      "source": "geolonia",
-      "source-layer": "building",
-      "minzoom": 15,
       "metadata": {
         "visible-on-3d": true
       },
+      "source": "geolonia",
+      "source-layer": "building",
+      "minzoom": 15,
       "layout": {
         "visibility": "none"
       },
@@ -5199,6 +5199,35 @@
       },
       "paint": {
         "text-color": "#333",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "railway-name",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "transportation_name",
+      "minzoom": 0,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
       }
