@@ -4985,6 +4985,84 @@
       }
     },
     {
+      "id": "place-village",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "place",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "village"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": {
+          "base": 1.2,
+          "stops": [
+            [
+              10,
+              12
+            ],
+            [
+              15,
+              22
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#333",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "place-town",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "place",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "town"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
       "id": "place-island-name",
       "type": "symbol",
       "source": "geolonia",
@@ -5042,71 +5120,7 @@
       }
     },
     {
-      "id": "place-city-rank6-later",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "minzoom": 9,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "city"
-        ],
-        [
-          "==",
-          "rank",
-          5
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ]
-    },
-    {
-      "id": "place-city-rank5",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "minzoom": 9,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "city"
-        ],
-        [
-          "==",
-          "rank",
-          5
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "place-city-rank4",
+      "id": "place-city",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
@@ -5114,92 +5128,14 @@
       "filter": [
         "all",
         [
-          "==",
-          "class",
-          "city"
-        ],
-        [
-          "==",
-          "rank",
-          4
-        ],
-        [
           "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "place-city-rank3",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "city"
-        ],
-        [
-          "==",
-          "rank",
-          3
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "place-city-rank2",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "place",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "city"
-        ],
-        [
-          "==",
-          "rank",
+          "capital",
           2
+        ],
+        [
+          "==",
+          "class",
+          "city"
         ],
         [
           "!=",
