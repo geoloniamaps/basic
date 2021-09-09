@@ -5035,7 +5035,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
-      "minzoom": 8,
+      "minzoom": 8.5,
       "filter": [
         "all",
         [
@@ -5126,7 +5126,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
-      "minzoom": 10,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -5149,7 +5149,21 @@
           "disputed",
           "japan_northern_territories"
         ]
-      ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
     },
     {
       "id": "place-city-rank5",
