@@ -5130,6 +5130,11 @@
       "filter": [
         "all",
         [
+          "!=",
+          "capital",
+          2
+        ],
+        [
           "==",
           "class",
           "city"
@@ -5154,6 +5159,11 @@
       "minzoom": 10,
       "filter": [
         "all",
+        [
+          "!=",
+          "capital",
+          2
+        ],
         [
           "==",
           "class",
@@ -5194,6 +5204,11 @@
       "filter": [
         "all",
         [
+          "!=",
+          "capital",
+          2
+        ],
+        [
           "==",
           "class",
           "city"
@@ -5233,6 +5248,11 @@
       "filter": [
         "all",
         [
+          "!=",
+          "capital",
+          2
+        ],
+        [
           "==",
           "class",
           "city"
@@ -5271,6 +5291,11 @@
       "minzoom": 8,
       "filter": [
         "all",
+        [
+          "!=",
+          "capital",
+          2
+        ],
         [
           "==",
           "class",
