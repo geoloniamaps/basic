@@ -5122,7 +5122,7 @@
       }
     },
     {
-      "id": "place-city-rank6-later",
+      "id": "place-city-rank6-more",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
@@ -5140,7 +5140,7 @@
           "city"
         ],
         [
-          "<=",
+          ">=",
           "rank",
           6
         ],
