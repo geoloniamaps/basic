@@ -4694,6 +4694,53 @@
       }
     },
     {
+      "id": "railway-name",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "transportation_name",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 12,
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible",
+        "symbol-placement": "line",
+        "symbol-spacing": {
+          "base": 1000,
+          "stops": [
+            [
+              10,
+              1000
+            ],
+            [
+              12,
+              800
+            ],
+            [
+              15,
+              600
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
       "id": "road_oneway",
       "type": "symbol",
       "source": "geolonia",
@@ -5199,37 +5246,6 @@
       },
       "paint": {
         "text-color": "#333",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "railway-name",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "transportation_name",
-      "minzoom": 0,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "rail"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible",
-        "symbol-placement": "line-center",
-        "symbol-spacing": 250
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
       }
