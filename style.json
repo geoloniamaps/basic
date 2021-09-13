@@ -4705,6 +4705,11 @@
           "==",
           "class",
           "rail"
+        ],
+        [
+          "!=",
+          "subclass",
+          "subway"
         ]
       ],
       "layout": {
