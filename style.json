@@ -4707,9 +4707,9 @@
           "rail"
         ],
         [
-          "!=",
-          "subclass",
-          "subway"
+          "!in",
+          "brunnel",
+          "tunnel"
         ]
       ],
       "layout": {
