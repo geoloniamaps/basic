@@ -4710,6 +4710,11 @@
           "!in",
           "brunnel",
           "tunnel"
+        ],
+        [
+          "!=",
+          "subclass",
+          "subway"
         ]
       ],
       "layout": {
