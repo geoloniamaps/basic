@@ -5009,7 +5009,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5036,19 +5036,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5087,7 +5075,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5102,19 +5090,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5220,7 +5196,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5235,19 +5211,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5296,7 +5260,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5311,19 +5275,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5372,7 +5324,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5387,19 +5339,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5448,7 +5388,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5463,19 +5403,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5524,7 +5452,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5539,19 +5467,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5600,7 +5516,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5615,19 +5531,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5676,7 +5580,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5691,19 +5595,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5752,7 +5644,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5767,19 +5659,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
@@ -5828,7 +5708,7 @@
         "text-anchor": "top",
         "text-offset": [
           0,
-          0.2
+          0.1
         ],
         "text-font": [
           "Noto Sans Regular"
@@ -5843,19 +5723,7 @@
         "icon-opacity": {
           "stops": [
             [
-              8,
-              1
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              10,
-              1
-            ],
-            [
-              11,
+              11.9,
               1
             ],
             [
