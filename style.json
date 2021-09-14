@@ -5050,6 +5050,13 @@
         ]
       ],
       "layout": {
+        "icon-image": "circle-11",
+        "icon-size": 0.4,
+        "text-anchor": "top",
+        "text-offset": [
+          0,
+          0.2
+        ],
         "text-font": [
           "Noto Sans Regular"
         ],
@@ -5059,6 +5066,31 @@
         "visibility": "visible"
       },
       "paint": {
+        "icon-color": "#000000",
+        "icon-opacity": {
+          "stops": [
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              0
+            ]
+          ]
+        },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
