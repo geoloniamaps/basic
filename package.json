@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/geolonia/basic/issues"
   },
-  "homepage": "https://github.com/geolonia/basic#readme"
+  "homepage": "https://github.com/geolonia/basic#readme",
+  "devDependencies": {
+    "vt-style": "github:geolonia/vt-style#gh-pages"
+  }
 }
