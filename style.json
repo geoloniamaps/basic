@@ -1,5 +1,6 @@
 {
   "version": 8,
+  "id": "geolonia-basic",
   "name": "Geolonia Basic",
   "metadata": {},
   "sources": {
@@ -641,7 +642,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -680,7 +681,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -1078,7 +1079,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -1135,7 +1136,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -1173,7 +1174,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -1211,7 +1212,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -1246,7 +1247,7 @@
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -1335,7 +1336,7 @@
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -1876,7 +1877,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -4284,7 +4285,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -4325,7 +4326,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -4383,7 +4384,7 @@
       "paint": {
         "text-color": "#74aee9",
         "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
+        "text-halo-color": "rgba(255, 255, 255, 0.7)"
       }
     },
     {
@@ -4747,7 +4748,7 @@
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -4990,7 +4991,7 @@
       "paint": {
         "text-color": "#333",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5038,7 +5039,7 @@
       "paint": {
         "text-color": "#333",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5104,7 +5105,7 @@
         },
         "text-color": "#333",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5158,7 +5159,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5215,7 +5216,7 @@
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5279,7 +5280,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5343,7 +5344,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5407,7 +5408,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5471,7 +5472,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5535,7 +5536,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5599,7 +5600,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5663,7 +5664,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5727,7 +5728,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5791,7 +5792,7 @@
         },
         "text-color": "rgba(102, 102, 102, 1)",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     },
     {
@@ -5836,9 +5837,8 @@
       "paint": {
         "text-color": "#333",
         "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-color": "rgba(255, 255, 255, 0.8)"
       }
     }
-  ],
-  "id": "geolonia-basic"
+  ]
 }
