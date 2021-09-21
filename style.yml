@@ -27,6 +27,11 @@ $way-line-color2: rgba(255, 255, 255, 1)
 $railway-tunnel-color: '#a58043'
 $cablecar-line-color: hsl(0, 0%, 70%)
 $commercial-land-color: hsla(0, 60%, 87%, 0.23)
+$hospital-color: '#fde'
+$cemetry-color: '#e0e4dd'
+$school-color: '#f0e8f8'
+$railway-color1: '#999999'
+$railway-color2: '#ffffff'
 $highway-line-width:
   base: 1.2
   stops:
@@ -46,6 +51,8 @@ $cacing-line-width:
     - [6, 0.6]
     - [7, 1.5]
     - [20, 22]
+$text-offset-below-icon:
+  [0, 0.6]
 
 __variables:
   paint-water-label: &paint-water-label
@@ -80,7 +87,6 @@ __variables:
       - Noto Sans Regular
     text-field: '{name}'
     text-max-width: 8
-    visibility: visible
 
   layout-label: &layout-label
     text-font:
@@ -101,7 +107,6 @@ __variables:
   layout-way-line: &layout-way-line
     line-cap: round
     line-join: round
-    visibility: visible
 
   # [デグレ] 17 を越えないとPOI が出ない。
   layout-poi-label-icon: &layout-poi-label-icon
@@ -168,8 +173,6 @@ layers:
     source: geolonia
     source-layer: landcover
     filter: ['==', class, grass]
-    layout:
-      visibility: visible
     paint:
       fill-color: $grass-color
       fill-opacity: 1
@@ -178,8 +181,6 @@ layers:
     source: geolonia
     source-layer: landcover
     filter: ['==', class, wood]
-    layout:
-      visibility: visible
     paint:
       fill-color: $wood-color
       fill-opacity: 0.2
@@ -195,8 +196,6 @@ layers:
     source-layer: park
     filter:
       ['==', class, public_park]
-    layout:
-      visibility: visible
     paint:
       fill-color: $grass-color
       fill-opacity: 0.8
@@ -204,8 +203,6 @@ layers:
     type: fill
     source: geolonia-water
     source-layer: water
-    layout:
-      visibility: visible
     paint:
       fill-color: $gl-water-color
   - id: water-river-lake-ja
@@ -215,8 +212,6 @@ layers:
     filter:
       - all
       - ['==', [get, class], lake]
-    layout:
-      visibility: visible
     paint:
       fill-color: $gl-water-color
   - id: oc-ocean200
@@ -227,8 +222,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 200]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc200-color
   - id: oc-ocean1000
@@ -239,8 +232,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 1000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc1000-color
   - id: oc-ocean2000
@@ -251,8 +242,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 2000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc2000-color
   - id: oc-ocean3000
@@ -263,8 +252,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 3000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc3000-color
   - id: oc-ocean4000
@@ -275,8 +262,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 4000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc4000-color
   - id: oc-ocean5000
@@ -287,8 +272,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 5000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc5000-color
   - id: oc-ocean6000
@@ -299,8 +282,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 6000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc6000-color
   - id: oc-ocean7000
@@ -311,8 +292,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 7000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc7000-color
   - id: oc-ocean8000
@@ -323,8 +302,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 8000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc8000-color
   - id: oc-ocean9000
@@ -335,8 +312,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 9000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc9000-color
   - id: oc-ocean10000
@@ -347,8 +322,6 @@ layers:
       - all
       - ['==', [get, class], ocean]
       - ['==', [get, subclass], 10000]
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-oc10000-color
   - id: oc-glacier
@@ -356,8 +329,6 @@ layers:
     source: oceanus
     source-layer: oc-glacier
     maxzoom: 8
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-glacier-color
   - id: oc-forest
@@ -366,8 +337,6 @@ layers:
     source-layer: oc-forest
     minzoom: 0
     maxzoom: 8
-    layout:
-      visibility: visible
     paint:
       fill-color: $oc-forest-color
   - id: oc-waterway-river-ja
@@ -454,8 +423,6 @@ layers:
       - all
       - ['==', [get, class], lakes]
       - [has, jflag]
-    layout:
-      visibility: visible
     paint:
       fill-color: $gl-water-color
   - id: oc-lake
@@ -467,8 +434,6 @@ layers:
       - all
       - ['==', [get, class], lakes]
       - ['==', [has, jflag], false]
-    layout:
-      visibility: visible
     paint:
       fill-color: $gl-water-color
   - id: oc-highway-outer-ja
@@ -484,7 +449,6 @@ layers:
     layout:
       line-cap: butt
       line-join: round
-      visibility: visible
     paint:
       line-color: $way-line-color
       line-opacity: 1
@@ -505,7 +469,6 @@ layers:
     layout:
       line-cap: butt
       line-join: round
-      visibility: visible
     paint:
       line-color: $way-line-color
       line-opacity: 1
@@ -612,8 +575,7 @@ layers:
       - ['==', [geometry-type], Polygon]
       - [has, name]
     layout:
-      text-font:
-        - Noto Sans Regular
+      <<: *layout-label
       text-size:
         - interpolate
         - - linear
@@ -622,13 +584,7 @@ layers:
         - 10
         - 6
         - 14
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
       symbol-placement: point
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
-      visibility: visible
     paint:
       <<: *paint-water-label
   - id: nt-water-name-ocean
@@ -639,15 +595,8 @@ layers:
     filter:
       ['==', [get, class], ocean]
     layout:
-      text-font:
-        - Noto Sans Regular
-      text-size: 14
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
+      <<: *layout-label
       symbol-placement: point
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
     paint:
       <<: *paint-water-label
   - id: nt-water-name-river
@@ -658,15 +607,8 @@ layers:
     filter:
       ['==', [get, class], river]
     layout:
-      text-font:
-        - Noto Sans Regular
-      text-size: 14
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
+      <<: *layout-label
       symbol-placement: point
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
     paint:
       <<: *paint-water-label
   - id: oc-label-country
@@ -717,7 +659,6 @@ layers:
       text-size: 14
       text-field: '{name}'
       text-max-width: 8
-      visibility: visible
     paint:
       <<: *paint-city-label
   - id: oc-label-town-ja
@@ -738,8 +679,7 @@ layers:
       text-anchor: top
       icon-image: circle-11
       text-field: '{name}'
-      text-offset:
-        [0, 0.6]
+      text-offset: $text-offset-below-icon
       text-size: 12
       text-max-width: 9
     paint:
@@ -786,8 +726,7 @@ layers:
       text-anchor: top
       icon-image: circle-11
       text-field: '{name}'
-      text-offset:
-        [0, 0.6]
+      text-offset: $text-offset-below-icon
       text-size: 12
       text-max-width: 9
     paint:
@@ -808,8 +747,7 @@ layers:
       text-anchor: top
       icon-image: airport-11
       text-field: '{name}'
-      text-offset:
-        [0, 0.6]
+      text-offset: $text-offset-below-icon
       text-size: 12
       text-max-width: 9
     paint:
@@ -840,8 +778,6 @@ layers:
     source-layer: park
     filter:
       ['==', $type, Polygon]
-    layout:
-      visibility: visible
     paint:
       fill-color: $park-color
       fill-opacity:
@@ -855,7 +791,7 @@ layers:
     filter:
       ['==', class, cemetery]
     paint:
-      fill-color: '#e0e4dd'
+      fill-color: $cemetry-color
   - id: landuse-hospital
     type: fill
     source: geolonia
@@ -863,7 +799,7 @@ layers:
     filter:
       ['==', class, hospital]
     paint:
-      fill-color: '#fde'
+      fill-color: $hospital-color
   - id: landuse-school
     type: fill
     source: geolonia
@@ -871,7 +807,7 @@ layers:
     filter:
       ['==', class, school]
     paint:
-      fill-color: '#f0e8f8'
+      fill-color: $school-color
   - id: landuse-railway
     type: fill
     source: geolonia
@@ -1066,7 +1002,6 @@ layers:
       - ['==', class, motorway]
     layout:
       line-join: round
-      visibility: visible
     paint:
       line-color: '#e9ac77'
       line-dasharray:
@@ -1169,7 +1104,6 @@ layers:
       - ['==', class, motorway]
     layout:
       line-join: round
-      visibility: visible
     paint:
       line-color: '#ffdaa6'
       line-width: $highway-line-width2
@@ -1182,7 +1116,6 @@ layers:
       - [in, class, ferry]
     layout:
       line-join: round
-      visibility: visible
     paint:
       line-color: $ferry-line-color
       line-width: 1.1
@@ -1233,8 +1166,6 @@ layers:
       - all
       - ['==', $type, Polygon]
       - [in, class, runway, taxiway]
-    layout:
-      visibility: visible
     paint:
       fill-opacity:
         base: 1
@@ -1294,8 +1225,6 @@ layers:
     source-layer: transportation
     filter:
       ['==', $type, Polygon]
-    layout:
-      visibility: visible
     paint:
       fill-color: hsla(0, 0%, 89%, 0.56)
       fill-outline-color: '#cfcdca'
@@ -1366,7 +1295,6 @@ layers:
     layout:
       line-cap: butt
       line-join: round
-      visibility: visible
     paint:
       line-color: $way-line-color
       line-opacity: 1
@@ -1387,7 +1315,6 @@ layers:
     layout:
       line-cap: butt
       line-join: round
-      visibility: visible
     paint:
       line-color: $way-line-color
       line-opacity:
@@ -1413,7 +1340,6 @@ layers:
     layout:
       line-cap: butt
       line-join: round
-      visibility: visible
     paint:
       line-color: $way-line-color
       line-opacity:
@@ -1439,7 +1365,6 @@ layers:
     layout:
       line-cap: butt
       line-join: round
-      visibility: visible
     paint:
       line-color: $way-line-color
       line-width:
@@ -1803,7 +1728,7 @@ layers:
       - ['==', class, rail]
       - ['!in', brunnel, tunnel]
     paint:
-      line-color: '#999999'
+      line-color: $railway-color1
       line-width:
         stops:
           - [10, 0.8]
@@ -1818,7 +1743,7 @@ layers:
       - ['==', class, rail]
       - ['!in', brunnel, tunnel]
     paint:
-      line-color: '#ffffff'
+      line-color: $railway-color2
       line-dasharray:
         [6, 4]
       line-width:
@@ -1834,7 +1759,6 @@ layers:
     filter:
       ['==', class, cable_car]
     layout:
-      visibility: visible
       line-cap: round
     paint:
       line-color: $cablecar-line-color
@@ -1851,7 +1775,6 @@ layers:
     filter:
       ['==', class, cable_car]
     layout:
-      visibility: visible
       line-cap: round
     paint:
       line-color: $cablecar-line-color
@@ -1928,7 +1851,6 @@ layers:
         stops:
           - [0, 10]
           - [6, 14]
-      visibility: visible
     paint:
       <<: *paint-water-label
   - id: building
@@ -1986,7 +1908,6 @@ layers:
       - ['>=', rank, 10]
     layout:
       <<: *layout-poi-label-icon
-      visibility: visible
     paint:
       <<: *paint-label-low-zoom
   - id: poi-r0-r9
@@ -2002,7 +1923,6 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       <<: *layout-poi-label-icon
-      visibility: visible
     paint:
       <<: *paint-label-low-zoom
   - id: poi-railway
@@ -2044,7 +1964,6 @@ layers:
       text-size: 12
       text-field: '{name}'
       text-max-width: 8
-      visibility: visible
       symbol-placement: line
       symbol-spacing:
         base: 1000
@@ -2128,11 +2047,9 @@ layers:
       text-anchor: top
       icon-image: airport-11
       text-field: '{name}'
-      text-offset:
-        [0, 0.6]
+      text-offset: $text-offset-below-icon
       text-size: 12
       text-max-width: 9
-      visibility: visible
       icon-size: 1
       text-optional: true
     paint:
@@ -2154,7 +2071,6 @@ layers:
           - [15, 22]
       text-field: '{name}'
       text-max-width: 8
-      visibility: visible
     paint:
       <<: *paint-small-city-label
   - id: nt-label-large
@@ -2174,7 +2090,6 @@ layers:
           - [15, 22]
       text-field: '{name}'
       text-max-width: 8
-      visibility: visible
     paint:
       <<: *paint-small-city-label
   - id: place-village
@@ -2230,7 +2145,6 @@ layers:
       text-size: 11
       text-field: '{name}'
       text-max-width: 8
-      visibility: visible
     paint:
       <<: *paint-city-label
   - id: place-city-rank10
@@ -2413,7 +2327,6 @@ layers:
       text-offset:
         [0.4, 0]
       text-anchor: left
-      visibility: visible
       icon-size: 0.8
       text-size: 18
     paint:

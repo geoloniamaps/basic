@@ -38,9 +38,6 @@
         "class",
         "grass"
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "#d8e8c8",
         "fill-opacity": 1
@@ -56,9 +53,6 @@
         "class",
         "wood"
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "#6a4",
         "fill-opacity": 0.2,
@@ -88,9 +82,6 @@
         "class",
         "public_park"
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "#d8e8c8",
         "fill-opacity": 0.8
@@ -101,9 +92,6 @@
       "type": "fill",
       "source": "geolonia-water",
       "source-layer": "water",
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(152, 209, 252, 1)"
       }
@@ -124,9 +112,6 @@
           "lake"
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(152, 209, 252, 1)"
       }
@@ -155,9 +140,6 @@
           200
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(2, 183, 237, 1)"
       }
@@ -186,9 +168,6 @@
           1000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(2, 170, 228, 1)"
       }
@@ -217,9 +196,6 @@
           2000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(3, 147, 212, 1)"
       }
@@ -248,9 +224,6 @@
           3000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(3, 136, 205, 1)"
       }
@@ -279,9 +252,6 @@
           4000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(4, 121, 195, 1)"
       }
@@ -310,9 +280,6 @@
           5000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(5, 99, 181, 1)"
       }
@@ -341,9 +308,6 @@
           6000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(6, 69, 161, 1)"
       }
@@ -372,9 +336,6 @@
           7000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(7, 45, 145, 1)"
       }
@@ -403,9 +364,6 @@
           8000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(8, 26, 132, 1)"
       }
@@ -434,9 +392,6 @@
           9000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(9, 9, 121, 1)"
       }
@@ -465,9 +420,6 @@
           10000
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(17, 17, 136, 1)"
       }
@@ -478,9 +430,6 @@
       "source": "oceanus",
       "source-layer": "oc-glacier",
       "maxzoom": 8,
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(241, 248, 254, 1)"
       }
@@ -492,9 +441,6 @@
       "source-layer": "oc-forest",
       "minzoom": 0,
       "maxzoom": 8,
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(223, 236, 218, 1)"
       }
@@ -706,9 +652,6 @@
           "jflag"
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(152, 209, 252, 1)"
       }
@@ -738,9 +681,6 @@
           false
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(152, 209, 252, 1)"
       }
@@ -769,8 +709,7 @@
       ],
       "layout": {
         "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
@@ -817,8 +756,7 @@
       ],
       "layout": {
         "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
@@ -862,8 +800,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
@@ -913,8 +850,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
@@ -1118,8 +1054,7 @@
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
         "symbol-spacing": 350,
-        "text-letter-spacing": 0.2,
-        "visibility": "visible"
+        "text-letter-spacing": 0.2
       },
       "paint": {
         "text-color": "#74aee9",
@@ -1286,8 +1221,7 @@
         ],
         "text-size": 14,
         "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
+        "text-max-width": 8
       },
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
@@ -1542,9 +1476,6 @@
         "$type",
         "Polygon"
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "rgba(102, 170, 68, 1)",
         "fill-opacity": {
@@ -2067,8 +1998,7 @@
         ]
       ],
       "layout": {
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#e9ac77",
@@ -2337,8 +2267,7 @@
         ]
       ],
       "layout": {
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#ffdaa6",
@@ -2375,8 +2304,7 @@
         ]
       ],
       "layout": {
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(108, 159, 182, 1)",
@@ -2403,8 +2331,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(153, 153, 153, 1)",
@@ -2440,8 +2367,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(153, 153, 153, 1)",
@@ -2481,9 +2407,6 @@
           "taxiway"
         ]
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-opacity": {
           "base": 1,
@@ -2522,8 +2445,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
@@ -2576,8 +2498,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
@@ -2619,9 +2540,6 @@
         "$type",
         "Polygon"
       ],
-      "layout": {
-        "visibility": "visible"
-      },
       "paint": {
         "fill-color": "hsla(0, 0%, 89%, 0.56)",
         "fill-outline-color": "#cfcdca",
@@ -2704,8 +2622,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#e9ac77",
@@ -2825,8 +2742,7 @@
       ],
       "layout": {
         "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
@@ -2868,8 +2784,7 @@
       ],
       "layout": {
         "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
@@ -2930,8 +2845,7 @@
       ],
       "layout": {
         "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
@@ -2992,8 +2906,7 @@
       ],
       "layout": {
         "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
@@ -3159,8 +3072,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "#fea",
@@ -3264,8 +3176,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
@@ -3317,8 +3228,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
@@ -3370,8 +3280,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
@@ -3424,8 +3333,7 @@
       ],
       "layout": {
         "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
+        "line-join": "round"
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
@@ -4083,7 +3991,6 @@
         "cable_car"
       ],
       "layout": {
-        "visibility": "visible",
         "line-cap": "round"
       },
       "paint": {
@@ -4115,7 +4022,6 @@
         "cable_car"
       ],
       "layout": {
-        "visibility": "visible",
         "line-cap": "round"
       },
       "paint": {
@@ -4310,8 +4216,7 @@
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
         "symbol-spacing": 350,
-        "text-letter-spacing": 0.2,
-        "visibility": "visible"
+        "text-letter-spacing": 0.2
       },
       "paint": {
         "text-color": "#74aee9",
@@ -4487,8 +4392,7 @@
           0.6
         ],
         "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible"
+        "text-max-width": 9
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -4555,8 +4459,7 @@
           0.6
         ],
         "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible"
+        "text-max-width": 9
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -4657,7 +4560,6 @@
         "text-size": 12,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "symbol-placement": "line",
         "symbol-spacing": {
           "base": 1000,
@@ -4874,7 +4776,6 @@
         ],
         "text-size": 12,
         "text-max-width": 9,
-        "visibility": "visible",
         "icon-size": 1,
         "text-optional": true
       },
@@ -4917,8 +4818,7 @@
           ]
         },
         "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
+        "text-max-width": 8
       },
       "paint": {
         "text-color": "#333",
@@ -4965,8 +4865,7 @@
           ]
         },
         "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
+        "text-max-width": 8
       },
       "paint": {
         "text-color": "#333",
@@ -5005,7 +4904,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": {
           "base": 1.2,
@@ -5071,7 +4969,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": 12
       },
@@ -5142,8 +5039,7 @@
         ],
         "text-size": 11,
         "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
+        "text-max-width": 8
       },
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
@@ -5192,7 +5088,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": 14
       },
@@ -5256,7 +5151,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": 14
       },
@@ -5320,7 +5214,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": 14
       },
@@ -5384,7 +5277,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": 14
       },
@@ -5448,7 +5340,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": 14
       },
@@ -5512,7 +5403,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": 14
       },
@@ -5576,7 +5466,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.3,
         "text-size": 14
       },
@@ -5640,7 +5529,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.4,
         "text-size": 16
       },
@@ -5704,7 +5592,6 @@
         ],
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible",
         "icon-size": 0.5,
         "text-size": 18
       },
@@ -5762,7 +5649,6 @@
           0
         ],
         "text-anchor": "left",
-        "visibility": "visible",
         "icon-size": 0.8,
         "text-size": 18
       },
