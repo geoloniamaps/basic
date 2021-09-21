@@ -1063,13 +1063,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
@@ -1119,13 +1113,7 @@
           6,
           14
         ],
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
@@ -1158,13 +1146,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
@@ -1196,13 +1178,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
@@ -1234,15 +1210,8 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-max-width": 8,
-        "visibility": "visible"
+        "text-field": "{name}",
+        "text-max-width": 8
       },
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
@@ -1277,15 +1246,8 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
-        "text-max-width": 8,
-        "visibility": "visible"
+        "text-field": "{name}",
+        "text-max-width": 8
       },
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
@@ -1323,13 +1285,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 8,
         "visibility": "visible"
       },
@@ -1376,13 +1332,7 @@
         ],
         "text-anchor": "top",
         "icon-image": "circle-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-offset": [
           0,
           0.6
@@ -1429,13 +1379,7 @@
         ],
         "icon-image": "circle-11",
         "icon-allow-overlap": true,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-offset": [
           0.6,
           0.6
@@ -1482,13 +1426,7 @@
         ],
         "text-anchor": "top",
         "icon-image": "circle-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-offset": [
           0,
           0.6
@@ -1535,13 +1473,7 @@
         ],
         "text-anchor": "top",
         "icon-image": "airport-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-offset": [
           0,
           0.6
@@ -1871,8 +1803,8 @@
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "line",
-        "text-letter-spacing": 0.2,
-        "symbol-spacing": 350
+        "symbol-spacing": 350,
+        "text-letter-spacing": 0.2
       },
       "paint": {
         "text-color": "#74aee9",
@@ -1899,7 +1831,7 @@
         ]
       ],
       "paint": {
-        "line-color": "#A58043",
+        "line-color": "#a58043",
         "line-opacity": 0.4,
         "line-width": {
           "base": 1.4,
@@ -4787,7 +4719,6 @@
         "symbol-spacing": 75,
         "icon-padding": 2,
         "icon-rotation-alignment": "map",
-        "icon-rotate": 90,
         "icon-size": {
           "stops": [
             [
@@ -4799,7 +4730,8 @@
               1
             ]
           ]
-        }
+        },
+        "icon-rotate": 90
       },
       "paint": {
         "icon-opacity": 0.5
@@ -4841,7 +4773,6 @@
         "symbol-spacing": 75,
         "icon-padding": 2,
         "icon-rotation-alignment": "map",
-        "icon-rotate": -90,
         "icon-size": {
           "stops": [
             [
@@ -4853,7 +4784,8 @@
               1
             ]
           ]
-        }
+        },
+        "icon-rotate": -90
       },
       "paint": {
         "icon-opacity": 0.5
@@ -5063,7 +4995,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5072,6 +5003,10 @@
         "text-font": [
           "Noto Sans Regular"
         ],
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible",
+        "icon-size": 0.3,
         "text-size": {
           "base": 1.2,
           "stops": [
@@ -5084,10 +5019,7 @@
               22
             ]
           ]
-        },
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
+        }
       },
       "paint": {
         "icon-color": "#000000",
@@ -5129,7 +5061,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5138,10 +5069,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 12,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.3,
+        "text-size": 12
       },
       "paint": {
         "icon-color": "#000000",

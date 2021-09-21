@@ -1,6 +1,7 @@
 $background-color: rgba(254, 254, 254, 1)
 $grass-color: '#d8e8c8'
 $wood-color: '#6a4'
+$park-color:  rgba(102, 170, 68, 1)
 $wood-outline-color: hsla(0, 0%, 0%, 0.03)
 $gl-water-color: rgba(152, 209, 252, 1)
 $oc-oc200-color: rgba(2, 183, 237, 1) 
@@ -19,6 +20,32 @@ $oc-forest-color: rgba(223, 236, 218, 1)
 $oc-water-river-color: '#a0c8f0'
 $oc-water-text-label: '#74aee9'
 $oc-water-text-label-halo-color: rgba(255, 255, 255, 0.7)
+$boundary-line-color: '#9e9cab'
+$ferry-line-color: rgba(108, 159, 182, 1)
+$way-line-color: rgba(222, 222, 222, 1) # #ddd と使い分けられてる？
+$way-line-color2: rgba(255, 255, 255, 1)
+$railway-tunnel-color: '#a58043'
+$cablecar-line-color: hsl(0, 0%, 70%)
+$commercial-land-color: hsla(0, 60%, 87%, 0.23)
+$highway-line-width:
+  base: 1.2
+  stops:
+    - [6.5, 0]
+    - [8, 0.5]
+    - [20, 13]
+$highway-line-width2:
+  base: 1.2
+  stops:
+    - [6.5, 0]
+    - [7, 0.5]
+    - [20, 18]
+$cacing-line-width:
+  base: 1.2
+  stops:
+    - [5, 0.4]
+    - [6, 0.6]
+    - [7, 1.5]
+    - [20, 22]
 
 __variables:
   paint-water-label: &paint-water-label
@@ -31,12 +58,11 @@ __variables:
     text-halo-width: 1.2
     text-halo-color: rgba(255, 255, 255, 0.8)
 
-  paint-city-label-icon: &paint-city-label-icon
-    icon-color: '#000000'
-    icon-opacity:
-      stops:
-        - [11.9, 1]
-        - [12, 0]
+  paint-label-low-zoom: &paint-label-low-zoom
+    text-halo-blur: 0.5
+    text-color: '#666'
+    text-halo-width: 1
+    text-halo-color: '#ffffff'
 
   paint-icon: &paint-icon
     icon-color: '#000000'
@@ -56,6 +82,64 @@ __variables:
     text-max-width: 8
     visibility: visible
 
+  layout-label: &layout-label
+    text-font:
+      - Noto Sans Regular
+    text-size: 14
+    text-field: '{name}'
+    text-max-width: 5
+    text-rotation-alignment: map
+    symbol-placement: line
+    symbol-spacing: 350
+    text-letter-spacing: 0.2
+
+  paint-small-city-label: &paint-small-city-label
+    text-color: '#333'
+    text-halo-width: 1.2
+    text-halo-color: rgba(255, 255, 255, 0.8)
+
+  layout-way-line: &layout-way-line
+    line-cap: round
+    line-join: round
+    visibility: visible
+
+  # [デグレ] 17 を越えないとPOI が出ない。
+  layout-poi-label-icon: &layout-poi-label-icon
+    text-padding: 2
+    text-font:
+      - Noto Sans Regular
+    text-anchor: top
+    icon-image:
+      - coalesce
+      - [image, [concat, [get, class], '-11']]
+      - [image, circle-11]
+    text-field: '{name}'
+    text-offset:
+      [0, 0.6]
+    text-size: 12
+    text-max-width: 9
+
+  paint-bridge: &paint-bridge
+    line-color: '#e9ac77'
+    line-opacity: 1
+    line-width:
+      base: 1.2
+      stops:
+        - [12, 1]
+        - [13, 3]
+        - [14, 4]
+        - [20, 15]
+  
+  layout-oneway: &layout-oneway
+    symbol-placement: line
+    icon-image: oneway
+    symbol-spacing: 75
+    icon-padding: 2
+    icon-rotation-alignment: map
+    icon-size:
+      stops:
+        - [15, 0.5]
+        - [19, 1]
 
 version: 8
 id: geolonia-basic
@@ -344,15 +428,7 @@ layers:
       - [has, name]
       - [has, jflag]
     layout:
-      text-font:
-        - Noto Sans Regular
-      text-size: 14
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
-      symbol-placement: line
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
+      <<: *layout-label
     paint:
       <<: *paint-water-label
   - id: oc-waterway-name
@@ -365,15 +441,7 @@ layers:
       - [has, name]
       - ['==', [has, jflag], false]
     layout:
-      text-font:
-        - Noto Sans Regular
-      text-size: 14
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
-      symbol-placement: line
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
+      <<: *layout-label
     paint:
       <<: *paint-water-label
   - id: oc-lake-ja
@@ -418,7 +486,7 @@ layers:
       line-join: round
       visibility: visible
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-opacity: 1
       line-width:
         base: 1.2
@@ -439,7 +507,7 @@ layers:
       line-join: round
       visibility: visible
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-opacity: 1
       line-width:
         base: 1.2
@@ -457,17 +525,10 @@ layers:
       - ['==', [get, class], highway]
       - [has, jflag]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: rgba(255, 255, 255, 1)
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [8, 0.5]
-          - [20, 13]
+      line-color: $way-line-color2
+      line-width: $highway-line-width
   - id: oc-highway-inner
     type: line
     source: oceanus
@@ -478,17 +539,10 @@ layers:
       - ['==', [get, class], highway]
       - ['==', [has, jflag], false]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: rgba(255, 255, 255, 1)
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [8, 0.5]
-          - [20, 13]
+      line-color: $way-line-color2
+      line-width: $highway-line-width
   - id: oc-boundary-land-level-1-ja
     type: line
     source: oceanus
@@ -502,7 +556,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: '#9e9cab'
+      line-color: $boundary-line-color
       line-dasharray:
         [3, 1, 1, 1]
       line-width: 1
@@ -519,7 +573,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: '#9e9cab'
+      line-color: $boundary-line-color
       line-dasharray:
         [3, 1, 1, 1]
       line-width: 1
@@ -532,7 +586,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: '#9e9cab'
+      line-color: $boundary-line-color
       line-width: 1
       line-blur: 0.4
   - id: oc-water-name-ocean
@@ -544,16 +598,8 @@ layers:
       - ['==', [geometry-type], Point]
       - ['==', [get, class], ocean]
     layout:
-      text-font:
-        - Noto Sans Regular
-      text-size: 14
-      text-field:
-        [to-string, [get, name]]
-      text-max-width: 5
-      text-rotation-alignment: map
+      <<: *layout-label
       symbol-placement: point
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
     paint:
       <<: *paint-water-label
   - id: oc-water-name-other
@@ -576,8 +622,7 @@ layers:
         - 10
         - 6
         - 14
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-max-width: 5
       text-rotation-alignment: map
       symbol-placement: point
@@ -597,8 +642,7 @@ layers:
       text-font:
         - Noto Sans Regular
       text-size: 14
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-max-width: 5
       text-rotation-alignment: map
       symbol-placement: point
@@ -617,8 +661,7 @@ layers:
       text-font:
         - Noto Sans Regular
       text-size: 14
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-max-width: 5
       text-rotation-alignment: map
       symbol-placement: point
@@ -637,10 +680,8 @@ layers:
       text-font:
         - Noto Sans Regular
       text-size: 14
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-max-width: 8
-      visibility: visible
     paint:
       <<: *paint-city-label
   - id: oc-label-pref-ja
@@ -657,10 +698,8 @@ layers:
       text-font:
         - Noto Sans Regular
       text-size: 14
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-max-width: 8
-      visibility: visible
     paint:
       <<: *paint-city-label
   - id: oc-label-pref
@@ -676,8 +715,7 @@ layers:
       text-font:
         - Noto Sans Regular
       text-size: 14
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-max-width: 8
       visibility: visible
     paint:
@@ -699,17 +737,13 @@ layers:
         - Noto Sans Regular
       text-anchor: top
       icon-image: circle-11
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-offset:
         [0, 0.6]
       text-size: 12
       text-max-width: 9
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: oc-label-pref-capital-ja
     type: symbol
     source: oceanus
@@ -729,17 +763,13 @@ layers:
         [top, bottom, left, right]
       icon-image: circle-11
       icon-allow-overlap: true
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-offset:
         [0.6, 0.6]
       text-size: 12
       text-max-width: 9
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: oc-label-town
     type: symbol
     source: oceanus
@@ -755,17 +785,13 @@ layers:
         - Noto Sans Regular
       text-anchor: top
       icon-image: circle-11
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-offset:
         [0, 0.6]
       text-size: 12
       text-max-width: 9
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: oc-airport
     type: symbol
     source: oceanus
@@ -781,17 +807,13 @@ layers:
         - Noto Sans Regular
       text-anchor: top
       icon-image: airport-11
-      text-field:
-        [to-string, [get, name]]
+      text-field: '{name}'
       text-offset:
         [0, 0.6]
       text-size: 12
       text-max-width: 9
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: landuse-commercial
     type: fill
     source: geolonia
@@ -801,7 +823,7 @@ layers:
       - ['==', $type, Polygon]
       - ['==', class, commercial]
     paint:
-      fill-color: hsla(0, 60%, 87%, 0.23)
+      fill-color: $commercial-land-color
   - id: landuse-industrial
     type: fill
     source: geolonia
@@ -821,7 +843,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(102, 170, 68, 1)
+      fill-color: $park-color
       fill-opacity:
         stops:
           - [7, 0]
@@ -870,7 +892,7 @@ layers:
     layout:
       line-cap: round
     paint:
-      line-color: rgba(152, 209, 252, 1)
+      line-color: $gl-water-color
       line-width:
         base: 1.3
         stops:
@@ -887,7 +909,7 @@ layers:
     layout:
       line-cap: round
     paint:
-      line-color: rgba(152, 209, 252, 1)
+      line-color: $gl-water-color
       line-width:
         base: 1.3
         stops:
@@ -904,7 +926,7 @@ layers:
     layout:
       line-cap: round
     paint:
-      line-color: rgba(152, 209, 252, 1)
+      line-color: $gl-water-color
       line-width:
         base: 1.3
         stops:
@@ -921,7 +943,7 @@ layers:
     layout:
       line-cap: round
     paint:
-      line-color: rgba(152, 209, 252, 1)
+      line-color: $gl-water-color
       line-width:
         base: 1.2
         stops:
@@ -938,15 +960,7 @@ layers:
       - [has, name]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      text-font:
-        - Noto Sans Regular
-      text-size: 14
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
-      symbol-placement: line
-      text-letter-spacing: 0.2
-      symbol-spacing: 350
+      <<: *layout-label
     paint:
       <<: *paint-water-label
   - id: tunnel-railway
@@ -958,7 +972,7 @@ layers:
       - ['==', brunnel, tunnel]
       - ['==', class, rail]
     paint:
-      line-color: '#A58043'
+      line-color: $railway-tunnel-color
       line-opacity: 0.4
       line-width:
         base: 1.4
@@ -1041,13 +1055,7 @@ layers:
       line-join: round
     paint:
       line-color: '#e9ac77'
-      line-width:
-        base: 1.2
-        stops:
-          - [5, 0.4]
-          - [6, 0.6]
-          - [7, 1.5]
-          - [20, 22]
+      line-width: $cacing-line-width
   - id: tunnel-motorway-casing
     type: line
     source: geolonia
@@ -1063,13 +1071,7 @@ layers:
       line-color: '#e9ac77'
       line-dasharray:
         [0.5, 0.25]
-      line-width:
-        base: 1.2
-        stops:
-          - [5, 0.4]
-          - [6, 0.6]
-          - [7, 1.5]
-          - [20, 22]
+      line-width: $cacing-line-width
   - id: tunnel-path
     type: line
     source: geolonia
@@ -1156,12 +1158,7 @@ layers:
       line-join: round
     paint:
       line-color: '#fff4c6'
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [7, 0.5]
-          - [20, 18]
+      line-width: $highway-line-width2
   - id: tunnel-motorway
     type: line
     source: geolonia
@@ -1175,12 +1172,7 @@ layers:
       visibility: visible
     paint:
       line-color: '#ffdaa6'
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [7, 0.5]
-          - [20, 18]
+      line-width: $highway-line-width2
   - id: ferry
     type: line
     source: geolonia
@@ -1192,7 +1184,7 @@ layers:
       line-join: round
       visibility: visible
     paint:
-      line-color: rgba(108, 159, 182, 1)
+      line-color: $ferry-line-color
       line-width: 1.1
       line-dasharray:
         [2, 2]
@@ -1205,9 +1197,7 @@ layers:
       - all
       - [in, class, taxiway]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
       line-color: rgba(153, 153, 153, 1)
       line-width:
@@ -1225,9 +1215,7 @@ layers:
       - all
       - [in, class, runway]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
       line-color: rgba(153, 153, 153, 1)
       line-width:
@@ -1264,11 +1252,9 @@ layers:
       - [in, class, taxiway]
       - ['==', $type, LineString]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: rgba(255, 255, 255, 1)
+      line-color: $way-line-color2
       line-width:
         base: 1.5
         stops:
@@ -1289,11 +1275,9 @@ layers:
       - [in, class, runway]
       - ['==', $type, LineString]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: rgba(255, 255, 255, 1)
+      line-color: $way-line-color2
       line-width:
         base: 1.5
         stops:
@@ -1330,15 +1314,7 @@ layers:
       line-cap: round
       line-join: round
     paint:
-      line-color: '#e9ac77'
-      line-opacity: 1
-      line-width:
-        base: 1.2
-        stops:
-          - [12, 1]
-          - [13, 3]
-          - [14, 4]
-          - [20, 15]
+      <<: *paint-bridge
   - id: highway-link-casing
     type: line
     source: geolonia
@@ -1349,19 +1325,9 @@ layers:
       - ['!in', brunnel, bridge, tunnel]
       - [in, class, primary_link, secondary_link, tertiary_link, trunk_link]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: '#e9ac77'
-      line-opacity: 1
-      line-width:
-        base: 1.2
-        stops:
-          - [12, 1]
-          - [13, 3]
-          - [14, 4]
-          - [20, 15]
+      <<: *paint-bridge
   - id: highway-minor-casing
     type: line
     source: geolonia
@@ -1377,7 +1343,7 @@ layers:
       line-cap: round
       line-join: round
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-opacity:
         stops:
           - [12, 0]
@@ -1402,7 +1368,7 @@ layers:
       line-join: round
       visibility: visible
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-opacity: 1
       line-width:
         base: 1.2
@@ -1423,7 +1389,7 @@ layers:
       line-join: round
       visibility: visible
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-opacity:
         stops:
           - [7, 0]
@@ -1449,7 +1415,7 @@ layers:
       line-join: round
       visibility: visible
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-opacity:
         stops:
           - [5, 0]
@@ -1475,7 +1441,7 @@ layers:
       line-join: round
       visibility: visible
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-width:
         base: 1.2
         stops:
@@ -1539,9 +1505,7 @@ layers:
       - ['!in', brunnel, bridge, tunnel]
       - [in, class, primary_link, secondary_link, tertiary_link, trunk_link]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
       line-color: '#fea'
       line-width:
@@ -1583,17 +1547,10 @@ layers:
       - ['!in', brunnel, bridge, tunnel]
       - [in, class, secondary, tertiary]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: rgba(255, 255, 255, 1)
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [8, 0.5]
-          - [20, 13]
+      line-color: $way-line-color2
+      line-width: $highway-line-width
   - id: highway-primary
     type: line
     source: geolonia
@@ -1605,11 +1562,9 @@ layers:
         - ['!in', brunnel, bridge, tunnel]
         - [in, class, primary]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: rgba(255, 255, 255, 1)
+      line-color: $way-line-color2
       line-width:
         base: 1.2
         stops:
@@ -1627,17 +1582,10 @@ layers:
         - ['!in', brunnel, bridge, tunnel]
         - [in, class, trunk]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: rgba(255, 255, 255, 1)
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [7, 0.5]
-          - [20, 18]
+      line-color: $way-line-color2
+      line-width: $highway-line-width2
   - id: highway-motorway
     type: line
     source: geolonia
@@ -1650,17 +1598,10 @@ layers:
         - ['!in', brunnel, bridge, tunnel]
         - ['==', class, motorway]
     layout:
-      line-cap: round
-      line-join: round
-      visibility: visible
+      <<: *layout-way-line
     paint:
-      line-color: rgba(255, 255, 255, 1)
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [7, 0.5]
-          - [20, 18]
+      line-color: $way-line-color2
+      line-width: $highway-line-width2
   - id: bridge-motorway-link-casing
     type: line
     source: geolonia
@@ -1672,15 +1613,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: '#e9ac77'
-      line-opacity: 1
-      line-width:
-        base: 1.2
-        stops:
-          - [12, 1]
-          - [13, 3]
-          - [14, 4]
-          - [20, 15]
+      <<: *paint-bridge
   - id: bridge-link-casing
     type: line
     source: geolonia
@@ -1692,15 +1625,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: '#e9ac77'
-      line-opacity: 1
-      line-width:
-        base: 1.2
-        stops:
-          - [12, 1]
-          - [13, 3]
-          - [14, 4]
-          - [20, 15]
+      <<: *paint-bridge
   - id: bridge-secondary-tertiary-casing
     type: line
     source: geolonia
@@ -1712,7 +1637,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-opacity: 1
       line-width:
         base: 1.2
@@ -1730,7 +1655,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: rgba(222, 222, 222, 1)
+      line-color: $way-line-color
       line-width:
         base: 1.2
         stops:
@@ -1749,14 +1674,8 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: rgba(222, 222, 222, 1)
-      line-width:
-        base: 1.2
-        stops:
-          - [5, 0.4]
-          - [6, 0.6]
-          - [7, 1.5]
-          - [20, 22]
+      line-color: $way-line-color
+      line-width: $cacing-line-width
   - id: bridge-path-casing
     type: line
     source: geolonia
@@ -1842,7 +1761,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: rgba(255, 255, 255, 1)
+      line-color: $way-line-color2
       line-width:
         base: 1.2
         stops:
@@ -1860,13 +1779,8 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: rgba(255, 255, 255, 1)
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [7, 0.5]
-          - [20, 18]
+      line-color: $way-line-color2
+      line-width: $highway-line-width2
   - id: bridge-motorway
     type: line
     source: geolonia
@@ -1878,13 +1792,8 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: rgba(255, 255, 255, 1)
-      line-width:
-        base: 1.2
-        stops:
-          - [6.5, 0]
-          - [7, 0.5]
-          - [20, 18]
+      line-color: $way-line-color2
+      line-width: $highway-line-width2
   - id: railway
     type: line
     source: geolonia
@@ -1928,7 +1837,7 @@ layers:
       visibility: visible
       line-cap: round
     paint:
-      line-color: hsl(0, 0%, 70%)
+      line-color: $cablecar-line-color
       line-width:
         base: 1
         stops:
@@ -1945,7 +1854,7 @@ layers:
       visibility: visible
       line-cap: round
     paint:
-      line-color: hsl(0, 0%, 70%)
+      line-color: $cablecar-line-color
       line-width:
         base: 1
         stops:
@@ -1965,7 +1874,7 @@ layers:
     layout:
       line-join: round
     paint:
-      line-color: '#9e9cab'
+      line-color: $boundary-line-color
       line-dasharray:
         [3, 1, 1, 1]
       line-width:
@@ -1983,15 +1892,7 @@ layers:
       - ['==', $type, LineString]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      text-font:
-        - Noto Sans Regular
-      text-size: 14
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
-      symbol-placement: line
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
+      <<: *layout-label
     paint:
       <<: *paint-water-label
   - id: water-name-ocean
@@ -2004,15 +1905,8 @@ layers:
       - ['==', class, ocean]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      text-font:
-        - Noto Sans Regular
-      text-size: 14
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
+      <<: *layout-label
       symbol-placement: point
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
     paint:
       <<: *paint-water-label
   - id: water-name-other
@@ -2026,18 +1920,14 @@ layers:
       - ['!=', disputed, japan_northern_territories]
       - ['!=', subclass, moat]
     layout:
-      text-font:
-        - Noto Sans Regular
+      <<: *layout-label
+      symbol-placement: point
+      symbol-spacing: 350
+      text-letter-spacing: 0.2
       text-size:
         stops:
           - [0, 10]
           - [6, 14]
-      text-field: '{name}'
-      text-max-width: 5
-      text-rotation-alignment: map
-      symbol-placement: point
-      symbol-spacing: 350
-      text-letter-spacing: 0.2
       visibility: visible
     paint:
       <<: *paint-water-label
@@ -2079,24 +1969,9 @@ layers:
       - [has, name]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      text-padding: 2
-      text-font:
-        - Noto Sans Regular
-      text-anchor: top
-      icon-image:
-        - coalesce
-        - [image, [concat, [get, class], '-11']]
-        - [image, circle-11]
-      text-field: '{name}'
-      text-offset:
-        [0, 0.6]
-      text-size: 12
-      text-max-width: 9
+      <<: *layout-poi-label-icon
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: poi-r10-r24
     type: symbol
     source: geolonia
@@ -2110,25 +1985,10 @@ layers:
       - ['!=', disputed, japan_northern_territories]
       - ['>=', rank, 10]
     layout:
-      text-padding: 2
-      text-font:
-        - Noto Sans Regular
-      text-anchor: top
-      icon-image:
-        - coalesce
-        - [image, [concat, [get, class], '-11']]
-        - [image, circle-11]
-      text-field: '{name}'
-      text-offset:
-        [0, 0.6]
-      text-size: 12
-      text-max-width: 9
+      <<: *layout-poi-label-icon
       visibility: visible
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: poi-r0-r9
     type: symbol
     source: geolonia
@@ -2141,25 +2001,10 @@ layers:
       - [has, name]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      text-padding: 2
-      text-font:
-        - Noto Sans Regular
-      text-anchor: top
-      icon-image:
-        - coalesce
-        - [image, [concat, [get, class], '-11']]
-        - [image, circle-11]
-      text-field: '{name}'
-      text-offset:
-        [0, 0.6]
-      text-size: 12
-      text-max-width: 9
+      <<: *layout-poi-label-icon
       visibility: visible
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: poi-railway
     type: symbol
     source: geolonia
@@ -2173,16 +2018,8 @@ layers:
       - ['==', subclass, station]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      text-padding: 2
-      text-font:
-        - Noto Sans Regular
-      text-anchor: top
+      <<: *layout-poi-label-icon
       icon-image: '{class}-11'
-      text-field: '{name}'
-      text-offset:
-        [0, 0.6]
-      text-size: 12
-      text-max-width: 9
       icon-optional: false
       icon-ignore-placement: false
       icon-allow-overlap: false
@@ -2190,10 +2027,7 @@ layers:
       text-allow-overlap: false
       text-optional: true
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: railway-name
     type: symbol
     source: geolonia
@@ -2231,16 +2065,8 @@ layers:
       - [in, class, motorway, trunk, primary, secondary, tertiary, minor, service]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      symbol-placement: line
-      icon-image: oneway
-      symbol-spacing: 75
-      icon-padding: 2
-      icon-rotation-alignment: map
+      <<: *layout-oneway
       icon-rotate: 90
-      icon-size:
-        stops:
-          - [15, 0.5]
-          - [19, 1]
     paint:
       icon-opacity: 0.5
   - id: road_oneway_opposite
@@ -2254,16 +2080,8 @@ layers:
       - [in, class, motorway, trunk, primary, secondary, tertiary, minor, service]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      symbol-placement: line
-      icon-image: oneway
-      symbol-spacing: 75
-      icon-padding: 2
-      icon-rotation-alignment: map
+      <<: *layout-oneway
       icon-rotate: -90
-      icon-size:
-        stops:
-          - [15, 0.5]
-          - [19, 1]
     paint:
       icon-opacity: 0.5
   - id: road_shield
@@ -2318,10 +2136,7 @@ layers:
       icon-size: 1
       text-optional: true
     paint:
-      text-halo-blur: 0.5
-      text-color: '#666'
-      text-halo-width: 1
-      text-halo-color: '#ffffff'
+      <<: *paint-label-low-zoom
   - id: nt-label-small
     type: symbol
     source: oceanus
@@ -2341,9 +2156,7 @@ layers:
       text-max-width: 8
       visibility: visible
     paint:
-      text-color: '#333'
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-small-city-label
   - id: nt-label-large
     type: symbol
     source: oceanus
@@ -2363,9 +2176,7 @@ layers:
       text-max-width: 8
       visibility: visible
     paint:
-      text-color: '#333'
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-small-city-label
   - id: place-village
     type: symbol
     source: geolonia
@@ -2376,26 +2187,16 @@ layers:
       - ['==', class, village]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
+      <<: *layout-city-label
       icon-size: 0.3
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
       text-size:
         base: 1.2
         stops:
           - [10, 12]
           - [15, 22]
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
     paint:
       <<: *paint-icon
-      text-color: '#333'
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-small-city-label
   - id: place-town
     type: symbol
     source: geolonia
@@ -2406,17 +2207,9 @@ layers:
       - ['==', class, town]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
+      <<: *layout-city-label
       icon-size: 0.3
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
       text-size: 12
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
     paint:
       <<: *paint-icon
       <<: *paint-city-label
@@ -2452,15 +2245,7 @@ layers:
       - ['==', rank, 10]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.3
       text-size: 14
     paint:
@@ -2478,15 +2263,7 @@ layers:
       - ['==', rank, 9]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.3
       text-size: 14
     paint:
@@ -2504,15 +2281,7 @@ layers:
       - ['==', rank, 8]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.3
       text-size: 14
     paint:
@@ -2530,15 +2299,7 @@ layers:
       - ['==', rank, 7]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.3
       text-size: 14
     paint:
@@ -2556,15 +2317,7 @@ layers:
       - ['==', rank, 6]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.3
       text-size: 14
     paint:
@@ -2582,15 +2335,7 @@ layers:
       - ['==', rank, 5]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.3
       text-size: 14
     paint:
@@ -2608,15 +2353,7 @@ layers:
       - ['==', rank, 4]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.3
       text-size: 14
     paint:
@@ -2634,15 +2371,7 @@ layers:
       - ['==', rank, 3]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.4
       text-size: 16
     paint:
@@ -2660,15 +2389,7 @@ layers:
       - ['==', rank, 2]
       - ['!=', disputed, japan_northern_territories]
     layout:
-      icon-image: circle-11
-      text-anchor: top
-      text-offset:
-        [0, 0.1]
-      text-font:
-        - Noto Sans Regular
-      text-field: '{name}'
-      text-max-width: 8
-      visibility: visible
+      <<: *layout-city-label
       icon-size: 0.5
       text-size: 18
     paint:
@@ -2696,6 +2417,4 @@ layers:
       icon-size: 0.8
       text-size: 18
     paint:
-      text-color: '#333'
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-small-city-label
