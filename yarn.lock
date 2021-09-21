@@ -603,8 +603,8 @@ validate-npm-package-license@^3.0.1:
     spdx-expression-parse "^3.0.0"
 
 "vt-style@github:geolonia/vt-style#gh-pages":
-  version "0.1.0"
-  resolved "https://codeload.github.com/geolonia/vt-style/tar.gz/ad3166d5ff9204fdb6cbc96dddbc12e1f28b9456"
+  version "0.1.1"
+  resolved "https://codeload.github.com/geolonia/vt-style/tar.gz/18216d50eb1d062e4321d23c09e42e8bddefb409"
   dependencies:
     chalk "^4.1.1"
     chokidar "^3.5.2"

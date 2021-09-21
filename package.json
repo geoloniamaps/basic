@@ -4,7 +4,8 @@
   "description": "3D style based on default style for [Geolonia](https://geolonia.com/).",
   "main": "style.json",
   "scripts": {
-    "start": "/usr/local/bin/maputnik --watch --file ./style.json"
+    "start:vt-style": "vt-style ./style.yml --output ./style.json --watch",
+    "start:maputnik": "/usr/local/bin/maputnik --watch --file ./style.json"
   },
   "repository": {
     "type": "git",
