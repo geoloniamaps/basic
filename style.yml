@@ -1,3 +1,62 @@
+$background-color: rgba(254, 254, 254, 1)
+$grass-color: '#d8e8c8'
+$wood-color: '#6a4'
+$wood-outline-color: hsla(0, 0%, 0%, 0.03)
+$gl-water-color: rgba(152, 209, 252, 1)
+$oc-oc200-color: rgba(2, 183, 237, 1) 
+$oc-oc1000-color: rgba(2, 170, 228, 1)
+$oc-oc2000-color: rgba(3, 147, 212, 1)
+$oc-oc3000-color: rgba(3, 136, 205, 1)
+$oc-oc4000-color: rgba(4, 121, 195, 1)
+$oc-oc5000-color: rgba(5, 99, 181, 1)
+$oc-oc6000-color: rgba(6, 69, 161, 1)
+$oc-oc7000-color: rgba(7, 45, 145, 1)
+$oc-oc8000-color: rgba(8, 26, 132, 1)
+$oc-oc9000-color: rgba(9, 9, 121, 1)
+$oc-oc10000-color: rgba(17, 17, 136, 1)
+$oc-glacier-color: rgba(241, 248, 254, 1)
+$oc-forest-color: rgba(223, 236, 218, 1)
+$oc-water-river-color: '#a0c8f0'
+$oc-water-text-label: '#74aee9'
+$oc-water-text-label-halo-color: rgba(255, 255, 255, 0.7)
+
+__variables:
+  paint-water-label: &paint-water-label
+    text-color: $oc-water-text-label
+    text-halo-width: 1.5
+    text-halo-color: $oc-water-text-label-halo-color
+
+  paint-city-label: &paint-city-label
+    text-color: rgba(102, 102, 102, 1)
+    text-halo-width: 1.2
+    text-halo-color: rgba(255, 255, 255, 0.8)
+
+  paint-city-label-icon: &paint-city-label-icon
+    icon-color: '#000000'
+    icon-opacity:
+      stops:
+        - [11.9, 1]
+        - [12, 0]
+
+  paint-icon: &paint-icon
+    icon-color: '#000000'
+    icon-opacity:
+      stops:
+        - [11.9, 1]
+        - [12, 0]
+
+  layout-city-label: &layout-city-label
+    icon-image: circle-11
+    text-anchor: top
+    text-offset:
+      [0, 0.1]
+    text-font:
+      - Noto Sans Regular
+    text-field: '{name}'
+    text-max-width: 8
+    visibility: visible
+
+
 version: 8
 id: geolonia-basic
 name: Geolonia Basic
@@ -19,7 +78,7 @@ layers:
   - id: background
     type: background
     paint:
-      background-color: rgba(254, 254, 254, 1)
+      background-color: $background-color
   - id: landcover-grass
     type: fill
     source: geolonia
@@ -28,7 +87,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: '#d8e8c8'
+      fill-color: $grass-color
       fill-opacity: 1
   - id: landcover-wood
     type: fill
@@ -38,9 +97,9 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: '#6a4'
+      fill-color: $wood-color
       fill-opacity: 0.2
-      fill-outline-color: hsla(0, 0%, 0%, 0.03)
+      fill-outline-color: $wood-outline-color
       fill-antialias:
         base: 1
         stops:
@@ -55,7 +114,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: '#d8e8c8'
+      fill-color: $grass-color
       fill-opacity: 0.8
   - id: water
     type: fill
@@ -64,7 +123,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(152, 209, 252, 1)
+      fill-color: $gl-water-color
   - id: water-river-lake-ja
     type: fill
     source: geolonia
@@ -75,7 +134,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(152, 209, 252, 1)
+      fill-color: $gl-water-color
   - id: oc-ocean200
     type: fill
     source: oceanus
@@ -87,7 +146,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(2, 183, 237, 1)
+      fill-color: $oc-oc200-color
   - id: oc-ocean1000
     type: fill
     source: oceanus
@@ -99,7 +158,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(2, 170, 228, 1)
+      fill-color: $oc-oc1000-color
   - id: oc-ocean2000
     type: fill
     source: oceanus
@@ -111,7 +170,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(3, 147, 212, 1)
+      fill-color: $oc-oc2000-color
   - id: oc-ocean3000
     type: fill
     source: oceanus
@@ -123,7 +182,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(3, 136, 205, 1)
+      fill-color: $oc-oc3000-color
   - id: oc-ocean4000
     type: fill
     source: oceanus
@@ -135,7 +194,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(4, 121, 195, 1)
+      fill-color: $oc-oc4000-color
   - id: oc-ocean5000
     type: fill
     source: oceanus
@@ -147,7 +206,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(5, 99, 181, 1)
+      fill-color: $oc-oc5000-color
   - id: oc-ocean6000
     type: fill
     source: oceanus
@@ -159,7 +218,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(6, 69, 161, 1)
+      fill-color: $oc-oc6000-color
   - id: oc-ocean7000
     type: fill
     source: oceanus
@@ -171,7 +230,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(7, 45, 145, 1)
+      fill-color: $oc-oc7000-color
   - id: oc-ocean8000
     type: fill
     source: oceanus
@@ -183,7 +242,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(8, 26, 132, 1)
+      fill-color: $oc-oc8000-color
   - id: oc-ocean9000
     type: fill
     source: oceanus
@@ -195,7 +254,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(9, 9, 121, 1)
+      fill-color: $oc-oc9000-color
   - id: oc-ocean10000
     type: fill
     source: oceanus
@@ -207,7 +266,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(17, 17, 136, 1)
+      fill-color: $oc-oc10000-color
   - id: oc-glacier
     type: fill
     source: oceanus
@@ -216,7 +275,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(241, 248, 254, 1)
+      fill-color: $oc-glacier-color
   - id: oc-forest
     type: fill
     source: oceanus
@@ -226,7 +285,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(223, 236, 218, 1)
+      fill-color: $oc-forest-color
   - id: oc-waterway-river-ja
     type: line
     source: oceanus
@@ -241,7 +300,7 @@ layers:
     layout:
       line-cap: round
     paint:
-      line-color: '#a0c8f0'
+      line-color: $oc-water-river-color
       line-width:
         - interpolate
         - [exponential, 1.2]
@@ -263,7 +322,7 @@ layers:
     layout:
       line-cap: round
     paint:
-      line-color: '#a0c8f0'
+      line-color: $oc-water-river-color
       line-width:
         - interpolate
         - - exponential
@@ -295,9 +354,7 @@ layers:
       symbol-spacing: 350
       text-letter-spacing: 0.2
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: oc-waterway-name
     type: symbol
     source: oceanus
@@ -318,9 +375,7 @@ layers:
       symbol-spacing: 350
       text-letter-spacing: 0.2
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: oc-lake-ja
     type: fill
     source: oceanus
@@ -334,7 +389,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(152, 209, 252, 1)
+      fill-color: $gl-water-color
   - id: oc-lake
     type: fill
     source: oceanus
@@ -347,7 +402,7 @@ layers:
     layout:
       visibility: visible
     paint:
-      fill-color: rgba(152, 209, 252, 1)
+      fill-color: $gl-water-color
   - id: oc-highway-outer-ja
     type: line
     source: oceanus
@@ -500,9 +555,7 @@ layers:
       symbol-spacing: 350
       text-letter-spacing: 0.2
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: oc-water-name-other
     type: symbol
     source: oceanus
@@ -532,9 +585,7 @@ layers:
       text-letter-spacing: 0.2
       visibility: visible
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: nt-water-name-ocean
     type: symbol
     source: oceanus
@@ -554,9 +605,7 @@ layers:
       symbol-spacing: 350
       text-letter-spacing: 0.2
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: nt-water-name-river
     type: symbol
     source: oceanus
@@ -576,9 +625,7 @@ layers:
       symbol-spacing: 350
       text-letter-spacing: 0.2
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: oc-label-country
     type: symbol
     source: oceanus
@@ -595,9 +642,7 @@ layers:
       text-max-width: 8
       visibility: visible
     paint:
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-city-label
   - id: oc-label-pref-ja
     type: symbol
     source: oceanus
@@ -617,9 +662,7 @@ layers:
       text-max-width: 8
       visibility: visible
     paint:
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-city-label
   - id: oc-label-pref
     type: symbol
     source: oceanus
@@ -638,9 +681,7 @@ layers:
       text-max-width: 8
       visibility: visible
     paint:
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-city-label
   - id: oc-label-town-ja
     type: symbol
     source: oceanus
@@ -907,9 +948,7 @@ layers:
       text-letter-spacing: 0.2
       symbol-spacing: 350
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: tunnel-railway
     type: line
     source: geolonia
@@ -1954,9 +1993,7 @@ layers:
       symbol-spacing: 350
       text-letter-spacing: 0.2
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: water-name-ocean
     type: symbol
     source: geolonia
@@ -1977,9 +2014,7 @@ layers:
       symbol-spacing: 350
       text-letter-spacing: 0.2
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: water-name-other
     type: symbol
     source: geolonia
@@ -2005,9 +2040,7 @@ layers:
       text-letter-spacing: 0.2
       visibility: visible
     paint:
-      text-color: '#74aee9'
-      text-halo-width: 1.5
-      text-halo-color: rgba(255, 255, 255, 0.7)
+      <<: *paint-water-label
   - id: building
     type: fill
     source: geolonia
@@ -2186,9 +2219,7 @@ layers:
           - [12, 800]
           - [15, 600]
     paint:
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-city-label
   - id: road_oneway
     type: symbol
     source: geolonia
@@ -2361,11 +2392,7 @@ layers:
       text-max-width: 8
       visibility: visible
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
+      <<: *paint-icon
       text-color: '#333'
       text-halo-width: 1.2
       text-halo-color: rgba(255, 255, 255, 0.8)
@@ -2391,14 +2418,8 @@ layers:
       text-max-width: 8
       visibility: visible
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-island-name
     type: symbol
     source: geolonia
@@ -2418,9 +2439,7 @@ layers:
       text-max-width: 8
       visibility: visible
     paint:
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-city-label
   - id: place-city-rank10
     type: symbol
     source: geolonia
@@ -2434,25 +2453,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.3
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 14
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.3
+      text-size: 14
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-rank9
     type: symbol
     source: geolonia
@@ -2466,25 +2479,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.3
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 14
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.3
+      text-size: 14
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-rank8
     type: symbol
     source: geolonia
@@ -2498,25 +2505,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.3
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 14
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.3
+      text-size: 14
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-rank7
     type: symbol
     source: geolonia
@@ -2530,25 +2531,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.3
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 14
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.3
+      text-size: 14
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-rank6
     type: symbol
     source: geolonia
@@ -2562,25 +2557,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.3
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 14
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.3
+      text-size: 14
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-rank5
     type: symbol
     source: geolonia
@@ -2594,25 +2583,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.3
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 14
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.3
+      text-size: 14
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-rank4
     type: symbol
     source: geolonia
@@ -2626,25 +2609,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.3
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 14
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.3
+      text-size: 14
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-rank3
     type: symbol
     source: geolonia
@@ -2658,25 +2635,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.4
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 16
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.4
+      text-size: 16
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-rank2
     type: symbol
     source: geolonia
@@ -2690,25 +2661,19 @@ layers:
       - ['!=', disputed, japan_northern_territories]
     layout:
       icon-image: circle-11
-      icon-size: 0.5
       text-anchor: top
       text-offset:
         [0, 0.1]
       text-font:
         - Noto Sans Regular
-      text-size: 18
       text-field: '{name}'
       text-max-width: 8
       visibility: visible
+      icon-size: 0.5
+      text-size: 18
     paint:
-      icon-color: '#000000'
-      icon-opacity:
-        stops:
-          - [11.9, 1]
-          - [12, 0]
-      text-color: rgba(102, 102, 102, 1)
-      text-halo-width: 1.2
-      text-halo-color: rgba(255, 255, 255, 0.8)
+      <<: *paint-icon
+      <<: *paint-city-label
   - id: place-city-capital
     type: symbol
     source: geolonia
@@ -2721,15 +2686,15 @@ layers:
     layout:
       text-font:
         - Noto Sans Regular
-      text-size: 18
       text-field: '{name}'
       text-max-width: 8
       icon-image: star-11
       text-offset:
         [0.4, 0]
-      icon-size: 0.8
       text-anchor: left
       visibility: visible
+      icon-size: 0.8
+      text-size: 18
     paint:
       text-color: '#333'
       text-halo-width: 1.2

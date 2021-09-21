@@ -5250,7 +5250,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5259,10 +5258,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.3,
+        "text-size": 14
       },
       "paint": {
         "icon-color": "#000000",
@@ -5314,7 +5314,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5323,10 +5322,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.3,
+        "text-size": 14
       },
       "paint": {
         "icon-color": "#000000",
@@ -5378,7 +5378,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5387,10 +5386,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.3,
+        "text-size": 14
       },
       "paint": {
         "icon-color": "#000000",
@@ -5442,7 +5442,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5451,10 +5450,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.3,
+        "text-size": 14
       },
       "paint": {
         "icon-color": "#000000",
@@ -5506,7 +5506,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5515,10 +5514,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.3,
+        "text-size": 14
       },
       "paint": {
         "icon-color": "#000000",
@@ -5570,7 +5570,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5579,10 +5578,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.3,
+        "text-size": 14
       },
       "paint": {
         "icon-color": "#000000",
@@ -5634,7 +5634,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.3,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5643,10 +5642,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 14,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.3,
+        "text-size": 14
       },
       "paint": {
         "icon-color": "#000000",
@@ -5698,7 +5698,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.4,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5707,10 +5706,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 16,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.4,
+        "text-size": 16
       },
       "paint": {
         "icon-color": "#000000",
@@ -5762,7 +5762,6 @@
       ],
       "layout": {
         "icon-image": "circle-11",
-        "icon-size": 0.5,
         "text-anchor": "top",
         "text-offset": [
           0,
@@ -5771,10 +5770,11 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 18,
         "text-field": "{name}",
         "text-max-width": 8,
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.5,
+        "text-size": 18
       },
       "paint": {
         "icon-color": "#000000",
@@ -5822,7 +5822,6 @@
         "text-font": [
           "Noto Sans Regular"
         ],
-        "text-size": 18,
         "text-field": "{name}",
         "text-max-width": 8,
         "icon-image": "star-11",
@@ -5830,9 +5829,10 @@
           0.4,
           0
         ],
-        "icon-size": 0.8,
         "text-anchor": "left",
-        "visibility": "visible"
+        "visibility": "visible",
+        "icon-size": 0.8,
+        "text-size": 18
       },
       "paint": {
         "text-color": "#333",
