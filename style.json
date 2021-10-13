@@ -17,7 +17,7 @@
       "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
     }
   },
-  "sprite": "https://sprites.geolonia.com/basic",
+  "sprite": "https://sprites.geolonia.com/basic-color",
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
