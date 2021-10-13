@@ -4873,14 +4873,17 @@
           6
         ],
         [
-          "==",
-          "class",
-          "primary"
-        ],
-        [
-          "==",
-          "class",
-          "secondary"
+          "any",
+          [
+            "==",
+            "class",
+            "primary"
+          ],
+          [
+            "==",
+            "class",
+            "secondary"
+          ]
         ],
         [
           "!=",
@@ -4907,11 +4910,11 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans CJK JP Bold"
         ],
         "text-offset": [
           0,
-          0
+          -0.1
         ],
         "text-rotation-alignment": "viewport",
         "text-size": 10,
@@ -4933,7 +4936,7 @@
         [
           "<=",
           "ref_length",
-          6
+          3
         ],
         [
           "==",
@@ -4965,11 +4968,11 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans CJK JP Bold"
         ],
         "text-offset": [
           0,
-          0
+          -0.1
         ],
         "text-rotation-alignment": "viewport",
         "text-size": 10,
@@ -5023,11 +5026,11 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans CJK JP Bold"
         ],
         "text-offset": [
           0,
-          0
+          -0.1
         ],
         "text-rotation-alignment": "viewport",
         "text-size": 10,
