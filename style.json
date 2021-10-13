@@ -4917,7 +4917,9 @@
         "text-size": 10,
         "icon-size": 1
       },
-      "paint": {}
+      "paint": {
+        "text-color": "#ffffff"
+      }
     },
     {
       "id": "road_shield_national",
@@ -4973,7 +4975,9 @@
         "text-size": 10,
         "icon-size": 1
       },
-      "paint": {}
+      "paint": {
+        "text-color": "#ffffff"
+      }
     },
     {
       "id": "road_shield_highway",
@@ -5029,7 +5033,9 @@
         "text-size": 10,
         "icon-size": 1
       },
-      "paint": {}
+      "paint": {
+        "text-color": "#ffffff"
+      }
     },
     {
       "id": "airport-label-major",
