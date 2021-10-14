@@ -17,7 +17,7 @@
       "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/geolonia/sprites.geolonia.com/add-road-jp/public/basic-color",
+  "sprite": "https://sprites.geolonia.com/basic-color",
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -4468,6 +4468,17 @@
                 "get",
                 "class"
               ],
+              "-JP-11"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
               "-11"
             ]
           ],
@@ -4540,6 +4551,17 @@
                 "get",
                 "class"
               ],
+              "-JP-11"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
               "-11"
             ]
           ],
@@ -4600,6 +4622,17 @@
         "text-anchor": "top",
         "icon-image": [
           "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP-11"
+            ]
+          ],
           [
             "image",
             [
