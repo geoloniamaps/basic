@@ -17,7 +17,7 @@
       "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
     }
   },
-  "sprite": "https://sprites.geolonia.com/basic",
+  "sprite": "https://sprites.geolonia.com/basic-color",
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -4468,6 +4468,17 @@
                 "get",
                 "class"
               ],
+              "-JP-11"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
               "-11"
             ]
           ],
@@ -4540,6 +4551,17 @@
                 "get",
                 "class"
               ],
+              "-JP-11"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
               "-11"
             ]
           ],
@@ -4600,6 +4622,17 @@
         "text-anchor": "top",
         "icon-image": [
           "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP-11"
+            ]
+          ],
           [
             "image",
             [
@@ -4859,7 +4892,7 @@
       }
     },
     {
-      "id": "road_shield",
+      "id": "road_shield_prefectural",
       "type": "symbol",
       "metadata": {},
       "source": "geolonia",
@@ -4873,13 +4906,26 @@
           6
         ],
         [
+          "any",
+          [
+            "==",
+            "class",
+            "primary"
+          ],
+          [
+            "==",
+            "class",
+            "secondary"
+          ]
+        ],
+        [
           "!=",
           "disputed",
           "japan_northern_territories"
         ]
       ],
       "layout": {
-        "icon-image": "default_{ref_length}",
+        "icon-image": "prefectural-JP_{ref_length}",
         "icon-rotation-alignment": "viewport",
         "symbol-placement": {
           "base": 1,
@@ -4897,17 +4943,135 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans CJK JP Bold"
         ],
         "text-offset": [
           0,
-          0
+          -0.1
         ],
         "text-rotation-alignment": "viewport",
         "text-size": 10,
         "icon-size": 1
       },
-      "paint": {}
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "road_shield_national",
+      "type": "symbol",
+      "metadata": {},
+      "source": "geolonia",
+      "source-layer": "transportation_name",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        [
+          "<=",
+          "ref_length",
+          3
+        ],
+        [
+          "==",
+          "class",
+          "trunk"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "icon-image": "national-JP_{ref_length}",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              "point"
+            ],
+            [
+              11,
+              "line"
+            ]
+          ]
+        },
+        "symbol-spacing": 500,
+        "text-field": "{ref}",
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-offset": [
+          0,
+          -0.1
+        ],
+        "text-rotation-alignment": "viewport",
+        "text-size": 10,
+        "icon-size": 1
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "road_shield_highway",
+      "type": "symbol",
+      "metadata": {},
+      "source": "geolonia",
+      "source-layer": "transportation_name",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        [
+          "<=",
+          "ref_length",
+          6
+        ],
+        [
+          "==",
+          "class",
+          "motorway"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "icon-image": "highway-JP_{ref_length}",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              "point"
+            ],
+            [
+              11,
+              "line"
+            ]
+          ]
+        },
+        "symbol-spacing": 500,
+        "text-field": "{ref}",
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-offset": [
+          0,
+          -0.1
+        ],
+        "text-rotation-alignment": "viewport",
+        "text-size": 10,
+        "icon-size": 1
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
     },
     {
       "id": "airport-label-major",
