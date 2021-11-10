@@ -1062,13 +1062,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
@@ -1118,13 +1112,7 @@
           6,
           14
         ],
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
@@ -1157,13 +1145,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
@@ -1195,13 +1177,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "symbol-placement": "point",
@@ -1233,13 +1209,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 8,
         "visibility": "visible"
       },
@@ -1276,13 +1246,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 8,
         "visibility": "visible"
       },
@@ -1322,13 +1286,7 @@
           "Noto Sans Regular"
         ],
         "text-size": 14,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-max-width": 8,
         "visibility": "visible"
       },
@@ -1375,13 +1333,7 @@
         ],
         "text-anchor": "top",
         "icon-image": "circle-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-offset": [
           0,
           0.6
@@ -1428,13 +1380,7 @@
         ],
         "icon-image": "circle-11",
         "icon-allow-overlap": true,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-offset": [
           0.6,
           0.6
@@ -1481,13 +1427,7 @@
         ],
         "text-anchor": "top",
         "icon-image": "circle-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-offset": [
           0,
           0.6
@@ -1534,13 +1474,7 @@
         ],
         "text-anchor": "top",
         "icon-image": "airport-11",
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "name"
-          ]
-        ],
+        "text-field": "{name}",
         "text-offset": [
           0,
           0.6
