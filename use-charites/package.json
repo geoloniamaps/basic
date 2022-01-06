@@ -1,0 +1,26 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "## ユーザーがカスタマイズする際の手順",
+  "main": "index.js",
+  "scripts": {
+    "start": "charites serve style.yml --provider geolonia",
+    "build": "charites build style.yml style.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoloniamaps/basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geoloniamaps/basic/issues"
+  },
+  "homepage": "https://github.com/geoloniamaps/basic#readme",
+  "devDependencies": {
+    "@mapbox/spritezero": "^6.1.2",
+    "@unvt/charites": "^0.1.2",
+    "glob": "^7.2.0",
+    "axios": "^0.24.0"
+  }
+}
