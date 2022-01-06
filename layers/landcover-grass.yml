@@ -1,0 +1,13 @@
+id: landcover-grass
+type: fill
+source: geolonia
+source-layer: landcover
+filter:
+  - '=='
+  - class
+  - grass
+layout:
+  visibility: visible
+paint:
+  fill-color: '#d8e8c8'
+  fill-opacity: 1

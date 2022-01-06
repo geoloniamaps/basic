@@ -1,0 +1,10 @@
+id: landuse-railway
+type: fill
+source: geolonia
+source-layer: landuse
+filter:
+  - '=='
+  - class
+  - railway
+paint:
+  fill-color: hsla(30, 19%, 90%, 0.4)

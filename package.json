@@ -1,22 +1,26 @@
 {
-  "name": "geolonia-basic",
-  "version": "0.1.0",
-  "description": "3D style based on default style for [Geolonia](https://geolonia.com/).",
-  "main": "style.json",
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "## ユーザーがカスタマイズする際の手順",
+  "main": "index.js",
   "scripts": {
-    "start": "/usr/local/bin/maputnik --watch --file ./style.json"
+    "start": "charites serve style.yml --provider geolonia",
+    "build": "charites build style.yml style.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geolonia/basic.git"
+    "url": "git+https://github.com/geoloniamaps/basic.git"
   },
-  "author": {
-    "name": "Geolonia Inc.",
-    "url": "https://geolonia.com/"
-  },
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/geolonia/basic/issues"
+    "url": "https://github.com/geoloniamaps/basic/issues"
   },
-  "homepage": "https://github.com/geolonia/basic#readme"
+  "homepage": "https://github.com/geoloniamaps/basic#readme",
+  "devDependencies": {
+    "@mapbox/spritezero": "^6.1.2",
+    "@unvt/charites": "^0.1.2",
+    "glob": "^7.2.0",
+    "axios": "^0.24.0"
+  }
 }

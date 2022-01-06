@@ -1,0 +1,63 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - 'main' 
+    
+  pull_request:
+    branches:
+      - '*' 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+          
+      - name: Convert the YAML to GeoJSON
+        run: |
+          cd $GITHUB_WORKSPACE
+          npm install
+          npm run build
+
+      - name: Build Icons
+        run: |
+          cd $GITHUB_WORKSPACE
+          node .github/workflows/icon-build.js $GITHUB_WORKSPACE
+
+      - name: Set index.html for preview
+        run: |
+          cd $GITHUB_WORKSPACE
+          mv .github/workflows/index.html ./index.html
+
+      - name: Generate slug
+        id: generate_slug
+        run: echo "##[set-output name=slug;]$(echo ${GITHUB_HEAD_REF#refs/heads/})"
+        shell: bash
+
+      - name: Determine base URL
+        id: determine_base_url
+        run: echo "##[set-output name=base_url;]$(echo $GITHUB_REPOSITORY | sed 's/\//.github.io\//')"
+        shell: bash
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: 'gh-pages'
+          folder: '.'
+          target-folder: ${{ steps.generate_slug.outputs.slug }}
+
+      - name: check is URL Live
+        run: |
+          cd $GITHUB_WORKSPACE
+          node .github/workflows/check-ghpaegs.js https://${{ steps.determine_base_url.outputs.base_url }}/${{ steps.generate_slug.outputs.slug }}/
+
+      - name: Publish env
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: Preview environment
+          message: |
+            ## Preview environment
+            https://${{ steps.determine_base_url.outputs.base_url }}/${{ steps.generate_slug.outputs.slug }}/

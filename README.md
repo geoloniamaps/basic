@@ -1,26 +1,28 @@
-# Default style for Geolonia Map
+# Basic
 
-This is a Mapbox GL JS based style for [Geolonia](https://geolonia.com/).
+* [DEMO](https://geoloniamaps.github.io/basic/)
+* [DEMO on editor](https://editor.geolonia.com/?style=https://geoloniamaps.github.io/basic/style.json)
 
-* [DEMO](https://geolonia.github.io/preview?style=geolonia/basic)
-* [DEMO on editor](https://editor.geolonia.com/?style=https://raw.githubusercontent.com/geolonia/basic/master/style.json)
 
-## Development
+## ユーザーがカスタマイズする際の手順
 
-### Installs the Maputnik CLI
-
-https://github.com/maputnik/editor/wiki/Maputnik-CLI
-
-```
-$ curl -L https://github.com/maputnik/editor/releases/download/v1.6.1/maputnik_darwin -o /usr/local/bin/maputnik
-$ chmod 755 /usr/local/bin/maputnik
-```
-
-### Contributing
+* [Use this template](https://github.com/geoloniamaps/basic/generate) ボタンでこのリポジトリをコピー。
+* `style.yml` を編集。
+* しばらくすると `gh-pages` ブランチに `style.json` がコミットされるので、Geolonia Maps で表示する場合は、その URL を以下のように指定してください。
 
 ```
-$ git clone git@github.com:geolonia/basic.git
-$ cd basic
-$ npm install
-$ npm start
+<div data-style="https://<あなたのGitHubユーザー名>.github.io/<リポジトリ名>/style.json"></div>
+```
+
+例: https://codepen.io/naogify/pen/ZEJOErQ
+
+
+## 色のカスタマイズ
+
+[style.yml](./style.yml) を開いて下さい。 以下をお好きな色のカラーコードに変更しコミットして下さい。
+
+```
+$background: rgba(254, 254, 254, 1)
+
+# カスタマイズここまで
 ```
