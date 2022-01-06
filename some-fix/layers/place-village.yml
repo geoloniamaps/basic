@@ -1,0 +1,43 @@
+id: place-village
+type: symbol
+source: geolonia
+source-layer: place
+minzoom: 9
+filter:
+  - all
+  - - '=='
+    - class
+    - village
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  icon-image: circle
+  icon-size: 0.3
+  text-anchor: top
+  text-offset:
+    - 0
+    - 0.1
+  text-font:
+    - Noto Sans Regular
+  text-size:
+    base: 1.2
+    stops:
+      - - 10
+        - 12
+      - - 15
+        - 22
+  text-field: '{name}'
+  text-max-width: 8
+  visibility: visible
+paint:
+  icon-color: '#000000'
+  icon-opacity:
+    stops:
+      - - 11.9
+        - 1
+      - - 12
+        - 0
+  text-color: '#333'
+  text-halo-width: 1.2
+  text-halo-color: rgba(255,255,255,0.8)

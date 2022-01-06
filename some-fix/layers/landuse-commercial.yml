@@ -1,0 +1,14 @@
+id: landuse-commercial
+type: fill
+source: geolonia
+source-layer: landuse
+filter:
+  - all
+  - - '=='
+    - $type
+    - Polygon
+  - - '=='
+    - class
+    - commercial
+paint:
+  fill-color: hsla(0, 60%, 87%, 0.23)

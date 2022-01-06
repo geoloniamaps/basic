@@ -1,0 +1,10 @@
+id: oc-forest
+type: fill
+source: oceanus
+source-layer: oc-forest
+minzoom: 0
+maxzoom: 8
+layout:
+  visibility: visible
+paint:
+  fill-color: rgba(223, 236, 218, 1)
