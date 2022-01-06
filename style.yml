@@ -1,0 +1,148 @@
+$name: Geolonia Basic
+
+$background: '#fefefe'
+
+# カスタマイズここまで
+
+version: 8
+name: $name
+sources:
+  oceanus:
+    type: vector
+    url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
+  geolonia-water:
+    type: vector
+    url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
+  geolonia:
+    type: vector
+    minzoom: 8
+    url: https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY
+sprite: https://geoloniamaps.github.io/basic/basic
+glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+layers:
+  - !!inc/file layers/background.yml
+  - !!inc/file layers/landcover-grass.yml
+  - !!inc/file layers/landcover-wood.yml
+  - !!inc/file layers/landcover-grass-park.yml
+  - !!inc/file layers/water.yml
+  - !!inc/file layers/water-river-lake-ja.yml
+  - !!inc/file layers/oc-ocean.yml
+  - !!inc/file layers/oc-glacier.yml
+  - !!inc/file layers/oc-forest.yml
+  - !!inc/file layers/oc-waterway-river-ja.yml
+  - !!inc/file layers/oc-waterway-river.yml
+  - !!inc/file layers/oc-waterway-name-ja.yml
+  - !!inc/file layers/oc-waterway-name.yml
+  - !!inc/file layers/oc-lake-ja.yml
+  - !!inc/file layers/oc-lake.yml
+  - !!inc/file layers/oc-highway-outer-ja.yml
+  - !!inc/file layers/oc-highway-outer.yml
+  - !!inc/file layers/oc-highway-inner-ja.yml
+  - !!inc/file layers/oc-highway-inner.yml
+  - !!inc/file layers/oc-boundary-land-level-1-ja.yml
+  - !!inc/file layers/oc-boundary-land-level-1.yml
+  - !!inc/file layers/oc-boundary-land-level-0.yml
+  - !!inc/file layers/oc-water-name-ocean.yml
+  - !!inc/file layers/oc-water-name-other.yml
+  - !!inc/file layers/nt-water-name-ocean.yml
+  - !!inc/file layers/nt-water-name-river.yml
+  - !!inc/file layers/oc-label-country.yml
+  - !!inc/file layers/oc-label-pref-ja.yml
+  - !!inc/file layers/oc-label-pref.yml
+  - !!inc/file layers/oc-label-town-ja.yml
+  - !!inc/file layers/oc-label-pref-capital-ja.yml
+  - !!inc/file layers/oc-label-town.yml
+  - !!inc/file layers/oc-airport.yml
+  - !!inc/file layers/landuse-commercial.yml
+  - !!inc/file layers/landuse-industrial.yml
+  - !!inc/file layers/park.yml
+  - !!inc/file layers/landuse-cemetery.yml
+  - !!inc/file layers/landuse-hospital.yml
+  - !!inc/file layers/landuse-school.yml
+  - !!inc/file layers/landuse-railway.yml
+  - !!inc/file layers/waterway_tunnel.yml
+  - !!inc/file layers/waterway-other.yml
+  - !!inc/file layers/waterway-stream-canal.yml
+  - !!inc/file layers/waterway-river.yml
+  - !!inc/file layers/tunnel-railway.yml
+  - !!inc/file layers/tunnel-service-track-casing.yml
+  - !!inc/file layers/tunnel-minor-casing.yml
+  - !!inc/file layers/tunnel-secondary-tertiary-casing.yml
+  - !!inc/file layers/tunnel-trunk-primary-casing.yml
+  - !!inc/file layers/tunnel-motorway-casing.yml
+  - !!inc/file layers/tunnel-service-track.yml
+  - !!inc/file layers/tunnel-minor.yml
+  - !!inc/file layers/tunnel-secondary-tertiary.yml
+  - !!inc/file layers/tunnel-trunk-primary.yml
+  - !!inc/file layers/tunnel-motorway.yml
+  - !!inc/file layers/ferry.yml
+  - !!inc/file layers/aeroway-taxiway-casing.yml
+  - !!inc/file layers/aeroway-runway-casing.yml
+  - !!inc/file layers/aeroway-area.yml
+  - !!inc/file layers/aeroway-taxiway.yml
+  - !!inc/file layers/aeroway-runway.yml
+  - !!inc/file layers/highway-area.yml
+  - !!inc/file layers/highway-motorway-link-casing.yml
+  - !!inc/file layers/highway-link-casing.yml
+  - !!inc/file layers/highway-minor-casing.yml
+  - !!inc/file layers/highway-secondary-tertiary-casing.yml
+  - !!inc/file layers/highway-primary-casing.yml
+  - !!inc/file layers/highway-trunk-casing.yml
+  - !!inc/file layers/highway-motorway-casing.yml
+  - !!inc/file layers/highway-path.yml
+  - !!inc/file layers/highway-motorway-link.yml
+  - !!inc/file layers/highway-link.yml
+  - !!inc/file layers/highway-minor.yml
+  - !!inc/file layers/highway-secondary-tertiary.yml
+  - !!inc/file layers/highway-primary.yml
+  - !!inc/file layers/highway-trunk.yml
+  - !!inc/file layers/highway-motorway.yml
+  - !!inc/file layers/bridge-motorway-link-casing.yml
+  - !!inc/file layers/bridge-link-casing.yml
+  - !!inc/file layers/bridge-secondary-tertiary-casing.yml
+  - !!inc/file layers/bridge-trunk-primary-casing.yml
+  - !!inc/file layers/bridge-motorway-casing.yml
+  - !!inc/file layers/bridge-path-casing.yml
+  - !!inc/file layers/bridge-path.yml
+  - !!inc/file layers/bridge-motorway-link.yml
+  - !!inc/file layers/bridge-link.yml
+  - !!inc/file layers/bridge-secondary-tertiary.yml
+  - !!inc/file layers/bridge-trunk-primary.yml
+  - !!inc/file layers/bridge-motorway.yml
+  - !!inc/file layers/railway.yml
+  - !!inc/file layers/railway-hatching.yml
+  - !!inc/file layers/cablecar.yml
+  - !!inc/file layers/cablecar-dash.yml
+  - !!inc/file layers/boundary-land-level-4.yml
+  - !!inc/file layers/waterway-name.yml
+  - !!inc/file layers/water-name-lakeline.yml
+  - !!inc/file layers/water-name-ocean.yml
+  - !!inc/file layers/water-name-other.yml
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/building-3d.yml
+  - !!inc/file layers/poi-r25.yml
+  - !!inc/file layers/poi-r10-r24.yml
+  - !!inc/file layers/poi-r0-r9.yml
+  - !!inc/file layers/poi-railway.yml
+  - !!inc/file layers/railway-name.yml
+  - !!inc/file layers/road_oneway.yml
+  - !!inc/file layers/road_oneway_opposite.yml
+  - !!inc/file layers/road_shield_prefectural.yml
+  - !!inc/file layers/road_shield_national.yml
+  - !!inc/file layers/road_shield_highway.yml
+  - !!inc/file layers/airport-label-major.yml
+  - !!inc/file layers/nt-label-small.yml
+  - !!inc/file layers/nt-label-large.yml
+  - !!inc/file layers/place-village.yml
+  - !!inc/file layers/place-town.yml
+  - !!inc/file layers/place-island-name.yml
+  - !!inc/file layers/place-city-rank10.yml
+  - !!inc/file layers/place-city-rank9.yml
+  - !!inc/file layers/place-city-rank8.yml
+  - !!inc/file layers/place-city-rank7.yml
+  - !!inc/file layers/place-city-rank6.yml
+  - !!inc/file layers/place-city-rank5.yml
+  - !!inc/file layers/place-city-rank4.yml
+  - !!inc/file layers/place-city-rank3.yml
+  - !!inc/file layers/place-city-rank2.yml
+  - !!inc/file layers/place-city-capital.yml

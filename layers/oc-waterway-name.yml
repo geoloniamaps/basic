@@ -1,0 +1,27 @@
+id: oc-waterway-name
+type: symbol
+source: oceanus
+source-layer: oc-waterway
+minzoom: 6
+filter:
+  - all
+  - - has
+    - name
+  - - '=='
+    - - has
+      - jflag
+    - false
+layout:
+  text-font:
+    - Noto Sans Regular
+  text-size: 14
+  text-field: '{name}'
+  text-max-width: 5
+  text-rotation-alignment: map
+  symbol-placement: line
+  symbol-spacing: 350
+  text-letter-spacing: 0.2
+paint:
+  text-color: '#74aee9'
+  text-halo-width: 1.5
+  text-halo-color: rgba(255,255,255,0.7)
