@@ -1,7 +1,7 @@
 {
   "name": "basic",
   "version": "1.0.0",
-  "description": "## ユーザーがカスタマイズする際の手順",
+  "description": "The default style for Geolonia",
   "main": "index.js",
   "scripts": {
     "start": "charites serve style.yml --provider geolonia",
