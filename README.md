@@ -1,5 +1,9 @@
 # Basic
 
+このリポジトリは、Geolonia の Basic スタイルをカスタマイズし公開するためのテンプレートリポジトリです。
+
+以下のような簡単な手順でカスタマイズしたスタイルの地図を表示できます。
+
 * [DEMO](https://geoloniamaps.github.io/basic/)
 * [DEMO on editor](https://editor.geolonia.com/?style=https://geoloniamaps.github.io/basic/style.json)
 
