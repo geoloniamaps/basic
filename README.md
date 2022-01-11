@@ -11,7 +11,7 @@
 ## ユーザーがカスタマイズする際の手順
 
 * [Use this template](https://github.com/geoloniamaps/basic/generate) ボタンでこのリポジトリをコピー。
-* GitHub Pages を 設定
+* GitHub Pages を 設定。
 * `style.yml` を編集。
 * しばらくすると `gh-pages` ブランチに `style.json` がコミットされるので、Geolonia Maps で表示する場合は、その URL を以下のように指定してください。
 
