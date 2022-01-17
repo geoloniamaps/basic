@@ -1,0 +1,11 @@
+id: hillshading
+source: dem
+type: hillshade
+paint:
+  hillshade-exaggeration:
+    stops:
+      - - 4
+        - 0.15
+      - - 12
+        - 0
+  hillshade-shadow-color: "#000000"

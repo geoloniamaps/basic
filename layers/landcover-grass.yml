@@ -9,5 +9,5 @@ filter:
 layout:
   visibility: visible
 paint:
-  fill-color: '#d8e8c8'
+  fill-color: $newgreenlight
   fill-opacity: 1
