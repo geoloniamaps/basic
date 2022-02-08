@@ -1,0 +1,14 @@
+id: water-river-lake-ja
+type: fill
+source: geolonia
+source-layer: water
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - lake
+layout:
+  visibility: visible
+paint:
+  fill-color: rgba(152, 209, 252, 1)
