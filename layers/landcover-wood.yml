@@ -9,8 +9,13 @@ filter:
 layout:
   visibility: visible
 paint:
-  fill-color: '#6a4'
-  fill-opacity: 0.2
+  fill-color: '#bce398'
+  fill-opacity:
+    stops:
+    - - 11
+      - 1
+    - - 12
+      - 0.4
   fill-outline-color: hsla(0, 0%, 0%, 0.03)
   fill-antialias:
     base: 1

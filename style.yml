@@ -17,6 +17,10 @@ sources:
     type: vector
     minzoom: 8
     url: https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY
+  dem:
+    type: raster-dem
+    tiles:
+    - https://tileserver.geolonia.com/gsi-dem/tiles/{z}/{x}/{y}.png?key=YOUR-API-KEY
 sprite: https://geoloniamaps.github.io/basic/basic
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
@@ -29,6 +33,7 @@ layers:
   - !!inc/file layers/oc-ocean.yml
   - !!inc/file layers/oc-glacier.yml
   - !!inc/file layers/oc-forest.yml
+  - !!inc/file layers/hillshading.yml
   - !!inc/file layers/oc-waterway-river-ja.yml
   - !!inc/file layers/oc-waterway-river.yml
   - !!inc/file layers/oc-waterway-name-ja.yml
