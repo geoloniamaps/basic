@@ -14,6 +14,12 @@
       "type": "vector",
       "minzoom": 8,
       "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
+    },
+    "dem": {
+      "type": "raster-dem",
+      "tiles": [
+        "https://tileserver.geolonia.com/gsi-dem/tiles/{z}/{x}/{y}.png?key=YOUR-API-KEY"
+      ]
     }
   },
   "sprite": "https://geoloniamaps.github.io/basic/basic",
@@ -23,7 +29,22 @@
       "id": "background",
       "type": "background",
       "paint": {
-        "background-color": "#fefefe"
+        "background-color": {
+          "stops": [
+            [
+              1,
+              "#f2f5d6"
+            ],
+            [
+              5,
+              "#dae2c1"
+            ],
+            [
+              12,
+              "#fefefe"
+            ]
+          ]
+        }
       }
     },
     {
@@ -40,7 +61,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#d8e8c8",
+        "fill-color": "#daeca9",
         "fill-opacity": 1
       }
     },
@@ -58,8 +79,19 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#6a4",
-        "fill-opacity": 0.2,
+        "fill-color": "#bce398",
+        "fill-opacity": {
+          "stops": [
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              0.4
+            ]
+          ]
+        },
         "fill-outline-color": "hsla(0, 0%, 0%, 0.03)",
         "fill-antialias": {
           "base": 1,
@@ -103,7 +135,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(152, 209, 252, 1)"
+        "fill-color": "#65cbf9"
       }
     },
     {
@@ -156,28 +188,28 @@
             "depth"
           ],
           200,
-          "#02b7ed",
+          "#5bc2f8",
           1000,
-          "#02aae4",
+          "#52baf7",
           2000,
-          "#0293d4",
+          "#4ab2f7",
           3000,
-          "#0288cd",
+          "#40a8f6",
           4000,
-          "#0479c3",
+          "#36a0f5",
           5000,
-          "#0563b5",
+          "#319bf6",
           6000,
-          "#0645a1",
+          "#2a94f5",
           7000,
-          "#072d91",
+          "#238df4",
           8000,
-          "#081a84",
+          "#1c88f4",
           9000,
-          "#090979",
+          "#147ff3",
           10000,
-          "#111188",
-          "#98d1fc"
+          "#0e7af2",
+          "#0673f2"
         ]
       }
     },
@@ -200,12 +232,43 @@
       "source": "oceanus",
       "source-layer": "oc-forest",
       "minzoom": 0,
-      "maxzoom": 8,
+      "maxzoom": 9,
       "layout": {
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(223, 236, 218, 1)"
+        "fill-color": {
+          "stops": [
+            [
+              5,
+              "#a5d47b"
+            ],
+            [
+              8,
+              "#bce398"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "hillshading",
+      "source": "dem",
+      "type": "hillshade",
+      "paint": {
+        "hillshade-exaggeration": {
+          "stops": [
+            [
+              4,
+              0.15
+            ],
+            [
+              12,
+              0
+            ]
+          ]
+        },
+        "hillshade-shadow-color": "#000000"
       }
     },
     {
