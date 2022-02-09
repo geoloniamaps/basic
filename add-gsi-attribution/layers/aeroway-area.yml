@@ -1,0 +1,25 @@
+id: aeroway-area
+type: fill
+source: geolonia
+source-layer: aeroway
+minzoom: 4
+filter:
+  - all
+  - - '=='
+    - $type
+    - Polygon
+  - - in
+    - class
+    - runway
+    - taxiway
+layout:
+  visibility: visible
+paint:
+  fill-opacity:
+    base: 1
+    stops:
+      - - 13
+        - 0
+      - - 14
+        - 1
+  fill-color: rgba(255, 255, 255, 1)

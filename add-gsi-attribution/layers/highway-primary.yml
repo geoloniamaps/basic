@@ -1,0 +1,30 @@
+id: highway-primary
+type: line
+source: geolonia
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - in
+    - class
+    - primary
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#ffffff'
+  line-width:
+    base: 1.2
+    stops:
+      - - 8.5
+        - 0
+      - - 9
+        - 0.5
+      - - 20
+        - 18
