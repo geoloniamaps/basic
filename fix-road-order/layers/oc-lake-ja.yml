@@ -1,0 +1,18 @@
+id: oc-lake-ja
+type: fill
+source: oceanus
+source-layer: oc-water
+minzoom: 4
+maxzoom: 8
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - lakes
+  - - has
+    - jflag
+layout:
+  visibility: visible
+paint:
+  fill-color: rgba(152, 209, 252, 1)
