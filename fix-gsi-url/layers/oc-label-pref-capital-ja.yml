@@ -1,0 +1,35 @@
+id: oc-label-pref-capital-ja
+type: symbol
+source: oceanus
+source-layer: oc-label
+minzoom: 6
+maxzoom: 8
+filter:
+  - all
+  - - has
+    - jflag
+  - - has
+    - pref-capital
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Regular
+  text-anchor: top
+  text-variable-anchor:
+    - top
+    - bottom
+    - left
+    - right
+  icon-image: circle
+  icon-allow-overlap: true
+  text-field: '{name}'
+  text-offset:
+    - 0.6
+    - 0.6
+  text-size: 12
+  text-max-width: 9
+paint:
+  text-halo-blur: 0.5
+  text-color: '#666'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'
