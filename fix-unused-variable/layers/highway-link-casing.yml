@@ -1,0 +1,35 @@
+id: highway-link-casing
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 13
+filter:
+  - all
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - in
+    - class
+    - primary_link
+    - secondary_link
+    - tertiary_link
+    - trunk_link
+layout:
+  line-cap: round
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#e9ac77'
+  line-opacity: 1
+  line-width:
+    base: 1.2
+    stops:
+      - - 12
+        - 1
+      - - 13
+        - 3
+      - - 14
+        - 4
+      - - 20
+        - 15

@@ -1,0 +1,31 @@
+id: bridge-link-casing
+type: line
+source: geolonia
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - bridge
+  - - in
+    - class
+    - primary_link
+    - secondary_link
+    - tertiary_link
+    - trunk_link
+layout:
+  line-join: round
+paint:
+  line-color: '#e9ac77'
+  line-opacity: 1
+  line-width:
+    base: 1.2
+    stops:
+      - - 12
+        - 1
+      - - 13
+        - 3
+      - - 14
+        - 4
+      - - 20
+        - 15
