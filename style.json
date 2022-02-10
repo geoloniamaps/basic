@@ -17,9 +17,7 @@
     },
     "dem": {
       "type": "raster-dem",
-      "tiles": [
-        "https://tileserver.geolonia.com/gsi-dem/tiles/{z}/{x}/{y}.png?key=YOUR-API-KEY"
-      ],
+      "url": "https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY",
       "attribution": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html\" target=\"_blank\">© GSI Japan</a>"
     }
   },
