@@ -19,8 +19,7 @@ sources:
     url: https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
-    tiles:
-    - https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
     attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
 sprite: https://geoloniamaps.github.io/basic/basic
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
