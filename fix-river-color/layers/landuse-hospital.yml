@@ -1,0 +1,10 @@
+id: landuse-hospital
+type: fill
+source: geolonia
+source-layer: landuse
+filter:
+  - '=='
+  - class
+  - hospital
+paint:
+  fill-color: '#fde'

@@ -1,0 +1,15 @@
+id: highway-area
+type: fill
+source: geolonia
+source-layer: transportation
+filter:
+  - '=='
+  - $type
+  - Polygon
+layout:
+  visibility: visible
+paint:
+  fill-color: hsla(0, 0%, 89%, 0.56)
+  fill-outline-color: '#cfcdca'
+  fill-opacity: 0.9
+  fill-antialias: false

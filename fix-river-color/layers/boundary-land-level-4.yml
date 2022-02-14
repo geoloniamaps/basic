@@ -1,0 +1,29 @@
+id: boundary-land-level-4
+type: line
+source: geolonia
+source-layer: boundary
+minzoom: 8
+maxzoom: 14
+filter:
+  - all
+  - - '=='
+    - admin_level
+    - 4
+layout:
+  line-join: round
+paint:
+  line-color: '#9e9cab'
+  line-dasharray:
+    - 3
+    - 1
+    - 1
+    - 1
+  line-width:
+    base: 1.4
+    stops:
+      - - 4
+        - 0.4
+      - - 5
+        - 1
+      - - 12
+        - 2

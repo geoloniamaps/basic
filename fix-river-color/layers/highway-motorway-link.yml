@@ -1,0 +1,33 @@
+id: highway-motorway-link
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 12
+filter:
+  - all
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - '=='
+    - class
+    - motorway
+  - - '=='
+    - ramp
+    - 1
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#ffffff'
+  line-width:
+    base: 1.2
+    stops:
+      - - 12.5
+        - 0
+      - - 13
+        - 1.5
+      - - 14
+        - 2.5
+      - - 20
+        - 11.5

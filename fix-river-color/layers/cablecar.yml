@@ -1,0 +1,21 @@
+id: cablecar
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 13
+filter:
+  - '=='
+  - class
+  - cable_car
+layout:
+  visibility: visible
+  line-cap: round
+paint:
+  line-color: hsl(0, 0%, 70%)
+  line-width:
+    base: 1
+    stops:
+      - - 11
+        - 1
+      - - 19
+        - 2.5
