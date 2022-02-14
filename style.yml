@@ -104,13 +104,13 @@ layers:
   - !!inc/file layers/bridge-link-casing.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing.yml
   - !!inc/file layers/bridge-trunk-primary-casing.yml
-  - !!inc/file layers/bridge-motorway-casing.yml
   - !!inc/file layers/bridge-path-casing.yml
   - !!inc/file layers/bridge-path.yml
   - !!inc/file layers/bridge-motorway-link.yml
   - !!inc/file layers/bridge-link.yml
   - !!inc/file layers/bridge-secondary-tertiary.yml
   - !!inc/file layers/bridge-trunk-primary.yml
+  - !!inc/file layers/bridge-motorway-casing.yml
   - !!inc/file layers/bridge-motorway.yml
   - !!inc/file layers/railway.yml
   - !!inc/file layers/railway-hatching.yml
