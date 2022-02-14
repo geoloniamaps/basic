@@ -1,0 +1,29 @@
+id: nt-label-small
+type: symbol
+source: oceanus
+source-layer: nt-label
+minzoom: 8
+filter:
+  - in
+  - subclass
+  - '19'
+  - '20'
+  - '21'
+  - '22'
+layout:
+  text-font:
+    - Noto Sans Regular
+  text-size:
+    base: 1.2
+    stops:
+      - - 10
+        - 12
+      - - 15
+        - 22
+  text-field: '{name}'
+  text-max-width: 8
+  visibility: visible
+paint:
+  text-color: '#333'
+  text-halo-width: 1.2
+  text-halo-color: rgba(255,255,255,0.8)

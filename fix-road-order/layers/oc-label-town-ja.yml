@@ -1,0 +1,35 @@
+id: oc-label-town-ja
+type: symbol
+source: oceanus
+source-layer: oc-label
+minzoom: 7
+maxzoom: 8
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - town
+  - - has
+    - jflag
+  - - '=='
+    - - has
+      - pref-capital
+    - false
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Regular
+  text-anchor: top
+  icon-image: circle
+  text-field: '{name}'
+  text-offset:
+    - 0
+    - 0.6
+  text-size: 12
+  text-max-width: 9
+paint:
+  text-halo-blur: 0.5
+  text-color: '#666'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'
