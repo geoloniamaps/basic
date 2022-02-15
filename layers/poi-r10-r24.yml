@@ -2,7 +2,7 @@ id: poi-r10-r24
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 13
+minzoom: 15
 filter:
   - all
   - - '=='
