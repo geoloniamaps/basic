@@ -1,0 +1,37 @@
+id: road_oneway
+type: symbol
+source: geolonia
+source-layer: transportation
+minzoom: 16
+filter:
+  - all
+  - - '=='
+    - oneway
+    - 1
+  - - in
+    - class
+    - motorway
+    - trunk
+    - primary
+    - secondary
+    - tertiary
+    - minor
+    - service
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  symbol-placement: line
+  icon-image: oneway
+  symbol-spacing: 250
+  icon-padding: 2
+  icon-rotation-alignment: map
+  icon-rotate: 90
+  icon-size:
+    stops:
+      - - 15
+        - 0.4
+      - - 19
+        - 0.8
+paint:
+  icon-opacity: 0.4
