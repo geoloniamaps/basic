@@ -254,6 +254,7 @@
       "id": "hillshading",
       "source": "dem",
       "type": "hillshade",
+      "maxzoom": 12,
       "paint": {
         "hillshade-exaggeration": {
           "stops": [
