@@ -4083,7 +4083,7 @@
         "visibility": "none"
       },
       "paint": {
-        "fill-extrusion-color": "#dedede",
+        "fill-extrusion-color": "#D7D4D1",
         "fill-extrusion-height": [
           "get",
           "render_height"
@@ -4092,7 +4092,7 @@
           "get",
           "render_min_height"
         ],
-        "fill-extrusion-opacity": 0.4
+        "fill-extrusion-opacity": 0.5
       }
     },
     {
