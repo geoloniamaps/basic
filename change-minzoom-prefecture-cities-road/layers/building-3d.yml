@@ -1,0 +1,18 @@
+id: building-3d
+type: fill-extrusion
+metadata:
+  visible-on-3d: true
+source: geolonia
+source-layer: building
+minzoom: 15
+layout:
+  visibility: none
+paint:
+  fill-extrusion-color: '#D7D4D1'
+  fill-extrusion-height:
+    - get
+    - render_height
+  fill-extrusion-base:
+    - get
+    - render_min_height
+  fill-extrusion-opacity: 0.5
