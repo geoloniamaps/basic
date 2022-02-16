@@ -1,0 +1,15 @@
+id: oc-forest
+type: fill
+source: oceanus
+source-layer: oc-forest
+minzoom: 0
+maxzoom: 9
+layout:
+  visibility: visible
+paint:
+  fill-color:
+    stops:
+      - - 5
+        - '#a5d47b'
+      - - 8
+        - '#bce398'
