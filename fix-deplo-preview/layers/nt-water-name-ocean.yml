@@ -1,0 +1,24 @@
+id: nt-water-name-ocean
+type: symbol
+source: oceanus
+source-layer: nt-water-name
+minzoom: 8
+filter:
+  - '=='
+  - - get
+    - class
+  - ocean
+layout:
+  text-font:
+    - Noto Sans Regular
+  text-size: 14
+  text-field: '{name}'
+  text-max-width: 5
+  text-rotation-alignment: map
+  symbol-placement: point
+  symbol-spacing: 350
+  text-letter-spacing: 0.2
+paint:
+  text-color: '#74aee9'
+  text-halo-width: 1.5
+  text-halo-color: rgba(255,255,255,0.7)
