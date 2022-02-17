@@ -34,12 +34,7 @@ jobs:
 
       - name: Generate slug
         id: generate_slug
-        run: |
-          if $(echo ${GITHUB_HEAD_REF#refs/heads/}) = "master" ; then
-            echo "##[set-output name=slug;]master"
-          else
-            echo "##[set-output name=slug;]$(echo ${GITHUB_HEAD_REF#refs/heads/})"
-          fi
+        run: echo "##[set-output name=slug;]$(echo ${GITHUB_HEAD_REF#refs/heads/})"
         shell: bash
 
       - name: Determine base URL
