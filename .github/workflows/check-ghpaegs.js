@@ -4,7 +4,7 @@ const Axios = axios.create({
 });
 
 const deployPreviewUrl = process.argv[2];
-const maxFetchTryCount = 15;
+const maxFetchTryCount = 20;
 
 const isUrlLive = async (deployPreviewUrl) => {
   let status;
