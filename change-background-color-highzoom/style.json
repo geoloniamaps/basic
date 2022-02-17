@@ -1722,7 +1722,18 @@
       },
       "paint": {
         "line-color": "#e9ac77",
-        "line-opacity": 1,
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -1946,6 +1957,18 @@
       },
       "paint": {
         "line-color": "#fff4c6",
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -2525,7 +2548,18 @@
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": 1,
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -2975,6 +3009,18 @@
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -4065,7 +4111,7 @@
       "source-layer": "building",
       "minzoom": 16,
       "paint": {
-        "fill-color": "#D7D4D1",
+        "fill-color": "rgba(204, 204, 204, 0.5)",
         "fill-outline-color": "#C6C3BF",
         "fill-antialias": true
       }
