@@ -1,0 +1,30 @@
+id: bridge-link
+type: line
+source: geolonia
+source-layer: transportation
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - bridge
+  - - in
+    - class
+    - primary_link
+    - secondary_link
+    - tertiary_link
+    - trunk_link
+layout:
+  line-join: round
+paint:
+  line-color: '#fea'
+  line-width:
+    base: 1.2
+    stops:
+      - - 12.5
+        - 0
+      - - 13
+        - 1.5
+      - - 14
+        - 2.5
+      - - 20
+        - 11.5

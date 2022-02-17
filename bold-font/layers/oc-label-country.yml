@@ -1,0 +1,26 @@
+id: oc-label-country
+type: symbol
+source: oceanus
+source-layer: oc-label
+maxzoom: 8
+filter:
+  - '=='
+  - - get
+    - class
+  - country
+layout:
+  text-font:
+    - Noto Sans Bold
+  text-size:
+    stops:
+      - - 0
+        - 9
+      - - 8
+        - 16
+  text-field: '{name}'
+  text-max-width: 8
+  visibility: visible
+paint:
+  text-color: rgba(71, 71, 71, 1)
+  text-halo-width: 1.2
+  text-halo-color: rgba(255,255,255,0.8)
