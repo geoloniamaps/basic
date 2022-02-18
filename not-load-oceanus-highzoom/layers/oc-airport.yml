@@ -1,0 +1,32 @@
+id: oc-airport
+type: symbol
+source: oceanus
+source-layer: oc-airport
+minzoom: 5
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - airport
+  - - '=='
+    - - has
+      - jflag
+    - false
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Regular
+  text-anchor: top
+  icon-image: airport
+  text-field: '{name}'
+  text-offset:
+    - 0
+    - 0.6
+  text-size: 12
+  text-max-width: 9
+paint:
+  text-halo-blur: 0.5
+  text-color: '#666'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'

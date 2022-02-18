@@ -1,0 +1,47 @@
+id: oc-ocean200
+type: fill
+source: oceanus
+source-layer: oc-water
+maxzoom: 10
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - ocean
+layout:
+  visibility: visible
+
+paint:
+  fill-opacity:
+    stops:
+    - - 9
+      - 1
+    - - 10
+      - 0
+  fill-color:
+    - match
+    - ['get', 'depth']
+    - 200
+    - "#5bc2f8"
+    - 1000
+    - "#52baf7"
+    - 2000
+    - "#4ab2f7"
+    - 3000
+    - "#40a8f6"
+    - 4000
+    - "#36a0f5"
+    - 5000
+    - "#319bf6"
+    - 6000
+    - "#2a94f5"
+    - 7000
+    - "#238df4"
+    - 8000
+    - "#1c88f4"
+    - 9000
+    - "#147ff3"
+    - 10000
+    - "#0e7af2"
+    - "#0673f2"
