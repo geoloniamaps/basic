@@ -1,0 +1,9 @@
+id: building
+type: fill
+source: geolonia
+source-layer: building
+minzoom: 16
+paint:
+  fill-color: 'rgba(204, 204, 204, 0.5)'
+  fill-outline-color: '#C6C3BF'
+  fill-antialias: true
