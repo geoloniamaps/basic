@@ -1,0 +1,37 @@
+id: railway-name
+type: symbol
+source: geolonia
+source-layer: transportation_name
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - class
+    - rail
+  - - '!in'
+    - brunnel
+    - tunnel
+  - - '!='
+    - subclass
+    - subway
+layout:
+  text-font:
+    - Noto Sans Regular
+  text-size: 12
+  text-field: '{name}'
+  text-max-width: 8
+  visibility: visible
+  symbol-placement: line
+  symbol-spacing:
+    base: 1000
+    stops:
+      - - 10
+        - 1000
+      - - 12
+        - 800
+      - - 15
+        - 600
+paint:
+  text-color: rgba(102, 102, 102, 1)
+  text-halo-width: 1.2
+  text-halo-color: rgba(255,255,255,0.8)

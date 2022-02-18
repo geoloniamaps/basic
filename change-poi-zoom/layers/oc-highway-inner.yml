@@ -1,0 +1,30 @@
+id: oc-highway-inner
+type: line
+source: oceanus
+source-layer: oc-road
+minzoom: 5
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - highway
+  - - '=='
+    - - has
+      - jflag
+    - false
+layout:
+  line-cap: round
+  line-join: round
+  visibility: visible
+paint:
+  line-color: rgba(255, 255, 255, 1)
+  line-width:
+    base: 1.2
+    stops:
+      - - 6.5
+        - 0
+      - - 8
+        - 0.5
+      - - 20
+        - 13
