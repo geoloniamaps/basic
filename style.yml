@@ -123,13 +123,14 @@ layers:
   - !!inc/file layers/water-name-other.yml
   - !!inc/file layers/building.yml
   - !!inc/file layers/building-3d.yml
+  - !!inc/file layers/railway-name.yml
+  - !!inc/file layers/road_oneway.yml
+  - !!inc/file layers/road_oneway_opposite.yml
+  - !!inc/file layers/poi-bus.yml
   - !!inc/file layers/poi-r25.yml
   - !!inc/file layers/poi-r10-r24.yml
   - !!inc/file layers/poi-r0-r9.yml
   - !!inc/file layers/poi-railway.yml
-  - !!inc/file layers/railway-name.yml
-  - !!inc/file layers/road_oneway.yml
-  - !!inc/file layers/road_oneway_opposite.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
