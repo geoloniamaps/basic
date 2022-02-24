@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "charites serve style.yml --provider geolonia",
-    "build": "charites build style.yml style.json"
+    "build": "charites build style.yml ./docs/style.json"
   },
   "repository": {
     "type": "git",
