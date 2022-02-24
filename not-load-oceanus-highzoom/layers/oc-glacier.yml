@@ -1,0 +1,9 @@
+id: oc-glacier
+type: fill
+source: oceanus
+source-layer: oc-glacier
+maxzoom: 8
+layout:
+  visibility: visible
+paint:
+  fill-color: rgba(241, 248, 254, 1)
