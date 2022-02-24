@@ -15,8 +15,13 @@ filter:
     - false
 layout:
   text-font:
-    - Noto Sans Regular
-  text-size: 14
+    - Noto Sans Bold
+  text-size:
+    stops:
+      - - 5
+        - 12
+      - - 8
+        - 14
   text-field: '{name}'
   text-max-width: 8
   visibility: visible

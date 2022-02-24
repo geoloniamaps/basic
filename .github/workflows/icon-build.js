@@ -6,7 +6,7 @@ var path = require('path');
 const GITHUB_WORKSPACE = process.argv[2];
 
 const svgsPath = path.resolve(GITHUB_WORKSPACE, 'icons');
-const publicPath = GITHUB_WORKSPACE;
+const publicPath = `${GITHUB_WORKSPACE}/docs/`;
 
 [1, 2].forEach(function(pxRatio) {
     var svgs = glob.sync(path.join(svgsPath, `*.svg`))
