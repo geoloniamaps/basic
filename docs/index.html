@@ -60,16 +60,7 @@
     map.on('load', () => {
 
       const dumpFeature = event => {
-        // const layers = []
         const features = map.queryRenderedFeatures(event.point)
-
-        // for (var item in features) {
-        //   console.log(item)
-        //   if ('properties' in item) {
-        //     layers.push(item.properties)
-        //   }
-        // }
-
         const jsonContainer = document.getElementById('json')
         jsonContainer.innerText = JSON.stringify(features, null, '  ')
       }
