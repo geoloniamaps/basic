@@ -1,0 +1,43 @@
+id: road_shield_prefectural
+type: symbol
+metadata: {}
+source: geolonia
+source-layer: transportation_name
+minzoom: 14
+filter:
+  - all
+  - - <=
+    - ref_length
+    - 6
+  - - any
+    - - '=='
+      - class
+      - primary
+    - - '=='
+      - class
+      - secondary
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  icon-image: prefectural-JP_{ref_length}
+  icon-rotation-alignment: viewport
+  symbol-placement:
+    base: 1
+    stops:
+      - - 10
+        - point
+      - - 11
+        - line
+  symbol-spacing: 500
+  text-field: '{ref}'
+  text-font:
+    - Noto Sans CJK JP Bold
+  text-offset:
+    - 0
+    - -0.1
+  text-rotation-alignment: viewport
+  text-size: 10
+  icon-size: 1
+paint:
+  text-color: '#ffffff'
