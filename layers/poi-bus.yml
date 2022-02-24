@@ -2,7 +2,7 @@ id: poi-bus
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 16
+minzoom: 15
 filter:
   - all
   - - '=='
