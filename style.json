@@ -165,6 +165,7 @@
       "type": "fill",
       "source": "oceanus",
       "source-layer": "oc-water",
+      "maxzoom": 10,
       "filter": [
         "all",
         [
@@ -180,6 +181,18 @@
         "visibility": "visible"
       },
       "paint": {
+        "fill-opacity": {
+          "stops": [
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              0
+            ]
+          ]
+        },
         "fill-color": [
           "match",
           [
