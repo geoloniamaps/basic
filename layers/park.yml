@@ -3,9 +3,13 @@ type: fill
 source: geolonia
 source-layer: park
 filter:
+  - all
   - '=='
-  - $type
-  - Polygon
+    - $type
+    - Polygon
+  - - '!='
+    - class
+    - national_park
 layout:
   visibility: visible
 paint:
