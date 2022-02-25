@@ -12,9 +12,9 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#9e9cab'
+  line-color: '#999'
   line-dasharray:
-    - 3
+    - 2
     - 1
     - 1
     - 1
@@ -24,6 +24,6 @@ paint:
       - - 4
         - 0.4
       - - 5
-        - 1
-      - - 12
         - 2
+      - - 12
+        - 3
