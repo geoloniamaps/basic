@@ -1,0 +1,11 @@
+id: bridge-area
+type: fill
+source: geolonia
+source-layer: landcover
+filter:
+  - all
+  - - '=='
+    - class
+    - bridge
+paint:
+  fill-color: rgba(254, 254, 254, 1)
