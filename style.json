@@ -756,14 +756,36 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#9e9cab",
+        "line-color": {
+          "stops": [
+            [
+              4,
+              "rgba(102,102,102,0.7)"
+            ],
+            [
+              7,
+              "rgba(136,136,136,0.7)"
+            ]
+          ]
+        },
         "line-dasharray": [
           3,
           1,
           1,
           1
         ],
-        "line-width": 1
+        "line-width": {
+          "stops": [
+            [
+              4,
+              0.5
+            ],
+            [
+              7,
+              1.8
+            ]
+          ]
+        }
       }
     },
     {
@@ -3977,7 +3999,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#9e9cab",
+        "line-color": "rgba(68,68,68,0.7)",
         "line-dasharray": [
           3,
           1,
@@ -3988,12 +4010,8 @@
           "base": 1.4,
           "stops": [
             [
-              4,
-              0.4
-            ],
-            [
-              5,
-              1
+              8,
+              1.2
             ],
             [
               12,
