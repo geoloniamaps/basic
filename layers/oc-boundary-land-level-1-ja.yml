@@ -29,6 +29,6 @@ paint:
   line-width: 
     stops:
       - - 4
-        - 1
+        - 0.5
       - - 7
         - 1.8
