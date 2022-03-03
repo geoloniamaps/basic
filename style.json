@@ -39,8 +39,16 @@
               "#dae2c1"
             ],
             [
-              12,
-              "#fefefe"
+              8,
+              "#EDE6DD"
+            ],
+            [
+              10,
+              "#e6e5e3"
+            ],
+            [
+              16,
+              "#f5f5f5"
             ]
           ]
         }
@@ -1772,7 +1780,18 @@
       },
       "paint": {
         "line-color": "#e9ac77",
-        "line-opacity": 1,
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -1996,6 +2015,18 @@
       },
       "paint": {
         "line-color": "#fff4c6",
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -2592,7 +2623,18 @@
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": 1,
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -3042,6 +3084,18 @@
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              1
+            ]
+          ]
+        },
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -4130,11 +4184,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "building",
-      "minzoom": 15,
+      "minzoom": 16,
       "paint": {
-        "fill-opacity": 0.6,
-        "fill-color": "rgba(225, 225, 225, 1)",
-        "fill-outline-color": "#ffffff",
+        "fill-color": "rgba(221, 221, 221, 0.5)",
+        "fill-outline-color": "#ccc",
         "fill-antialias": true
       }
     },
@@ -4151,7 +4204,7 @@
         "visibility": "none"
       },
       "paint": {
-        "fill-extrusion-color": "#dedede",
+        "fill-extrusion-color": "#D7D4D1",
         "fill-extrusion-height": [
           "get",
           "render_height"
@@ -4160,7 +4213,7 @@
           "get",
           "render_min_height"
         ],
-        "fill-extrusion-opacity": 0.4
+        "fill-extrusion-opacity": 0.5
       }
     },
     {
