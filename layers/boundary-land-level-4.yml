@@ -12,18 +12,21 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#999'
+  line-color: 
+    stops:
+      - - 8
+        - 'rgba(85,85,85,0.7)'
+      - - 12
+        - 'rgba(85,85,85,0.7)'
   line-dasharray:
-    - 2
+    - 3
     - 1
     - 1
     - 1
   line-width:
     base: 1.4
     stops:
-      - - 4
-        - 0.4
-      - - 5
-        - 2
+      - - 8
+        - 1.2
       - - 12
-        - 3
+        - 2
