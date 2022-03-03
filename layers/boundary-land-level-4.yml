@@ -12,12 +12,7 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: 
-    stops:
-      - - 8
-        - 'rgba(85,85,85,0.7)'
-      - - 12
-        - 'rgba(85,85,85,0.7)'
+  line-color: 'rgba(68,68,68,0.7)'
   line-dasharray:
     - 3
     - 1
