@@ -16,17 +16,18 @@ filter:
 layout:
   text-font:
     - Noto Sans Regular
-  text-size: 18
+  text-size: 22
   text-field: '{name}'
   text-max-width: 8
   icon-image: star
   text-offset:
-    - 0.4
-    - 0
+    - 0.5
+    - -0.1
   icon-size: 0.8
+  icon-padding: 20
   text-anchor: left
   visibility: visible
 paint:
-  text-color: '#333'
-  text-halo-width: 1.2
-  text-halo-color: rgba(255,255,255,0.8)
+  text-color: "#222"
+  text-halo-width: 3
+  text-halo-color: "#fefefe"
