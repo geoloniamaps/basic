@@ -15,7 +15,7 @@ paint:
     - - 11
       - 1
     - - 12
-      - 0.5
+      - 0.4
   fill-outline-color: hsla(0, 0%, 0%, 0.03)
   fill-antialias:
     base: 1

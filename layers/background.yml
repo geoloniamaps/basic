@@ -1,4 +1,15 @@
 id: background
 type: background
 paint:
-  background-color: $background
+  background-color:
+    stops:
+    - - 1
+      - '#f2f5d6'
+    - - 5
+      - '#dae2c1'
+    - - 8
+      - '#EDE6DD'
+    - - 10
+      - '#e6e5e3'
+    - - 16
+      - '#f5f5f5'

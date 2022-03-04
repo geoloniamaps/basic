@@ -3,7 +3,7 @@ type: fill
 source: oceanus
 source-layer: oc-forest
 minzoom: 0
-maxzoom: 8
+maxzoom: 9
 layout:
   visibility: visible
 paint:
