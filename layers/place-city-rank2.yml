@@ -18,8 +18,8 @@ filter:
     - disputed
     - japan_northern_territories
 layout:
-  icon-image: circle
-  icon-size: 0.5
+  icon-image: circle-stroked
+  icon-size: 0.8
   text-anchor: top
   text-offset:
     - 0
