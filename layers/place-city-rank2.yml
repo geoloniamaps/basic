@@ -23,10 +23,10 @@ layout:
   text-anchor: top
   text-offset:
     - 0
-    - 0.1
+    - 0.2
   text-font:
-    - Noto Sans Regular
-  text-size: 18
+    - Noto Sans bold
+  text-size: 17
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
@@ -38,6 +38,6 @@ paint:
         - 1
       - - 12
         - 0
-  text-color: rgba(102, 102, 102, 1)
+  text-color: rgba(68, 68, 68, 1)
   text-halo-width: 1.2
   text-halo-color: rgba(255,255,255,0.8)

@@ -31,6 +31,6 @@ layout:
   text-max-width: 9
 paint:
   text-halo-blur: 0.5
-  text-color: '#666'
+  text-color: '#333'
   text-halo-width: 1
   text-halo-color: '#ffffff'
