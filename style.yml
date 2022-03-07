@@ -148,6 +148,5 @@ layers:
   - !!inc/file layers/place-city-rank6.yml
   - !!inc/file layers/place-city-rank5.yml
   - !!inc/file layers/place-city-rank4.yml
-  - !!inc/file layers/place-city-rank3.yml
   - !!inc/file layers/place-city-capital-pref.yml
   - !!inc/file layers/place-city-capital.yml
