@@ -15,15 +15,15 @@ filter:
     - japan_northern_territories
 layout:
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Bold
   text-size: 18
   text-field: '{name}'
   text-max-width: 8
   icon-image: star
   text-offset:
     - 0.4
-    - 0
-  icon-size: 0.8
+    - -0.1
+  icon-size: 1
   text-anchor: left
   visibility: visible
 paint:

@@ -21,7 +21,8 @@ layout:
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-image: circle
+  icon-image: circle-stroked
+  icon-size: 0.8
   text-field: '{name}'
   text-offset:
     - 0
@@ -30,6 +31,6 @@ layout:
   text-max-width: 9
 paint:
   text-halo-blur: 0.5
-  text-color: '#666'
+  text-color: '#333'
   text-halo-width: 1
   text-halo-color: '#ffffff'
