@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/geoloniamaps/basic#readme",
   "devDependencies": {
-    "@mapbox/spritezero": "^6.1.2",
+    "@mapbox/spritezero": "^8.0.0",
     "@unvt/charites": "^0.1.2",
-    "glob": "^7.2.0",
-    "axios": "^0.24.0"
+    "axios": "^0.24.0",
+    "glob": "^7.2.0"
   }
 }
