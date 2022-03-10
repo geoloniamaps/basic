@@ -8,4 +8,14 @@ filter:
     - class
     - bridge
 paint:
-  fill-color: rgba(254, 254, 254, 1)
+  fill-color:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - '#EDE6DD'
+    - 10
+    - '#e6e5e3'
+    - 16
+    - '#f5f5f5'
+  
