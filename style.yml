@@ -67,6 +67,7 @@ layers:
   - !!inc/file layers/waterway-other.yml
   - !!inc/file layers/waterway-stream-canal.yml
   - !!inc/file layers/waterway-river.yml
+  - !!inc/file layers/bridge-area.yml
   - !!inc/file layers/tunnel-railway.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
   - !!inc/file layers/tunnel-minor-casing.yml
@@ -84,7 +85,6 @@ layers:
   - !!inc/file layers/aeroway-area.yml
   - !!inc/file layers/aeroway-taxiway.yml
   - !!inc/file layers/aeroway-runway.yml
-  - !!inc/file layers/bridge-area.yml
   - !!inc/file layers/highway-area.yml
   - !!inc/file layers/highway-motorway-link-casing.yml
   - !!inc/file layers/highway-link-casing.yml
