@@ -22,7 +22,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Bold
+    - Noto Sans CJK JP Bold
   text-anchor: top
   icon-anchor: bottom
   icon-image: '{class}'
