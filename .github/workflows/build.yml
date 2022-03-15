@@ -18,11 +18,6 @@ jobs:
           npm install
           npm run build
 
-      - name: Build Icons
-        run: |
-          cd $GITHUB_WORKSPACE
-          node .github/workflows/icon-build.js $GITHUB_WORKSPACE
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
