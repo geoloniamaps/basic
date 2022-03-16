@@ -23,14 +23,15 @@ layout:
   visibility: visible
   symbol-placement: line
   symbol-spacing:
-    base: 1000
-    stops:
-      - - 10
-        - 1000
-      - - 12
-        - 800
-      - - 15
-        - 600
+      - interpolate
+      - - linear
+      - - zoom
+      - 10
+      - 90
+      - 12
+      - 800
+      - 15
+      - 600
 paint:
   text-color: rgba(102, 102, 102, 1)
   text-halo-width: 1.2
