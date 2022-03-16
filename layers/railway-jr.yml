@@ -1,14 +1,13 @@
-id: railway
+id: railway-jr
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 13
 filter:
   - all
   - - '=='
     - class
     - rail
-  - - '!='
+  - - '=='
     - operator
     - jr
   - - '!in'
