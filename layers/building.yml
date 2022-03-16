@@ -4,6 +4,6 @@ source: geolonia
 source-layer: building
 minzoom: 16
 paint:
-  fill-color: 'rgba(221, 221, 221, 0.5)'
+  fill-color: 'rgba(221, 221, 221, 1)'
   fill-outline-color: '#ccc'
   fill-antialias: true

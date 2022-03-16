@@ -1,0 +1,21 @@
+id: building-blur
+type: line
+source: geolonia
+source-layer: building
+minzoom: 16
+paint:
+  line-color: '#000000'
+  line-width: 10
+  line-translate:
+    stops:
+      - - 14
+        - [0, 0]
+      - - 17
+        - [4, 4]
+  line-opacity:
+    stops:
+      - - 14
+        - 0
+      - - 17
+        - 0.7
+  line-blur: 15
