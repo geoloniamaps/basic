@@ -12,7 +12,7 @@ filter:
     - motorway
 layout:
   line-join: round
-  line-cap: "butt"
+  line-cap: "round"
 paint:
   line-color: '#000000'
   line-width:
@@ -38,4 +38,4 @@ paint:
         - 0
       - - 17
         - 0.8
-  line-blur: 10
+  line-blur: 15
