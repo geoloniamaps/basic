@@ -1,0 +1,35 @@
+id: bridge-area-blur
+type: line
+source: geolonia
+source-layer: landcover
+filter:
+  - all
+  - - '=='
+    - class
+    - bridge
+paint:
+  line-color: '#000000'
+    # - interpolate
+    # - - linear
+    # - - zoom
+    # - 8
+    # - '#EDE6DD'
+    # - 10
+    # - '#e6e5e3'
+    # - 16
+    # - '#f5f5f5'
+  line-width: 5
+
+  line-translate:
+    stops:
+      - - 14
+        - [0, 0]
+      - - 17
+        - [2, 2]
+  line-opacity:
+    stops:
+      - - 14
+        - 0
+      - - 17
+        - 0.8
+  line-blur: 10
