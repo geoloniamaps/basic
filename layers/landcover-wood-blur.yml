@@ -1,24 +1,26 @@
-id: water-blur
+id: landcover-wood-blur
 type: line
-source: geolonia-water
-source-layer: water
+source: geolonia
+source-layer: landcover
+filter:
+  - '=='
+  - class
+  - wood
 layout:
-  line-join: "round"
-  line-round-limit: 0.5
   visibility: visible
 paint:
-  line-color: '#0099ff'
+  line-color: '#000000'
   line-width: 10
   line-translate:
     stops:
       - - 14
         - [0, 0]
       - - 17
-        - [-2, -2]
+        - [3, 3]
   line-opacity:
     stops:
       - - 14
         - 0
       - - 17
         - 0.7
-  line-blur: 5
+  line-blur: 15

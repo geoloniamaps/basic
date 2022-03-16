@@ -24,6 +24,8 @@ glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
+
+  - !!inc/file layers/landcover-wood-blur.yml
   - !!inc/file layers/landcover-wood.yml
   - !!inc/file layers/landcover-grass-park.yml
   - !!inc/file layers/water-blur.yml
