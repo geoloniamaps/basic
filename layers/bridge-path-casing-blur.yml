@@ -19,20 +19,16 @@ paint:
   line-width:
     base: 1.2
     stops:
-      - - 5
-        - 0.4
-      - - 6
-        - 0.6
-      - - 7
-        - 1.5
+      - - 15
+        - 1.2
       - - 20
-        - 22
+        - 18
   line-translate:
     stops:
       - - 14
         - [0, 0]
       - - 17
-        - [10, 10]
+        - [5, 5]
   line-opacity:
     stops:
       - - 14
