@@ -119,6 +119,7 @@ layers:
   - !!inc/file layers/bridge-motorway.yml
   - !!inc/file layers/railway.yml
   - !!inc/file layers/railway-hatching.yml
+  - !!inc/file layers/railway-subway.yml
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
   - !!inc/file layers/boundary-land-level-4.yml
