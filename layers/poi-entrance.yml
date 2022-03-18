@@ -2,7 +2,7 @@ id: poi-entrance
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 15
+minzoom: 16
 filter:
   - all
   - - '=='
