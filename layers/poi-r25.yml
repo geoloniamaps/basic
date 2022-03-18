@@ -14,6 +14,9 @@ filter:
   - - has
     - name
   - - '!='
+    - subclass
+    - subway_entrance
+  - - '!='
     - disputed
     - japan_northern_territories
 layout:

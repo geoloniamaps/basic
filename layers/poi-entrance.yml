@@ -11,9 +11,6 @@ filter:
   - - has
     - name
   - - '=='
-    - class
-    - entrance
-  - - '=='
     - subclass
     - subway_entrance
 layout:
