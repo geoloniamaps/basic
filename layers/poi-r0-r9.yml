@@ -8,7 +8,7 @@ filter:
   - - '=='
     - $type
     - Point
-  - - =<
+  - - <=
     - rank
     - 9
   - - has
