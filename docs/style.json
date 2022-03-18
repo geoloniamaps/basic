@@ -1022,7 +1022,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Bold"
+          "Noto Sans CJK JP Bold"
         ],
         "text-size": {
           "stops": [
@@ -1070,7 +1070,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Bold"
+          "Noto Sans CJK JP Bold"
         ],
         "text-size": {
           "stops": [
@@ -1121,7 +1121,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Bold"
+          "Noto Sans CJK JP Bold"
         ],
         "text-size": {
           "stops": [
@@ -5852,7 +5852,7 @@
           0.2
         ],
         "text-font": [
-          "Noto Sans bold"
+          "Noto Sans CJK JP Bold"
         ],
         "text-size": 17,
         "text-field": "{name}",
@@ -5903,7 +5903,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Bold"
+          "Noto Sans CJK JP Bold"
         ],
         "text-size": 18,
         "text-field": "{name}",
