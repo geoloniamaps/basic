@@ -131,8 +131,8 @@ layers:
   - !!inc/file layers/poi-r25.yml
   - !!inc/file layers/poi-r10-r24.yml
   - !!inc/file layers/poi-r0-r9.yml
-  - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/poi-entrance.yml
+  - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
