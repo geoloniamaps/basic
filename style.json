@@ -4524,6 +4524,11 @@
         ],
         [
           "!=",
+          "subclass",
+          "subway_entrance"
+        ],
+        [
+          "!=",
           "disputed",
           "japan_northern_territories"
         ]
@@ -4745,6 +4750,77 @@
       "paint": {
         "text-halo-blur": 0.5,
         "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-entrance",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "==",
+          "subclass",
+          "subway_entrance"
+        ]
+      ],
+      "layout": {
+        "text-padding": 1,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              ""
+            ]
+          ],
+          [
+            "image",
+            "circle"
+          ]
+        ],
+        "text-field": "{name}",
+        "text-size": 11,
+        "text-max-width": 9,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#415CBD",
         "text-halo-width": 1,
         "text-halo-color": "#ffffff"
       }
