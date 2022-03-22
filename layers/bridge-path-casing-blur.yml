@@ -22,17 +22,17 @@ paint:
       - - 15
         - 1.2
       - - 20
-        - 18
+        - 10
   line-translate:
     stops:
       - - 14
         - [0, 0]
       - - 17
-        - [5, 5]
+        - [5, 3]
   line-opacity:
     stops:
       - - 14
         - 0
       - - 17
         - 0.8
-  line-blur: 15
+  line-blur: 20

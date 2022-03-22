@@ -31,11 +31,11 @@ paint:
       - - 14
         - [0, 0]
       - - 17
-        - [10, 10]
+        - [5, 2]
   line-opacity:
     stops:
       - - 14
         - 0
       - - 17
-        - 0.8
-  line-blur: 15
+        - 0.4
+  line-blur: 20
