@@ -28,6 +28,7 @@ filter:
     - shop
     - bridge
     - rail
+    - railway
   - - '!='
     - disputed
     - japan_northern_territories
