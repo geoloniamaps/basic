@@ -1,21 +1,19 @@
-id: poi-r25
+id: poi-z13
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 16
+minzoom: 13
 filter:
   - all
   - - '=='
     - $type
     - Point
-  - - '>='
-    - rank
-    - 25
   - - has
     - name
-  - - '!='
-    - subclass
-    - subway_entrance
+  - - 'in'
+    - class
+    - beach
+    - rocket
   - - '!='
     - disputed
     - japan_northern_territories
