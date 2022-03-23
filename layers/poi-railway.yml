@@ -22,7 +22,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans CJK JP Bold
   text-anchor: top
   icon-anchor: bottom
   icon-image: '{class}'
@@ -40,6 +40,6 @@ layout:
   text-optional: true
 paint:
   text-halo-blur: 0.5
-  text-color: '#666'
-  text-halo-width: 1
+  text-color: '#415CBD'
+  text-halo-width: 2
   text-halo-color: '#ffffff'

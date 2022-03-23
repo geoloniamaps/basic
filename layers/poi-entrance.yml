@@ -1,4 +1,4 @@
-id: poi-r25
+id: poi-entrance
 type: symbol
 source: geolonia
 source-layer: poi
@@ -8,19 +8,13 @@ filter:
   - - '=='
     - $type
     - Point
-  - - '>='
-    - rank
-    - 25
   - - has
     - name
-  - - '!='
+  - - '=='
     - subclass
     - subway_entrance
-  - - '!='
-    - disputed
-    - japan_northern_territories
 layout:
-  text-padding: 2
+  text-padding: 1
   text-font:
     - Noto Sans Regular
   text-anchor: top
@@ -40,13 +34,11 @@ layout:
     - - image
       - circle
   text-field: '{name}'
-  text-offset:
-    - 0
-    - 0.3
-  text-size: 12
+  text-size: 11
   text-max-width: 9
+  visibility: visible
 paint:
   text-halo-blur: 0.5
-  text-color: '#666'
+  text-color: '#415CBD'
   text-halo-width: 1
   text-halo-color: '#ffffff'
