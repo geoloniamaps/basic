@@ -1,4 +1,4 @@
-id: poi-r25
+id: poi-z16
 type: symbol
 source: geolonia
 source-layer: poi
@@ -8,14 +8,14 @@ filter:
   - - '=='
     - $type
     - Point
-  - - '>='
-    - rank
-    - 25
   - - has
     - name
-  - - '!='
-    - subclass
-    - subway_entrance
+  - - 'in'
+    - class
+    - baseball
+    - castle
+    - swimming
+    - skateboard
   - - '!='
     - disputed
     - japan_northern_territories

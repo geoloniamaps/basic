@@ -1,8 +1,8 @@
-id: poi-z15
+id: poi-z17-other
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 15
+minzoom: 17
 filter:
   - all
   - - '=='
@@ -10,8 +10,29 @@ filter:
     - Point
   - - has
     - name
-  - - 'in'
+  - - '!in'
     - class
+    - college
+    - attraction
+    - landmark
+    - monument
+    - museum
+    - golf
+    - skiing
+    - hospital
+    - park
+    - waterfall
+    - wetland
+    - commercial
+    - grocery
+    - shop
+    - bridge
+    - rail
+    - railway
+    - stadium
+    - bar
+    - cafe
+    - lodging
     - post
     - school
     - embassy
@@ -28,6 +49,20 @@ filter:
     - prison
     - campsite
     - bbq
+    - baseball
+    - castle
+    - swimming
+    - skateboar
+    - cemetery
+    - pitch
+    - tennis
+    - restaurant
+    - bank
+    - parking
+    - fuel
+    - entrance
+    - bus
+    - veterinary
   - - '!='
     - disputed
     - japan_northern_territories
@@ -37,20 +72,7 @@ layout:
     - Noto Sans Regular
   text-anchor: top
   icon-anchor: bottom
-  icon-image:
-    - coalesce
-    - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
-      - - concat
-        - - get
-          - class
-        - ''
-    - - image
-      - circle
+  icon-image: circle
   text-field: '{name}'
   text-offset:
     - 0
