@@ -1,24 +1,24 @@
-id: poi-r10-r24
+id: poi-r25
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 13
+minzoom: 16
 filter:
   - all
   - - '=='
     - $type
     - Point
-  - - <
+  - - '>='
     - rank
     - 25
   - - has
     - name
   - - '!='
+    - subclass
+    - subway_entrance
+  - - '!='
     - disputed
     - japan_northern_territories
-  - - '>='
-    - rank
-    - 10
 layout:
   text-padding: 2
   text-font:
@@ -45,7 +45,6 @@ layout:
     - 0.3
   text-size: 12
   text-max-width: 9
-  visibility: visible
 paint:
   text-halo-blur: 0.5
   text-color: '#666'
