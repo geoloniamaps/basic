@@ -19,13 +19,13 @@ layout:
   visibility: visible
 paint:
   line-color: '#62cffc'
-  line-width: 10
+  line-width: 5
   line-translate:
     stops:
       - - 14
         - [0, 0]
       - - 17
-        - [-2, -2]
+        - [0, -2]
   line-opacity:
     stops:
       - - 14

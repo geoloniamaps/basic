@@ -9,18 +9,18 @@ filter:
 layout:
   visibility: visible
 paint:
-  line-color: '#000000'
-  line-width: 10
+  line-color: '#bce398'
+  line-width: 5
   line-translate:
     stops:
       - - 14
         - [0, 0]
       - - 17
-        - [3, 3]
+        - [0, 2]
   line-opacity:
     stops:
       - - 14
         - 0
       - - 17
-        - 0.7
-  line-blur: 15
+        - 0.4
+  line-blur: 10

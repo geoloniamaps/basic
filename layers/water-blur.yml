@@ -7,18 +7,18 @@ layout:
   line-round-limit: 0.5
   visibility: visible
 paint:
-  line-color: '#0099ff'
-  line-width: 10
+  line-color: '#000'
+  line-width: 1
   line-translate:
     stops:
       - - 14
         - [0, 0]
       - - 17
-        - [-2, -2]
+        - [0, 0]
   line-opacity:
     stops:
       - - 14
         - 0
       - - 17
-        - 0.7
-  line-blur: 5
+        - 0
+  line-blur: 0
