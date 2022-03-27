@@ -119,12 +119,14 @@ layers:
   - !!inc/file layers/bridge-motorway.yml
   - !!inc/file layers/railway.yml
   - !!inc/file layers/railway-hatching.yml
+  - !!inc/file layers/railway-jr.yml
+  - !!inc/file layers/railway-hatching-jr.yml
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
-  - !!inc/file layers/boundary-land-level-4.yml
+  # - !!inc/file layers/boundary-land-level-4.yml
   - !!inc/file layers/building.yml
   - !!inc/file layers/building-3d.yml
-  - !!inc/file layers/railway-name.yml
+  # - !!inc/file layers/railway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
   - !!inc/file layers/poi-bus.yml
@@ -152,3 +154,4 @@ layers:
   - !!inc/file layers/place-city-rank3.yml
   - !!inc/file layers/place-city-rank2.yml
   - !!inc/file layers/place-city-capital.yml
+  - !!inc/file layers/railway-name.yml

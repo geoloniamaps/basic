@@ -1,21 +1,20 @@
-id: railway
+id: railway-jr
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 12
 filter:
   - all
   - - '=='
     - class
     - rail
-  - - '!='
+  - - '=='
     - operator
     - jr
   - - '!in'
     - brunnel
     - tunnel
 paint:
-  line-color: '#999999'
+  line-color: '#000000'
   line-width:
     stops:
       - - 10

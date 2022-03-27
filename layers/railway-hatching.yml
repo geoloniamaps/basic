@@ -2,11 +2,15 @@ id: railway-hatching
 type: line
 source: geolonia
 source-layer: transportation
+minzoom: 12
 filter:
   - all
   - - '=='
     - class
     - rail
+  - - '!='
+    - operator
+    - jr
   - - '!in'
     - brunnel
     - tunnel

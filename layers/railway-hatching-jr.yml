@@ -1,26 +1,28 @@
-id: railway
+id: railway-hatching-jr
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 12
 filter:
   - all
   - - '=='
     - class
     - rail
-  - - '!='
+  - - '=='
     - operator
     - jr
   - - '!in'
     - brunnel
     - tunnel
 paint:
-  line-color: '#999999'
+  line-color: '#ffffff'
+  line-dasharray:
+    - 6
+    - 4
   line-width:
     stops:
       - - 10
-        - 0.8
+        - 0.5
       - - 18
-        - 4
+        - 2
       - - 22
-        - 20
+        - 18

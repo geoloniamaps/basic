@@ -22,16 +22,16 @@ layout:
   text-max-width: 8
   visibility: visible
   symbol-placement: line
-  symbol-spacing:
-    base: 1000
-    stops:
-      - - 10
-        - 1000
-      - - 12
-        - 800
-      - - 15
-        - 600
+  symbol-spacing: 10
+    # base: 1000
+    # stops:
+    #   - - 10
+    #     - 1000
+    #   - - 12
+    #     - 800
+    #   - - 15
+    #     - 600
 paint:
-  text-color: rgba(102, 102, 102, 1)
+  text-color: '#000000'
   text-halo-width: 1.2
   text-halo-color: rgba(255,255,255,0.8)
