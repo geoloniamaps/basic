@@ -27,6 +27,7 @@ filter:
     - fuel
     - post
     - police
+    - fire_station
     - entrance
     - bus
     - attraction
