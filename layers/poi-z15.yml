@@ -12,10 +12,16 @@ filter:
     - name
   - - 'in'
     - class
-    - baseball
-    - castle
-    - swimming
-    - skateboard
+    - bank
+    - parking
+    - grocery
+    - shop
+    - school
+    - hospital
+    # - baseball
+    # - castle
+    # - swimming
+    # - skateboard
   - - '!='
     - disputed
     - japan_northern_territories

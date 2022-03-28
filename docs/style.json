@@ -12,8 +12,7 @@
     },
     "geolonia": {
       "type": "vector",
-      "minzoom": 8,
-      "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/v2_devtiles/tiles.json?key=YOUR-API-KEY"
     },
     "dem": {
       "type": "raster-dem",
@@ -21,7 +20,7 @@
       "attribution": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html\" target=\"_blank\">© GSI Japan</a>"
     }
   },
-  "sprite": "https://geoloniamaps.github.io/basic/basic",
+  "sprite": "http://127.0.0.1:8080/docs/basic",
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -1181,7 +1180,7 @@
           "Noto Sans Regular"
         ],
         "text-anchor": "top",
-        "icon-image": "circle-stroked",
+        "icon-image": "circle_stroked",
         "icon-size": 0.8,
         "text-field": "{name}",
         "text-offset": [
@@ -1228,7 +1227,7 @@
           "left",
           "right"
         ],
-        "icon-image": "circle-stroked",
+        "icon-image": "circle_stroked",
         "icon-size": 0.8,
         "icon-allow-overlap": true,
         "text-field": "{name}",
@@ -4416,11 +4415,11 @@
       }
     },
     {
-      "id": "poi-bus",
+      "id": "poi-z19",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "poi",
-      "minzoom": 15,
+      "minzoom": 19,
       "filter": [
         "all",
         [
@@ -4433,14 +4432,9 @@
           "name"
         ],
         [
-          "==",
+          "in",
           "class",
-          "bus"
-        ],
-        [
-          "==",
-          "subclass",
-          "bus_stop"
+          "hairdresser"
         ],
         [
           "!=",
@@ -4465,87 +4459,7 @@
                 "get",
                 "class"
               ],
-              "-JP"
-            ]
-          ],
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              ""
-            ]
-          ],
-          [
-            "image",
-            "circle"
-          ]
-        ],
-        "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.3
-        ],
-        "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "poi-r25",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "poi",
-      "minzoom": 16,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          ">=",
-          "rank",
-          25
-        ],
-        [
-          "has",
-          "name"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-anchor": "bottom",
-        "icon-image": [
-          "coalesce",
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              "-JP"
+              "_JP"
             ]
           ],
           [
@@ -4580,11 +4494,11 @@
       }
     },
     {
-      "id": "poi-r10-r24",
+      "id": "poi-z16-other",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "poi",
-      "minzoom": 13,
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -4593,23 +4507,68 @@
           "Point"
         ],
         [
-          "<",
-          "rank",
-          25
-        ],
-        [
           "has",
           "name"
+        ],
+        [
+          "!in",
+          "class",
+          "college",
+          "attraction",
+          "landmark",
+          "monument",
+          "museum",
+          "golf",
+          "skiing",
+          "hospital",
+          "park",
+          "waterfall",
+          "wetland",
+          "commercial",
+          "grocery",
+          "shop",
+          "bridge",
+          "rail",
+          "railway",
+          "stadium",
+          "bar",
+          "cafe",
+          "lodging",
+          "post",
+          "school",
+          "embassy",
+          "aquarium",
+          "cinema",
+          "soccer",
+          "theatre",
+          "farm",
+          "zoo",
+          "convenience",
+          "aerialway",
+          "library",
+          "police",
+          "prison",
+          "campsite",
+          "bbq",
+          "baseball",
+          "castle",
+          "swimming",
+          "skateboar",
+          "cemetery",
+          "pitch",
+          "tennis",
+          "restaurant",
+          "bank",
+          "parking",
+          "fuel",
+          "entrance",
+          "bus",
+          "veterinary"
         ],
         [
           "!=",
           "disputed",
           "japan_northern_territories"
-        ],
-        [
-          ">=",
-          "rank",
-          10
         ]
       ],
       "layout": {
@@ -4619,43 +4578,14 @@
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
-        "icon-image": [
-          "coalesce",
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              "-JP"
-            ]
-          ],
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              ""
-            ]
-          ],
-          [
-            "image",
-            "circle"
-          ]
-        ],
+        "icon-image": "circle",
         "text-field": "{name}",
         "text-offset": [
           0,
           0.3
         ],
         "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible"
+        "text-max-width": 9
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -4665,11 +4595,11 @@
       }
     },
     {
-      "id": "poi-r0-r9",
+      "id": "poi-z16",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "poi",
-      "minzoom": 13,
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -4678,17 +4608,20 @@
           "Point"
         ],
         [
-          "<",
-          "rank",
-          9
-        ],
-        [
           "has",
           "name"
         ],
         [
-          "!=",
+          "in",
           "class",
+          "cemetery",
+          "pitch",
+          "tennis",
+          "restaurant",
+          "bank",
+          "parking",
+          "fuel",
+          "entrance",
           "bus"
         ],
         [
@@ -4714,7 +4647,7 @@
                 "get",
                 "class"
               ],
-              "-JP"
+              "_JP"
             ]
           ],
           [
@@ -4739,8 +4672,7 @@
           0.3
         ],
         "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible"
+        "text-max-width": 9
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -4750,7 +4682,183 @@
       }
     },
     {
-      "id": "poi-railway",
+      "id": "poi-z15",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "in",
+          "class",
+          "baseball",
+          "castle",
+          "swimming",
+          "skateboard"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "_JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              ""
+            ]
+          ],
+          [
+            "image",
+            "circle"
+          ]
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-z14",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "in",
+          "class",
+          "post",
+          "school",
+          "embassy",
+          "aquarium",
+          "cinema",
+          "soccer",
+          "theatre",
+          "farm",
+          "zoo",
+          "convenience",
+          "aerialway",
+          "library",
+          "police",
+          "prison",
+          "campsite",
+          "bbq"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "_JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              ""
+            ]
+          ],
+          [
+            "image",
+            "circle"
+          ]
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-z13",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "poi",
@@ -4767,14 +4875,12 @@
           "name"
         ],
         [
-          "==",
+          "in",
           "class",
-          "railway"
-        ],
-        [
-          "==",
-          "subclass",
-          "station"
+          "stadium",
+          "bar",
+          "cafe",
+          "lodging"
         ],
         [
           "!=",
@@ -4789,7 +4895,226 @@
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
-        "icon-image": "{class}",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "_JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              ""
+            ]
+          ],
+          [
+            "image",
+            "circle"
+          ]
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-z11",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "in",
+          "class",
+          "museum",
+          "park",
+          "place_of_worship"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "_JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              ""
+            ]
+          ],
+          [
+            "image",
+            "circle"
+          ]
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-z10",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "aerodrome_label",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        [
+          "has",
+          "iata"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-image": "airport",
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-size": 12,
+        "text-max-width": 9,
+        "visibility": "visible",
+        "icon-size": 1,
+        "text-optional": true
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-z8",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "mountain_peak",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "_JP"
+            ]
+          ],
+          [
+            "image",
+            "mountain"
+          ],
+          [
+            "image",
+            "circle"
+          ]
+        ],
         "text-field": "{name}",
         "text-offset": [
           0,
@@ -4797,12 +5122,7 @@
         ],
         "text-size": 12,
         "text-max-width": 9,
-        "icon-optional": false,
-        "icon-ignore-placement": false,
-        "icon-allow-overlap": false,
-        "text-ignore-placement": false,
-        "text-allow-overlap": false,
-        "text-optional": true
+        "visibility": "visible"
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -4991,49 +5311,6 @@
       },
       "paint": {
         "text-color": "#ffffff"
-      }
-    },
-    {
-      "id": "airport-label-major",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "aerodrome_label",
-      "minzoom": 10,
-      "filter": [
-        "all",
-        [
-          "has",
-          "iata"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-image": "airport",
-        "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible",
-        "icon-size": 1,
-        "text-optional": true
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
       }
     },
     {
@@ -5844,7 +6121,7 @@
         ]
       ],
       "layout": {
-        "icon-image": "circle-stroked",
+        "icon-image": "circle_stroked",
         "icon-size": 0.8,
         "text-anchor": "top",
         "text-offset": [

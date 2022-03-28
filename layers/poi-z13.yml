@@ -13,9 +13,6 @@ filter:
   - - 'in'
     - class
     - stadium
-    - bar
-    - cafe
-    - lodging
   - - '!='
     - disputed
     - japan_northern_territories

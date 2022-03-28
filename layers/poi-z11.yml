@@ -12,23 +12,16 @@ filter:
     - name
   - - 'in'
     - class
-    # - college
     # - attraction
-    # - landmark
-    # - monument
+    - landmark
+    - monument
     - museum
-    # - golf
+    - town_hall
+    - golf
     # - skiing
-    # - hospital
-    - park # 多すぎるので公園の プライマリーを決める。Geolonia Map では優先順位を下げてもよい。
-    # - waterfall
-    # - wetland
-    # - commercial
-    # - grocery
-    # - shop
-    # - bridge
-    # - rail
-    # - railway
+    - park # 多すぎるので minzoom を下げる + プライマリー追加
+    - railway
+    - place_of_worship # 多すぎるので minzoom を下げる + プライマリー追加
   - - '!='
     - disputed
     - japan_northern_territories

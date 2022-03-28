@@ -1,8 +1,8 @@
-id: poi-z19
+id: poi-z17
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 19
+minzoom: 17
 filter:
   - all
   - - '=='
@@ -12,7 +12,8 @@ filter:
     - name
   - - 'in'
     - class
-    - hairdresser
+    # - hairdresser
+    - post
   - - '!='
     - disputed
     - japan_northern_territories

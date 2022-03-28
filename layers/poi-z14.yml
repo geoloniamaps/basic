@@ -12,22 +12,22 @@ filter:
     - name
   - - 'in'
     - class
-    - post
-    - school
-    - embassy
-    - aquarium
+    - college
+    # - embassy
+    # - aquarium
     - cinema
-    - soccer
+    # - soccer
     - theatre
-    - farm
-    - zoo
+    # - farm
+    # - zoo
     - convenience
-    - aerialway
-    - library
-    - police
-    - prison
-    - campsite
-    - bbq
+    # - aerialway
+    # - library
+    # - police
+    # - prison
+    # - campsite
+    # - bbq
+    - lodging
   - - '!='
     - disputed
     - japan_northern_territories
