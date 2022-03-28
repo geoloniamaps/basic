@@ -12,13 +12,12 @@ filter:
     - name
   - - 'in'
     - class
-    # - attraction
+    - stadium
     - landmark
     - monument
     - museum
     - town_hall
     - golf
-    # - skiing
     - park # 多すぎるので minzoom を下げる + プライマリー追加
     - railway
     - place_of_worship # 多すぎるので minzoom を下げる + プライマリー追加

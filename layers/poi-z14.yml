@@ -13,20 +13,13 @@ filter:
   - - 'in'
     - class
     - college
-    # - embassy
-    # - aquarium
+    - castle
+    - aquarium
     - cinema
-    # - soccer
     - theatre
-    # - farm
-    # - zoo
+    - zoo
     - convenience
-    # - aerialway
-    # - library
-    # - police
-    # - prison
-    # - campsite
-    # - bbq
+    - art-gallery
     - lodging
   - - '!='
     - disputed

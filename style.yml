@@ -128,12 +128,10 @@ layers:
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
 
-  - !!inc/file layers/poi-z17.yml
   - !!inc/file layers/poi-z16-other.yml
   - !!inc/file layers/poi-z16.yml
   - !!inc/file layers/poi-z15.yml
   - !!inc/file layers/poi-z14.yml
-  - !!inc/file layers/poi-z13.yml
   - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-z10.yml
   - !!inc/file layers/poi-z8.yml

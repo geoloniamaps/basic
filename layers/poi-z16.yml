@@ -12,9 +12,7 @@ filter:
     - name
   - - 'in'
     - class
-    # - cemetery
-    # - pitch
-    # - tennis
+    - cemetery
     - restaurant
     - bar
     - cafe
@@ -25,9 +23,13 @@ filter:
     - restaurant_pizza
     - restaurant_seafood
     - beer
-    # - fuel
+    - library
+    - fuel
+    - post
+    - police
     - entrance
     - bus
+    - attraction
   - - '!='
     - disputed
     - japan_northern_territories
