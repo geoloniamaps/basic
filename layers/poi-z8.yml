@@ -1,8 +1,8 @@
-id: poi-z12
+id: poi-z8
 type: symbol
 source: geolonia
-source-layer: poi
-minzoom: 12
+source-layer: mountain_peak
+minzoom: 8
 filter:
   - all
   - - '=='
@@ -10,25 +10,6 @@ filter:
     - Point
   - - has
     - name
-  - - 'in'
-    - class
-    - college
-    - attraction
-    - landmark
-    - monument
-    - museum
-    - golf
-    - skiing
-    - hospital
-    - park
-    - waterfall
-    - wetland
-    - commercial
-    - grocery
-    - shop
-    - bridge
-    - rail
-    - railway
   - - '!='
     - disputed
     - japan_northern_territories
@@ -44,12 +25,9 @@ layout:
       - - concat
         - - get
           - class
-        - '-JP'
+        - '_JP'
     - - image
-      - - concat
-        - - get
-          - class
-        - ''
+      - 'mountain'
     - - image
       - circle
   text-field: '{name}'
@@ -58,6 +36,7 @@ layout:
     - 0.3
   text-size: 12
   text-max-width: 9
+  visibility: visible
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

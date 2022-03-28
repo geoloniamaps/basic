@@ -12,10 +12,15 @@ filter:
     - name
   - - 'in'
     - class
-    - baseball
-    - castle
-    - swimming
-    - skateboard
+    - cemetery
+    - pitch
+    - tennis
+    - restaurant
+    - bank
+    - parking
+    - fuel
+    - entrance
+    - bus
   - - '!='
     - disputed
     - japan_northern_territories
@@ -31,7 +36,7 @@ layout:
       - - concat
         - - get
           - class
-        - '-JP'
+        - '_JP'
     - - image
       - - concat
         - - get

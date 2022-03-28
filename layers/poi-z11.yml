@@ -1,12 +1,34 @@
 id: poi-z11
 type: symbol
 source: geolonia
-source-layer: aerodrome_label
+source-layer: poi
 minzoom: 11
 filter:
   - all
+  - - '=='
+    - $type
+    - Point
   - - has
-    - iata
+    - name
+  - - 'in'
+    - class
+    # - college
+    # - attraction
+    # - landmark
+    # - monument
+    - museum
+    # - golf
+    # - skiing
+    # - hospital
+    - park # 多すぎるので公園の プライマリーを決める。Geolonia Map では優先順位を下げてもよい。
+    # - waterfall
+    # - wetland
+    # - commercial
+    # - grocery
+    # - shop
+    # - bridge
+    # - rail
+    # - railway
   - - '!='
     - disputed
     - japan_northern_territories
@@ -15,16 +37,27 @@ layout:
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-image: airport
+  icon-anchor: bottom
+  icon-image:
+    - coalesce
+    - - image
+      - - concat
+        - - get
+          - class
+        - '_JP'
+    - - image
+      - - concat
+        - - get
+          - class
+        - ''
+    - - image
+      - circle
   text-field: '{name}'
   text-offset:
     - 0
-    - 0.6
+    - 0.3
   text-size: 12
   text-max-width: 9
-  visibility: visible
-  icon-size: 1
-  text-optional: true
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

@@ -1,8 +1,8 @@
-id: poi-z20
+id: poi-z13
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 17
+minzoom: 13
 filter:
   - all
   - - '=='
@@ -12,7 +12,10 @@ filter:
     - name
   - - 'in'
     - class
-    - hairdresser
+    - stadium
+    - bar
+    - cafe
+    - lodging
   - - '!='
     - disputed
     - japan_northern_territories
@@ -28,7 +31,7 @@ layout:
       - - concat
         - - get
           - class
-        - '-JP'
+        - '_JP'
     - - image
       - - concat
         - - get

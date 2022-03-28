@@ -1,8 +1,8 @@
-id: poi-z17
+id: poi-z19
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 17
+minzoom: 19
 filter:
   - all
   - - '=='
@@ -12,15 +12,7 @@ filter:
     - name
   - - 'in'
     - class
-    - cemetery
-    - pitch
-    - tennis
-    - restaurant
-    - bank
-    - parking
-    - fuel
-    - entrance
-    - bus
+    - hairdresser
   - - '!='
     - disputed
     - japan_northern_territories
@@ -36,7 +28,7 @@ layout:
       - - concat
         - - get
           - class
-        - '-JP'
+        - '_JP'
     - - image
       - - concat
         - - get

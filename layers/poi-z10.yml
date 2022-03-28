@@ -1,15 +1,12 @@
-id: poi-z9
+id: poi-z10
 type: symbol
 source: geolonia
-source-layer: mountain_peak
-minzoom: 9
+source-layer: aerodrome_label
+minzoom: 10
 filter:
   - all
-  - - '=='
-    - $type
-    - Point
   - - has
-    - name
+    - iata
   - - '!='
     - disputed
     - japan_northern_territories
@@ -18,25 +15,16 @@ layout:
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-anchor: bottom
-  icon-image:
-    - coalesce
-    - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
-      - 'mountain'
-    - - image
-      - circle
+  icon-image: airport
   text-field: '{name}'
   text-offset:
     - 0
-    - 0.3
+    - 0.6
   text-size: 12
   text-max-width: 9
   visibility: visible
+  icon-size: 1
+  text-optional: true
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

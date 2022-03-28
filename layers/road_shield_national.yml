@@ -16,7 +16,7 @@ filter:
     - disputed
     - japan_northern_territories
 layout:
-  icon-image: national-JP_{ref_length}
+  icon-image: national_JP_{ref_length}
   icon-rotation-alignment: viewport
   symbol-placement:
     base: 1

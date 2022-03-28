@@ -12,10 +12,22 @@ filter:
     - name
   - - 'in'
     - class
-    - stadium
-    - bar
-    - cafe
-    - lodging
+    - post
+    - school
+    - embassy
+    - aquarium
+    - cinema
+    - soccer
+    - theatre
+    - farm
+    - zoo
+    - convenience
+    - aerialway
+    - library
+    - police
+    - prison
+    - campsite
+    - bbq
   - - '!='
     - disputed
     - japan_northern_territories
@@ -31,7 +43,7 @@ layout:
       - - concat
         - - get
           - class
-        - '-JP'
+        - '_JP'
     - - image
       - - concat
         - - get
