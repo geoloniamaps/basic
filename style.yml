@@ -74,6 +74,7 @@ layers:
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
+  - !!inc/file layers/ferry.yml
   - !!inc/file layers/bridge-area.yml
   - !!inc/file layers/bridge-motorway-link-casing-blur.yml
   - !!inc/file layers/bridge-link-casing-blur.yml
@@ -92,7 +93,6 @@ layers:
   - !!inc/file layers/tunnel-secondary-tertiary.yml
   - !!inc/file layers/tunnel-trunk-primary.yml
   - !!inc/file layers/tunnel-motorway.yml
-  - !!inc/file layers/ferry.yml
   - !!inc/file layers/aeroway-taxiway-casing.yml
   - !!inc/file layers/aeroway-runway-casing.yml
   - !!inc/file layers/aeroway-area.yml
