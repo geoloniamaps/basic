@@ -75,6 +75,12 @@ layers:
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
   - !!inc/file layers/bridge-area.yml
+  - !!inc/file layers/bridge-motorway-link-casing-blur.yml
+  - !!inc/file layers/bridge-link-casing-blur.yml
+  - !!inc/file layers/bridge-secondary-tertiary-casing-blur.yml
+  - !!inc/file layers/bridge-trunk-primary-casing-blur.yml
+  - !!inc/file layers/bridge-path-casing-blur.yml
+  - !!inc/file layers/bridge-motorway-casing-blur.yml
   - !!inc/file layers/tunnel-railway.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
   - !!inc/file layers/tunnel-minor-casing.yml
