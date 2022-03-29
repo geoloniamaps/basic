@@ -17,14 +17,26 @@ filter:
       - class
       - path
 paint:
-  line-color: '#dddddd'
+  line-color: '#dfdfdf'
   line-dasharray:
-    - 1.5
-    - 0.75
+    - 2.5
+    - 0.5
   line-width:
-    base: 1.2
-    stops:
-      - - 15
-        - 1.2
-      - - 20
-        - 4
+    - interpolate
+    - - exponential
+      - 0.9 # カーブが大きい
+    - - zoom
+    - 16    # zl 16 から徐々に で building の表示が始まり、太さコントロールが必要になる
+    - 0.5  
+    # - 18    # zl
+    # - 24
+    # - 19    # zl
+    # - 72
+    - 20   # 最大zl, つまり20で
+    - 10  # 太さ180 ならはみ出さない
+
+
+    #   - - 15
+    #     - 1.2
+    #   - - 20
+    #     - 4
