@@ -30,6 +30,14 @@ layout:
       - 'mountain'
     - - image
       - circle
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 50
+    - 20
+    - 2
   text-field: '{name}'
   text-offset:
     - 0

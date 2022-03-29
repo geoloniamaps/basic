@@ -2,7 +2,7 @@ id: poi-worship
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 11
+minzoom: 16
 filter:
   - all
   - - '=='
@@ -10,7 +10,7 @@ filter:
     - Point
   - - has
     - name
-  - - has
+  - - '!has'
     - wikidata
   - - 'in'
     - class

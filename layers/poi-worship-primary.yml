@@ -1,8 +1,8 @@
-id: poi-park
+id: poi-worship-primary
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 16
+minzoom: 11
 filter:
   - all
   - - '=='
@@ -10,11 +10,11 @@ filter:
     - Point
   - - has
     - name
-  - - '!has'
+  - - has
     - wikidata
   - - 'in'
     - class
-    - park # 多すぎるので minzoom を下げる + プライマリー追加
+    - place_of_worship
   - - '!='
     - disputed
     - japan_northern_territories
@@ -39,6 +39,14 @@ layout:
     - - image
       - circle
   text-field: '{name}'
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 30
+    - 15
+    - 2
   text-offset:
     - 0
     - 0.3

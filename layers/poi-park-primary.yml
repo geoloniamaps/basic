@@ -1,8 +1,8 @@
-id: poi-park
+id: poi-park-primary
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 16
+minzoom: 11
 filter:
   - all
   - - '=='
@@ -10,7 +10,7 @@ filter:
     - Point
   - - has
     - name
-  - - '!has'
+  - - has
     - wikidata
   - - 'in'
     - class
@@ -38,6 +38,14 @@ layout:
         - ''
     - - image
       - circle
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 30
+    - 15
+    - 2
   text-field: '{name}'
   text-offset:
     - 0

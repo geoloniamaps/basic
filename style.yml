@@ -134,7 +134,9 @@ layers:
   - !!inc/file layers/poi-z14.yml
   - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-worship.yml
+  - !!inc/file layers/poi-worship-primary.yml
   - !!inc/file layers/poi-park.yml
+  - !!inc/file layers/poi-park-primary.yml
   - !!inc/file layers/poi-station.yml
   - !!inc/file layers/poi-z10.yml
   - !!inc/file layers/poi-z8.yml

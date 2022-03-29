@@ -10,8 +10,6 @@ filter:
     - Point
   - - has
     - name
-  - - has
-    - wikidata
   - - 'in'
     - class
     - railway
@@ -38,6 +36,14 @@ layout:
         - ''
     - - image
       - circle
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 30
+    - 15
+    - 2
   text-field: '{name}'
   text-offset:
     - 0
