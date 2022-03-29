@@ -43,7 +43,7 @@ layout:
     - - linear
     - - zoom
     - 11
-    - 30
+    - 15
     - 15
     - 2
   text-field: '{name}'
