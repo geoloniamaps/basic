@@ -1,4 +1,4 @@
-id: poi-z11
+id: poi-worship
 type: symbol
 source: geolonia
 source-layer: poi
@@ -10,14 +10,11 @@ filter:
     - Point
   - - has
     - name
+  - - has
+    - wikidata
   - - 'in'
     - class
-    - stadium
-    - landmark
-    - monument
-    - museum
-    - town_hall
-    - golf
+    - place_of_worship
   - - '!='
     - disputed
     - japan_northern_territories

@@ -1,4 +1,4 @@
-id: poi-z11
+id: poi-park
 type: symbol
 source: geolonia
 source-layer: poi
@@ -10,14 +10,11 @@ filter:
     - Point
   - - has
     - name
+  - - has
+    - wikidata
   - - 'in'
     - class
-    - stadium
-    - landmark
-    - monument
-    - museum
-    - town_hall
-    - golf
+    - park # 多すぎるので minzoom を下げる + プライマリー追加
   - - '!='
     - disputed
     - japan_northern_territories
