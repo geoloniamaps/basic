@@ -143,7 +143,6 @@ layers:
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
   - !!inc/file layers/boundary-land-level-4.yml
-  - !!inc/file layers/building-blur.yml
   - !!inc/file layers/building.yml
   - !!inc/file layers/building-3d.yml
   - !!inc/file layers/railway-name.yml
