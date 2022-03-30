@@ -14,7 +14,7 @@ filter:
     - jflag
 layout:
   text-font:
-    - Noto Sans Bold
+    - Noto Sans CJK JP Bold
   text-size:
     stops:
       - - 5

@@ -78,9 +78,12 @@ layers:
   - !!inc/file layers/water-name-other.yml
 
   - !!inc/file layers/bridge-area.yml
-
+  - !!inc/file layers/bridge-motorway-link-casing-blur.yml
+  - !!inc/file layers/bridge-link-casing-blur.yml
+  - !!inc/file layers/bridge-secondary-tertiary-casing-blur.yml
+  - !!inc/file layers/bridge-trunk-primary-casing-blur.yml
+  - !!inc/file layers/bridge-path-casing-blur.yml
   - !!inc/file layers/bridge-motorway-casing-blur.yml
-
 
   - !!inc/file layers/tunnel-railway.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
@@ -150,6 +153,7 @@ layers:
   - !!inc/file layers/poi-r25.yml
   - !!inc/file layers/poi-r10-r24.yml
   - !!inc/file layers/poi-r0-r9.yml
+  - !!inc/file layers/poi-entrance.yml
   - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml

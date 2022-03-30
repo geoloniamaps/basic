@@ -1,4 +1,4 @@
-id: bridge-motorway-casing-blur
+id: bridge-motorway-link-casing-blur
 type: line
 source: geolonia
 source-layer: transportation
@@ -9,25 +9,20 @@ filter:
     - bridge
   - - '=='
     - class
-    - motorway
-layout:
-  line-join: round
-  line-cap: "round"
+    - motorway_link
 paint:
   line-color: '#000000'
   line-width:
     base: 1.2
     stops:
-      - - 5
-        - 0.4
-      - - 6
-        - 0.6
-      - - 7
-        - 1.5
-      - - 15
-        - 14
+      - - 12
+        - 1
+      - - 13
+        - 3
+      - - 14
+        - 4
       - - 20
-        - 18
+        - 20
   line-translate:
     stops:
       - - 14
@@ -39,10 +34,10 @@ paint:
       - - 14
         - 0.2
       - - 17
-        - 0.6
+        - 0.8
   line-blur: 
     stops:
       - - 14
         - 20
       - - 17
-        - 30
+        - 25
