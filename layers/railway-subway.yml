@@ -11,13 +11,16 @@ filter:
     - subclass
     - subway
 paint:
-  line-color: '#bbb'
-  line-opacity: 1
-  line-width: 
+  line-offset: 
     stops:
-      - - 10
-        - 1.5
       - - 14
-        - 1.8
+        - 1
       - - 15
+        - 1.5
+      - - 16
         - 2
+      - - 17
+        - 8
+  line-color: '#9dabdd'
+  line-opacity: 1
+  line-width: 1.5
