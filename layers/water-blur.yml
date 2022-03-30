@@ -8,7 +8,7 @@ layout:
   visibility: visible
 paint:
   line-color: '#62cffc'
-  line-width: 10
+  line-width: 5
   line-translate:
     stops:
       - - 14
@@ -18,7 +18,7 @@ paint:
   line-opacity:
     stops:
       - - 14
-        - 0
+        - 0.5
       - - 17
         - 0.8
   line-blur: 10
