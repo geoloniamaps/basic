@@ -1,30 +1,26 @@
-id: water-river-lake-ja-blur
+id: landcover-wood-blur
 type: line
 source: geolonia
-source-layer: water
+source-layer: landcover
 filter:
-  - all
-  - - '=='
-    - - get
-      - class
-    - lake
+  - '=='
+  - class
+  - wood
 layout:
-  line-join: "round"
-  line-round-limit: 0.5
   visibility: visible
 paint:
-  line-color: '#62cffc'
-  line-width: 10
+  line-color: '#bce398'
+  line-width: 5
   line-translate:
     stops:
       - - 14
         - [0, 0]
       - - 17
-        - [0, -2]
+        - [0, 2]
   line-opacity:
     stops:
       - - 14
         - 0
       - - 17
-        - 0.8
+        - 0.4
   line-blur: 10
