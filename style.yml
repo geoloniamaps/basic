@@ -18,7 +18,7 @@ $broadRoadsLineWidth:
     - 18
     - 20
     - 19
-    - 70
+    - 68
     - 20   # 最大zl, つまり20で
     - 160  # はみ出さない太さ
  
@@ -43,10 +43,6 @@ $broadRoadsCasingLineWidth:
     - 72
     - 20   # 最大zl, つまり20で
     - 166  # 太さ180 ならはみ出さない
-
-
-
-
 
 # カスタマイズここまで
 
@@ -137,14 +133,18 @@ layers:
   - !!inc/file layers/aeroway-area.yml
   - !!inc/file layers/aeroway-taxiway.yml
   - !!inc/file layers/aeroway-runway.yml
+
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/building-3d.yml
+
   - !!inc/file layers/highway-area.yml
-  #- !!inc/file layers/highway-motorway-link-casing.yml
-  #- !!inc/file layers/highway-link-casing.yml
-  #- !!inc/file layers/highway-minor-casing.yml
-  #- !!inc/file layers/highway-secondary-tertiary-casing.yml
-  #- !!inc/file layers/highway-primary-casing.yml
-  #- !!inc/file layers/highway-trunk-casing.yml
-  #- !!inc/file layers/highway-motorway-casing.yml
+  - !!inc/file layers/highway-motorway-link-casing.yml
+  - !!inc/file layers/highway-link-casing.yml
+  - !!inc/file layers/highway-minor-casing.yml
+  - !!inc/file layers/highway-secondary-tertiary-casing.yml
+  - !!inc/file layers/highway-primary-casing.yml
+  - !!inc/file layers/highway-trunk-casing.yml
+  - !!inc/file layers/highway-motorway-casing.yml
   - !!inc/file layers/highway-path.yml
   - !!inc/file layers/highway-motorway-link.yml
   - !!inc/file layers/highway-link.yml
@@ -170,8 +170,6 @@ layers:
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
   - !!inc/file layers/boundary-land-level-4.yml
-  - !!inc/file layers/building.yml
-  - !!inc/file layers/building-3d.yml
   - !!inc/file layers/railway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml

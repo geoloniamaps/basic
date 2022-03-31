@@ -14,7 +14,7 @@ filter:
     - secondary
     - tertiary
 layout:
-  line-cap: butt
+  line-cap: round
   line-join: round
   visibility: visible
 paint:
