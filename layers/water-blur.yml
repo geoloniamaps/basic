@@ -1,0 +1,24 @@
+id: water-blur
+type: line
+source: geolonia-water
+source-layer: water
+layout:
+  line-join: "round"
+  line-round-limit: 0.5
+  visibility: visible
+paint:
+  line-color: '#62cffc'
+  line-width: 10
+  line-translate:
+    stops:
+      - - 14
+        - [0, 0]
+      - - 17
+        - [-2, -2]
+  line-opacity:
+    stops:
+      - - 14
+        - 0.5
+      - - 17
+        - 0.8
+  line-blur: 10

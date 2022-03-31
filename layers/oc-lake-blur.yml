@@ -1,0 +1,35 @@
+id: oc-lake-blur
+type: line
+source: oceanus
+source-layer: oc-water
+minzoom: 4
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - lakes
+  - - '=='
+    - - has
+      - jflag
+    - false
+layout:
+  line-join: "round"
+  line-round-limit: 0.5
+  visibility: visible
+paint:
+  line-color: '#62cffc'
+  line-width: 5
+  line-translate:
+    stops:
+      - - 14
+        - [0, 0]
+      - - 17
+        - [0, -2]
+  line-opacity:
+    stops:
+      - - 14
+        - 0
+      - - 17
+        - 0.8
+  line-blur: 10

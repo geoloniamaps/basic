@@ -47,7 +47,9 @@ layout:
   text-max-width: 9
   visibility: visible
 paint:
-  text-halo-blur: 0.5
+  text-halo-blur: 3
   text-color: '#666'
   text-halo-width: 1
   text-halo-color: '#ffffff'
+  icon-halo-width: 10
+

@@ -68,8 +68,11 @@ glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
+  - !!inc/file layers/landcover-wood-blur.yml
   - !!inc/file layers/landcover-wood.yml
   - !!inc/file layers/landcover-grass-park.yml
+  - !!inc/file layers/water-blur.yml
+  - !!inc/file layers/water-river-lake-ja-blur.yml
   - !!inc/file layers/water.yml
   - !!inc/file layers/water-river-lake-ja.yml
   - !!inc/file layers/oc-ocean.yml
@@ -81,6 +84,7 @@ layers:
   - !!inc/file layers/oc-waterway-name-ja.yml
   - !!inc/file layers/oc-waterway-name.yml
   - !!inc/file layers/oc-lake-ja.yml
+  - !!inc/file layers/oc-lake-blur.yml
   - !!inc/file layers/oc-lake.yml
   - !!inc/file layers/oc-highway-outer-ja.yml
   - !!inc/file layers/oc-highway-outer.yml
@@ -116,6 +120,12 @@ layers:
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
   - !!inc/file layers/bridge-area.yml
+  - !!inc/file layers/bridge-motorway-link-casing-blur.yml
+  - !!inc/file layers/bridge-link-casing-blur.yml
+  - !!inc/file layers/bridge-secondary-tertiary-casing-blur.yml
+  - !!inc/file layers/bridge-trunk-primary-casing-blur.yml
+  - !!inc/file layers/bridge-path-casing-blur.yml
+  - !!inc/file layers/bridge-motorway-casing-blur.yml
   - !!inc/file layers/tunnel-railway.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
   - !!inc/file layers/tunnel-minor-casing.yml
