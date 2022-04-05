@@ -137,7 +137,7 @@ layers:
   - !!inc/file layers/railway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
-  - !!inc/file layers/poi-z16.yml
+  # - !!inc/file layers/poi-z16.yml
   - !!inc/file layers/poi-z16-primary.yml
   - !!inc/file layers/poi-z15.yml
   - !!inc/file layers/poi-z14.yml
