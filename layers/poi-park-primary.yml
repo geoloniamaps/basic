@@ -37,7 +37,7 @@ layout:
           - class
         - ''
     - - image
-      - circle-stroked-stroked
+      - circle-stroked
   icon-padding:
     - interpolate
     - - linear

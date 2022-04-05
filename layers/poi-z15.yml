@@ -40,7 +40,7 @@ layout:
           - class
         - ''
     - - image
-      - circle-stroked-stroked
+      - circle-stroked
   text-field: '{name}'
   text-offset:
     - 0
