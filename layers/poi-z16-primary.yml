@@ -48,8 +48,8 @@ layout:
           - class
         - '-JP'
     - - image
-        - - get
-          - class
+      - - get
+        - class
     - - image
       - circle-stroked
   text-field: '{name}'
