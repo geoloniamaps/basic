@@ -43,11 +43,6 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
       - - get
         - class
     - - image
