@@ -24,7 +24,6 @@ glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
-
   - !!inc/file layers/landcover-wood-blur.yml
   - !!inc/file layers/landcover-wood.yml
   - !!inc/file layers/landcover-grass-park.yml
@@ -76,7 +75,6 @@ layers:
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
-
   - !!inc/file layers/bridge-area.yml
   - !!inc/file layers/bridge-motorway-link-casing-blur.yml
   - !!inc/file layers/bridge-link-casing-blur.yml
@@ -84,7 +82,6 @@ layers:
   - !!inc/file layers/bridge-trunk-primary-casing-blur.yml
   - !!inc/file layers/bridge-path-casing-blur.yml
   - !!inc/file layers/bridge-motorway-casing-blur.yml
-
   - !!inc/file layers/tunnel-railway.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
   - !!inc/file layers/tunnel-minor-casing.yml
@@ -102,9 +99,6 @@ layers:
   - !!inc/file layers/aeroway-area.yml
   - !!inc/file layers/aeroway-taxiway.yml
   - !!inc/file layers/aeroway-runway.yml
-
-
-
   - !!inc/file layers/highway-area.yml
   - !!inc/file layers/highway-motorway-link-casing.yml
   - !!inc/file layers/highway-link-casing.yml
@@ -121,23 +115,18 @@ layers:
   - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/highway-trunk.yml
   - !!inc/file layers/highway-motorway.yml
-
   - !!inc/file layers/bridge-motorway-link-casing.yml
   - !!inc/file layers/bridge-link-casing.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing.yml
   - !!inc/file layers/bridge-trunk-primary-casing.yml
   - !!inc/file layers/bridge-path-casing.yml
-
   - !!inc/file layers/bridge-path.yml
   - !!inc/file layers/bridge-motorway-link.yml
   - !!inc/file layers/bridge-link.yml
   - !!inc/file layers/bridge-secondary-tertiary.yml
   - !!inc/file layers/bridge-trunk-primary.yml
-
   - !!inc/file layers/bridge-motorway-casing.yml
   - !!inc/file layers/bridge-motorway.yml
-
-
   - !!inc/file layers/railway.yml
   - !!inc/file layers/railway-hatching.yml
   - !!inc/file layers/cablecar.yml
@@ -148,16 +137,21 @@ layers:
   - !!inc/file layers/railway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
-  - !!inc/file layers/poi-bus.yml
-  - !!inc/file layers/poi-r25.yml
-  - !!inc/file layers/poi-r10-r24.yml
-  - !!inc/file layers/poi-r0-r9.yml
-  - !!inc/file layers/poi-entrance.yml
+  - !!inc/file layers/poi-z16.yml
+  - !!inc/file layers/poi-z16-primary.yml
+  - !!inc/file layers/poi-z15.yml
+  - !!inc/file layers/poi-z14.yml
+  - !!inc/file layers/poi-z11.yml
+  - !!inc/file layers/poi-worship.yml
+  - !!inc/file layers/poi-worship-primary.yml
+  - !!inc/file layers/poi-park.yml
+  - !!inc/file layers/poi-park-primary.yml
   - !!inc/file layers/poi-railway.yml
+  - !!inc/file layers/poi-airport-primary.yml
+  - !!inc/file layers/poi-mountain.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
-  - !!inc/file layers/airport-label-major.yml
   - !!inc/file layers/nt-label-small.yml
   - !!inc/file layers/nt-label-large.yml
   - !!inc/file layers/place-village.yml

@@ -1,51 +1,30 @@
-id: poi-r10-r24
+id: poi-airport-primary
 type: symbol
 source: geolonia
-source-layer: poi
-minzoom: 13
+source-layer: aerodrome_label
+minzoom: 10
 filter:
   - all
-  - - '=='
-    - $type
-    - Point
-  - - <
-    - rank
-    - 25
   - - has
-    - name
+    - iata
   - - '!='
     - disputed
     - japan_northern_territories
-  - - '>='
-    - rank
-    - 10
 layout:
   text-padding: 2
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-anchor: bottom
-  icon-image:
-    - coalesce
-    - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
-      - - concat
-        - - get
-          - class
-        - ''
-    - - image
-      - circle
+  icon-image: airport
   text-field: '{name}'
   text-offset:
     - 0
-    - 0.3
+    - 0.6
   text-size: 12
   text-max-width: 9
   visibility: visible
+  icon-size: 1
+  text-optional: true
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

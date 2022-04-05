@@ -1,21 +1,23 @@
-id: poi-r0-r9
+id: poi-z11
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 13
+minzoom: 11
 filter:
   - all
   - - '=='
     - $type
     - Point
-  - - <=
-    - rank
-    - 9
   - - has
     - name
-  - - '!='
+  - - 'in'
     - class
-    - bus
+    - stadium
+    - landmark
+    - monument
+    - museum
+    - town_hall
+    - golf
   - - '!='
     - disputed
     - japan_northern_territories
@@ -31,25 +33,22 @@ layout:
       - - concat
         - - get
           - class
-        - '-JP'
+        - '_JP'
     - - image
       - - concat
         - - get
           - class
         - ''
     - - image
-      - circle
+      - circle-stroked-stroked
   text-field: '{name}'
   text-offset:
     - 0
     - 0.3
   text-size: 12
   text-max-width: 9
-  visibility: visible
 paint:
-  text-halo-blur: 3
+  text-halo-blur: 0.5
   text-color: '#666'
   text-halo-width: 1
   text-halo-color: '#ffffff'
-  icon-halo-width: 10
-

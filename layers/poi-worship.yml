@@ -1,8 +1,8 @@
-id: poi-bus
+id: poi-worship
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 15
+minzoom: 16
 filter:
   - all
   - - '=='
@@ -10,12 +10,11 @@ filter:
     - Point
   - - has
     - name
-  - - '=='
+  - - '!has'
+    - wikidata
+  - - 'in'
     - class
-    - bus
-  - - '=='
-    - subclass
-    - bus_stop
+    - place_of_worship
   - - '!='
     - disputed
     - japan_northern_territories
@@ -31,21 +30,20 @@ layout:
       - - concat
         - - get
           - class
-        - '-JP'
+        - '_JP'
     - - image
       - - concat
         - - get
           - class
         - ''
     - - image
-      - circle
+      - circle-stroked-stroked
   text-field: '{name}'
   text-offset:
     - 0
     - 0.3
   text-size: 12
   text-max-width: 9
-  visibility: visible
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

@@ -1,4 +1,4 @@
-id: poi-entrance
+id: poi-park
 type: symbol
 source: geolonia
 source-layer: poi
@@ -10,11 +10,16 @@ filter:
     - Point
   - - has
     - name
-  - - '=='
-    - subclass
-    - subway_entrance
+  - - '!has'
+    - wikidata
+  - - 'in'
+    - class
+    - park
+  - - '!='
+    - disputed
+    - japan_northern_territories
 layout:
-  text-padding: 1
+  text-padding: 2
   text-font:
     - Noto Sans Regular
   text-anchor: top
@@ -32,13 +37,15 @@ layout:
           - class
         - ''
     - - image
-      - circle
+      - circle-stroked-stroked
   text-field: '{name}'
-  text-size: 11
+  text-offset:
+    - 0
+    - 0.3
+  text-size: 12
   text-max-width: 9
-  visibility: visible
 paint:
   text-halo-blur: 0.5
-  text-color: '#415CBD'
+  text-color: '#666'
   text-halo-width: 1
   text-halo-color: '#ffffff'
