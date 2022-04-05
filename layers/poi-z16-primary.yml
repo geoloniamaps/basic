@@ -44,20 +44,20 @@ layout:
     - Noto Sans Regular
   text-anchor: top
   icon-anchor: bottom
-  icon-image:
-    - coalesce
-    - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
-      - - concat
-        - - get
-          - class
-        - ''
-    - - image
-      - circle-stroked
+  icon-image: bus
+    # - coalesce
+    # - - image
+    #   - - concat
+    #     - - get
+    #       - class
+    #     - '-JP'
+    # - - image
+    #   - - concat
+    #     - - get
+    #       - class
+    #     - ''
+    # - - image
+    #   - circle-stroked
   text-field: '{name}'
   text-offset:
     - 0
