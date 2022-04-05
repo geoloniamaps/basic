@@ -35,6 +35,7 @@ filter:
     - disputed
     - japan_northern_territories
 layout:
+  icon-allow-overlap: true
   text-padding: 2
   text-font:
     - Noto Sans Regular
