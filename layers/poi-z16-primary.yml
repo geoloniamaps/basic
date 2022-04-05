@@ -46,7 +46,10 @@ layout:
       - - concat
         - - get
           - class
-        - ''
+        - '-JP'
+    - - image
+        - - get
+          - class
     - - image
       - circle-stroked
   text-field: '{name}'
