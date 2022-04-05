@@ -25,7 +25,7 @@ layout:
       - - concat
         - - get
           - class
-        - '_JP'
+        - '-JP'
     - - image
       - 'mountain'
     - - image
