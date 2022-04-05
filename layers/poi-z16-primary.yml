@@ -12,25 +12,25 @@ filter:
     - name
   - - 'in'
     - class
-    # - cemetery
-    # - restaurant
-    # - bar
-    # - cafe
-    # - sushi
-    # - restaurant_noodle
-    # - fast_food
-    # - ice_cream
-    # - restaurant_pizza
-    # - restaurant_seafood
-    # - beer
-    # - library
-    # - fuel
-    # - post
-    # - police
-    # - fire_station
-    # - entrance
+    - cemetery
+    - restaurant
+    - bar
+    - cafe
+    - sushi
+    - restaurant_noodle
+    - fast_food
+    - ice_cream
+    - restaurant_pizza
+    - restaurant_seafood
+    - beer
+    - library
+    - fuel
+    - post
+    - police
+    - fire_station
+    - entrance
     - bus
-    # - attraction
+    - attraction
   - - '!='
     - disputed
     - japan_northern_territories
