@@ -13,7 +13,7 @@
     "geolonia": {
       "type": "vector",
       "minzoom": 8,
-      "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/v2_poizl/tiles.json?key=YOUR-API-KEY"
     },
     "dem": {
       "type": "raster-dem",
@@ -21,7 +21,7 @@
       "attribution": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html\" target=\"_blank\">© GSI Japan</a>"
     }
   },
-  "sprite": "https://geoloniamaps.github.io/basic/basic",
+  "sprite": "https://k-kbys.jp.ngrok.io/basic",
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -73,6 +73,55 @@
       }
     },
     {
+      "id": "landcover-wood-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "landcover",
+      "filter": [
+        "==",
+        "class",
+        "wood"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#bce398",
+        "line-width": 5,
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                0,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              17,
+              0.4
+            ]
+          ]
+        },
+        "line-blur": 10
+      }
+    },
+    {
       "id": "landcover-wood",
       "type": "fill",
       "source": "geolonia",
@@ -87,19 +136,6 @@
       },
       "paint": {
         "fill-color": "#bce398",
-        "fill-opacity": {
-          "stops": [
-            [
-              11,
-              1
-            ],
-            [
-              12,
-              0.4
-            ]
-          ]
-        },
-        "fill-outline-color": "hsla(0, 0%, 0%, 0.03)",
         "fill-antialias": {
           "base": 1,
           "stops": [
@@ -131,6 +167,109 @@
       "paint": {
         "fill-color": "#d8e8c8",
         "fill-opacity": 0.8
+      }
+    },
+    {
+      "id": "water-blur",
+      "type": "line",
+      "source": "geolonia-water",
+      "source-layer": "water",
+      "layout": {
+        "line-join": "round",
+        "line-round-limit": 0.5,
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#62cffc",
+        "line-width": 10,
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                -2,
+                -2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.5
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": 10
+      }
+    },
+    {
+      "id": "water-river-lake-ja-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "water",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "lake"
+        ]
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-round-limit": 0.5,
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#62cffc",
+        "line-width": 10,
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                0,
+                -2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": 10
       }
     },
     {
@@ -504,6 +643,72 @@
       },
       "paint": {
         "fill-color": "#65cbf9"
+      }
+    },
+    {
+      "id": "oc-lake-blur",
+      "type": "line",
+      "source": "oceanus",
+      "source-layer": "oc-water",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "lakes"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+        ]
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-round-limit": 0.5,
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#62cffc",
+        "line-width": 5,
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                0,
+                -2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": 10
       }
     },
     {
@@ -1502,7 +1707,7 @@
         "line-cap": "round"
       },
       "paint": {
-        "line-color": "rgba(152, 209, 252, 1)",
+        "line-color": "#65cbf9",
         "line-width": {
           "base": 1.3,
           "stops": [
@@ -1538,7 +1743,7 @@
         "line-cap": "round"
       },
       "paint": {
-        "line-color": "rgba(152, 209, 252, 1)",
+        "line-color": "#65cbf9",
         "line-width": {
           "base": 1.3,
           "stops": [
@@ -1577,7 +1782,7 @@
         "line-cap": "round"
       },
       "paint": {
-        "line-color": "rgba(152, 209, 252, 1)",
+        "line-color": "#65cbf9",
         "line-width": {
           "base": 1.3,
           "stops": [
@@ -1615,7 +1820,7 @@
         "line-cap": "round"
       },
       "paint": {
-        "line-color": "rgba(152, 209, 252, 1)",
+        "line-color": "#65cbf9",
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -1667,7 +1872,7 @@
         "symbol-spacing": 350
       },
       "paint": {
-        "text-color": "#74aee9",
+        "text-color": "#65cbf9",
         "text-halo-width": 1.5,
         "text-halo-color": "rgba(255,255,255,0.7)"
       }
@@ -1836,6 +2041,533 @@
           16,
           "#f5f5f5"
         ]
+      }
+    },
+    {
+      "id": "bridge-motorway-link-casing-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ],
+        [
+          "==",
+          "class",
+          "motorway_link"
+        ]
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              3
+            ],
+            [
+              14,
+              4
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                5,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.2
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": {
+          "stops": [
+            [
+              14,
+              20
+            ],
+            [
+              17,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "bridge-link-casing-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ],
+        [
+          "in",
+          "class",
+          "primary_link",
+          "secondary_link",
+          "tertiary_link",
+          "trunk_link"
+        ]
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              3
+            ],
+            [
+              14,
+              5
+            ],
+            [
+              20,
+              20
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                5,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.2
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": {
+          "stops": [
+            [
+              14,
+              20
+            ],
+            [
+              17,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "bridge-secondary-tertiary-casing-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ],
+        [
+          "in",
+          "class",
+          "secondary",
+          "tertiary"
+        ]
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              8,
+              1.5
+            ],
+            [
+              20,
+              15
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                5,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.2
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": {
+          "stops": [
+            [
+              14,
+              20
+            ],
+            [
+              17,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "bridge-trunk-primary-casing-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ],
+        [
+          "in",
+          "class",
+          "primary",
+          "trunk"
+        ]
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              5,
+              0.4
+            ],
+            [
+              6,
+              0.6
+            ],
+            [
+              7,
+              1.5
+            ],
+            [
+              14,
+              10
+            ],
+            [
+              20,
+              25
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                5,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.2
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": {
+          "stops": [
+            [
+              14,
+              20
+            ],
+            [
+              17,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "bridge-path-casing-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "==",
+            "brunnel",
+            "bridge"
+          ],
+          [
+            "==",
+            "class",
+            "path"
+          ]
+        ]
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              15,
+              1.2
+            ],
+            [
+              20,
+              15
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                5,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.2
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": {
+          "stops": [
+            [
+              14,
+              20
+            ],
+            [
+              17,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "bridge-motorway-casing-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ],
+        [
+          "==",
+          "class",
+          "motorway"
+        ]
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              5,
+              0.4
+            ],
+            [
+              6,
+              0.6
+            ],
+            [
+              7,
+              1.5
+            ],
+            [
+              15,
+              14
+            ],
+            [
+              20,
+              18
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                5,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.2
+            ],
+            [
+              17,
+              0.6
+            ]
+          ]
+        },
+        "line-blur": {
+          "stops": [
+            [
+              14,
+              20
+            ],
+            [
+              17,
+              30
+            ]
+          ]
+        }
       }
     },
     {
@@ -4220,7 +4952,7 @@
       "source-layer": "building",
       "minzoom": 16,
       "paint": {
-        "fill-color": "rgba(221, 221, 221, 0.5)",
+        "fill-color": "rgba(236, 236, 236, 0.9)",
         "fill-outline-color": "#ccc",
         "fill-antialias": true
       }
@@ -4416,92 +5148,7 @@
       }
     },
     {
-      "id": "poi-bus",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "poi",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Point"
-        ],
-        [
-          "has",
-          "name"
-        ],
-        [
-          "==",
-          "class",
-          "bus"
-        ],
-        [
-          "==",
-          "subclass",
-          "bus_stop"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-anchor": "bottom",
-        "icon-image": [
-          "coalesce",
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              "-JP"
-            ]
-          ],
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              ""
-            ]
-          ],
-          [
-            "image",
-            "circle"
-          ]
-        ],
-        "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.3
-        ],
-        "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "poi-r25",
+      "id": "poi-z16",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "poi",
@@ -4514,11 +5161,6 @@
           "Point"
         ],
         [
-          ">=",
-          "rank",
-          25
-        ],
-        [
           "has",
           "name"
         ],
@@ -4526,6 +5168,93 @@
           "!=",
           "disputed",
           "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": "circle-stroked",
+        "icon-size": 0.6,
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-z16-primary",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 16,
+      "filter": [
+        "any",
+        [
+          "all",
+          [
+            "==",
+            "$type",
+            "Point"
+          ],
+          [
+            "has",
+            "name"
+          ],
+          [
+            "in",
+            "class",
+            "cemetery",
+            "restaurant",
+            "bar",
+            "cafe",
+            "sushi",
+            "restaurant_noodle",
+            "fast_food",
+            "ice_cream",
+            "restaurant_pizza",
+            "restaurant_seafood",
+            "beer",
+            "library",
+            "fuel",
+            "post",
+            "police",
+            "fire_station",
+            "entrance",
+            "bus",
+            "attraction",
+            "art_gallery"
+          ],
+          [
+            "!=",
+            "disputed",
+            "japan_northern_territories"
+          ]
+        ],
+        [
+          "all",
+          [
+            "in",
+            "subclass",
+            "community_centre"
+          ],
+          [
+            "!=",
+            "disputed",
+            "japan_northern_territories"
+          ]
         ]
       ],
       "layout": {
@@ -4551,17 +5280,13 @@
           [
             "image",
             [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              ""
+              "get",
+              "class"
             ]
           ],
           [
             "image",
-            "circle"
+            "circle-stroked"
           ]
         ],
         "text-field": "{name}",
@@ -4580,11 +5305,11 @@
       }
     },
     {
-      "id": "poi-r10-r24",
+      "id": "poi-z15",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "poi",
-      "minzoom": 13,
+      "minzoom": 15,
       "filter": [
         "all",
         [
@@ -4593,23 +5318,23 @@
           "Point"
         ],
         [
-          "<",
-          "rank",
-          25
-        ],
-        [
           "has",
           "name"
+        ],
+        [
+          "in",
+          "class",
+          "bank",
+          "parking",
+          "grocery",
+          "shop",
+          "school",
+          "hospital"
         ],
         [
           "!=",
           "disputed",
           "japan_northern_territories"
-        ],
-        [
-          ">=",
-          "rank",
-          10
         ]
       ],
       "layout": {
@@ -4635,17 +5360,13 @@
           [
             "image",
             [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              ""
+              "get",
+              "class"
             ]
           ],
           [
             "image",
-            "circle"
+            "circle-stroked"
           ]
         ],
         "text-field": "{name}",
@@ -4654,8 +5375,7 @@
           0.3
         ],
         "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible"
+        "text-max-width": 9
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -4665,11 +5385,11 @@
       }
     },
     {
-      "id": "poi-r0-r9",
+      "id": "poi-z14",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "poi",
-      "minzoom": 13,
+      "minzoom": 14,
       "filter": [
         "all",
         [
@@ -4678,18 +5398,20 @@
           "Point"
         ],
         [
-          "<",
-          "rank",
-          9
-        ],
-        [
           "has",
           "name"
         ],
         [
-          "!=",
+          "in",
           "class",
-          "bus"
+          "college",
+          "castle",
+          "aquarium",
+          "cinema",
+          "theatre",
+          "zoo",
+          "convenience",
+          "lodging"
         ],
         [
           "!=",
@@ -4720,17 +5442,13 @@
           [
             "image",
             [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              ""
+              "get",
+              "class"
             ]
           ],
           [
             "image",
-            "circle"
+            "circle-stroked"
           ]
         ],
         "text-field": "{name}",
@@ -4739,8 +5457,434 @@
           0.3
         ],
         "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible"
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-z11",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "in",
+          "class",
+          "stadium",
+          "landmark",
+          "monument",
+          "museum",
+          "town_hall",
+          "golf"
+        ],
+        [
+          "!in",
+          "subclass",
+          "community_centre"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "get",
+              "class"
+            ]
+          ],
+          [
+            "image",
+            "circle-stroked"
+          ]
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-worship",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "!has",
+          "wikidata"
+        ],
+        [
+          "in",
+          "class",
+          "place_of_worship"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "get",
+              "class"
+            ]
+          ],
+          [
+            "image",
+            "circle-stroked"
+          ]
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-worship-primary",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "has",
+          "wikidata"
+        ],
+        [
+          "in",
+          "class",
+          "place_of_worship"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "get",
+              "class"
+            ]
+          ],
+          [
+            "image",
+            "circle-stroked"
+          ]
+        ],
+        "text-field": "{name}",
+        "icon-padding": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          30,
+          15,
+          2
+        ],
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-park",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "!has",
+          "wikidata"
+        ],
+        [
+          "in",
+          "class",
+          "park"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "get",
+              "class"
+            ]
+          ],
+          [
+            "image",
+            "circle-stroked"
+          ]
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-park-primary",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "has",
+          "wikidata"
+        ],
+        [
+          "in",
+          "class",
+          "park"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "get",
+              "class"
+            ]
+          ],
+          [
+            "image",
+            "circle-stroked"
+          ]
+        ],
+        "icon-padding": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          15,
+          15,
+          2
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -4754,7 +5898,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "poi",
-      "minzoom": 13,
+      "minzoom": 11,
       "filter": [
         "all",
         [
@@ -4785,11 +5929,48 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans CJK JP Bold"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
-        "icon-image": "{class}",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            [
+              "get",
+              "class"
+            ]
+          ],
+          [
+            "image",
+            "circle-stroked"
+          ]
+        ],
+        "icon-padding": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          30,
+          15,
+          2
+        ],
         "text-field": "{name}",
         "text-offset": [
           0,
@@ -4803,6 +5984,132 @@
         "text-ignore-placement": false,
         "text-allow-overlap": false,
         "text-optional": true
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#415CBD",
+        "text-halo-width": 2,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-airport-primary",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "aerodrome_label",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        [
+          "has",
+          "iata"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-image": "airport",
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-size": 12,
+        "text-max-width": 9,
+        "visibility": "visible",
+        "icon-size": 1,
+        "text-optional": true
+      },
+      "paint": {
+        "text-halo-blur": 0.5,
+        "text-color": "#666",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "poi-mountain",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "mountain_peak",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            "mountain"
+          ],
+          [
+            "image",
+            "circle-stroked"
+          ]
+        ],
+        "icon-padding": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          50,
+          11,
+          100,
+          20,
+          2
+        ],
+        "text-field": "{name}",
+        "text-offset": [
+          0,
+          0.3
+        ],
+        "text-size": 12,
+        "text-max-width": 9,
+        "visibility": "visible"
       },
       "paint": {
         "text-halo-blur": 0.5,
@@ -4991,49 +6298,6 @@
       },
       "paint": {
         "text-color": "#ffffff"
-      }
-    },
-    {
-      "id": "airport-label-major",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "aerodrome_label",
-      "minzoom": 10,
-      "filter": [
-        "all",
-        [
-          "has",
-          "iata"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-image": "airport",
-        "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9,
-        "visibility": "visible",
-        "icon-size": 1,
-        "text-optional": true
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
       }
     },
     {

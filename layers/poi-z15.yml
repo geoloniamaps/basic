@@ -35,10 +35,8 @@ layout:
           - class
         - '-JP'
     - - image
-      - - concat
-        - - get
-          - class
-        - ''
+      - - get
+        - class
     - - image
       - circle-stroked
   text-field: '{name}'
