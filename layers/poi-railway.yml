@@ -28,8 +28,15 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - get
-        - class
+      - - concat
+        - - get
+          - class
+        - '-JP'
+    - - image
+      - - concat
+        - - get
+          - class
+        - ''
     - - image
       - circle-stroked
   icon-padding:
