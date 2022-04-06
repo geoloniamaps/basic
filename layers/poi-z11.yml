@@ -18,6 +18,9 @@ filter:
     - museum
     - town_hall
     - golf
+  - - '!in'
+    - subclass
+    - community_centre # class town_hall内でも 
   - - '!='
     - disputed
     - japan_northern_territories

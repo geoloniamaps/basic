@@ -2,7 +2,7 @@ id: poi-worship-primary
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 11
+minzoom: 14
 filter:
   - all
   - - '=='

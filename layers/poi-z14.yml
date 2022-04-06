@@ -19,7 +19,6 @@ filter:
     - theatre
     - zoo
     - convenience
-    - art_gallery
     - lodging
   - - '!='
     - disputed
