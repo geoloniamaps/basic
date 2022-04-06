@@ -22,11 +22,6 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
       - 'mountain'
     - - image
       - circle-stroked

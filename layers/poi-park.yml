@@ -27,15 +27,8 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
-      - - concat
-        - - get
-          - class
-        - ''
+      - - get
+        - class
     - - image
       - circle-stroked
   text-field: '{name}'
