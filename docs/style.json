@@ -21,7 +21,7 @@
       "attribution": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html\" target=\"_blank\">© GSI Japan</a>"
     }
   },
-  "sprite": "https://k-kbys.jp.ngrok.io/basic",
+  "sprite": "https://geoloniamaps.github.io/basic/basic",
   "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -5177,7 +5177,24 @@
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
-        "icon-image": "circle-stroked",
+        "icon-image": [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "class"
+              ],
+              "-JP"
+            ]
+          ],
+          [
+            "image",
+            "circle-stroked"
+          ]
+        ],
         "icon-size": 0.6,
         "text-field": "{name}",
         "text-offset": [
@@ -5279,13 +5296,6 @@
           ],
           [
             "image",
-            [
-              "get",
-              "class"
-            ]
-          ],
-          [
-            "image",
             "circle-stroked"
           ]
         ],
@@ -5355,13 +5365,6 @@
                 "class"
               ],
               "-JP"
-            ]
-          ],
-          [
-            "image",
-            [
-              "get",
-              "class"
             ]
           ],
           [
@@ -5437,13 +5440,6 @@
                 "class"
               ],
               "-JP"
-            ]
-          ],
-          [
-            "image",
-            [
-              "get",
-              "class"
             ]
           ],
           [
@@ -5526,13 +5522,6 @@
           ],
           [
             "image",
-            [
-              "get",
-              "class"
-            ]
-          ],
-          [
-            "image",
             "circle-stroked"
           ]
         ],
@@ -5605,13 +5594,6 @@
           ],
           [
             "image",
-            [
-              "get",
-              "class"
-            ]
-          ],
-          [
-            "image",
             "circle-stroked"
           ]
         ],
@@ -5680,13 +5662,6 @@
                 "class"
               ],
               "-JP"
-            ]
-          ],
-          [
-            "image",
-            [
-              "get",
-              "class"
             ]
           ],
           [
@@ -5776,13 +5751,6 @@
           ],
           [
             "image",
-            [
-              "get",
-              "class"
-            ]
-          ],
-          [
-            "image",
             "circle-stroked"
           ]
         ],
@@ -5851,13 +5819,6 @@
                 "class"
               ],
               "-JP"
-            ]
-          ],
-          [
-            "image",
-            [
-              "get",
-              "class"
             ]
           ],
           [
@@ -5944,13 +5905,6 @@
                 "class"
               ],
               "-JP"
-            ]
-          ],
-          [
-            "image",
-            [
-              "get",
-              "class"
             ]
           ],
           [
@@ -6067,17 +6021,6 @@
         "icon-anchor": "bottom",
         "icon-image": [
           "coalesce",
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "class"
-              ],
-              "-JP"
-            ]
-          ],
           [
             "image",
             "mountain"

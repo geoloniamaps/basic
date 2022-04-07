@@ -19,7 +19,7 @@ layout:
     - Noto Sans Regular
   text-anchor: top
   icon-anchor: bottom
-  icon-image: circle-stroked
+  icon-image: !!inc/file layers/components/poi-icon-image.yml
   icon-size: 0.6
   text-field: '{name}'
   text-offset:

@@ -30,18 +30,7 @@ layout:
     - Noto Sans Regular
   text-anchor: top
   icon-anchor: bottom
-  icon-image:
-    - coalesce
-    - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
-      - - get
-        - class
-    - - image
-      - circle-stroked
+  icon-image: !!inc/file layers/components/poi-icon-image.yml
   text-field: '{name}'
   text-offset:
     - 0
