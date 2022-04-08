@@ -49,13 +49,14 @@ layout:
     - Noto Sans Regular
   text-anchor: top
   icon-anchor: bottom
-  icon-image:
-    - coalesce
-    - - image
-      - - get
-        - class
-    - - image
-      - circle-stroked
+  icon-image: [
+    'case',
+    ['boolean', ["image", ["concat", ["get", class], '-JP']], true],
+    ["image", ["concat", ["get", class], '-JP']],
+    ['boolean', ["image", ["get", class]], true],
+    ["image", ["get", class]],
+    ["image", circle-stroked]
+  ]
   text-field: '{name}'
   text-offset:
     - 0
