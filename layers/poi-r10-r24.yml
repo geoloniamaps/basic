@@ -25,20 +25,7 @@ layout:
     - Noto Sans Regular
   text-anchor: top
   icon-anchor: bottom
-  icon-image:
-    - coalesce
-    - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
-      - - concat
-        - - get
-          - class
-        - ''
-    - - image
-      - circle
+  icon-image: kai_36_36
   text-field: '{name}'
   text-offset:
     - 0
