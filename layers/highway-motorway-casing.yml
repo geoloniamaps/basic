@@ -22,7 +22,7 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: rgba(222, 222, 222, 1)
+  line-color: '#4ed19e'
   line-width:
     base: 1.2
     stops:
@@ -37,8 +37,10 @@ paint:
       - - 20
         - 22
   line-opacity:
-    stops:
-      - - 4
-        - 0
-      - - 5
-        - 1
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 0.6
+    - 11
+    - 1
