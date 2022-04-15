@@ -24,7 +24,6 @@ glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
-
   - !!inc/file layers/landcover-wood-blur.yml
   - !!inc/file layers/landcover-wood.yml
   - !!inc/file layers/landcover-grass-park.yml
@@ -76,7 +75,7 @@ layers:
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
-
+  - !!inc/file layers/ferry.yml
   - !!inc/file layers/bridge-area.yml
   - !!inc/file layers/bridge-motorway-link-casing-blur.yml
   - !!inc/file layers/bridge-link-casing-blur.yml
@@ -84,7 +83,6 @@ layers:
   - !!inc/file layers/bridge-trunk-primary-casing-blur.yml
   - !!inc/file layers/bridge-path-casing-blur.yml
   - !!inc/file layers/bridge-motorway-casing-blur.yml
-
   - !!inc/file layers/tunnel-railway.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
   - !!inc/file layers/tunnel-minor-casing.yml
@@ -96,15 +94,11 @@ layers:
   - !!inc/file layers/tunnel-secondary-tertiary.yml
   - !!inc/file layers/tunnel-trunk-primary.yml
   - !!inc/file layers/tunnel-motorway.yml
-  - !!inc/file layers/ferry.yml
   - !!inc/file layers/aeroway-taxiway-casing.yml
   - !!inc/file layers/aeroway-runway-casing.yml
   - !!inc/file layers/aeroway-area.yml
   - !!inc/file layers/aeroway-taxiway.yml
   - !!inc/file layers/aeroway-runway.yml
-
-
-
   - !!inc/file layers/highway-area.yml
   - !!inc/file layers/highway-motorway-link-casing.yml
   - !!inc/file layers/highway-link-casing.yml
@@ -121,23 +115,18 @@ layers:
   - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/highway-trunk.yml
   - !!inc/file layers/highway-motorway.yml
-
   - !!inc/file layers/bridge-motorway-link-casing.yml
   - !!inc/file layers/bridge-link-casing.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing.yml
   - !!inc/file layers/bridge-trunk-primary-casing.yml
   - !!inc/file layers/bridge-path-casing.yml
-
   - !!inc/file layers/bridge-path.yml
   - !!inc/file layers/bridge-motorway-link.yml
   - !!inc/file layers/bridge-link.yml
   - !!inc/file layers/bridge-secondary-tertiary.yml
   - !!inc/file layers/bridge-trunk-primary.yml
-
   - !!inc/file layers/bridge-motorway-casing.yml
   - !!inc/file layers/bridge-motorway.yml
-
-
   - !!inc/file layers/railway.yml
   - !!inc/file layers/railway-hatching.yml
   - !!inc/file layers/railway-subway.yml
