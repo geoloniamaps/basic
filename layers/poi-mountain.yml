@@ -1,21 +1,15 @@
-id: poi-r0-r9
+id: poi-mountain
 type: symbol
 source: geolonia
-source-layer: poi
-minzoom: 13
+source-layer: mountain_peak
+minzoom: 8
 filter:
   - all
   - - '=='
     - $type
     - Point
-  - - <=
-    - rank
-    - 9
   - - has
     - name
-  - - '!='
-    - class
-    - bus
   - - '!='
     - disputed
     - japan_northern_territories
@@ -28,17 +22,19 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
+      - 'mountain'
     - - image
-      - - concat
-        - - get
-          - class
-        - ''
-    - - image
-      - circle
+      - circle-stroked
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 50
+    - 11
+    - 100
+    - 20
+    - 2
   text-field: '{name}'
   text-offset:
     - 0
@@ -47,9 +43,7 @@ layout:
   text-max-width: 9
   visibility: visible
 paint:
-  text-halo-blur: 3
+  text-halo-blur: 0.5
   text-color: '#666'
   text-halo-width: 1
   text-halo-color: '#ffffff'
-  icon-halo-width: 10
-
