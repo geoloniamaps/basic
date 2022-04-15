@@ -4,8 +4,6 @@ $name: Geolonia Basic
 
 version: 8
 name: $name
-metadata:
-  "variables": !!inc/file layers/components/road-width.yml
 sources:
   oceanus:
     type: vector
@@ -23,9 +21,6 @@ sources:
     attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
 sprite: https://geoloniamaps.github.io/basic/basic
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
-
-!!inc/file layers/components/road-width.yml
-
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
@@ -80,6 +75,7 @@ layers:
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
+  - !!inc/file layers/ferry.yml
   - !!inc/file layers/bridge-area.yml
   - !!inc/file layers/bridge-motorway-link-casing-blur.yml
   - !!inc/file layers/bridge-link-casing-blur.yml
@@ -98,14 +94,11 @@ layers:
   - !!inc/file layers/tunnel-secondary-tertiary.yml
   - !!inc/file layers/tunnel-trunk-primary.yml
   - !!inc/file layers/tunnel-motorway.yml
-  - !!inc/file layers/ferry.yml
   - !!inc/file layers/aeroway-taxiway-casing.yml
   - !!inc/file layers/aeroway-runway-casing.yml
   - !!inc/file layers/aeroway-area.yml
   - !!inc/file layers/aeroway-taxiway.yml
   - !!inc/file layers/aeroway-runway.yml
-  - !!inc/file layers/building.yml
-  - !!inc/file layers/building-3d.yml
   - !!inc/file layers/highway-area.yml
   - !!inc/file layers/highway-motorway-link-casing.yml
   - !!inc/file layers/highway-link-casing.yml
@@ -129,41 +122,50 @@ layers:
   - !!inc/file layers/bridge-path-casing.yml
   - !!inc/file layers/bridge-path.yml
   - !!inc/file layers/bridge-motorway-link.yml
-  # - !!inc/file layers/bridge-link.yml
-  # - !!inc/file layers/bridge-secondary-tertiary.yml
-  # - !!inc/file layers/bridge-trunk-primary.yml
-  # - !!inc/file layers/bridge-motorway-casing.yml
-  # - !!inc/file layers/bridge-motorway.yml
-  # - !!inc/file layers/railway.yml
-  # - !!inc/file layers/railway-hatching.yml
-  # - !!inc/file layers/cablecar.yml
-  # - !!inc/file layers/cablecar-dash.yml
-  # - !!inc/file layers/boundary-land-level-4.yml
-  # - !!inc/file layers/railway-name.yml
-  # - !!inc/file layers/road_oneway.yml
-  # - !!inc/file layers/road_oneway_opposite.yml
-  # - !!inc/file layers/poi-bus.yml
-  # - !!inc/file layers/poi-r25.yml
-  # - !!inc/file layers/poi-r10-r24.yml
-  # - !!inc/file layers/poi-r0-r9.yml
-  # - !!inc/file layers/poi-entrance.yml
-  # - !!inc/file layers/poi-railway.yml
-  # - !!inc/file layers/road_shield_prefectural.yml
-  # - !!inc/file layers/road_shield_national.yml
-  # - !!inc/file layers/road_shield_highway.yml
-  # - !!inc/file layers/airport-label-major.yml
-  # - !!inc/file layers/nt-label-small.yml
-  # - !!inc/file layers/nt-label-large.yml
-  # - !!inc/file layers/place-village.yml
-  # - !!inc/file layers/place-town.yml
-  # - !!inc/file layers/place-island-name.yml
-  # - !!inc/file layers/place-city-rank10.yml
-  # - !!inc/file layers/place-city-rank9.yml
-  # - !!inc/file layers/place-city-rank8.yml
-  # - !!inc/file layers/place-city-rank7.yml
-  # - !!inc/file layers/place-city-rank6.yml
-  # - !!inc/file layers/place-city-rank5.yml
-  # - !!inc/file layers/place-city-rank4.yml
-  # - !!inc/file layers/place-city-rank3.yml
-  # - !!inc/file layers/place-city-rank2.yml
-  # - !!inc/file layers/place-city-capital.yml
+  - !!inc/file layers/bridge-link.yml
+  - !!inc/file layers/bridge-secondary-tertiary.yml
+  - !!inc/file layers/bridge-trunk-primary.yml
+  - !!inc/file layers/bridge-motorway-casing.yml
+  - !!inc/file layers/bridge-motorway.yml
+  - !!inc/file layers/railway.yml
+  - !!inc/file layers/railway-hatching.yml
+  - !!inc/file layers/railway-subway.yml
+  - !!inc/file layers/cablecar.yml
+  - !!inc/file layers/cablecar-dash.yml
+  - !!inc/file layers/boundary-land-level-4.yml
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/building-3d.yml
+  - !!inc/file layers/railway-name.yml
+  - !!inc/file layers/railway-subway-name.yml
+  - !!inc/file layers/road_oneway.yml
+  - !!inc/file layers/road_oneway_opposite.yml
+  - !!inc/file layers/poi-z16.yml
+  - !!inc/file layers/poi-z16-primary.yml
+  - !!inc/file layers/poi-z15.yml
+  - !!inc/file layers/poi-z14.yml
+  - !!inc/file layers/poi-z11.yml
+  - !!inc/file layers/poi-worship.yml
+  - !!inc/file layers/poi-worship-primary.yml
+  - !!inc/file layers/poi-park.yml
+  - !!inc/file layers/poi-park-primary.yml
+  - !!inc/file layers/poi-railway.yml
+  - !!inc/file layers/poi-airport-primary.yml
+  - !!inc/file layers/poi-mountain.yml
+  - !!inc/file layers/road_shield_prefectural.yml
+  - !!inc/file layers/road_shield_national.yml
+  - !!inc/file layers/road_shield_highway.yml
+  - !!inc/file layers/nt-label-small.yml
+  - !!inc/file layers/nt-label-large.yml
+  - !!inc/file layers/place-village.yml
+  - !!inc/file layers/place-town.yml
+  - !!inc/file layers/place-island-name.yml
+  - !!inc/file layers/place-city-rank10.yml
+  - !!inc/file layers/place-city-rank9.yml
+  - !!inc/file layers/place-city-rank8.yml
+  - !!inc/file layers/place-city-rank7.yml
+  - !!inc/file layers/place-city-rank6.yml
+  - !!inc/file layers/place-city-rank5.yml
+  - !!inc/file layers/place-city-rank4.yml
+  - !!inc/file layers/place-city-rank3.yml
+  - !!inc/file layers/place-city-rank2.yml
+  - !!inc/file layers/place-city-capital.yml
