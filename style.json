@@ -3800,7 +3800,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 16,
+      "minzoom": 15,
       "filter": [
         "all",
         [
@@ -3824,21 +3824,30 @@
         ]
       ],
       "paint": {
-        "line-color": "#dddddd",
-        "line-dasharray": [
-          1.5,
-          0.75
-        ],
+        "line-color": "#FFFFFF",
         "line-width": {
-          "base": 1.2,
+          "base": 3,
           "stops": [
             [
               15,
-              1.2
+              2
             ],
             [
-              20,
-              4
+              17,
+              3
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              15,
+              0.5
+            ],
+            [
+              17,
+              1
             ]
           ]
         }
