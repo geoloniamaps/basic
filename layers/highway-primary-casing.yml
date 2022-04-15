@@ -24,4 +24,4 @@ paint:
         - 0
       - - 8
         - 1
-  line-width: $broadRoadsCasingLineWidth
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

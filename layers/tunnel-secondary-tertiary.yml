@@ -21,4 +21,4 @@ paint:
         - 0
       - - 13
         - 1
-  line-width: $broadRoadsLineWidth
+  line-width: !!inc/file layers/components/broad-road-width.yml

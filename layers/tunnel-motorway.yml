@@ -15,4 +15,4 @@ layout:
   visibility: visible
 paint:
   line-color: '#ffdaa6'
-  line-width: $broadRoadsLineWidth
+  line-width: !!inc/file layers/components/broad-road-width.yml

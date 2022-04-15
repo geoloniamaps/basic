@@ -1,8 +1,8 @@
-id: poi-railway
+id: poi-worship-primary
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 11
+minzoom: 14
 filter:
   - all
   - - '=='
@@ -10,19 +10,18 @@ filter:
     - Point
   - - has
     - name
-  - - '=='
+  - - has
+    - wikidata
+  - - 'in'
     - class
-    - railway
-  - - '=='
-    - subclass
-    - station
+    - place_of_worship
   - - '!='
     - disputed
     - japan_northern_territories
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Regular
   text-anchor: top
   icon-anchor: bottom
   icon-image:
@@ -32,6 +31,7 @@ layout:
         - class
     - - image
       - circle-stroked
+  text-field: '{name}'
   icon-padding:
     - interpolate
     - - linear
@@ -40,20 +40,13 @@ layout:
     - 30
     - 15
     - 2
-  text-field: '{name}'
   text-offset:
     - 0
     - 0.3
   text-size: 12
   text-max-width: 9
-  icon-optional: false
-  icon-ignore-placement: false
-  icon-allow-overlap: false
-  text-ignore-placement: false
-  text-allow-overlap: false
-  text-optional: true
 paint:
   text-halo-blur: 0.5
-  text-color: '#415CBD'
-  text-halo-width: 2
+  text-color: '#666'
+  text-halo-width: 1
   text-halo-color: '#ffffff'

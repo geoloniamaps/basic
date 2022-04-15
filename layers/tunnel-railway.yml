@@ -10,6 +10,9 @@ filter:
   - - '=='
     - class
     - rail
+  - - '!='
+    - subclass
+    - subway
 paint:
   line-color: '#A58043'
   line-opacity: 0.4

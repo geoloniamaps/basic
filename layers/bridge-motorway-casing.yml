@@ -13,5 +13,13 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: rgba(222, 222, 222, 1)
-  line-width: $broadRoadsCasingLineWidth
+  line-color: '#4ed19e'
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 0
+    - 11
+    - 1
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

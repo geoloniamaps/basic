@@ -19,6 +19,14 @@ layout:
   line-cap: round
   line-join: round
 paint:
-  line-color: '#dedede'
-  line-opacity: 1
-  line-width: $broadRoadsCasingLineWidth
+  line-color: '#4ed19e'
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 0.6
+    - 11
+    - 1
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
+

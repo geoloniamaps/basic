@@ -22,5 +22,13 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: rgba(222, 222, 222, 1)
-  line-width: $broadRoadsCasingLineWidth
+  line-color: '#4ed19e'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 0.6
+    - 11
+    - 1

@@ -15,4 +15,4 @@ layout:
 paint:
   line-color: '#e9ac77'
   line-opacity: 1
-  line-width: $broadRoadsCasingLineWidth
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

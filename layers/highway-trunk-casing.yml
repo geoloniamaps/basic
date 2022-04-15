@@ -18,4 +18,4 @@ layout:
   visibility: visible
 paint:
   line-color: rgba(222, 222, 222, 1)
-  line-width: $broadRoadsCasingLineWidth
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

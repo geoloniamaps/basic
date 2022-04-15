@@ -1,8 +1,8 @@
-id: poi-bus
+id: poi-z14
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 15
+minzoom: 14
 filter:
   - all
   - - '=='
@@ -10,12 +10,16 @@ filter:
     - Point
   - - has
     - name
-  - - '=='
+  - - 'in'
     - class
-    - bus
-  - - '=='
-    - subclass
-    - bus_stop
+    - college
+    - castle
+    - aquarium
+    - cinema
+    - theatre
+    - zoo
+    - convenience
+    - lodging
   - - '!='
     - disputed
     - japan_northern_territories
@@ -28,24 +32,16 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
+      - - get
+        - class
     - - image
-      - - concat
-        - - get
-          - class
-        - ''
-    - - image
-      - circle
+      - circle-stroked
   text-field: '{name}'
   text-offset:
     - 0
     - 0.3
   text-size: 12
   text-max-width: 9
-  visibility: visible
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

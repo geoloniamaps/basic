@@ -13,5 +13,20 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: rgba(255, 255, 255, 1)
-  line-width: $broadRoadsLineWidth
+  line-color:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - '#4ed19e'
+    - 11
+    - '#9be0c5'
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 0
+    - 11
+    - 1
+  line-width: !!inc/file layers/components/broad-road-width.yml
