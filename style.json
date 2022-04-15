@@ -2836,19 +2836,32 @@
             ]
           ]
         },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              8,
-              1.5
-            ],
-            [
-              20,
-              17
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -2875,27 +2888,32 @@
       },
       "paint": {
         "line-color": "#e9ac77",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              5,
-              0.4
-            ],
-            [
-              6,
-              0.6
-            ],
-            [
-              7,
-              1.5
-            ],
-            [
-              20,
-              22
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -2926,27 +2944,32 @@
           0.5,
           0.25
         ],
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              5,
-              0.4
-            ],
-            [
-              6,
-              0.6
-            ],
-            [
-              7,
-              1.5
-            ],
-            [
-              20,
-              22
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -3071,23 +3094,32 @@
             ]
           ]
         },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              7,
-              0.5
-            ],
-            [
-              20,
-              10
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -3114,23 +3146,32 @@
       },
       "paint": {
         "line-color": "#fff4c6",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              7,
-              0.5
-            ],
-            [
-              20,
-              18
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -3157,23 +3198,32 @@
       },
       "paint": {
         "line-color": "#ffdaa6",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              7,
-              0.5
-            ],
-            [
-              20,
-              18
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -3399,6 +3449,43 @@
       }
     },
     {
+      "id": "building",
+      "type": "fill",
+      "source": "geolonia",
+      "source-layer": "building",
+      "minzoom": 16,
+      "paint": {
+        "fill-color": "rgba(236, 236, 236, 0.9)",
+        "fill-outline-color": "#ccc",
+        "fill-antialias": true
+      }
+    },
+    {
+      "id": "building-3d",
+      "type": "fill-extrusion",
+      "metadata": {
+        "visible-on-3d": true
+      },
+      "source": "geolonia",
+      "source-layer": "building",
+      "minzoom": 15,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-extrusion-color": "#D7D4D1",
+        "fill-extrusion-height": [
+          "get",
+          "render_height"
+        ],
+        "fill-extrusion-base": [
+          "get",
+          "render_min_height"
+        ],
+        "fill-extrusion-opacity": 0.5
+      }
+    },
+    {
       "id": "highway-area",
       "type": "fill",
       "source": "geolonia",
@@ -3462,27 +3549,32 @@
           11,
           1
         ],
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              12,
-              1
-            ],
-            [
-              13,
-              3
-            ],
-            [
-              14,
-              4
-            ],
-            [
-              20,
-              15
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -3574,39 +3666,24 @@
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": {
-          "stops": [
-            [
-              12,
-              0
-            ],
-            [
-              12.5,
-              1
-            ]
-          ]
-        },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              12,
-              0.5
-            ],
-            [
-              13,
-              1
-            ],
-            [
-              14,
-              4
-            ],
-            [
-              20,
-              15
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          13.5,
+          0,
+          14,
+          1,
+          16,
+          3,
+          20,
+          20
+        ]
       }
     },
     {
@@ -3614,6 +3691,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "min-zoom": 8,
       "filter": [
         "all",
         [
@@ -3630,37 +3708,38 @@
         ]
       ],
       "layout": {
-        "line-cap": "butt",
+        "line-cap": "round",
         "line-join": "round",
         "visibility": "visible"
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": {
-          "stops": [
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              1
-            ]
-          ]
-        },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              8,
-              1.5
-            ],
-            [
-              20,
-              17
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -3702,27 +3781,32 @@
             ]
           ]
         },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              7,
-              0
-            ],
-            [
-              8,
-              0.6
-            ],
-            [
-              9,
-              1.5
-            ],
-            [
-              20,
-              22
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -3730,7 +3814,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 5,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3752,39 +3836,32 @@
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
-        "line-opacity": {
-          "stops": [
-            [
-              5,
-              0
-            ],
-            [
-              6,
-              1
-            ]
-          ]
-        },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              5,
-              0
-            ],
-            [
-              6,
-              0.6
-            ],
-            [
-              7,
-              1.5
-            ],
-            [
-              20,
-              22
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -3823,31 +3900,32 @@
       },
       "paint": {
         "line-color": "#4ed19e",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              4,
-              0
-            ],
-            [
-              5,
-              0.4
-            ],
-            [
-              6,
-              0.6
-            ],
-            [
-              7,
-              1.5
-            ],
-            [
-              20,
-              22
-            ]
-          ]
-        },
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ],
         "line-opacity": [
           "interpolate",
           [
@@ -3977,27 +4055,32 @@
           11,
           1
         ],
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              12.5,
-              0
-            ],
-            [
-              13,
-              1.5
-            ],
-            [
-              14,
-              2.5
-            ],
-            [
-              20,
-              11.5
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -4085,24 +4168,24 @@
       },
       "paint": {
         "line-color": "#ffffff",
-        "line-opacity": 1,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              13.5,
-              0
-            ],
-            [
-              14,
-              2.5
-            ],
-            [
-              20,
-              11.5
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          13.5,
+          0,
+          14,
+          1.2,
+          16,
+          2.2,
+          20,
+          16
+        ]
       }
     },
     {
@@ -4131,36 +4214,33 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
-        "line-opacity": {
-          "stops": [
-            [
-              12,
-              0
-            ],
-            [
-              13,
-              1
-            ]
-          ]
-        },
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              8,
-              0.5
-            ],
-            [
-              20,
-              13
-            ]
-          ]
-        }
+        "line-color": "#fff",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -4168,6 +4248,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4192,24 +4273,33 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              8.5,
-              0
-            ],
-            [
-              9,
-              0.5
-            ],
-            [
-              20,
-              18
-            ]
-          ]
-        }
+        "line-color": "#fff",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -4217,6 +4307,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4242,23 +4333,32 @@
       },
       "paint": {
         "line-color": "#ffffff",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              7,
-              0.5
-            ],
-            [
-              20,
-              18
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -4321,23 +4421,32 @@
           11,
           1
         ],
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              7,
-              0.5
-            ],
-            [
-              20,
-              18
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -4364,27 +4473,32 @@
       "paint": {
         "line-color": "#e9ac77",
         "line-opacity": 1,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              12,
-              1
-            ],
-            [
-              13,
-              3
-            ],
-            [
-              14,
-              4
-            ],
-            [
-              20,
-              15
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -4462,19 +4576,32 @@
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
         "line-opacity": 1,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              8,
-              1.5
-            ],
-            [
-              20,
-              28
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -4501,27 +4628,32 @@
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              5,
-              0.4
-            ],
-            [
-              6,
-              0.6
-            ],
-            [
-              7,
-              1.5
-            ],
-            [
-              20,
-              26
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -4637,27 +4769,32 @@
       },
       "paint": {
         "line-color": "#fc8",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              12.5,
-              0
-            ],
-            [
-              13,
-              1.5
-            ],
-            [
-              14,
-              2.5
-            ],
-            [
-              20,
-              11.5
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -4733,23 +4870,32 @@
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              7,
-              0.5
-            ],
-            [
-              20,
-              20
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -4776,23 +4922,32 @@
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              7,
-              0.5
-            ],
-            [
-              20,
-              18
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -4831,27 +4986,32 @@
           11,
           1
         ],
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              5,
-              0.4
-            ],
-            [
-              6,
-              0.6
-            ],
-            [
-              7,
-              1.5
-            ],
-            [
-              20,
-              22
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
       }
     },
     {
@@ -4902,23 +5062,32 @@
           11,
           1
         ],
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              7,
-              0.5
-            ],
-            [
-              20,
-              18
-            ]
-          ]
-        }
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          9,
+          0.5,
+          12,
+          0.8,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
       }
     },
     {
@@ -5152,43 +5321,6 @@
             ]
           ]
         }
-      }
-    },
-    {
-      "id": "building",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "building",
-      "minzoom": 16,
-      "paint": {
-        "fill-color": "rgba(236, 236, 236, 0.9)",
-        "fill-outline-color": "#ccc",
-        "fill-antialias": true
-      }
-    },
-    {
-      "id": "building-3d",
-      "type": "fill-extrusion",
-      "metadata": {
-        "visible-on-3d": true
-      },
-      "source": "geolonia",
-      "source-layer": "building",
-      "minzoom": 15,
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "fill-extrusion-color": "#D7D4D1",
-        "fill-extrusion-height": [
-          "get",
-          "render_height"
-        ],
-        "fill-extrusion-base": [
-          "get",
-          "render_min_height"
-        ],
-        "fill-extrusion-opacity": 0.5
       }
     },
     {
