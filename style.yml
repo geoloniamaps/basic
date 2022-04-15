@@ -140,12 +140,14 @@ layers:
 
   - !!inc/file layers/railway.yml
   - !!inc/file layers/railway-hatching.yml
+  - !!inc/file layers/railway-subway.yml
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
   - !!inc/file layers/boundary-land-level-4.yml
   - !!inc/file layers/building.yml
   - !!inc/file layers/building-3d.yml
   - !!inc/file layers/railway-name.yml
+  - !!inc/file layers/railway-subway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
   - !!inc/file layers/poi-bus.yml
