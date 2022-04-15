@@ -18,7 +18,7 @@ paint:
   line-opacity:
     stops:
       - - 14
-        - 0
+        - 0.5
       - - 17
         - 0.8
   line-blur: 10
