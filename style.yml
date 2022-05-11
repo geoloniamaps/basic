@@ -7,14 +7,15 @@ name: $name
 sources:
   oceanus:
     type: vector
+    maxzoom: 5
     url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
   geolonia-water:
     type: vector
     url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
   geolonia:
     type: vector
-    minzoom: 8
-    url: https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY
+    minzoom: 6
+    url: https://tileserver-dev.geolonia.com/v3/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY

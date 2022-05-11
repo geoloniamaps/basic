@@ -2,6 +2,7 @@ id: oc-water-name-ocean
 type: symbol
 source: oceanus
 source-layer: oc-water_name
+maxzoom: 6
 filter:
   - all
   - - '=='

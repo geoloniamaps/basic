@@ -2,7 +2,7 @@ id: oc-glacier
 type: fill
 source: oceanus
 source-layer: oc-glacier
-maxzoom: 8
+maxzoom: 6
 layout:
   visibility: visible
 paint:

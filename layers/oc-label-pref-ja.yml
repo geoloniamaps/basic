@@ -3,7 +3,7 @@ type: symbol
 source: oceanus
 source-layer: oc-label
 minzoom: 5
-maxzoom: 8
+maxzoom: 6
 filter:
   - all
   - - '=='

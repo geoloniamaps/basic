@@ -3,16 +3,13 @@ type: line
 source: oceanus
 source-layer: oc-road
 minzoom: 5
+maxzoom: 6
 filter:
   - all
   - - '=='
     - - get
       - class
     - highway
-  - - '=='
-    - - has
-      - jflag
-    - false
 layout:
   line-cap: butt
   line-join: round
