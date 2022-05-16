@@ -1,0 +1,52 @@
+id: poi-worship-primary
+type: symbol
+source: geolonia
+source-layer: poi
+minzoom: 14
+filter:
+  - all
+  - - '=='
+    - $type
+    - Point
+  - - has
+    - name
+  - - has
+    - wikidata
+  - - 'in'
+    - class
+    - place_of_worship
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Regular
+  text-anchor: top
+  icon-anchor: bottom
+  icon-image:
+    - coalesce
+    - - image
+      - - get
+        - class
+    - - image
+      - circle-stroked
+  text-field: '{name}'
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 30
+    - 15
+    - 2
+  text-offset:
+    - 0
+    - 0.3
+  text-size: 12
+  text-max-width: 9
+paint:
+  text-halo-blur: 0.5
+  text-color: '#666'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'

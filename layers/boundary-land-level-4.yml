@@ -2,8 +2,7 @@ id: boundary-land-level-4
 type: line
 source: geolonia
 source-layer: boundary
-minzoom: 8
-maxzoom: 14
+minzoom: 6
 filter:
   - all
   - - '=='

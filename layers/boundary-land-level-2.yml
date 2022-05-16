@@ -1,0 +1,16 @@
+id: boundary-land-level-2
+type: line
+source: geolonia
+source-layer: boundary
+minzoom: 6
+filter:
+  - all
+  - - '=='
+    - admin_level
+    - 2
+layout:
+  line-join: round
+paint:
+  line-color: '#9e9cab'
+  line-width: 1
+  line-blur: 0.4

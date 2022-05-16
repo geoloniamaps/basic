@@ -1,12 +1,20 @@
-id: airport-label-major
+id: poi-park
 type: symbol
 source: geolonia
-source-layer: aerodrome_label
-minzoom: 10
+source-layer: poi
+minzoom: 16
 filter:
   - all
+  - - '=='
+    - $type
+    - Point
   - - has
-    - iata
+    - name
+  - - '!has'
+    - wikidata
+  - - 'in'
+    - class
+    - park
   - - '!='
     - disputed
     - japan_northern_territories
@@ -15,16 +23,20 @@ layout:
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-image: airport
+  icon-anchor: bottom
+  icon-image:
+    - coalesce
+    - - image
+      - - get
+        - class
+    - - image
+      - circle-stroked
   text-field: '{name}'
   text-offset:
     - 0
-    - 0.6
+    - 0.3
   text-size: 12
   text-max-width: 9
-  visibility: visible
-  icon-size: 1
-  text-optional: true
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

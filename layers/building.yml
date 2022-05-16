@@ -3,7 +3,9 @@ type: fill
 source: geolonia
 source-layer: building
 minzoom: 16
+# layout:
+#   visibility: none
 paint:
-  fill-color: 'rgba(221, 221, 221, 0.5)'
+  fill-color: 'rgba(236, 236, 236, 0.9)'
   fill-outline-color: '#ccc'
   fill-antialias: true

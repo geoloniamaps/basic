@@ -2,7 +2,7 @@ id: oc-label-country
 type: symbol
 source: oceanus
 source-layer: oc-label
-maxzoom: 8
+maxzoom: 6
 filter:
   - '=='
   - - get

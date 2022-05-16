@@ -3,7 +3,8 @@ type: symbol
 source: oceanus
 source-layer: oc-label
 minzoom: 6
-maxzoom: 8
+maxzoom: 6
+visibility: false
 filter:
   - all
   - - has

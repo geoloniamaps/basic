@@ -2,7 +2,7 @@ id: poi-railway
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 13
+minzoom: 11
 filter:
   - all
   - - '=='
@@ -25,7 +25,21 @@ layout:
     - Noto Sans CJK JP Bold
   text-anchor: top
   icon-anchor: bottom
-  icon-image: '{class}'
+  icon-image:
+    - coalesce
+    - - image
+      - - get
+        - class
+    - - image
+      - circle-stroked
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 30
+    - 15
+    - 2
   text-field: '{name}'
   text-offset:
     - 0

@@ -1,0 +1,69 @@
+id: poi-z16-primary
+type: symbol
+source: geolonia
+source-layer: poi
+minzoom: 16
+filter:
+  - any
+  - - all
+    - - '=='
+      - $type
+      - Point
+    - - has
+      - name
+    - - 'in'
+      - class
+      - cemetery
+      - restaurant
+      - bar
+      - cafe
+      - sushi
+      - restaurant_noodle
+      - fast_food
+      - ice_cream
+      - restaurant_pizza
+      - restaurant_seafood
+      - beer
+      - library
+      - fuel
+      - post
+      - police
+      - fire_station
+      - entrance
+      - bus
+      - attraction
+      - art_gallery
+    - - '!='
+      - disputed
+      - japan_northern_territories
+  - - all
+    - - 'in'
+      - subclass
+      - community_centre
+    - - '!='
+      - disputed
+      - japan_northern_territories
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Regular
+  text-anchor: top
+  icon-anchor: bottom
+  icon-image:
+    - coalesce
+    - - image
+      - - get
+        - class
+    - - image
+      - circle-stroked
+  text-field: '{name}'
+  text-offset:
+    - 0
+    - 0.3
+  text-size: 12
+  text-max-width: 9
+paint:
+  text-halo-blur: 0.5
+  text-color: '#666'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'
