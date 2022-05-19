@@ -16,13 +16,7 @@ layout:
   line-cap: "round"
 paint:
   line-color: '#000000'
-  line-width:
-    base: 1.2
-    stops:
-      - - 8
-        - 1.5
-      - - 20
-        - 15
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
   line-translate:
     stops:
       - - 14
@@ -35,7 +29,7 @@ paint:
         - 0.2
       - - 17
         - 0.8
-  line-blur: 
+  line-blur:
     stops:
       - - 14
         - 20
