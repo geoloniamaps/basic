@@ -10,12 +10,6 @@ layout:
   visibility: visible
 paint:
   fill-color: '#bce398'
-  # fill-opacity:
-  #   stops:
-  #   - - 11
-  #     - 1
-  #   - - 12
-  #     - 0.4
   fill-antialias:
     base: 1
     stops:
