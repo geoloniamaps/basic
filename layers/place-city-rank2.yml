@@ -25,7 +25,7 @@ layout:
     - 0
     - 0.2
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Regular
   text-size: 17
   text-field: '{name}'
   text-max-width: 8

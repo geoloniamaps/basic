@@ -21,7 +21,8 @@ sources:
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
     attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
 sprite: https://geoloniamaps.github.io/basic/basic
-glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+# glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+glyphs: https://deploy-preview-12--geolonia-glyphs.netlify.app/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml

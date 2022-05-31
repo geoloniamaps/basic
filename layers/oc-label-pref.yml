@@ -12,7 +12,7 @@ filter:
     - pref
 layout:
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Regular
   text-size:
     stops:
       - - 5
