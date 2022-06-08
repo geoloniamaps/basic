@@ -6,7 +6,7 @@ minzoom: 5
 maxzoom: 6
 # filter:
 #   - all
-#   - - '=='
+  - - '=='
 #     - - get
 #       - class
 #     - pref
