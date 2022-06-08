@@ -4,12 +4,12 @@ source: oceanus
 source-layer: oc-label
 minzoom: 5
 maxzoom: 6
-filter:
-  - all
-  - - '=='
-    - - get
-      - class
-    - pref
+# filter:
+#   - all
+#   - - '=='
+#     - - get
+#       - class
+#     - pref
 layout:
   text-font:
     - Noto Sans Regular
