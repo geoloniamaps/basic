@@ -98,7 +98,6 @@ layers:
   - !!inc/file layers/tunnel-motorway.yml
   - !!inc/file layers/aeroway-taxiway-casing.yml
   - !!inc/file layers/aeroway-runway-casing.yml
-  - !!inc/file layers/aeroway-area.yml
   - !!inc/file layers/aeroway-taxiway.yml
   - !!inc/file layers/aeroway-runway.yml
   - !!inc/file layers/building.yml
