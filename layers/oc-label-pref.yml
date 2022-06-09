@@ -2,7 +2,7 @@ id: oc-label-pref
 type: symbol
 source: oceanus
 source-layer: oc-label
-minzoom: 5
+minzoom: 3
 maxzoom: 6
 # filter:
 #   - all

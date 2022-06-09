@@ -8,7 +8,7 @@ sources:
   oceanus:
     type: vector
     maxzoom: 5
-    url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver.geolonia.com/oceanus-pr-28/tiles.json?key=YOUR-API-KEY
   geolonia-water:
     type: vector
     url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
@@ -61,6 +61,7 @@ layers:
   - !!inc/file layers/oc-label-town-ja.yml
   - !!inc/file layers/oc-label-pref-capital-ja.yml
   - !!inc/file layers/oc-label-town.yml
+  - !!inc/file layers/oc-label-capital.yml
   - !!inc/file layers/oc-airport.yml
   - !!inc/file layers/landuse-commercial.yml
   - !!inc/file layers/landuse-industrial.yml
