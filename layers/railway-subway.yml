@@ -14,13 +14,23 @@ paint:
   line-offset: 
     stops:
       - - 14
-        - 1
-      - - 15
-        - 1.5
-      - - 16
         - 2
+      - - 15
+        - 2.5
+      - - 16
+        - 2.5
       - - 17
         - 8
+  line-opacity:
+    stops:
+      - - 14
+        - 0.5
+      - - 17
+        - 0.3
   line-color: '#9dabdd'
-  line-opacity: 1
-  line-width: 1.5
+  line-width: 
+      stops:
+      - - 14
+        - 1.5
+      - - 17
+        - 2
