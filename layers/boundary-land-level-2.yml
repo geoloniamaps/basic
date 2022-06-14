@@ -1,14 +1,13 @@
-id: oc-boundary-land-level-0
+id: boundary-land-level-2
 type: line
-source: oceanus
-source-layer: oc-boundary
-minzoom: 1
-maxzoom: 6
+source: geolonia
+source-layer: boundary
+minzoom: 6
 filter:
-  - '=='
-  - - get
+  - all
+  - - '=='
     - admin_level
-  - 0
+    - 2
 layout:
   line-join: round
 paint:

@@ -3,6 +3,7 @@ type: line
 source: oceanus
 source-layer: oc-waterway
 minzoom: 4
+maxzoom: 6
 filter:
   - all
   - - '=='
@@ -13,10 +14,6 @@ filter:
     - - get
       - brunnel
     - tunnel
-  - - '=='
-    - - has
-      - jflag
-    - false
 layout:
   line-cap: round
 paint:

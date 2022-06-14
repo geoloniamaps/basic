@@ -15,7 +15,7 @@ filter:
     - japan_northern_territories
 layout:
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Regular
   text-size: 18
   text-field: '{name}'
   text-max-width: 8

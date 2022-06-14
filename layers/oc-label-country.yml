@@ -2,7 +2,8 @@ id: oc-label-country
 type: symbol
 source: oceanus
 source-layer: oc-label
-maxzoom: 8
+minzoom: 1
+maxzoom: 6
 filter:
   - '=='
   - - get
@@ -10,7 +11,7 @@ filter:
   - country
 layout:
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Regular
   text-size:
     stops:
       - - 0

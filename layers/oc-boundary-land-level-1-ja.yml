@@ -2,8 +2,8 @@ id: oc-boundary-land-level-1-ja
 type: line
 source: oceanus
 source-layer: oc-boundary
-minzoom: 4
-maxzoom: 8
+minzoom: 3
+maxzoom: 6
 filter:
   - all
   - - '=='
@@ -26,7 +26,7 @@ paint:
     - 1
     - 1
     - 1
-  line-width: 
+  line-width:
     stops:
       - - 4
         - 0.5

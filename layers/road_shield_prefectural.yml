@@ -32,7 +32,7 @@ layout:
   symbol-spacing: 500
   text-field: '{ref}'
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Regular
   text-offset:
     - 0
     - -0.1

@@ -2,20 +2,17 @@ id: oc-label-pref
 type: symbol
 source: oceanus
 source-layer: oc-label
-minzoom: 5
+minzoom: 3
+maxzoom: 6
 filter:
   - all
   - - '=='
     - - get
       - class
     - pref
-  - - '=='
-    - - has
-      - jflag
-    - false
 layout:
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Regular
   text-size:
     stops:
       - - 5
