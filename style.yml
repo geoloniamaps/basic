@@ -8,7 +8,7 @@ sources:
   oceanus:
     type: vector
     maxzoom: 5
-    url: https://tileserver.geolonia.com/oceanus-v0-1-5/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver.geolonia.com/oceanus-v0-1-6/tiles.json?key=YOUR-API-KEY
   geolonia-water:
     type: vector
     url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
@@ -49,7 +49,7 @@ layers:
   - !!inc/file layers/oc-highway-inner-ja.yml
   - !!inc/file layers/oc-highway-inner.yml
   - !!inc/file layers/oc-boundary-land-level-1-ja.yml
-  - !!inc/file layers/oc-boundary-land-level-1.yml
+  # - !!inc/file layers/oc-boundary-land-level-1.yml
   - !!inc/file layers/oc-boundary-land-level-0.yml
   - !!inc/file layers/oc-water-name-ocean.yml
   - !!inc/file layers/oc-water-name-other.yml
@@ -57,7 +57,7 @@ layers:
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/oc-label-country.yml
   - !!inc/file layers/oc-label-pref-ja.yml
-  - !!inc/file layers/oc-label-pref.yml
+  # - !!inc/file layers/oc-label-pref.yml
   - !!inc/file layers/oc-label-town-ja.yml
   - !!inc/file layers/oc-label-pref-capital-ja.yml
   - !!inc/file layers/oc-label-town.yml

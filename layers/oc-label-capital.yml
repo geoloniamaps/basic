@@ -12,14 +12,14 @@ filter:
     - capital
 layout:
   icon-image: circle-stroked
-  icon-size: 0.8
+  icon-size: 0.5
   text-anchor: top
   text-offset:
     - 0
     - 0.2
   text-font:
     - Noto Sans Regular
-  text-size: 15
+  text-size: 12
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
