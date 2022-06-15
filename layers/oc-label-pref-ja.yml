@@ -17,11 +17,19 @@ layout:
     - Noto Sans Regular
   text-size:
     stops:
-      - - 5
+      - - 3
         - 10
-      - - 8
-        - 17
+      - - 6
+        - 12
   text-field: '{name}'
+  text-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 3
+    - 10
+    - 6
+    - 25
   text-max-width: 8
   visibility: visible
 paint:
