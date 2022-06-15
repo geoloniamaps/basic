@@ -16,7 +16,7 @@ layout:
     stops:
       - - 0
         - 9
-      - - 8
+      - - 6
         - 16
   text-field: '{name}'
   text-max-width: 8
