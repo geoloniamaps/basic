@@ -15,20 +15,19 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color:
-    stops:
-      - - 4
-        - 'rgba(102,102,102,0.7)'
-      - - 7
-        - 'rgba(136,136,136,0.7)'
+  line-color: '#9e9cab'
   line-dasharray:
+    stops:
+      - - 3
+        - [1, 2]
+      - - 6
+        - [5, 5]
+  line-width: 1
+  line-blur:
+    - interpolate
+    - - linear
+    - - zoom
     - 3
     - 1
-    - 1
-    - 1
-  line-width:
-    stops:
-      - - 4
-        - 0.5
-      - - 7
-        - 1.8
+    - 6
+    - 0
