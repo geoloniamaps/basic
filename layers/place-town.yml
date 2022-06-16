@@ -2,7 +2,8 @@ id: place-town
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 8.5
+minzoom: 10
+maxzoom: 14
 filter:
   - all
   - - '=='
@@ -20,7 +21,7 @@ layout:
     - 0.1
   text-font:
     - Noto Sans Regular
-  text-size: 12
+  text-size: 18
   text-field: '{name}'
   text-max-width: 8
   visibility: visible

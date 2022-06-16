@@ -3,6 +3,7 @@ type: symbol
 source: geolonia
 source-layer: place
 minzoom: 8
+maxzoom: 13
 filter:
   - all
   - - '!='
@@ -26,7 +27,14 @@ layout:
     - 0.1
   text-font:
     - Noto Sans Regular
-  text-size: 14
+  text-size:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - 11
+    - 13
+    - 21
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
