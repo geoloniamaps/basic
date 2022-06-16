@@ -2,6 +2,7 @@ id: place-city-capital
 type: symbol
 source: geolonia
 source-layer: place
+minzoom: 6
 filter:
   - all
   - - '=='
@@ -16,15 +17,29 @@ filter:
 layout:
   text-font:
     - Noto Sans Regular
-  text-size: 18
+  text-size:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 12
+    - 16
+    - 23
   text-field: '{name}'
   text-max-width: 8
-  icon-image: star
+  icon-image: circle-stroked
   text-offset:
-    - 0.4
-    - -0.1
-  icon-size: 1
-  text-anchor: left
+    - 0
+    - 0.2
+  icon-size:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 0.5
+    - 16
+    - 1
+  text-anchor: top
   visibility: visible
 paint:
   text-color: '#333'
