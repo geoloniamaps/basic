@@ -57,7 +57,7 @@ layers:
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/oc-airport.yml
   - !!inc/file layers/oc-label-town-ja.yml
-  - !!inc/file layers/oc-label-town.yml
+  # - !!inc/file layers/oc-label-town.yml
   - !!inc/file layers/oc-label-pref-capital-ja.yml
   - !!inc/file layers/oc-label-pref-ja.yml
   - !!inc/file layers/oc-label-pref.yml
