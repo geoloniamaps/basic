@@ -22,7 +22,7 @@ layout:
     - - linear
     - - zoom
     - 6
-    - 12
+    - 18
     - 16
     - 23
   text-field: '{name}'
@@ -42,6 +42,6 @@ layout:
   text-anchor: top
   visibility: visible
 paint:
-  text-color: '#333'
+  text-color: rgba(68, 68, 68, 1)
   text-halo-width: 1.2
   text-halo-color: rgba(255,255,255,0.8)

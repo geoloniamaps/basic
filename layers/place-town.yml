@@ -2,7 +2,8 @@ id: place-town
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 8.5
+minzoom: 7
+maxzoom: 14
 filter:
   - all
   - - '=='
@@ -12,6 +13,14 @@ filter:
     - disputed
     - japan_northern_territories
 layout:
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 7
+    - 60
+    - 14
+    - 0
   icon-image: circle
   icon-size: 0.3
   text-anchor: top
@@ -20,7 +29,14 @@ layout:
     - 0.1
   text-font:
     - Noto Sans Regular
-  text-size: 12
+  text-size:
+    - interpolate
+    - - linear
+    - - zoom
+    - 7
+    - 11
+    - 14
+    - 18
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
