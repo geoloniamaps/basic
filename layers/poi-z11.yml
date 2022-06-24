@@ -20,14 +20,14 @@ filter:
     - golf
   - - '!in'
     - subclass
-    - community_centre # class town_hall内でも 
+    - community_centre # class town_hall内でも
   - - '!='
     - disputed
     - japan_northern_territories
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-anchor: bottom
   icon-image:

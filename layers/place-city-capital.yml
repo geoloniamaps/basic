@@ -16,7 +16,7 @@ filter:
     - japan_northern_territories
 layout:
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-size:
     - interpolate
     - - linear

@@ -13,7 +13,7 @@ filter:
 layout:
   text-padding: 30
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-image: circle
   text-field: '{name}'

@@ -555,7 +555,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -587,7 +587,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1091,7 +1091,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1130,7 +1130,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": [
           "interpolate",
@@ -1175,7 +1175,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1207,7 +1207,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1239,7 +1239,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": {
           "stops": [
@@ -1287,7 +1287,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": {
           "stops": [
@@ -1331,7 +1331,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": {
           "stops": [
@@ -1388,7 +1388,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-image": "circle-stroked",
@@ -1430,7 +1430,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "text-variable-anchor": [
@@ -1478,7 +1478,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-image": "circle",
@@ -1518,7 +1518,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-image": "airport",
@@ -1853,7 +1853,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1889,7 +1889,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1930,7 +1930,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1976,7 +1976,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": {
           "stops": [
@@ -5313,7 +5313,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 12,
         "text-field": "{name}",
@@ -5365,7 +5365,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 11,
         "text-field": "{name}",
@@ -5530,7 +5530,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5617,7 +5617,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5686,7 +5686,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5757,7 +5757,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5831,7 +5831,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5899,7 +5899,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5967,7 +5967,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6048,7 +6048,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6116,7 +6116,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6198,7 +6198,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6271,7 +6271,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-image": "airport",
@@ -6319,7 +6319,7 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6417,7 +6417,7 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-offset": [
           0,
@@ -6475,7 +6475,7 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-offset": [
           0,
@@ -6533,7 +6533,7 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-offset": [
           0,
@@ -6563,7 +6563,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": {
           "base": 1.2,
@@ -6611,7 +6611,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": {
           "base": 1.2,
@@ -6664,7 +6664,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": {
           "base": 1.2,
@@ -6730,7 +6730,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 12,
         "text-field": "{name}",
@@ -6800,7 +6800,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 11,
         "text-field": "{name}",
@@ -6851,7 +6851,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -6915,7 +6915,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -6979,7 +6979,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7043,7 +7043,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7107,7 +7107,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7171,7 +7171,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7235,7 +7235,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7299,7 +7299,7 @@
           0.1
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 16,
         "text-field": "{name}",
@@ -7363,7 +7363,7 @@
           0.2
         ],
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 17,
         "text-field": "{name}",
@@ -7414,7 +7414,7 @@
       ],
       "layout": {
         "text-font": [
-          "Noto Sans Regular"
+          "Noto Sans Universal Regular"
         ],
         "text-size": 18,
         "text-field": "{name}",

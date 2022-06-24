@@ -19,7 +19,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-image: circle-stroked
   icon-size: 0.8

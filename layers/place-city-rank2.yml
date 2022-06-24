@@ -37,7 +37,7 @@ layout:
       - - 12
         - [0, 0]
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-size:
     - interpolate
     - - linear

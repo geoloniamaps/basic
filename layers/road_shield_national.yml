@@ -28,7 +28,7 @@ layout:
   symbol-spacing: 500
   text-field: '{ref}'
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-offset:
     - 0
     - -0.1
