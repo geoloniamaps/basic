@@ -8,6 +8,8 @@ filter:
   - - '=='
     - admin_level
     - 2
+  - - '!has'
+    - 'maritime'
 layout:
   line-join: round
 paint:
