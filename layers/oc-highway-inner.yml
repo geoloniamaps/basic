@@ -15,12 +15,6 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: '#F0762D'
+  line-color: '#f0762d'
   line-opacity: 0.6
-  line-width:
-    base: 1.2
-    stops:
-      - - 8
-        - 1.5
-      - - 20
-        - 17
+  line-width: 1.5
