@@ -2,7 +2,7 @@ id: highway-motorway
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 5
+minzoom: 6
 filter:
   - all
   - - '=='
@@ -21,20 +21,13 @@ layout:
   line-cap: round
   line-join: round
 paint:
-  line-color:
-    - interpolate
-    - - linear
-    - - zoom
-    - 8
-    - '#4ed19e'
-    - 11
-    - '#9be0c5'
+  line-color: '#f0762d'
   line-opacity:
     - interpolate
     - - linear
     - - zoom
-    - 8
+    - 6
     - 0.6
-    - 11
+    - 12
     - 1
   line-width: !!inc/file layers/components/broad-road-width.yml

@@ -13,5 +13,5 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#fc8'
+  line-color: '#f0762d'
   line-width: !!inc/file layers/components/broad-road-width.yml
