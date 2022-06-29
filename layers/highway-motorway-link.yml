@@ -19,14 +19,7 @@ layout:
   line-cap: round
   line-join: round
 paint:
-  line-color:
-    - interpolate
-    - - linear
-    - - zoom
-    - 8
-    - '#4ed19e'
-    - 11
-    - '#9be0c5'
+  line-color: '#f0762d'
   line-opacity:
     - interpolate
     - - linear
