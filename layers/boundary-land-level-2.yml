@@ -8,9 +8,17 @@ filter:
   - - '=='
     - admin_level
     - 2
+  - - '!has'
+    - 'maritime'
 layout:
   line-join: round
 paint:
   line-color: '#9e9cab'
-  line-width: 1
-  line-blur: 0.4
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 2
+    - 14
+    - 2.5

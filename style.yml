@@ -136,7 +136,7 @@ layers:
   - !!inc/file layers/railway-subway.yml
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
-  # - !!inc/file layers/boundary-land-level-2.yml
+  - !!inc/file layers/boundary-land-level-2.yml
   - !!inc/file layers/boundary-land-level-4.yml
   - !!inc/file layers/railway-name.yml
   # - !!inc/file layers/railway-subway-name.yml
