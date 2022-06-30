@@ -2,7 +2,7 @@ id: poi-railway
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 11
+minzoom: 12
 filter:
   - all
   - - '=='
