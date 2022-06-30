@@ -78,7 +78,6 @@ layers:
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
-  - !!inc/file layers/ferry.yml
   - !!inc/file layers/bridge-area.yml
   - !!inc/file layers/bridge-motorway-link-casing-blur.yml
   - !!inc/file layers/bridge-link-casing-blur.yml
