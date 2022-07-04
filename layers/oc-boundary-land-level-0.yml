@@ -1,6 +1,6 @@
 id: oc-boundary-land-level-0
 type: line
-source: oceanus
+source: geolonia
 source-layer: oc-boundary
 filter:
   - '=='

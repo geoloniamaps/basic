@@ -1,6 +1,6 @@
 id: oc-label-pref-ja
 type: symbol
-source: oceanus
+source: geolonia
 source-layer: oc-label
 minzoom: 5
 maxzoom: 8

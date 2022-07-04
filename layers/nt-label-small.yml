@@ -1,6 +1,6 @@
 id: nt-label-small
 type: symbol
-source: oceanus
+source: geolonia
 source-layer: nt-label
 minzoom: 8
 filter:

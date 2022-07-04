@@ -1,6 +1,6 @@
 id: nt-water-name-river
 type: symbol
-source: oceanus
+source: geolonia
 source-layer: nt-water-name
 minzoom: 13
 filter:
