@@ -17,7 +17,7 @@ filter:
     - grocery
     - shop
     - school
-    - hospital
+    - monument
   - - '!='
     - disputed
     - japan_northern_territories
