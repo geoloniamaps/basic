@@ -15,7 +15,6 @@ filter:
     - college
     - stadium
     - landmark
-    # - museum #z12 に移動
     - town_hall
     - golf
     - hospital

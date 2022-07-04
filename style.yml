@@ -149,6 +149,7 @@ layers:
   - !!inc/file layers/poi-z16-primary.yml
   - !!inc/file layers/poi-z15.yml
   - !!inc/file layers/poi-z14.yml
+  - !!inc/file layers/poi-z12.yml
   - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/poi-airport-primary.yml
