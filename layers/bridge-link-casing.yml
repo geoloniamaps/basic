@@ -2,6 +2,7 @@ id: bridge-link-casing
 type: line
 source: geolonia
 source-layer: transportation
+minzoom: 8
 filter:
   - all
   - - '=='

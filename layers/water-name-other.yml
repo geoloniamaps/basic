@@ -2,6 +2,7 @@ id: water-name-other
 type: symbol
 source: geolonia
 source-layer: water_name
+minzoom: 8
 filter:
   - all
   - - '=='

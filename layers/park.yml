@@ -2,6 +2,7 @@ id: park
 type: fill
 source: geolonia
 source-layer: park
+minzoom: 8
 filter:
   - all
   - - '=='

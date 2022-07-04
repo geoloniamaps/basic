@@ -2,6 +2,7 @@ id: railway-subway
 type: line
 source: geolonia
 source-layer: transportation
+minzoom: 8
 filter:
   - all
   - - '=='
@@ -11,7 +12,7 @@ filter:
     - subclass
     - subway
 paint:
-  line-offset: 
+  line-offset:
     stops:
       - - 14
         - 1
