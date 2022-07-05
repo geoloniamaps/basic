@@ -141,18 +141,19 @@ layers:
   # - !!inc/file layers/railway-subway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
-  - !!inc/file layers/poi-z16.yml
-  - !!inc/file layers/poi-z16-primary.yml
-  - !!inc/file layers/poi-z15.yml
-  - !!inc/file layers/poi-z14.yml
-  - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-worship.yml
   - !!inc/file layers/poi-worship-primary.yml
   - !!inc/file layers/poi-park.yml
   - !!inc/file layers/poi-park-primary.yml
+  - !!inc/file layers/poi-z16.yml
+  - !!inc/file layers/poi-z16-primary.yml
+  - !!inc/file layers/poi-z15.yml
+  - !!inc/file layers/poi-z14.yml
+  - !!inc/file layers/poi-z12.yml
+  - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/poi-airport-primary.yml
-  - !!inc/file layers/poi-mountain.yml
+  # - !!inc/file layers/poi-mountain.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml

@@ -12,12 +12,12 @@ filter:
     - name
   - - 'in'
     - class
+    - college
     - stadium
     - landmark
-    - monument
-    - museum
     - town_hall
     - golf
+    - hospital
   - - '!in'
     - subclass
     - community_centre # class town_hall内でも
