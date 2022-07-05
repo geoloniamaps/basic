@@ -153,7 +153,7 @@ layers:
   - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/poi-airport-primary.yml
-  - !!inc/file layers/poi-mountain.yml
+  # - !!inc/file layers/poi-mountain.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
