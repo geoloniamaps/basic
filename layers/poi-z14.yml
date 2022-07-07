@@ -12,7 +12,6 @@ filter:
     - name
   - - 'in'
     - class
-    - college
     - castle
     - aquarium
     - cinema

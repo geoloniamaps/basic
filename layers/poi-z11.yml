@@ -12,6 +12,8 @@ filter:
     - name
   - - 'in'
     - class
+    - college
+    - hospital
     - stadium
     - landmark
     - monument
@@ -20,7 +22,7 @@ filter:
     - golf
   - - '!in'
     - subclass
-    - community_centre # class town_hall内でも 
+    - community_centre # class town_hall内でも
   - - '!='
     - disputed
     - japan_northern_territories

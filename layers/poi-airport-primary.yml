@@ -2,7 +2,7 @@ id: poi-airport-primary
 type: symbol
 source: geolonia
 source-layer: aerodrome_label
-minzoom: 10
+minzoom: 8
 filter:
   - all
   - - has
