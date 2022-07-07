@@ -1,0 +1,11 @@
+id: farmland
+type: fill
+source: fudepoli
+source-layer: fudepoli
+paint:
+  fill-color:
+    - case
+    - [==, [get, type], field]
+    - wheat     # field
+    - palegreen # rice-field
+
