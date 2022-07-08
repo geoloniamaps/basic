@@ -16,7 +16,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-anchor: bottom
   icon-image: circle-stroked

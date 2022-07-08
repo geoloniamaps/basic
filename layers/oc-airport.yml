@@ -3,20 +3,17 @@ type: symbol
 source: oceanus
 source-layer: oc-airport
 minzoom: 5
+maxzoom: 6
 filter:
   - all
   - - '=='
     - - get
       - class
     - airport
-  - - '=='
-    - - has
-      - jflag
-    - false
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-image: airport
   text-field: '{name}'

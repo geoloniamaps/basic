@@ -1,8 +1,8 @@
-id: poi-park
+id: poi-z12
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 16
+minzoom: 12
 filter:
   - all
   - - '=='
@@ -10,11 +10,9 @@ filter:
     - Point
   - - has
     - name
-  - - '!has'
-    - wikidata
   - - 'in'
     - class
-    - park
+    - museum
   - - '!='
     - disputed
     - japan_northern_territories

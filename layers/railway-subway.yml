@@ -2,6 +2,7 @@ id: railway-subway
 type: line
 source: geolonia
 source-layer: transportation
+minzoom: 14
 filter:
   - all
   - - '=='
@@ -11,16 +12,26 @@ filter:
     - subclass
     - subway
 paint:
-  line-offset: 
+  line-offset:
     stops:
       - - 14
-        - 1
-      - - 15
-        - 1.5
-      - - 16
         - 2
+      - - 15
+        - 2.5
+      - - 16
+        - 2.5
       - - 17
         - 8
+  line-opacity:
+    stops:
+      - - 14
+        - 0.1
+      - - 17
+        - 1
   line-color: '#9dabdd'
-  line-opacity: 1
-  line-width: 1.5
+  line-width:
+      stops:
+      - - 14
+        - 1.5
+      - - 17
+        - 1

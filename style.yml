@@ -7,20 +7,22 @@ name: $name
 sources:
   oceanus:
     type: vector
-    url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
+    maxzoom: 5
+    url: https://tileserver.geolonia.com/oceanus-v0-1-6/tiles.json?key=YOUR-API-KEY
   geolonia-water:
     type: vector
     url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
   geolonia:
     type: vector
-    minzoom: 8
-    url: https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY
+    minzoom: 6
+    url: https://tileserver-dev.geolonia.com/v3/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
     attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
 sprite: https://geoloniamaps.github.io/basic/basic
-glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+# glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
+glyphs: https://deploy-preview-12--geolonia-glyphs.netlify.app/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
@@ -53,13 +55,14 @@ layers:
   - !!inc/file layers/oc-water-name-other.yml
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
-  - !!inc/file layers/oc-label-country.yml
+  - !!inc/file layers/oc-airport.yml
+  - !!inc/file layers/oc-label-town-ja.yml
+  # - !!inc/file layers/oc-label-town.yml
+  - !!inc/file layers/oc-label-pref-capital-ja.yml
   - !!inc/file layers/oc-label-pref-ja.yml
   - !!inc/file layers/oc-label-pref.yml
-  - !!inc/file layers/oc-label-town-ja.yml
-  - !!inc/file layers/oc-label-pref-capital-ja.yml
-  - !!inc/file layers/oc-label-town.yml
-  - !!inc/file layers/oc-airport.yml
+  - !!inc/file layers/oc-label-capital.yml
+  - !!inc/file layers/oc-label-country.yml
   - !!inc/file layers/landuse-commercial.yml
   - !!inc/file layers/landuse-industrial.yml
   - !!inc/file layers/park.yml
@@ -75,7 +78,6 @@ layers:
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
-  - !!inc/file layers/ferry.yml
   - !!inc/file layers/bridge-area.yml
   - !!inc/file layers/bridge-motorway-link-casing-blur.yml
   - !!inc/file layers/bridge-link-casing-blur.yml
@@ -133,31 +135,34 @@ layers:
   - !!inc/file layers/railway-subway.yml
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
+  - !!inc/file layers/boundary-land-level-2.yml
   - !!inc/file layers/boundary-land-level-4.yml
   - !!inc/file layers/railway-name.yml
-  - !!inc/file layers/railway-subway-name.yml
+  # - !!inc/file layers/railway-subway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
-  - !!inc/file layers/poi-z16.yml
-  - !!inc/file layers/poi-z16-primary.yml
-  - !!inc/file layers/poi-z15.yml
-  - !!inc/file layers/poi-z14.yml
-  - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-worship.yml
   - !!inc/file layers/poi-worship-primary.yml
   - !!inc/file layers/poi-park.yml
   - !!inc/file layers/poi-park-primary.yml
+  - !!inc/file layers/poi-z16.yml
+  - !!inc/file layers/poi-z16-primary.yml
+  - !!inc/file layers/poi-z15.yml
+  - !!inc/file layers/poi-z14.yml
+  - !!inc/file layers/poi-z12.yml
+  - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/poi-airport-primary.yml
-  - !!inc/file layers/poi-mountain.yml
+  # - !!inc/file layers/poi-mountain.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
   - !!inc/file layers/nt-label-small.yml
   - !!inc/file layers/nt-label-large.yml
+  - !!inc/file layers/place-island-name.yml
+  - !!inc/file layers/place-suburb.yml
   - !!inc/file layers/place-village.yml
   - !!inc/file layers/place-town.yml
-  - !!inc/file layers/place-island-name.yml
   - !!inc/file layers/place-city-rank10.yml
   - !!inc/file layers/place-city-rank9.yml
   - !!inc/file layers/place-city-rank8.yml

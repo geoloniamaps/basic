@@ -21,7 +21,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-anchor: bottom
   icon-image:
@@ -36,7 +36,7 @@ layout:
     - - linear
     - - zoom
     - 11
-    - 15
+    - 50
     - 15
     - 2
   text-field: '{name}'

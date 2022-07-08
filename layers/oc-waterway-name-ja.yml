@@ -3,7 +3,7 @@ type: symbol
 source: oceanus
 source-layer: oc-waterway
 minzoom: 6
-maxzoom: 8
+maxzoom: 6
 filter:
   - all
   - - '=='
@@ -15,7 +15,7 @@ filter:
     - jflag
 layout:
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-size: 14
   text-field: '{name}'
   text-max-width: 5

@@ -3,7 +3,7 @@ type: symbol
 source: oceanus
 source-layer: oc-label
 minzoom: 7
-maxzoom: 8
+maxzoom: 6
 filter:
   - all
   - - '=='
@@ -19,7 +19,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-image: circle-stroked
   icon-size: 0.8
