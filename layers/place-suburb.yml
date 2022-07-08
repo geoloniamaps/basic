@@ -25,6 +25,7 @@ layout:
     - 16
   text-field: ['upcase', ['get', 'name']]
   text-letter-spacing: 0.2
+  text-max-width: 8
   visibility: visible
 paint:
   text-color: '#888888'
