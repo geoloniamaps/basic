@@ -27,10 +27,12 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - - get
-        - class
+      - - concat
+        - - get
+          - class
+        - '-11'
     - - image
-      - circle-stroked
+      - circle-stroked-11
   text-field: '{name}'
   icon-padding:
     - interpolate

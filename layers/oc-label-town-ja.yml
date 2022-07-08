@@ -21,7 +21,7 @@ layout:
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-image: circle-stroked
+  icon-image: circle-stroked-11
   icon-size: 0.8
   text-field: '{name}'
   text-offset:

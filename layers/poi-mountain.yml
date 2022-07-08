@@ -22,9 +22,9 @@ layout:
   icon-image:
     - coalesce
     - - image
-      - 'mountain'
+      - 'mountain-11'
     - - image
-      - circle-stroked
+      - circle-stroked-11
   icon-padding:
     - interpolate
     - - linear

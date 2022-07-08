@@ -15,7 +15,7 @@ layout:
   text-font:
     - Noto Sans Regular
   text-anchor: top
-  icon-image: airport
+  icon-image: airport-11
   text-field: '{name}'
   text-offset:
     - 0
