@@ -159,9 +159,10 @@ layers:
   - !!inc/file layers/road_shield_highway.yml
   - !!inc/file layers/nt-label-small.yml
   - !!inc/file layers/nt-label-large.yml
+  - !!inc/file layers/place-island-name.yml
+  - !!inc/file layers/place-suburb.yml
   - !!inc/file layers/place-village.yml
   - !!inc/file layers/place-town.yml
-  - !!inc/file layers/place-island-name.yml
   - !!inc/file layers/place-city-rank10.yml
   - !!inc/file layers/place-city-rank9.yml
   - !!inc/file layers/place-city-rank8.yml
