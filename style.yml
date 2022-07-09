@@ -76,8 +76,6 @@ layers:
   - !!inc/file layers/waterway-other.yml
   - !!inc/file layers/waterway-stream-canal.yml
   - !!inc/file layers/waterway-river.yml
-  - !!inc/file layers/waterway-name.yml
-  - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
   - !!inc/file layers/ferry.yml
@@ -121,6 +119,8 @@ layers:
   - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/highway-trunk.yml
   - !!inc/file layers/highway-motorway.yml
+  - !!inc/file layers/waterway-name.yml
+  - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/bridge-motorway-link-casing.yml
   - !!inc/file layers/bridge-link-casing.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing.yml
