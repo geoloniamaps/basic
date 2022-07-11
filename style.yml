@@ -5,15 +5,9 @@ $name: Geolonia Basic
 version: 8
 name: $name
 sources:
-#   oceanus:
-#     type: vector
-#     url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
-#   geolonia-water:
-#     type: vector
-#     url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
   geolonia:
     type: vector
-    url: https://tileserver-dev.geolonia.com/v2_combined/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver.geolonia.com/v2_combined/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
