@@ -2,18 +2,9 @@
   "version": 8,
   "name": "Geolonia Basic",
   "sources": {
-    "oceanus": {
-      "type": "vector",
-      "url": "https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY"
-    },
-    "geolonia-water": {
-      "type": "vector",
-      "url": "https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY"
-    },
     "geolonia": {
       "type": "vector",
-      "minzoom": 8,
-      "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/v2_combined/tiles.json?key=YOUR-API-KEY"
     },
     "dem": {
       "type": "raster-dem",
@@ -59,6 +50,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landcover",
+      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -77,6 +69,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "landcover",
+      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -126,6 +119,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landcover",
+      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -156,6 +150,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "park",
+      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -172,8 +167,9 @@
     {
       "id": "water-blur",
       "type": "line",
-      "source": "geolonia-water",
+      "source": "geolonia",
       "source-layer": "water",
+      "minzoom": 8,
       "layout": {
         "line-join": "round",
         "line-round-limit": 0.5,
@@ -220,6 +216,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "water",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -275,7 +272,7 @@
     {
       "id": "water",
       "type": "fill",
-      "source": "geolonia-water",
+      "source": "geolonia",
       "source-layer": "water",
       "layout": {
         "visibility": "visible"
@@ -289,6 +286,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "water",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -310,7 +308,7 @@
     {
       "id": "oc-ocean200",
       "type": "fill",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-water",
       "maxzoom": 10,
       "filter": [
@@ -375,7 +373,7 @@
     {
       "id": "oc-glacier",
       "type": "fill",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-glacier",
       "maxzoom": 8,
       "layout": {
@@ -388,7 +386,7 @@
     {
       "id": "oc-forest",
       "type": "fill",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-forest",
       "minzoom": 0,
       "maxzoom": 9,
@@ -434,7 +432,7 @@
     {
       "id": "oc-waterway-river-ja",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-waterway",
       "minzoom": 4,
       "maxzoom": 8,
@@ -485,7 +483,7 @@
     {
       "id": "oc-waterway-river",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-waterway",
       "minzoom": 4,
       "filter": [
@@ -539,7 +537,7 @@
     {
       "id": "oc-waterway-name-ja",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-waterway",
       "minzoom": 6,
       "maxzoom": 8,
@@ -580,7 +578,7 @@
     {
       "id": "oc-waterway-name",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-waterway",
       "minzoom": 6,
       "filter": [
@@ -619,7 +617,7 @@
     {
       "id": "oc-lake-ja",
       "type": "fill",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-water",
       "minzoom": 4,
       "maxzoom": 8,
@@ -648,7 +646,7 @@
     {
       "id": "oc-lake-blur",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-water",
       "minzoom": 4,
       "filter": [
@@ -714,7 +712,7 @@
     {
       "id": "oc-lake",
       "type": "fill",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-water",
       "minzoom": 4,
       "filter": [
@@ -746,7 +744,7 @@
     {
       "id": "oc-highway-outer-ja",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-road",
       "minzoom": 5,
       "maxzoom": 8,
@@ -803,7 +801,7 @@
     {
       "id": "oc-highway-outer",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-road",
       "minzoom": 5,
       "filter": [
@@ -863,7 +861,7 @@
     {
       "id": "oc-highway-inner-ja",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-road",
       "minzoom": 5,
       "maxzoom": 8,
@@ -924,7 +922,7 @@
     {
       "id": "oc-highway-inner",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-road",
       "minzoom": 5,
       "filter": [
@@ -988,7 +986,7 @@
     {
       "id": "oc-boundary-land-level-1-ja",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-boundary",
       "minzoom": 4,
       "maxzoom": 8,
@@ -1046,7 +1044,7 @@
     {
       "id": "oc-boundary-land-level-1",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-boundary",
       "minzoom": 4,
       "maxzoom": 8,
@@ -1086,7 +1084,7 @@
     {
       "id": "oc-boundary-land-level-0",
       "type": "line",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-boundary",
       "filter": [
         "==",
@@ -1108,7 +1106,7 @@
     {
       "id": "oc-water-name-ocean",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-water_name",
       "filter": [
         "all",
@@ -1149,7 +1147,7 @@
     {
       "id": "oc-water-name-other",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-water",
       "minzoom": 6,
       "filter": [
@@ -1200,7 +1198,7 @@
     {
       "id": "nt-water-name-ocean",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "nt-water-name",
       "minzoom": 8,
       "filter": [
@@ -1232,7 +1230,7 @@
     {
       "id": "nt-water-name-river",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "nt-water-name",
       "minzoom": 13,
       "filter": [
@@ -1264,7 +1262,7 @@
     {
       "id": "oc-label-country",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-label",
       "maxzoom": 8,
       "filter": [
@@ -1304,7 +1302,7 @@
     {
       "id": "oc-label-pref-ja",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-label",
       "minzoom": 5,
       "maxzoom": 8,
@@ -1352,7 +1350,7 @@
     {
       "id": "oc-label-pref",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-label",
       "minzoom": 5,
       "filter": [
@@ -1403,7 +1401,7 @@
     {
       "id": "oc-label-town-ja",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-label",
       "minzoom": 7,
       "maxzoom": 8,
@@ -1456,7 +1454,7 @@
     {
       "id": "oc-label-pref-capital-ja",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-label",
       "minzoom": 6,
       "maxzoom": 8,
@@ -1504,7 +1502,7 @@
     {
       "id": "oc-label-town",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-label",
       "minzoom": 6,
       "filter": [
@@ -1551,7 +1549,7 @@
     {
       "id": "oc-airport",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "oc-airport",
       "minzoom": 5,
       "filter": [
@@ -1600,6 +1598,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -1622,6 +1621,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -1644,6 +1644,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "park",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -1681,6 +1682,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -1695,6 +1697,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -1709,6 +1712,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -1723,6 +1727,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -1782,6 +1787,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "waterway",
+      "minzoom": 8,
       "filter": [
         "!in",
         "class",
@@ -1814,6 +1820,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "waterway",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -1853,6 +1860,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "waterway",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -1932,6 +1940,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "water_name",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -1968,6 +1977,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "water_name",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2009,6 +2019,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "water_name",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2067,6 +2078,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2093,6 +2105,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landcover",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2124,6 +2137,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2214,6 +2228,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2302,6 +2317,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2397,6 +2413,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2492,6 +2509,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2577,6 +2595,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2671,6 +2690,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2720,6 +2740,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2767,6 +2788,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2889,6 +2911,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2941,6 +2964,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -2997,6 +3021,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3040,6 +3065,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3083,6 +3109,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3147,6 +3174,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3199,6 +3227,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3325,7 +3354,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "aeroway",
-      "minzoom": 4,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3379,7 +3408,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "aeroway",
-      "minzoom": 4,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3470,6 +3499,7 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "==",
         "$type",
@@ -3671,7 +3701,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "min-zoom": 8,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3727,7 +3757,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 5,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -3849,7 +3879,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 4,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4173,6 +4203,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4346,7 +4377,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 5,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4434,6 +4465,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4486,6 +4518,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4536,6 +4569,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4589,6 +4623,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4641,6 +4676,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4684,6 +4720,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4731,6 +4768,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4782,6 +4820,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4831,6 +4870,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4883,6 +4923,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4935,6 +4976,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -4999,6 +5041,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -5075,6 +5118,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -5113,6 +5157,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -5155,6 +5200,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -6453,7 +6499,7 @@
       "metadata": {},
       "source": "geolonia",
       "source-layer": "transportation_name",
-      "minzoom": 7,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -6511,7 +6557,7 @@
       "metadata": {},
       "source": "geolonia",
       "source-layer": "transportation_name",
-      "minzoom": 7,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -6566,7 +6612,7 @@
     {
       "id": "nt-label-small",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "nt-label",
       "minzoom": 8,
       "filter": [
@@ -6607,7 +6653,7 @@
     {
       "id": "nt-label-large",
       "type": "symbol",
-      "source": "oceanus",
+      "source": "geolonia",
       "source-layer": "nt-label",
       "minzoom": 13,
       "filter": [
@@ -6777,6 +6823,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -7410,6 +7457,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
+      "minzoom": 8,
       "filter": [
         "all",
         [
