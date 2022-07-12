@@ -1,6 +1,6 @@
 id: oc-forest
 type: fill
-source: oceanus
+source: geolonia
 source-layer: oc-forest
 minzoom: 0
 maxzoom: 9

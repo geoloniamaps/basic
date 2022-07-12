@@ -1,6 +1,6 @@
 id: oc-label-town
 type: symbol
-source: oceanus
+source: geolonia
 source-layer: oc-label
 minzoom: 6
 filter:

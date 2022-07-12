@@ -2,6 +2,7 @@ id: water-river-lake-ja-blur
 type: line
 source: geolonia
 source-layer: water
+minzoom: 8
 filter:
   - all
   - - '=='

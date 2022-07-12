@@ -1,6 +1,6 @@
 id: oc-highway-outer
 type: line
-source: oceanus
+source: geolonia
 source-layer: oc-road
 minzoom: 5
 filter:

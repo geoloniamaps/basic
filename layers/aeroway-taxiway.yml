@@ -2,7 +2,7 @@ id: aeroway-taxiway
 type: line
 source: geolonia
 source-layer: aeroway
-minzoom: 4
+minzoom: 8
 filter:
   - all
   - - in

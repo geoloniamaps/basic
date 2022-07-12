@@ -2,6 +2,7 @@ id: landuse-cemetery
 type: fill
 source: geolonia
 source-layer: landuse
+minzoom: 8
 filter:
   - '=='
   - class

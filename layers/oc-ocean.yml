@@ -1,6 +1,6 @@
 id: oc-ocean200
 type: fill
-source: oceanus
+source: geolonia
 source-layer: oc-water
 maxzoom: 10
 filter:

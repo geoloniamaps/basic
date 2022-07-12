@@ -1,6 +1,6 @@
 id: water
 type: fill
-source: geolonia-water
+source: geolonia
 source-layer: water
 layout:
   visibility: visible

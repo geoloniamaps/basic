@@ -2,6 +2,7 @@ id: waterway-other
 type: line
 source: geolonia
 source-layer: waterway
+minzoom: 8
 filter:
   - '!in'
   - class
