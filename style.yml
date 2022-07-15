@@ -85,7 +85,6 @@ layers:
   - !!inc/file layers/bridge-trunk-primary-casing-blur.yml
   - !!inc/file layers/bridge-path-casing-blur.yml
   - !!inc/file layers/bridge-motorway-casing-blur.yml
-  - !!inc/file layers/tunnel-railway.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
   - !!inc/file layers/tunnel-minor-casing.yml
   - !!inc/file layers/tunnel-secondary-tertiary-casing.yml
@@ -147,11 +146,9 @@ layers:
   - !!inc/file layers/poi-z16-primary.yml
   - !!inc/file layers/poi-z15.yml
   - !!inc/file layers/poi-z14.yml
-  - !!inc/file layers/poi-z12.yml
   - !!inc/file layers/poi-z11.yml
   - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/poi-airport-primary.yml
-  # - !!inc/file layers/poi-mountain.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml

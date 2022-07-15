@@ -19,6 +19,8 @@ filter:
     - zoo
     - convenience
     - lodging
+    - museum
+    - golf
   - - '!='
     - disputed
     - japan_northern_territories

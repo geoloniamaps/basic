@@ -16,7 +16,6 @@ filter:
     - stadium
     - landmark
     - town_hall
-    - golf
     - hospital
   - - '!in'
     - subclass
