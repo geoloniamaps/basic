@@ -1,0 +1,41 @@
+id: road_name
+type: symbol
+source: geolonia
+source-layer: transportation_name
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - network
+    - road
+  - - in
+    - class
+    - trunk
+    - primary
+    - secondary
+    - tertiary
+  - - '!in'
+    - brunnel
+    - tunnel
+layout:
+  text-font:
+    - Noto Sans Universal Regular
+  text-size: 13
+  text-field: '{name}'
+  text-max-width: 8
+  text-padding: 50
+  visibility: visible
+  symbol-placement: line
+  symbol-spacing:
+    base: 1000
+    stops:
+      - - 10
+        - 1000
+      - - 12
+        - 800
+      - - 15
+        - 600
+paint:
+  text-color: '#666666'
+  text-halo-width: 1.2
+  text-halo-color: rgba(255,255,255,0.8)
