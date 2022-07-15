@@ -1,8 +1,8 @@
-id: poi-z11
+id: poi-z12
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 11
+minzoom: 12
 filter:
   - all
   - - '=='
