@@ -1,0 +1,49 @@
+id: poi-z12
+type: symbol
+source: geolonia
+source-layer: poi
+minzoom: 12
+filter:
+  - all
+  - - '=='
+    - $type
+    - Point
+  - - has
+    - name
+  - - 'in'
+    - class
+    - college
+    - stadium
+    - landmark
+    - town_hall
+    - hospital
+  - - '!in'
+    - subclass
+    - community_centre # class town_hall内でも
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Universal Regular
+  text-anchor: top
+  icon-anchor: bottom
+  icon-image:
+    - coalesce
+    - - image
+      - - get
+        - class
+    - - image
+      - circle-stroked
+  text-field: '{name}'
+  text-offset:
+    - 0
+    - 0.3
+  text-size: 12
+  text-max-width: 9
+paint:
+  text-halo-blur: 0.5
+  text-color: '#666'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'
