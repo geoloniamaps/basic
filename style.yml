@@ -137,8 +137,6 @@ layers:
   - !!inc/file layers/cablecar-dash.yml
   - !!inc/file layers/boundary-land-level-2.yml
   - !!inc/file layers/boundary-land-level-4.yml
-  - !!inc/file layers/railway-name.yml
-  # - !!inc/file layers/railway-subway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
   - !!inc/file layers/poi-worship.yml
@@ -157,6 +155,8 @@ layers:
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
+  - !!inc/file layers/road_name-minor.yml
+  - !!inc/file layers/road_name.yml
   - !!inc/file layers/nt-label-small.yml
   - !!inc/file layers/nt-label-large.yml
   - !!inc/file layers/place-island-name.yml
