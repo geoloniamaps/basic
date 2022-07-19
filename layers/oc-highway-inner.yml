@@ -15,6 +15,16 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: '#f0762d'
-  line-opacity: 0.6
+  line-color:
+  - interpolate
+  - - linear
+  - - zoom
+  - 8
+  - '#f0762d'
+  - 12
+  - '#FF8D48'
+  - 14
+  - '#FF9D62'
+  - 16
+  - '#FFB98E'
   line-width: 1.5

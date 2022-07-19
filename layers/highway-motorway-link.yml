@@ -19,13 +19,16 @@ layout:
   line-cap: round
   line-join: round
 paint:
-  line-color: '#f0762d'
-  line-opacity:
+  line-color:
     - interpolate
     - - linear
     - - zoom
     - 8
-    - 0.6
-    - 11
-    - 1
+    - '#f0762d'
+    - 12
+    - '#FF8D48'
+    - 14
+    - '#FF9D62'
+    - 16
+    - '#FFB98E'
   line-width: !!inc/file layers/components/broad-road-width.yml
