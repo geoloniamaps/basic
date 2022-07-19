@@ -37,11 +37,12 @@ layout:
     - Noto Sans CJK JP Bold
   text-size:
     - interpolate
-    - - linear
+    - - exponential
+      - 1.5
     - - zoom
     - 6
     - 10
-    - 8
+    - 10
     - 17
   text-field: '{name}'
   text-max-width: 8
