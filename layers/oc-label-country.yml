@@ -1,13 +1,15 @@
 id: oc-label-country
 type: symbol
 source: geolonia
-source-layer: oc-label
+source-layer: place
 maxzoom: 8
 filter:
-  - '=='
-  - - get
-    - class
-  - country
+  - all
+  - - 'has'
+    - 'osm_id'
+  - - '=='
+    - 'class'
+    - 'country'
 layout:
   text-font:
     - Noto Sans CJK JP Bold
