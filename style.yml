@@ -48,8 +48,6 @@ layers:
   - !!inc/file layers/oc-label-country.yml
   - !!inc/file layers/oc-label-pref-ja.yml
   - !!inc/file layers/oc-label-pref.yml
-  - !!inc/file layers/oc-label-town-ja.yml
-  - !!inc/file layers/oc-label-town.yml
   - !!inc/file layers/oc-airport.yml
   - !!inc/file layers/landuse-commercial.yml
   - !!inc/file layers/landuse-industrial.yml
