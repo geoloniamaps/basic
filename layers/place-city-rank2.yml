@@ -23,7 +23,6 @@ layout:
   text-anchor: top
   text-variable-anchor:
     - top
-    - bottom
     - left
     - right
   text-radial-offset:
