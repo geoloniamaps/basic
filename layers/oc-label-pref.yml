@@ -1,7 +1,7 @@
 id: oc-label-pref
 type: symbol
 source: geolonia
-source-layer: oc-label
+source-layer: place
 minzoom: 5
 filter:
   - all
