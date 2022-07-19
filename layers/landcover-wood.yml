@@ -2,7 +2,6 @@ id: landcover-wood
 type: fill
 source: geolonia
 source-layer: landcover
-minzoom: 8
 filter:
   - '=='
   - class
@@ -10,7 +9,12 @@ filter:
 layout:
   visibility: visible
 paint:
-  fill-color: '#bce398'
+  fill-color:
+    stops:
+      - - 5
+        - '#a5d47b'
+      - - 8
+        - '#bce398'
   fill-antialias:
     base: 1
     stops:
