@@ -2,7 +2,7 @@ id: highway-motorway-casing
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 8
+minzoom: 5
 filter:
   - all
   - - '=='
@@ -28,7 +28,7 @@ paint:
     - interpolate
     - - linear
     - - zoom
-    - 8
+    - 5
     - 0.6
     - 11
     - 1
