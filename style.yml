@@ -41,9 +41,6 @@ layers:
   - !!inc/file layers/oc-water-name-other.yml
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
-  - !!inc/file layers/oc-label-country.yml
-  - !!inc/file layers/oc-label-pref-ja.yml
-  - !!inc/file layers/oc-label-pref.yml
   - !!inc/file layers/oc-airport.yml
   - !!inc/file layers/landuse-commercial.yml
   - !!inc/file layers/landuse-industrial.yml
@@ -153,3 +150,6 @@ layers:
   - !!inc/file layers/place-city-rank3.yml
   - !!inc/file layers/place-city-rank2.yml
   - !!inc/file layers/place-city-capital.yml
+  - !!inc/file layers/place-city-pref-ja.yml
+  - !!inc/file layers/place-city-pref.yml
+  - !!inc/file layers/place-city-country.yml

@@ -1,4 +1,4 @@
-id: oc-label-country
+id: place-city-country
 type: symbol
 source: geolonia
 source-layer: place
