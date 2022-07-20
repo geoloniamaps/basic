@@ -1,7 +1,7 @@
 id: oc-boundary-land-level-0
 type: line
 source: geolonia
-source-layer: oc-boundary
+source-layer: boundary
 filter:
   - '=='
   - - get

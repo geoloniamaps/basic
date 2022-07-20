@@ -34,8 +34,6 @@ layers:
   - !!inc/file layers/oc-lake-ja.yml
   - !!inc/file layers/oc-lake-blur.yml
   - !!inc/file layers/oc-lake.yml
-  - !!inc/file layers/oc-boundary-land-level-1-ja.yml
-  - !!inc/file layers/oc-boundary-land-level-1.yml
   - !!inc/file layers/oc-boundary-land-level-0.yml
   - !!inc/file layers/oc-water-name-ocean.yml
   - !!inc/file layers/oc-water-name-other.yml
