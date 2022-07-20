@@ -10,6 +10,13 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#9e9cab'
-  line-width: 1
+  line-color: '#85848c'
+  line-width:
+    - interpolate
+    - - linear
+    - - zoom
+    - 0
+    - 0.5
+    - 6
+    - 1.5
   line-blur: 0.4

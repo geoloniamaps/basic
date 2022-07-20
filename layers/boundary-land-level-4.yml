@@ -13,7 +13,7 @@ filter:
   - - '=='
     - - has
       - jflag
-    - false
+    - true
   - - '=='
     - - has
       - maritime
