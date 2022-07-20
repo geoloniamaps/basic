@@ -5,11 +5,14 @@ source-layer: place
 maxzoom: 8
 filter:
   - all
-  - - 'has'
-    - 'osm_id'
   - - '=='
-    - 'class'
+    - - 'get'
+      - 'class'
     - 'country'
+  - - '=='
+    - - 'has'
+      - osm_id
+    - false
 layout:
   text-font:
     - Noto Sans CJK JP Bold
