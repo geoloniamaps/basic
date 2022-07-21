@@ -36,7 +36,7 @@ layout:
   text-font:
     - Noto Sans Universal Regular
   text-size: 14
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-max-width: 8
   visibility: visible
 paint:

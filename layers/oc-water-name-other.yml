@@ -22,7 +22,7 @@ layout:
     - 10
     - 6
     - 14
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-max-width: 5
   text-rotation-alignment: map
   symbol-placement: point

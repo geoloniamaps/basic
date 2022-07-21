@@ -23,7 +23,7 @@ layout:
   text-anchor: top
   icon-image: circle-stroked
   icon-size: 0.8
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-offset:
     - 0
     - 0.6

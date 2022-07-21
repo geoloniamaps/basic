@@ -1,0 +1,6 @@
+[
+  'case',
+  ['==', ["string", ["get", "name:ja"], ["get", "name"]], ["get", "name"]],
+  ["string", ["get", "name:ja"], ["get", "name"]],
+  ["concat", ["get", "name:ja"], "\n", ["get", "name"]]
+]

@@ -52,7 +52,7 @@ layout:
     - 30
     - 16
     - 0
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-offset:
     - 0
     - 0.3

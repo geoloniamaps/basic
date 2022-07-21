@@ -25,7 +25,7 @@ layout:
     - 18
     - 16
     - 23
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-max-width: 8
   icon-image: circle-stroked
   text-offset:

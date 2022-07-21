@@ -36,7 +36,7 @@ layout:
         - class
     - - image
       - circle-stroked
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-offset:
     - 0
     - 0.3

@@ -16,7 +16,7 @@ layout:
     - Noto Sans Universal Regular
   text-anchor: top
   icon-image: circle
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-offset:
     - 0
     - 0.6

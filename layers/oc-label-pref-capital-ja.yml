@@ -24,7 +24,7 @@ layout:
   icon-image: circle-stroked
   icon-size: 0.8
   icon-allow-overlap: true
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-offset:
     - 0.6
     - 0.6

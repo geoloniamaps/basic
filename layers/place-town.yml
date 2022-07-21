@@ -37,7 +37,7 @@ layout:
     - 11
     - 14
     - 18
-  text-field: '{name}'
+  text-field: !!inc/file layers/components/place-label.yml
   text-max-width: 8
   visibility: visible
 paint:
