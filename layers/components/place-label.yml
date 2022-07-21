@@ -1,1 +1,1 @@
-["string", ["get", "name:ja"], ["get", "name"]]
+["string", ["get", "name:en"], ["string", ["get", "name:latin"], ["get", "name"]]]
