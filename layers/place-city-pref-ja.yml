@@ -1,7 +1,7 @@
-id: oc-label-pref-ja
+id: place-city-pref-ja
 type: symbol
 source: geolonia
-source-layer: oc-label
+source-layer: place
 minzoom: 5
 maxzoom: 8
 filter:

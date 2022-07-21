@@ -1,26 +1,31 @@
-id: oc-label-country
+id: place-city-pref
 type: symbol
 source: geolonia
-source-layer: oc-label
-maxzoom: 8
+source-layer: place
+minzoom: 5
 filter:
-  - '=='
-  - - get
-    - class
-  - country
+  - all
+  - - '=='
+    - - get
+      - class
+    - pref
+  - - '=='
+    - - has
+      - jflag
+    - false
 layout:
   text-font:
     - Noto Sans CJK JP Bold
   text-size:
     stops:
-      - - 0
-        - 9
+      - - 5
+        - 12
       - - 8
-        - 16
+        - 14
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
 paint:
-  text-color: rgba(68, 68, 68, 1)
+  text-color: rgba(102, 102, 102, 1)
   text-halo-width: 1.2
   text-halo-color: rgba(255,255,255,0.8)

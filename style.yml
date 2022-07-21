@@ -7,7 +7,7 @@ name: $name
 sources:
   geolonia:
     type: vector
-    url: https://tileserver.geolonia.com/v2_combined/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver.geolonia.com/v2_combined2/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
@@ -26,7 +26,6 @@ layers:
   - !!inc/file layers/water-river-lake-ja.yml
   - !!inc/file layers/oc-ocean.yml
   - !!inc/file layers/oc-glacier.yml
-  - !!inc/file layers/oc-forest.yml
   - !!inc/file layers/hillshading.yml
   - !!inc/file layers/oc-waterway-river-ja.yml
   - !!inc/file layers/oc-waterway-river.yml
@@ -35,23 +34,11 @@ layers:
   - !!inc/file layers/oc-lake-ja.yml
   - !!inc/file layers/oc-lake-blur.yml
   - !!inc/file layers/oc-lake.yml
-  - !!inc/file layers/oc-highway-outer-ja.yml
-  - !!inc/file layers/oc-highway-outer.yml
-  - !!inc/file layers/oc-highway-inner-ja.yml
-  - !!inc/file layers/oc-highway-inner.yml
-  - !!inc/file layers/oc-boundary-land-level-1-ja.yml
-  - !!inc/file layers/oc-boundary-land-level-1.yml
-  - !!inc/file layers/oc-boundary-land-level-0.yml
+  - !!inc/file layers/boundary-land-level-0.yml
   - !!inc/file layers/oc-water-name-ocean.yml
   - !!inc/file layers/oc-water-name-other.yml
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
-  - !!inc/file layers/oc-label-country.yml
-  - !!inc/file layers/oc-label-pref-ja.yml
-  - !!inc/file layers/oc-label-pref.yml
-  - !!inc/file layers/oc-label-town-ja.yml
-  - !!inc/file layers/oc-label-pref-capital-ja.yml
-  - !!inc/file layers/oc-label-town.yml
   - !!inc/file layers/oc-airport.yml
   - !!inc/file layers/landuse-commercial.yml
   - !!inc/file layers/landuse-industrial.yml
@@ -161,3 +148,6 @@ layers:
   - !!inc/file layers/place-city-rank3.yml
   - !!inc/file layers/place-city-rank2.yml
   - !!inc/file layers/place-city-capital.yml
+  - !!inc/file layers/place-city-pref-ja.yml
+  - !!inc/file layers/place-city-pref.yml
+  - !!inc/file layers/place-city-country.yml
