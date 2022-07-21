@@ -1,6 +1,6 @@
 [
-  'case',
-  ['==', ["string", ["get", "name:en"], ["get", "name"]], ["get", "name"]],
-  ["string", ["get", "name:en"], ["get", "name"]],
-  ["concat", ["get", "name:en"], "\n", ["get", "name"]]
+  "case",
+  ["==", ["string", ["get", "name:en"], ["string", ["get", "name:latin"], ["get", "name"]]],
+  ["get", "name"]], ["string", ["get", "name:en"], ["string", ["get", "name:latin"], ["get", "name"]]],
+  ["concat", ["string", ["get", "name:en"], ["get", "name:latin"]], "\n", ["get", "name"]]
 ]
