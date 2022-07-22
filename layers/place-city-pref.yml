@@ -3,6 +3,7 @@ type: symbol
 source: geolonia
 source-layer: place
 minzoom: 5
+maxzoom: 8
 filter:
   - all
   - - '=='
