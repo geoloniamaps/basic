@@ -10,7 +10,7 @@ filter:
     - - get
       - admin_level
     - 4
-  - - '=='
+  - - '!='
     - - has
       - jflag
     - true
@@ -24,8 +24,8 @@ paint:
   line-color:
     stops:
       - - 4
-        - 'rgba(68,68,68,0.7)'
-      - - 8
+        - 'rgba(102,102,102,0.7)'
+      - - 7
         - 'rgba(136,136,136,0.7)'
   line-dasharray:
     - 3
@@ -35,8 +35,8 @@ paint:
   line-width:
     stops:
       - - 4
-        - 1
-      - - 8
-        - 1.2
+        - 0.5
+      - - 7
+        - 1.8
       - - 12
         - 2
