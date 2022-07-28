@@ -1,6 +1,6 @@
 id: water-blur
 type: line
-source: geolonia-water
+source: geolonia
 source-layer: water
 layout:
   line-join: "round"

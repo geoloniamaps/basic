@@ -1,6 +1,6 @@
 id: oc-water-name-ocean
 type: symbol
-source: oceanus
+source: geolonia
 source-layer: oc-water_name
 minzoom: 1
 maxzoom: 6

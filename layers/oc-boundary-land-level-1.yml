@@ -1,7 +1,7 @@
 id: oc-boundary-land-level-1
 type: line
-source: oceanus
-source-layer: oc-boundary
+source: geolonia
+source-layer: boundary
 minzoom: 3
 maxzoom: 6
 filter:

@@ -1,6 +1,6 @@
 id: oc-waterway-name-ja
 type: symbol
-source: oceanus
+source: geolonia
 source-layer: oc-waterway
 minzoom: 6
 maxzoom: 6

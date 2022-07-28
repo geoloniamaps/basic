@@ -1,6 +1,6 @@
 id: oc-waterway-river-ja
 type: line
-source: oceanus
+source: geolonia
 source-layer: oc-waterway
 minzoom: 4
 maxzoom: 6

@@ -1,6 +1,6 @@
 id: oc-lake-blur
 type: line
-source: oceanus
+source: geolonia
 source-layer: oc-water
 minzoom: 4
 maxzoom: 6

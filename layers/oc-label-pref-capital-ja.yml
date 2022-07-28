@@ -1,7 +1,7 @@
 id: oc-label-pref-capital-ja
 type: symbol
-source: oceanus
-source-layer: oc-label
+source: geolonia
+source-layer: place
 minzoom: 6
 maxzoom: 6
 visibility: false

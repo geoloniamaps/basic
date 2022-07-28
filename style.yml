@@ -5,16 +5,8 @@ $name: Geolonia Basic
 version: 8
 name: $name
 sources:
-  oceanus:
-    type: vector
-    maxzoom: 5
-    url: https://tileserver.geolonia.com/oceanus-v0-1-6/tiles.json?key=YOUR-API-KEY
-  geolonia-water:
-    type: vector
-    url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
   geolonia:
     type: vector
-    minzoom: 6
     url: https://tileserver-dev.geolonia.com/v3/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
@@ -35,7 +27,6 @@ layers:
   - !!inc/file layers/water-river-lake-ja.yml
   - !!inc/file layers/oc-ocean.yml
   - !!inc/file layers/oc-glacier.yml
-  - !!inc/file layers/oc-forest.yml
   - !!inc/file layers/hillshading.yml
   - !!inc/file layers/oc-waterway-river-ja.yml
   - !!inc/file layers/oc-waterway-river.yml
