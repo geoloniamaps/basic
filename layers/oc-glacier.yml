@@ -1,6 +1,6 @@
 id: oc-glacier
 type: fill
-source: oceanus
+source: geolonia
 source-layer: oc-glacier
 maxzoom: 8
 layout:

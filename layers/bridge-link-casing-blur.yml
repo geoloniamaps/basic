@@ -2,6 +2,7 @@ id: bridge-link-casing-blur
 type: line
 source: geolonia
 source-layer: transportation
+minzoom: 8
 filter:
   - all
   - - '=='
@@ -38,7 +39,7 @@ paint:
         - 0.2
       - - 17
         - 0.8
-  line-blur: 
+  line-blur:
     stops:
       - - 14
         - 20

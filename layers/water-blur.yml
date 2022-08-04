@@ -1,7 +1,8 @@
 id: water-blur
 type: line
-source: geolonia-water
+source: geolonia
 source-layer: water
+minzoom: 8
 layout:
   line-join: "round"
   line-round-limit: 0.5

@@ -3,7 +3,7 @@ type: symbol
 metadata: {}
 source: geolonia
 source-layer: transportation_name
-minzoom: 7
+minzoom: 8
 filter:
   - all
   - - <=

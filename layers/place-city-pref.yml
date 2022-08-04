@@ -1,8 +1,9 @@
-id: oc-label-pref
+id: place-city-pref
 type: symbol
-source: oceanus
-source-layer: oc-label
+source: geolonia
+source-layer: place
 minzoom: 5
+maxzoom: 8
 filter:
   - all
   - - '=='

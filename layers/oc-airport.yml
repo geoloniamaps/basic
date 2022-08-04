@@ -1,6 +1,6 @@
 id: oc-airport
 type: symbol
-source: oceanus
+source: geolonia
 source-layer: oc-airport
 minzoom: 5
 filter:

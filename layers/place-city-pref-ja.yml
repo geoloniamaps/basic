@@ -1,22 +1,26 @@
-id: oc-label-country
+id: place-city-pref-ja
 type: symbol
-source: oceanus
-source-layer: oc-label
+source: geolonia
+source-layer: place
+minzoom: 5
 maxzoom: 8
 filter:
-  - '=='
-  - - get
-    - class
-  - country
+  - all
+  - - '=='
+    - - get
+      - class
+    - pref
+  - - has
+    - jflag
 layout:
   text-font:
     - Noto Sans CJK JP Bold
   text-size:
     stops:
-      - - 0
-        - 9
+      - - 5
+        - 10
       - - 8
-        - 16
+        - 17
   text-field: '{name}'
   text-max-width: 8
   visibility: visible

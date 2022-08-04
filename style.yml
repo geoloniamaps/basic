@@ -5,16 +5,9 @@ $name: Geolonia Basic
 version: 8
 name: $name
 sources:
-  oceanus:
-    type: vector
-    url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
-  geolonia-water:
-    type: vector
-    url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
   geolonia:
     type: vector
-    minzoom: 8
-    url: https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver.geolonia.com/v2_combined2/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
@@ -37,7 +30,6 @@ layers:
   - !!inc/file layers/water-river-lake-ja.yml
   - !!inc/file layers/oc-ocean.yml
   - !!inc/file layers/oc-glacier.yml
-  - !!inc/file layers/oc-forest.yml
   - !!inc/file layers/hillshading.yml
   - !!inc/file layers/oc-waterway-river-ja.yml
   - !!inc/file layers/oc-waterway-river.yml
@@ -46,23 +38,11 @@ layers:
   - !!inc/file layers/oc-lake-ja.yml
   - !!inc/file layers/oc-lake-blur.yml
   - !!inc/file layers/oc-lake.yml
-  - !!inc/file layers/oc-highway-outer-ja.yml
-  - !!inc/file layers/oc-highway-outer.yml
-  - !!inc/file layers/oc-highway-inner-ja.yml
-  - !!inc/file layers/oc-highway-inner.yml
-  - !!inc/file layers/oc-boundary-land-level-1-ja.yml
-  - !!inc/file layers/oc-boundary-land-level-1.yml
-  - !!inc/file layers/oc-boundary-land-level-0.yml
+  - !!inc/file layers/boundary-land-level-0.yml
   - !!inc/file layers/oc-water-name-ocean.yml
   - !!inc/file layers/oc-water-name-other.yml
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
-  - !!inc/file layers/oc-label-country.yml
-  - !!inc/file layers/oc-label-pref-ja.yml
-  - !!inc/file layers/oc-label-pref.yml
-  - !!inc/file layers/oc-label-town-ja.yml
-  - !!inc/file layers/oc-label-pref-capital-ja.yml
-  - !!inc/file layers/oc-label-town.yml
   - !!inc/file layers/oc-airport.yml
   - !!inc/file layers/farmland.yml
   - !!inc/file layers/landuse-commercial.yml
@@ -121,6 +101,9 @@ layers:
   - !!inc/file layers/highway-motorway.yml
   - !!inc/file layers/waterway-name.yml
   - !!inc/file layers/water-name-lakeline.yml
+  - !!inc/file layers/railway.yml
+  - !!inc/file layers/railway-hatching.yml
+  - !!inc/file layers/railway-subway.yml
   - !!inc/file layers/bridge-motorway-link-casing.yml
   - !!inc/file layers/bridge-link-casing.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing.yml
@@ -133,9 +116,6 @@ layers:
   - !!inc/file layers/bridge-trunk-primary.yml
   - !!inc/file layers/bridge-motorway-casing.yml
   - !!inc/file layers/bridge-motorway.yml
-  - !!inc/file layers/railway.yml
-  - !!inc/file layers/railway-hatching.yml
-  - !!inc/file layers/railway-subway.yml
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
   - !!inc/file layers/boundary-land-level-4.yml
@@ -173,3 +153,6 @@ layers:
   - !!inc/file layers/place-city-rank3.yml
   - !!inc/file layers/place-city-rank2.yml
   - !!inc/file layers/place-city-capital.yml
+  - !!inc/file layers/place-city-pref-ja.yml
+  - !!inc/file layers/place-city-pref.yml
+  - !!inc/file layers/place-city-country.yml
