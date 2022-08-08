@@ -52,12 +52,19 @@
 
   <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>
   <script>
+
+    const htmlLoadedTime = Date.now();
+
     const map = new geolonia.Map({
       container: "#map",
       style: "./style.json",
     });
 
     map.on('load', () => {
+
+      const mapRenderedTime = Date.now();
+      const totalMapRenderTime = mapRenderedTime - htmlLoadedTime;
+      console.log("Map rendered time: " + (totalMapRenderTime /1000) + "s");
 
       const dumpFeature = event => {
         const features = map.queryRenderedFeatures(event.point)
