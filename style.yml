@@ -12,6 +12,11 @@ sources:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
     attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
+  fudepoli:
+    type: vector
+    url: https://tileserver.geolonia.com/fudepoli_v0/tiles.json?key=YOUR-API-KEY
+    attribution: <a href="https://www.maff.go.jp/j/tokei/porigon/attach/pdf/hudeporidl-1.pdf" target="_blank">© 農林水産省</a>
+    minzoom: 13
 sprite: https://geoloniamaps.github.io/basic/basic
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
@@ -40,6 +45,7 @@ layers:
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/oc-airport.yml
+  - !!inc/file layers/farmland.yml
   - !!inc/file layers/landuse-commercial.yml
   - !!inc/file layers/landuse-industrial.yml
   - !!inc/file layers/park.yml
@@ -51,8 +57,6 @@ layers:
   - !!inc/file layers/waterway-other.yml
   - !!inc/file layers/waterway-stream-canal.yml
   - !!inc/file layers/waterway-river.yml
-  - !!inc/file layers/waterway-name.yml
-  - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
   - !!inc/file layers/ferry.yml
@@ -96,6 +100,8 @@ layers:
   - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/highway-trunk.yml
   - !!inc/file layers/highway-motorway.yml
+  - !!inc/file layers/waterway-name.yml
+  - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/railway.yml
   - !!inc/file layers/railway-hatching.yml
   - !!inc/file layers/railway-subway.yml
