@@ -4,12 +4,17 @@
   "sources": {
     "geolonia": {
       "type": "vector",
-      "url": "https://tileserver.geolonia.com/v2_combined/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/v2_combined2/tiles.json?key=YOUR-API-KEY"
     },
     "dem": {
       "type": "raster-dem",
       "url": "https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY",
       "attribution": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html\" target=\"_blank\">© GSI Japan</a>"
+    },
+    "fudepoli": {
+      "type": "vector",
+      "url": "https://tileserver.geolonia.com/fudepoli_v0/tiles.json?key=YOUR-API-KEY",
+      "attribution": "<a href=\"https://www.maff.go.jp/j/tokei/porigon/attach/pdf/hudeporidl-1.pdf\" target=\"_blank\">© 農林水産省</a>"
     }
   },
   "sprite": "https://geoloniamaps.github.io/basic/basic",
@@ -119,7 +124,6 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landcover",
-      "minzoom": 8,
       "filter": [
         "==",
         "class",
@@ -129,7 +133,18 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "#bce398",
+        "fill-color": {
+          "stops": [
+            [
+              5,
+              "#a5d47b"
+            ],
+            [
+              8,
+              "#bce398"
+            ]
+          ]
+        },
         "fill-antialias": {
           "base": 1,
           "stops": [
@@ -381,31 +396,6 @@
       },
       "paint": {
         "fill-color": "rgba(241, 248, 254, 1)"
-      }
-    },
-    {
-      "id": "oc-forest",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "oc-forest",
-      "minzoom": 0,
-      "maxzoom": 9,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": {
-          "stops": [
-            [
-              5,
-              "#a5d47b"
-            ],
-            [
-              8,
-              "#bce398"
-            ]
-          ]
-        }
       }
     },
     {
@@ -742,350 +732,10 @@
       }
     },
     {
-      "id": "oc-highway-outer-ja",
+      "id": "boundary-land-level-0",
       "type": "line",
       "source": "geolonia",
-      "source-layer": "oc-road",
-      "minzoom": 5,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "highway"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          5,
-          "#59ad8c",
-          8,
-          "#4ed19e"
-        ],
-        "line-opacity": 0.6,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              8,
-              1.5
-            ],
-            [
-              20,
-              17
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "oc-highway-outer",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "oc-road",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "highway"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          5,
-          "#59ad8c",
-          8,
-          "#4ed19e"
-        ],
-        "line-opacity": 0.6,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              8,
-              1.5
-            ],
-            [
-              20,
-              17
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "oc-highway-inner-ja",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "oc-road",
-      "minzoom": 5,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "highway"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          5,
-          "#59ad8c",
-          8,
-          "#4ed19e"
-        ],
-        "line-opacity": 0.6,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              8,
-              0.5
-            ],
-            [
-              20,
-              13
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "oc-highway-inner",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "oc-road",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "highway"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          5,
-          "#59ad8c",
-          8,
-          "#4ed19e"
-        ],
-        "line-opacity": 0.6,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6.5,
-              0
-            ],
-            [
-              8,
-              0.8
-            ],
-            [
-              20,
-              13
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "oc-boundary-land-level-1-ja",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "oc-boundary",
-      "minzoom": 4,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "admin_level"
-          ],
-          1
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": {
-          "stops": [
-            [
-              4,
-              "rgba(102,102,102,0.7)"
-            ],
-            [
-              7,
-              "rgba(136,136,136,0.7)"
-            ]
-          ]
-        },
-        "line-dasharray": [
-          3,
-          1,
-          1,
-          1
-        ],
-        "line-width": {
-          "stops": [
-            [
-              4,
-              0.5
-            ],
-            [
-              7,
-              1.8
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "oc-boundary-land-level-1",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "oc-boundary",
-      "minzoom": 4,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "admin_level"
-          ],
-          1
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#9e9cab",
-        "line-dasharray": [
-          3,
-          1,
-          1,
-          1
-        ],
-        "line-width": 1
-      }
-    },
-    {
-      "id": "oc-boundary-land-level-0",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "oc-boundary",
+      "source-layer": "boundary",
       "filter": [
         "==",
         [
@@ -1098,8 +748,20 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#9e9cab",
-        "line-width": 1,
+        "line-color": "#85848c",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.5,
+          6,
+          1.5
+        ],
         "line-blur": 0.4
       }
     },
@@ -1260,293 +922,6 @@
       }
     },
     {
-      "id": "oc-label-country",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-label",
-      "maxzoom": 8,
-      "filter": [
-        "==",
-        [
-          "get",
-          "class"
-        ],
-        "country"
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans CJK JP Bold"
-        ],
-        "text-size": {
-          "stops": [
-            [
-              0,
-              9
-            ],
-            [
-              8,
-              16
-            ]
-          ]
-        },
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(68, 68, 68, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "oc-label-pref-ja",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-label",
-      "minzoom": 5,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "pref"
-        ],
-        [
-          "has",
-          "jflag"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans CJK JP Bold"
-        ],
-        "text-size": {
-          "stops": [
-            [
-              5,
-              10
-            ],
-            [
-              8,
-              17
-            ]
-          ]
-        },
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(68, 68, 68, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "oc-label-pref",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-label",
-      "minzoom": 5,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "pref"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans CJK JP Bold"
-        ],
-        "text-size": {
-          "stops": [
-            [
-              5,
-              12
-            ],
-            [
-              8,
-              14
-            ]
-          ]
-        },
-        "text-field": "{name}",
-        "text-max-width": 8,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "rgba(102, 102, 102, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
-      }
-    },
-    {
-      "id": "oc-label-town-ja",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-label",
-      "minzoom": 7,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "town"
-        ],
-        [
-          "has",
-          "jflag"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "pref-capital"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-image": "circle-stroked",
-        "icon-size": 0.8,
-        "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#333",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "oc-label-pref-capital-ja",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-label",
-      "minzoom": 6,
-      "maxzoom": 8,
-      "filter": [
-        "all",
-        [
-          "has",
-          "jflag"
-        ],
-        [
-          "has",
-          "pref-capital"
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "text-variable-anchor": [
-          "top",
-          "bottom",
-          "left",
-          "right"
-        ],
-        "icon-image": "circle-stroked",
-        "icon-size": 0.8,
-        "icon-allow-overlap": true,
-        "text-field": "{name}",
-        "text-offset": [
-          0.6,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "rgba(71, 71, 71, 1)",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
-      "id": "oc-label-town",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "oc-label",
-      "minzoom": 6,
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "town"
-        ],
-        [
-          "==",
-          [
-            "has",
-            "jflag"
-          ],
-          false
-        ]
-      ],
-      "layout": {
-        "text-padding": 2,
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-anchor": "top",
-        "icon-image": "circle",
-        "text-field": "{name}",
-        "text-offset": [
-          0,
-          0.6
-        ],
-        "text-size": 12,
-        "text-max-width": 9
-      },
-      "paint": {
-        "text-halo-blur": 0.5,
-        "text-color": "#666",
-        "text-halo-width": 1,
-        "text-halo-color": "#ffffff"
-      }
-    },
-    {
       "id": "oc-airport",
       "type": "symbol",
       "source": "geolonia",
@@ -1591,6 +966,40 @@
         "text-color": "#666",
         "text-halo-width": 1,
         "text-halo-color": "#ffffff"
+      }
+    },
+    {
+      "id": "farmland",
+      "type": "fill",
+      "source": "fudepoli",
+      "source-layer": "fudepoli",
+      "paint": {
+        "fill-color": [
+          "case",
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "field"
+          ],
+          "#F0E7D2",
+          "#E2EBCF"
+        ],
+        "fill-outline-color": [
+          "case",
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "field"
+          ],
+          "#eadcbb",
+          "#cedbb1"
+        ]
       }
     },
     {
@@ -1895,84 +1304,6 @@
       }
     },
     {
-      "id": "waterway-name",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "waterway",
-      "minzoom": 13,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "has",
-          "name"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "line",
-        "text-letter-spacing": 0.2,
-        "symbol-spacing": 350
-      },
-      "paint": {
-        "text-color": "#65cbf9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "water-name-lakeline",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "water_name",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "line",
-        "symbol-spacing": 350,
-        "text-letter-spacing": 0.2
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
       "id": "water-name-ocean",
       "type": "symbol",
       "source": "geolonia",
@@ -2162,8 +1493,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -2347,8 +1678,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -2443,8 +1774,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -2624,8 +1955,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -2887,8 +2218,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -2940,8 +2271,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -2997,8 +2328,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -3150,8 +2481,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -3203,8 +2534,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -3256,8 +2587,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -3568,8 +2899,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -3733,8 +3064,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -3800,8 +3131,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -3855,8 +3186,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -3879,7 +3210,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 8,
+      "minzoom": 5,
       "filter": [
         "all",
         [
@@ -3919,8 +3250,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -3944,7 +3275,7 @@
           [
             "zoom"
           ],
-          8,
+          5,
           0.6,
           11,
           1
@@ -4074,8 +3405,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -4235,8 +3566,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -4294,8 +3625,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -4353,8 +3684,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -4377,7 +3708,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
-      "minzoom": 8,
+      "minzoom": 5,
       "filter": [
         "all",
         [
@@ -4414,7 +3745,7 @@
           [
             "zoom"
           ],
-          8,
+          5,
           "#4ed19e",
           11,
           "#9be0c5"
@@ -4427,7 +3758,7 @@
           [
             "zoom"
           ],
-          8,
+          5,
           0.6,
           11,
           1
@@ -4441,8 +3772,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -4458,6 +3789,211 @@
           20,
           160
         ]
+      }
+    },
+    {
+      "id": "waterway-name",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "waterway",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "symbol-placement": "line",
+        "text-letter-spacing": 0.2,
+        "symbol-spacing": 350
+      },
+      "paint": {
+        "text-color": "#65cbf9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      }
+    },
+    {
+      "id": "water-name-lakeline",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "water_name",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "symbol-placement": "line",
+        "symbol-spacing": 350,
+        "text-letter-spacing": 0.2
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      }
+    },
+    {
+      "id": "railway",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ],
+        [
+          "!in",
+          "brunnel",
+          "tunnel"
+        ]
+      ],
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              10,
+              0.8
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-hatching",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ],
+        [
+          "!in",
+          "brunnel",
+          "tunnel"
+        ]
+      ],
+      "paint": {
+        "line-color": "#ffffff",
+        "line-dasharray": [
+          6,
+          4
+        ],
+        "line-width": {
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              18,
+              2
+            ],
+            [
+              22,
+              18
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-subway",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ],
+        [
+          "==",
+          "subclass",
+          "subway"
+        ]
+      ],
+      "paint": {
+        "line-offset": {
+          "stops": [
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1.5
+            ],
+            [
+              16,
+              2
+            ],
+            [
+              17,
+              8
+            ]
+          ]
+        },
+        "line-color": "#9dabdd",
+        "line-opacity": 1,
+        "line-width": 1.5
       }
     },
     {
@@ -4494,8 +4030,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -4599,8 +4135,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -4652,8 +4188,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -4796,8 +4332,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -4899,8 +4435,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -4952,8 +4488,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -5017,8 +4553,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.4,
           9,
           0.6,
           12,
@@ -5094,8 +4630,8 @@
           [
             "zoom"
           ],
-          8,
-          0,
+          5,
+          0.2,
           9,
           0.5,
           12,
@@ -5111,133 +4647,6 @@
           20,
           160
         ]
-      }
-    },
-    {
-      "id": "railway",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "rail"
-        ],
-        [
-          "!in",
-          "brunnel",
-          "tunnel"
-        ]
-      ],
-      "paint": {
-        "line-color": "#999999",
-        "line-width": {
-          "stops": [
-            [
-              10,
-              0.8
-            ],
-            [
-              18,
-              4
-            ],
-            [
-              22,
-              20
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "railway-hatching",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "rail"
-        ],
-        [
-          "!in",
-          "brunnel",
-          "tunnel"
-        ]
-      ],
-      "paint": {
-        "line-color": "#ffffff",
-        "line-dasharray": [
-          6,
-          4
-        ],
-        "line-width": {
-          "stops": [
-            [
-              10,
-              0.5
-            ],
-            [
-              18,
-              2
-            ],
-            [
-              22,
-              18
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "railway-subway",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "transportation",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "rail"
-        ],
-        [
-          "==",
-          "subclass",
-          "subway"
-        ]
-      ],
-      "paint": {
-        "line-offset": {
-          "stops": [
-            [
-              14,
-              1
-            ],
-            [
-              15,
-              1.5
-            ],
-            [
-              16,
-              2
-            ],
-            [
-              17,
-              8
-            ]
-          ]
-        },
-        "line-color": "#9dabdd",
-        "line-opacity": 1,
-        "line-width": 1.5
       }
     },
     {
@@ -5313,21 +4722,51 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "boundary",
-      "minzoom": 8,
+      "minzoom": 4,
       "maxzoom": 14,
       "filter": [
         "all",
         [
           "==",
-          "admin_level",
+          [
+            "get",
+            "admin_level"
+          ],
           4
+        ],
+        [
+          "!=",
+          [
+            "has",
+            "jflag"
+          ],
+          true
+        ],
+        [
+          "==",
+          [
+            "has",
+            "maritime"
+          ],
+          false
         ]
       ],
       "layout": {
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgba(68,68,68,0.7)",
+        "line-color": {
+          "stops": [
+            [
+              4,
+              "rgba(102,102,102,0.7)"
+            ],
+            [
+              7,
+              "rgba(136,136,136,0.7)"
+            ]
+          ]
+        },
         "line-dasharray": [
           3,
           1,
@@ -5335,11 +4774,14 @@
           1
         ],
         "line-width": {
-          "base": 1.4,
           "stops": [
             [
-              8,
-              1.2
+              4,
+              0.5
+            ],
+            [
+              7,
+              1.8
             ],
             [
               12,
@@ -7393,7 +6835,7 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
-      "minzoom": 8,
+      "minzoom": 6,
       "filter": [
         "all",
         [
@@ -7421,14 +6863,41 @@
         "icon-image": "circle-stroked",
         "icon-size": 0.8,
         "text-anchor": "top",
-        "text-offset": [
-          0,
-          0.2
+        "text-variable-anchor": [
+          "top",
+          "left",
+          "right"
+        ],
+        "text-radial-offset": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.5,
+          8,
+          0.4
         ],
         "text-font": [
           "Noto Sans CJK JP Bold"
         ],
-        "text-size": 17,
+        "text-size": [
+          "interpolate",
+          [
+            "exponential",
+            1.5
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          10,
+          10,
+          17
+        ],
         "text-field": "{name}",
         "text-max-width": 8,
         "visibility": "visible"
@@ -7447,9 +6916,10 @@
             ]
           ]
         },
-        "text-color": "rgba(68, 68, 68, 1)",
-        "text-halo-width": 1.2,
-        "text-halo-color": "rgba(255,255,255,0.8)"
+        "text-halo-blur": 0.5,
+        "text-color": "rgba(71, 71, 71, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
       }
     },
     {
@@ -7494,6 +6964,157 @@
       },
       "paint": {
         "text-color": "#333",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "place-city-pref-ja",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "place",
+      "minzoom": 5,
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "pref"
+        ],
+        [
+          "has",
+          "jflag"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              5,
+              10
+            ],
+            [
+              8,
+              17
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(68, 68, 68, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "place-city-pref",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "place",
+      "minzoom": 5,
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "pref"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              5,
+              12
+            ],
+            [
+              8,
+              14
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "place-city-country",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "place",
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "country"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "osm_id"
+          ],
+          false
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              9
+            ],
+            [
+              8,
+              16
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(68, 68, 68, 1)",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
       }
