@@ -21,14 +21,10 @@ const getMapRenderTime = async (zoom, center) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-<<<<<<< HEAD
-  await page.goto(`http://localhost:${port}/index.html`);
-=======
   const lng = center[0];
   const lat = center[1];
 
   await page.goto(`http://localhost:${port}/index.html#${zoom}/${lat}/${lng}`);
->>>>>>> d598a18 (some fix)
   await page.waitForSelector('.loading-geolonia-map', { hidden: true });
 
   const mapRenderTime = await page.evaluate(() => {
