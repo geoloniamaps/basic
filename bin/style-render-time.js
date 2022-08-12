@@ -92,7 +92,7 @@ const getMapRenderTimeByZoom = async () => {
       const zoom = zoomList[i];
       const mapRenderedTime = await getMapRenderTimeDiff(zoom, center);
       const plusMinus = mapRenderedTime.diff > 0 ? '+' : '';
-      comment += `<tr><td>${zoom}</td><td>${plusMinus}${mapRenderedTime.diff/1000}秒</td>${mapRenderedTime.averageProd/1000}秒<td>${mapRenderedTime.average/1000}秒</td></tr>`;
+      comment += `<tr><td>${zoom}</td><td>${plusMinus}${mapRenderedTime.diff/1000}秒</td><td>${mapRenderedTime.averageProd/1000}秒</td><td>${mapRenderedTime.average/1000}秒</td></tr>`;
 
       if (parseInt(mapRenderedTime.diff) > threshold) {
         throw new Error(`Map render average time changes should be less than ${threshold}ms.`);
