@@ -6,7 +6,7 @@
   "scripts": {
     "start": "charites serve style.yml --provider geolonia",
     "build": "charites build style.yml ./docs/style.json --sprite-input ./icons --sprite-output ./docs",
-    "test:e2e": "node ./bin/style-render-time.js"
+    "benchmark:render-time": "node ./bin/style-render-time.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,6 @@
   "homepage": "https://github.com/geoloniamaps/basic#readme",
   "devDependencies": {
     "@unvt/charites": "^0.1.4",
-    "http": "^0.0.1-security",
     "http-close": "^1.0.0",
     "node-fetch": "^2.6.7",
     "puppeteer": "^16.1.0"
