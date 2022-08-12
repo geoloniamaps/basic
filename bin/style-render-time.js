@@ -80,8 +80,7 @@ const getMapRenderTimeByZoom = async () => {
   server.listen(port, async () => {
 
     const center = [139.7671773, 35.6810755];
-    // const zoomList = [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ]
-    const zoomList = [3, 4, 5, 6, 7]
+    const zoomList = [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ]
 
     let comment = '<h3><span aria-hidden="true">✅</span> 地図レンダリング時間</h3>';
     comment += '<p><code>master</code> ブランチのスタイルと、この PR のスタイルの地図レンダリング速度を比較した結果を表示します。（レンダリング時間が2秒以上増加した場合テストが失敗します）</p>';
