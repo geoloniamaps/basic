@@ -41,7 +41,7 @@ const getAverageMapRenderTime = async (zoom, center) => {
   const mapRenderedTimes = [];
 
   // 5回のレンダリング時間の平均を取得
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 5; i++) {
     const mapRenderedTime = await getMapRenderTime(zoom, center);
     mapRenderedTimes.push(mapRenderedTime);
   }
