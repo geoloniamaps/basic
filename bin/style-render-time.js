@@ -83,7 +83,7 @@ const getMapRenderTimeByZoom = async () => {
     const zoomList = [ 5, 7, 11, 14 ]
 
     let comment = '<h3><span aria-hidden="true">✅</span> 地図レンダリング時間</h3>';
-    comment += `<p><code>master</code> ブランチのスタイルと、現在のブランチのスタイルのレンダリング速度を比較した結果を表示します。（レンダリング時間が${threshold/1000}秒以上増加した場合テストが失敗します）</p>`;
+    comment += `<p><code>master</code> ブランチのスタイルと、現在のブランチのスタイルのレンダリング時間を比較した結果を表示します。（レンダリング時間が${threshold/1000}秒以上増加した場合テストが失敗します）</p>`;
     comment += '<table><tr><th>ズームレベル</th><th>最新リリースとの差分</th><th>最新リリース</th><th>現在のブランチ</th></tr>';
 
     for (let i = 0; i < zoomList.length; i++) {
