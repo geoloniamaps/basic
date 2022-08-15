@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "charites serve style.yml --provider geolonia",
-    "build": "charites build style.yml ./docs/style.json --sprite-input ./icons --sprite-output ./docs"
+    "build": "charites build style.yml ./docs/style.json --sprite-input ./icons --sprite-output ./docs",
+    "benchmark:render-time": "node ./bin/style-render-time.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   },
   "homepage": "https://github.com/geoloniamaps/basic#readme",
   "devDependencies": {
-    "@unvt/charites": "^0.1.4"
+    "@unvt/charites": "^0.1.4",
+    "http-close": "^1.0.0",
+    "node-fetch": "^2.6.7",
+    "puppeteer": "^16.1.0"
   }
 }

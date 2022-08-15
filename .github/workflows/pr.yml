@@ -1,0 +1,33 @@
+name: pr
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run tests
+        run: |
+          cd $GITHUB_WORKSPACE
+          npm install
+          npm run build
+
+      - id: create_comment
+        run: |
+          COMMENT=$(node bin/style-render-time.js)
+          echo ::set-output name=comment::$COMMENT
+
+      - name: Post comment
+        uses: actions/github-script@v4
+        if: github.event_name == 'pull_request'
+        env:
+          POSTING_COMMENT_BODY: ${{ steps.create_comment.outputs.comment }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+            github.issues.createComment({ issue_number, owner, repo, body: process.env.POSTING_COMMENT_BODY })
