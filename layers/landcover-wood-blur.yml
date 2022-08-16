@@ -2,6 +2,7 @@ id: landcover-wood-blur
 type: line
 source: geolonia
 source-layer: landcover
+minzoom: 8
 filter:
   - '=='
   - class
