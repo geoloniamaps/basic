@@ -16,10 +16,17 @@ jobs:
           npm install
           npm run build
 
-      - name: Action step
-        uses: geolonia/map-render-benchmark
+      - id: create_comment
+        run: |
+          COMMENT=$(node bin/style-render-time.js)
+          echo ::set-output name=comment::$COMMENT
+      - name: Post comment
+        uses: actions/github-script@v4
+        if: github.event_name == 'pull_request'
+        env:
+          POSTING_COMMENT_BODY: ${{ steps.create_comment.outputs.comment }}
         with:
-          style: docs/style.json
-          center: 139.7671773,35.6810755
-          zooms: 5,7,11,14
-          production_style: https://geoloniamaps.github.io/basic/style.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+            github.issues.createComment({ issue_number, owner, repo, body: process.env.POSTING_COMMENT_BODY })
