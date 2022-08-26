@@ -18,7 +18,7 @@ jobs:
           npm run build
         
       - name: Action step
-        uses: geolonia/map-render-benchmark@refs/heads/main
+        uses: geolonia/map-render-benchmark@refs/heads/output-html
         with:
           style: docs/style.json
           center: 139.7671773,35.6810755
