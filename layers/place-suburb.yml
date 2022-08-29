@@ -23,7 +23,7 @@ layout:
     - 10
     - 15
     - 16
-  text-field: ['upcase', ['get', 'name']]
+  text-field: !!inc/file layers/components/place-label-upper.yml
   text-letter-spacing: 0.2
   text-padding:
     - interpolate

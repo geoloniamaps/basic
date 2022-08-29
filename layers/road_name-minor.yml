@@ -21,7 +21,7 @@ layout:
   text-font:
     - Noto Sans Universal Regular
   text-size: 12
-  text-field: !!inc/file layers/components/place-label.yml
+  text-field: !!inc/file layers/components/place-label-poi.yml
   text-max-width: 8
   text-padding: 50
   visibility: visible

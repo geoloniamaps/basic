@@ -21,7 +21,7 @@ layout:
   icon-anchor: bottom
   icon-image: circle-stroked
   icon-size: 0.6
-  text-field: !!inc/file layers/components/place-label.yml
+  text-field: !!inc/file layers/components/place-label-poi.yml
   text-offset:
     - 0
     - 0.3

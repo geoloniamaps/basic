@@ -35,7 +35,7 @@ layout:
     - 100
     - 20
     - 2
-  text-field: !!inc/file layers/components/place-label.yml
+  text-field: !!inc/file layers/components/place-label-poi.yml
   text-offset:
     - 0
     - 0.3

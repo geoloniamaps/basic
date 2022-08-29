@@ -16,7 +16,7 @@ layout:
     - Noto Sans Universal Regular
   text-anchor: top
   icon-image: airport
-  text-field: !!inc/file layers/components/place-label.yml
+  text-field: !!inc/file layers/components/place-label-poi.yml
   text-offset:
     - 0
     - 0.6
