@@ -1,0 +1,1 @@
+['upcase', ["string", ["get", "name:ja"], ["get", "name:en"], ["get", "name"]]]
