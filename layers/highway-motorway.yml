@@ -2,7 +2,7 @@ id: highway-motorway
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 5
+minzoom: 4
 filter:
   - all
   - - '=='
@@ -41,4 +41,4 @@ paint:
     - 0.6
     - 12
     - 1
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-width: !!inc/file layers/components/highway-road-width.yml

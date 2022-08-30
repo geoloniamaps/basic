@@ -16,6 +16,8 @@ layout:
     stops:
       - - 0
         - 9
+      - - 3
+        - 16
       - - 6
         - 16
   text-field: '{name}'

@@ -2,8 +2,8 @@ id: oc-label-pref
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 3
-maxzoom: 6
+minzoom: 6
+# maxzoom: 6
 filter:
   - all
   - - '=='
