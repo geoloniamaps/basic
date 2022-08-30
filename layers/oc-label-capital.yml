@@ -11,7 +11,7 @@ filter:
       - class
     - capital
 layout:
-  icon-image: circle-stroked
+  icon-image: circle-double
   icon-size: 0.5
   text-anchor: top
   text-offset:
