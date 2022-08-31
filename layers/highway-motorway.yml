@@ -26,9 +26,11 @@ paint:
     - - linear
     - - zoom
     - 4
-    - '#ffffff'
+    - '#fce8db'
+    - 6
+    - '#f9c9ac'
     - 8
-    - '#f0762d'
+    - '#fce8db'
     - 12
     - '#FF8D48'
     - 14

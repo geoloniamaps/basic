@@ -22,5 +22,12 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: '#f0762d'
+  line-color:
+    - interpolate
+    - - linear
+    - - zoom
+    - 4
+    - '#f0762d'
+    - 8
+    - '#f3955d'
   line-width: !!inc/file layers/components/highway-road-width-casing.yml
