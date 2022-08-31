@@ -27,7 +27,7 @@ layout:
     - 23
   text-field: '{name}'
   text-max-width: 8
-  icon-image: circle-stroked
+  icon-image: circle-double
   text-offset:
     - 0
     - 0.2
@@ -36,7 +36,7 @@ layout:
     - - linear
     - - zoom
     - 6
-    - 0.5
+    - 0.7
     - 16
     - 1
   text-anchor: top
