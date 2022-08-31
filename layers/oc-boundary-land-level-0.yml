@@ -12,7 +12,10 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#85848c'
+  line-color:
+    stops:
+      - - 0
+        - '#535258'
   line-width:
     - interpolate
     - - linear

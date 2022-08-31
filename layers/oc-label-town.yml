@@ -2,7 +2,7 @@ id: oc-label-town
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 4
+minzoom: 5
 maxzoom: 6
 filter:
   - all
@@ -15,12 +15,12 @@ layout:
   text-font:
     - Noto Sans Universal Regular
   text-anchor: top
-  icon-image: circle
+  icon-image: circle-stroked
   text-field: '{name}'
   text-offset:
     - 0
     - 0.6
-  text-size: 10
+  text-size: 12
   text-max-width: 9
   icon-size: 0.5
 paint:

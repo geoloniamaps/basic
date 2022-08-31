@@ -2,7 +2,7 @@ id: highway-motorway-casing
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 6
+minzoom: 4
 filter:
   - all
   - - '=='
@@ -22,13 +22,5 @@ layout:
   line-join: round
   visibility: visible
 paint:
-  line-color: '#ffffff'
-  line-width: !!inc/file layers/components/broad-road-width-casing.yml
-  line-opacity:
-    - interpolate
-    - - linear
-    - - zoom
-    - 6
-    - 0.6
-    - 12
-    - 1
+  line-color: '#f0762d'
+  line-width: !!inc/file layers/components/highway-road-width-casing.yml

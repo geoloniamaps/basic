@@ -25,6 +25,8 @@ paint:
     - interpolate
     - - linear
     - - zoom
+    - 4
+    - '#ffffff'
     - 8
     - '#f0762d'
     - 12
@@ -33,12 +35,4 @@ paint:
     - '#FF9D62'
     - 16
     - '#FFB98E'
-  line-opacity:
-    - interpolate
-    - - linear
-    - - zoom
-    - 6
-    - 0.6
-    - 12
-    - 1
   line-width: !!inc/file layers/components/highway-road-width.yml
