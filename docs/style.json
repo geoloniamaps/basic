@@ -185,36 +185,26 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "water",
-      "minzoom": 17,
+      "minzoom": 8,
       "layout": {
         "line-join": "round",
+        "line-round-limit": 0.5,
         "visibility": "visible"
       },
       "paint": {
         "line-color": "#62cffc",
-        "line-width": {
-          "stops": [
-            [
-              17,
-              3
-            ],
-            [
-              20,
-              5
-            ]
-          ]
-        },
+        "line-width": 10,
         "line-translate": {
           "stops": [
             [
-              17,
+              14,
               [
-                1,
-                1
+                0,
+                0
               ]
             ],
             [
-              20,
+              17,
               [
                 -2,
                 -2
@@ -222,7 +212,19 @@
             ]
           ]
         },
-        "line-blur": 2
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.5
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": 10
       }
     },
     {
@@ -230,7 +232,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "water",
-      "minzoom": 17,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -249,37 +251,38 @@
       },
       "paint": {
         "line-color": "#62cffc",
-        "line-width": {
-          "stops": [
-            [
-              17,
-              3
-            ],
-            [
-              20,
-              5
-            ]
-          ]
-        },
+        "line-width": 10,
         "line-translate": {
           "stops": [
             [
-              17,
+              14,
               [
-                1,
-                1
+                0,
+                0
               ]
             ],
             [
-              20,
+              17,
               [
-                -2,
+                0,
                 -2
               ]
             ]
           ]
         },
-        "line-blur": 2
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": 10
       }
     },
     {
@@ -636,7 +639,7 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "oc-water",
-      "minzoom": 17,
+      "minzoom": 4,
       "filter": [
         "all",
         [
@@ -663,37 +666,38 @@
       },
       "paint": {
         "line-color": "#62cffc",
-        "line-width": {
-          "stops": [
-            [
-              17,
-              3
-            ],
-            [
-              20,
-              5
-            ]
-          ]
-        },
+        "line-width": 5,
         "line-translate": {
           "stops": [
             [
-              17,
+              14,
               [
-                1,
-                1
+                0,
+                0
               ]
             ],
             [
-              20,
+              17,
               [
-                -2,
+                0,
                 -2
               ]
             ]
           ]
         },
-        "line-blur": 2
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": 10
       }
     },
     {
