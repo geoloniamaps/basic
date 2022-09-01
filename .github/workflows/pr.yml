@@ -21,6 +21,7 @@ jobs:
         uses: geolonia/map-render-benchmark@refs/heads/main
         with:
           style: docs/style.json
-          center: 139.7671773,35.6810755
-          zooms: 5,7,11,14
+          center: 138.92037,37.73718
+          zooms: 13,14,15,16,17,18
+          run_iterations: 10
           production_style: https://geoloniamaps.github.io/basic/style.json
