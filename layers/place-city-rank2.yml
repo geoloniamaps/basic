@@ -2,7 +2,7 @@ id: place-city-rank2
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 6
+minzoom: 7
 maxzoom: 13
 filter:
   - all
@@ -16,21 +16,13 @@ filter:
     - - '=='
       - rank
       - 2
-    - - '=='
-      - rank
-      - 3
-    # - - '=='
-    #   - rank
-    #   - 3
-    # - - '=='
-    #   - rank
-    #   - 4
   - - '!='
     - disputed
     - japan_northern_territories
 layout:
   icon-image: circle
   icon-size: 0.5
+  icon-padding: 40
   text-anchor: top
   text-offset:
     stops:

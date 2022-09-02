@@ -2,7 +2,7 @@ id: place-city-rank6
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 8
+minzoom: 7
 maxzoom: 13
 filter:
   - all

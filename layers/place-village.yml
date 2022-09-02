@@ -14,14 +14,23 @@ filter:
     - japan_northern_territories
 layout:
   text-anchor: top
+  # text-padding:
+  #   - interpolate
+  #   - - linear
+  #   - - zoom
+  #   - 10
+  #   - 60
+  #   - 15
+  #   - 0
   text-padding:
     - interpolate
     - - linear
     - - zoom
     - 10
-    - 60
-    - 15
-    - 0
+    - 40
+    - 12
+    - 30
+
   text-offset:
     - 0
     - 0.1

@@ -117,7 +117,7 @@ layers:
   - !!inc/file layers/poi-z14.yml
   - !!inc/file layers/poi-z12.yml
   - !!inc/file layers/poi-railway.yml
-  # - !!inc/file layers/poi-airport-primary.yml
+  - !!inc/file layers/poi-airport-primary.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
@@ -127,16 +127,17 @@ layers:
   - !!inc/file layers/nt-label-large.yml
   - !!inc/file layers/place-island-name.yml
   - !!inc/file layers/place-suburb.yml
-  # - !!inc/file layers/place-village.yml
-  # - !!inc/file layers/place-town.yml
+  - !!inc/file layers/place-village.yml
+  - !!inc/file layers/place-town.yml
   # - !!inc/file layers/place-city-rank10.yml
   # - !!inc/file layers/place-city-rank9.yml
   # - !!inc/file layers/place-city-rank8.yml
   # - !!inc/file layers/place-city-rank7.yml
-  - !!inc/file layers/place-city-rank6.yml
-  - !!inc/file layers/place-city-rank5.yml
+  # - !!inc/file layers/place-city-rank5.yml
   # - !!inc/file layers/place-city-rank4.yml
   # - !!inc/file layers/place-city-rank3.yml
+  - !!inc/file layers/place-city-rank6.yml
+  - !!inc/file layers/place-city-rank2-other.yml
   - !!inc/file layers/place-city-rank2.yml
   - !!inc/file layers/place-city-state.yml
   - !!inc/file layers/place-city-capital.yml
