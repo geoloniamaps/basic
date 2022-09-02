@@ -2,7 +2,7 @@ id: highway-motorway
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 4
+minzoom: 5
 filter:
   - all
   - - '=='
@@ -26,11 +26,9 @@ paint:
     - - linear
     - - zoom
     - 4
-    - '#fce8db'
-    - 6
-    - '#f9c9ac'
+    - '#f0762d'
     - 8
-    - '#fce8db'
+    - '#f0762d'
     - 12
     - '#FF8D48'
     - 14

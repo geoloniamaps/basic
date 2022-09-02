@@ -21,28 +21,21 @@ filter:
 layout:
   icon-image: circle
   icon-size: 0.3
-  icon-padding:
-    - interpolate
-    - - linear
-    - - zoom
-    - 6
-    - 100
-    - 13
-    - 0
+  # icon-padding:
+  #   - interpolate
+  #   - - linear
+  #   - - zoom
+  #   - 6
+  #   - 100
+  #   - 13
+  #   - 0
   text-anchor: top
   text-offset:
     - 0
     - 0.1
   text-font:
     - Noto Sans Universal Regular
-  text-size:
-    - interpolate
-    - - linear
-    - - zoom
-    - 6
-    - 14
-    - 13
-    - 24
+  text-size: 16
   text-field: '{name}'
   text-max-width: 8
   visibility: visible

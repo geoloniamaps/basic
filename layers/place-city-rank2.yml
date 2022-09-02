@@ -12,23 +12,25 @@ filter:
   - - '=='
     - class
     - city
-  - - '=='
-    - rank
-    - 2
+  - - any
+    - - '=='
+      - rank
+      - 2
+    - - '=='
+      - rank
+      - 3
+    # - - '=='
+    #   - rank
+    #   - 3
+    # - - '=='
+    #   - rank
+    #   - 4
   - - '!='
     - disputed
     - japan_northern_territories
 layout:
   icon-image: circle
   icon-size: 0.5
-  icon-padding:
-    - interpolate
-    - - linear
-    - - zoom
-    - 6
-    - 100
-    - 13
-    - 0
   text-anchor: top
   text-offset:
     stops:

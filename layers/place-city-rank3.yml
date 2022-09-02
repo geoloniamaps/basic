@@ -21,14 +21,14 @@ filter:
 layout:
   icon-image: circle
   icon-size: 0.4
-  icon-padding:
-    - interpolate
-    - - linear
-    - - zoom
-    - 6
-    - 100
-    - 13
-    - 0
+  # icon-padding:
+  #   - interpolate
+  #   - - linear
+  #   - - zoom
+  #   - 6
+  #   - 100
+  #   - 13
+  #   - 0
   text-anchor: top
   text-offset:
     - 0

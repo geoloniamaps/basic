@@ -2,7 +2,7 @@ id: boundary-land-level-4
 type: line
 source: geolonia
 source-layer: boundary
-minzoom: 7
+minzoom: 4
 filter:
   - all
   - - '=='
@@ -14,12 +14,20 @@ layout:
   line-join: round
 paint:
   line-color: '#9e9cab'
-  line-dasharray:
-    stops:
-      - - 6
-        - [2, 2]
-      - - 14
-        - [1, 1]
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 4
+    - 0.2
+    - 14
+    - 1
+  # line-dasharray:
+  #   stops:
+  #     - - 6
+  #       - [2, 2]
+  #     - - 14
+  #       - [1, 1]
   line-width:
     - interpolate
     - - linear

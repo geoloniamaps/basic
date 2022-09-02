@@ -15,14 +15,6 @@ filter:
 layout:
   icon-image: circle-stroked
   icon-size: 0.5
-  icon-padding:
-    - interpolate
-    - - linear
-    - - zoom
-    - 6
-    - 100
-    - 13
-    - 0
   text-anchor: top
   text-offset:
     stops:
