@@ -14,7 +14,6 @@
     "fudepoli": {
       "type": "vector",
       "url": "https://tileserver.geolonia.com/fudepoli_v0/tiles.json?key=YOUR-API-KEY",
-      "attribution": "<a href=\"https://www.maff.go.jp/j/tokei/porigon/attach/pdf/hudeporidl-1.pdf\" target=\"_blank\">© 農林水産省</a>",
       "minzoom": 13
     }
   },
