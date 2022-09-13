@@ -5,7 +5,6 @@ source-layer: water
 minzoom: 13
 layout:
   line-join: "round"
-  line-round-limit: 0.5
   visibility: visible
 paint:
   line-color: '#62cffc'

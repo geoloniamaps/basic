@@ -2,6 +2,7 @@ id: tunnel-service-track
 type: line
 source: geolonia
 source-layer: transportation
+minzoom: 8
 filter:
   - all
   - - '=='

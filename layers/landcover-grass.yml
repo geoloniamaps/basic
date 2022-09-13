@@ -2,6 +2,7 @@ id: landcover-grass
 type: fill
 source: geolonia
 source-layer: landcover
+minzoom: 8
 filter:
   - '=='
   - class

@@ -1,0 +1,16 @@
+id: farmland
+type: fill
+source: fudepoli
+source-layer: fudepoli
+minzoom: 13
+paint:
+  fill-color:
+    - case
+    - [==, [get, type], field]
+    - '#F0E7D2' # field
+    - '#E2EBCF' # rice-field
+  fill-outline-color:
+    - case
+    - [==, [get, type], field]
+    - '#eadcbb' # field
+    - '#cedbb1' # rice-field

@@ -52,6 +52,9 @@
 
   <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>
   <script>
+
+    let mapRenderedTime = '';
+
     const map = new geolonia.Map({
       container: "#map",
       style: "./style.json",
@@ -59,6 +62,11 @@
     });
 
     map.on('load', () => {
+
+      // 地図のレンダリングの時間を計測
+      // puppeteerで取得する為に グローバル変数に格納
+      mapRenderedTime = Math.round(performance.measure('map-render-time').duration);
+      console.log(`Map rendered time: ${mapRenderedTime}ms`);
 
       const dumpFeature = event => {
         const features = map.queryRenderedFeatures(event.point)
