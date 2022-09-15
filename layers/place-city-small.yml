@@ -1,8 +1,8 @@
-id: place-city-rank10
+id: place-city-small
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 8
+minzoom: 7
 maxzoom: 13
 filter:
   - all
@@ -12,30 +12,47 @@ filter:
   - - '=='
     - class
     - city
-  - - '=='
-    - rank
-    - 10
+  - - any
+    - - '=='
+      - rank
+      - 7
+    - - '=='
+      - rank
+      - 8
+    - - '=='
+      - rank
+      - 9
+    - - '=='
+      - rank
+      - 10
   - - '!='
     - disputed
     - japan_northern_territories
 layout:
   icon-image: circle
   icon-size: 0.3
-  icon-padding:
-    - interpolate
-    - - linear
-    - - zoom
-    - 8
-    - 60
-    - 13
-    - 0
+  icon-padding: 30
+  #   - interpolate
+  #   - - linear
+  #   - - zoom
+  #   - 7
+  #   - 60
+  #   - 13
+  #   - 0
   text-anchor: top
   text-offset:
     - 0
     - 0.1
   text-font:
     - Noto Sans Universal Regular
-  text-size: 14
+  text-size: 12
+    # - interpolate
+    # - - linear
+    # - - zoom
+    # - 7
+    # - 13
+    # - 13
+    # - 20
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
@@ -47,6 +64,7 @@ paint:
         - 1
       - - 12
         - 0
-  text-color: '#000000'
+  text-color: '#333333'
   text-halo-width: 1.2
   text-halo-color: rgba(255,255,255,0.8)
+

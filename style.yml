@@ -129,16 +129,9 @@ layers:
   - !!inc/file layers/place-suburb.yml
   - !!inc/file layers/place-village.yml
   - !!inc/file layers/place-town.yml
-  # - !!inc/file layers/place-city-rank10.yml
-  # - !!inc/file layers/place-city-rank9.yml
-  # - !!inc/file layers/place-city-rank8.yml
-  # - !!inc/file layers/place-city-rank7.yml
-  # - !!inc/file layers/place-city-rank5.yml
-  # - !!inc/file layers/place-city-rank4.yml
-  # - !!inc/file layers/place-city-rank3.yml
-  - !!inc/file layers/place-city-rank6.yml
-  - !!inc/file layers/place-city-rank2-other.yml
-  - !!inc/file layers/place-city-rank2.yml
+  - !!inc/file layers/place-city-small.yml
+  - !!inc/file layers/place-city-middle.yml
+  - !!inc/file layers/place-city-large.yml
   - !!inc/file layers/place-city-state.yml
   - !!inc/file layers/place-city-capital.yml
   - !!inc/file layers/oc-boundary-land-level-1-ja.yml
