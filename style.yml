@@ -149,6 +149,7 @@ layers:
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/oc-airport.yml
+  - !!inc/file layers/farmland.yml
   - !!inc/file layers/oc-label-pref-capital-ja.yml
   - !!inc/file layers/oc-label-pref-ja.yml
   - !!inc/file layers/oc-label-pref.yml
