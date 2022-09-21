@@ -6,8 +6,7 @@ minzoom: 4
 filter:
   - all
   - - '=='
-    - - get
-      - admin_level
+    - 'admin_level'
     - 4
   - - '!has'
     - 'maritime'

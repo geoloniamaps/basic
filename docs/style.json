@@ -4069,6 +4069,57 @@
       }
     },
     {
+      "id": "boundary-land-level-4",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "boundary",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          "admin_level",
+          4
+        ],
+        [
+          "!has",
+          "maritime"
+        ]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#9e9cab",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4,
+          0.2,
+          14,
+          1
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1,
+          14,
+          2
+        ]
+      }
+    },
+    {
       "id": "waterway-name",
       "type": "symbol",
       "source": "geolonia",
