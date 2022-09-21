@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Geolonia Basic",
+  "name": "Geolonia Basic World",
   "sources": {
     "geolonia": {
       "type": "vector",
@@ -12,7 +12,7 @@
       "attribution": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html\" target=\"_blank\">© GSI Japan</a>"
     }
   },
-  "sprite": "https://deploy-preview-190--geoloniamaps-basic.netlify.app/basic",
+  "sprite": "https://geoloniamaps.github.io/basic-world/basic-world",
   "glyphs": "https://deploy-preview-12--geolonia-glyphs.netlify.app/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -180,25 +180,36 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "water",
-      "minzoom": 13,
+      "minzoom": 17,
       "layout": {
         "line-join": "round",
         "visibility": "visible"
       },
       "paint": {
         "line-color": "#62cffc",
-        "line-width": 10,
+        "line-width": {
+          "stops": [
+            [
+              17,
+              3
+            ],
+            [
+              20,
+              5
+            ]
+          ]
+        },
         "line-translate": {
           "stops": [
             [
-              14,
+              17,
               [
-                0,
-                0
+                1,
+                1
               ]
             ],
             [
-              17,
+              20,
               [
                 -2,
                 -2
@@ -206,19 +217,7 @@
             ]
           ]
         },
-        "line-opacity": {
-          "stops": [
-            [
-              14,
-              0.5
-            ],
-            [
-              17,
-              0.8
-            ]
-          ]
-        },
-        "line-blur": 10
+        "line-blur": 2
       }
     },
     {
