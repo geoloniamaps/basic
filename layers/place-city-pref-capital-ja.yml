@@ -1,34 +1,37 @@
-id: poi-z16
+id: place-city-pref-capital-ja
 type: symbol
 source: geolonia
-source-layer: poi
-minzoom: 16
+source-layer: place
+minzoom: 6
+maxzoom: 6
+visibility: false
 filter:
   - all
-  - - '=='
-    - $type
-    - Point
   - - has
-    - name
-  - - '!='
-    - disputed
-    - japan_northern_territories
+    - jflag
+  - - has
+    - pref-capital
 layout:
   text-padding: 2
   text-font:
     - Noto Sans Universal Regular
   text-anchor: top
-  icon-anchor: bottom
+  text-variable-anchor:
+    - top
+    - bottom
+    - left
+    - right
   icon-image: circle-stroked
-  icon-size: 0.6
+  icon-size: 0.8
+  icon-allow-overlap: true
   text-field: '{name}'
   text-offset:
-    - 0
-    - 0.3
+    - 0.6
+    - 0.6
   text-size: 12
   text-max-width: 9
 paint:
   text-halo-blur: 0.5
-  text-color: '#666'
+  text-color: 'rgba(71, 71, 71, 1)'
   text-halo-width: 1
   text-halo-color: '#ffffff'

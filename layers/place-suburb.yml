@@ -1,0 +1,41 @@
+id: place-suburb
+type: symbol
+source: geolonia
+source-layer: place
+minzoom: 11
+maxzoom: 15
+filter:
+  - all
+  - - '=='
+    - class
+    - suburb
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  text-font:
+    - Noto Sans Universal Regular
+  text-size:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 10
+    - 15
+    - 16
+  text-field: ['upcase', ['get', 'name']]
+  text-letter-spacing: 0.2
+  text-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 11
+    - 20
+    - 15
+    - 0
+  visibility: visible
+paint:
+  text-color: '#888888'
+  text-halo-width: 2
+  text-halo-blur: 1
+  text-halo-color: rgba(255,255,255,1)

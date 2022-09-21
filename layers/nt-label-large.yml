@@ -19,7 +19,7 @@ filter:
   - '17'
 layout:
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-size:
     base: 1.2
     stops:

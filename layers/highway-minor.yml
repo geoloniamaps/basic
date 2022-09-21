@@ -2,7 +2,7 @@ id: highway-minor
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 13
+minzoom: 11
 filter:
   - all
   - - '=='
@@ -23,15 +23,17 @@ paint:
   line-color: '#ffffff'
   line-width:
     - interpolate
-    - - exponential
+    - - linear
       - 0.9 # カーブが大きい
     - - zoom
-    - 13.5 # zl 8
-    - 0    # 0 から始めて
+    - 11 # zl 8
+    - 0.2    # 0 から始めて
+    - 13     # zl 8
+    - 0.5    # 0 から始めて
     - 14    # zl 9 から本格的に描画
-    - 1.2
+    - 2
     - 16   # zl 16 で building の表示が始まり、太さコントロールが必要になる
-    - 2.2
+    - 6
     - 20   # 最大zl, つまり20で
     - 16   # 太さ20 ならはみ出さない
 

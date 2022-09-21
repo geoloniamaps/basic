@@ -1,6 +1,6 @@
 id: farmland
 type: fill
-source: fudepoli
+source: geolonia
 source-layer: fudepoli
 minzoom: 13
 paint:

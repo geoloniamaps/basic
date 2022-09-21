@@ -2,7 +2,8 @@ id: oc-lake-blur
 type: line
 source: geolonia
 source-layer: oc-water
-minzoom: 17
+minzoom: 4
+maxzoom: 6
 filter:
   - all
   - - '=='
@@ -17,4 +18,19 @@ layout:
   line-join: "round"
   line-round-limit: 0.5
   visibility: visible
-paint: !!inc/file layers/components/water-blur-paint.yml
+paint:
+  line-color: '#62cffc'
+  line-width: 5
+  line-translate:
+    stops:
+      - - 14
+        - [0, 0]
+      - - 17
+        - [0, -2]
+  line-opacity:
+    stops:
+      - - 14
+        - 0
+      - - 17
+        - 0.8
+  line-blur: 10

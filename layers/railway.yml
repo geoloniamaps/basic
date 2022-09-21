@@ -2,7 +2,7 @@ id: railway
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 8
+minzoom: 14
 filter:
   - all
   - - '=='
@@ -15,9 +15,15 @@ paint:
   line-color: '#999999'
   line-width:
     stops:
-      - - 10
-        - 0.8
-      - - 18
-        - 4
-      - - 22
-        - 20
+      - - 14
+        - 0.1
+      - - 15
+        - 1
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 14
+    - 0.1
+    - 20
+    - 1

@@ -3,7 +3,7 @@ type: fill
 source: geolonia
 source-layer: oc-water
 minzoom: 4
-maxzoom: 8
+maxzoom: 6
 filter:
   - all
   - - '=='

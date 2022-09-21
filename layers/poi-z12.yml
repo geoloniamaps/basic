@@ -1,8 +1,8 @@
-id: poi-z14
+id: poi-z12
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 14
+minzoom: 12
 filter:
   - all
   - - '=='
@@ -12,15 +12,14 @@ filter:
     - name
   - - 'in'
     - class
-    - castle
-    - aquarium
-    - cinema
-    - theatre
-    - zoo
-    - convenience
-    - lodging
-    - museum
-    - golf
+    - college
+    - stadium
+    - landmark
+    - town_hall
+    - hospital
+  - - '!in'
+    - subclass
+    - community_centre # class town_hall内でも
   - - '!='
     - disputed
     - japan_northern_territories

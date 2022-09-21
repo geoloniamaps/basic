@@ -1,25 +1,18 @@
-id: place-city-rank2
+id: oc-label-capital
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 6
+minzoom: 3
+maxzoom: 6
 filter:
   - all
-  - - '!='
+  - - '=='
+    - - get
+      - class
     - capital
-    - 2
-  - - '=='
-    - class
-    - city
-  - - '=='
-    - rank
-    - 2
-  - - '!='
-    - disputed
-    - japan_northern_territories
 layout:
-  icon-image: circle-stroked
-  icon-size: 0.8
+  icon-image: circle-double
+  icon-size: 0.6
   text-anchor: top
   text-variable-anchor:
     - top
@@ -34,16 +27,13 @@ layout:
     - 8
     - 0.4
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Universal Regular
   text-size:
-    - interpolate
-    - - exponential
-      - 1.5
-    - - zoom
-    - 6
-    - 10
-    - 10
-    - 17
+    stops:
+      - - 3
+        - 8
+      - - 6
+        - 20
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
@@ -55,7 +45,7 @@ paint:
         - 1
       - - 12
         - 0
-  text-halo-blur: 0.5
-  text-color: 'rgba(71, 71, 71, 1)'
-  text-halo-width: 1
-  text-halo-color: '#ffffff'
+  text-color: rgba(68, 68, 68, 1)
+  text-halo-width: 1.5
+  text-halo-color: rgba(255,255,255,0.8)
+

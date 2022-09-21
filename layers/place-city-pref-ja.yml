@@ -3,7 +3,7 @@ type: symbol
 source: geolonia
 source-layer: place
 minzoom: 5
-maxzoom: 8
+maxzoom: 6
 filter:
   - all
   - - '=='
@@ -14,13 +14,13 @@ filter:
     - jflag
 layout:
   text-font:
-    - Noto Sans CJK JP Bold
+    - Noto Sans Universal Regular
   text-size:
     stops:
-      - - 5
+      - - 3
         - 10
-      - - 8
-        - 17
+      - - 6
+        - 12
   text-field: '{name}'
   text-max-width: 8
   visibility: visible

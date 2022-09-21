@@ -14,16 +14,6 @@ filter:
     - - 'in'
       - class
       - cemetery
-      - restaurant
-      - bar
-      - cafe
-      - sushi
-      - restaurant_noodle
-      - fast_food
-      - ice_cream
-      - restaurant_pizza
-      - restaurant_seafood
-      - beer
       - library
       - fuel
       - post
@@ -46,7 +36,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-anchor: bottom
   icon-image:

@@ -2,7 +2,7 @@ id: poi-airport-primary
 type: symbol
 source: geolonia
 source-layer: aerodrome_label
-minzoom: 10
+minzoom: 8
 filter:
   - all
   - - has
@@ -13,7 +13,7 @@ filter:
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-image: airport
   text-field: '{name}'
@@ -24,7 +24,6 @@ layout:
   text-max-width: 9
   visibility: visible
   icon-size: 1
-  text-optional: true
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

@@ -2,7 +2,7 @@ id: place-island-name
 type: symbol
 source: geolonia
 source-layer: place
-minzoom: 8
+minzoom: 13
 filter:
   - all
   - - '=='
@@ -23,7 +23,7 @@ filter:
       - 16
 layout:
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-size: 11
   text-field: '{name}'
   text-max-width: 8

@@ -19,7 +19,7 @@ filter:
     - moat
 layout:
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-size:
     stops:
       - - 0

@@ -19,9 +19,13 @@ paint:
     - - linear
     - - zoom
     - 8
-    - '#4ed19e'
-    - 11
-    - '#9be0c5'
+    - '#f0762d'
+    - 12
+    - '#FF8D48'
+    - 14
+    - '#FF9D62'
+    - 16
+    - '#FFB98E'
   line-opacity:
     - interpolate
     - - linear

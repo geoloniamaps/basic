@@ -14,5 +14,24 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#fc8'
+  line-color:
+    - interpolate
+    - - linear
+    - - zoom
+    - 8
+    - '#f0762d'
+    - 12
+    - '#FF8D48'
+    - 14
+    - '#FF9D62'
+    - 16
+    - '#FFB98E'
+  line-opacity:
+  - interpolate
+  - - linear
+  - - zoom
+  - 8
+  - 0
+  - 11
+  - 1
   line-width: !!inc/file layers/components/broad-road-width.yml

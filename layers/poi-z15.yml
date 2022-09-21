@@ -17,14 +17,24 @@ filter:
     - grocery
     - shop
     - school
-    - hospital
+    - monument
+    - restaurant
+    - bar
+    - cafe
+    - sushi
+    - restaurant_noodle
+    - fast_food
+    - ice_cream
+    - restaurant_pizza
+    - restaurant_seafood
+    - beer
   - - '!='
     - disputed
     - japan_northern_territories
 layout:
   text-padding: 2
   text-font:
-    - Noto Sans Regular
+    - Noto Sans Universal Regular
   text-anchor: top
   icon-anchor: bottom
   icon-image:
@@ -34,6 +44,14 @@ layout:
         - class
     - - image
       - circle-stroked
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 15
+    - 30
+    - 16
+    - 0
   text-field: '{name}'
   text-offset:
     - 0

@@ -1,0 +1,31 @@
+id: oc-boundary-land-level-1
+type: line
+source: geolonia
+source-layer: boundary
+minzoom: 3
+maxzoom: 6
+filter:
+  - all
+  - - '=='
+    - - get
+      - admin_level
+    - 1
+layout:
+  line-join: round
+paint:
+  line-color: '#9e9cab'
+  line-dasharray:
+    stops:
+      - - 3
+        - [1, 2]
+      - - 6
+        - [5, 5]
+  line-width: 1
+  line-blur:
+    - interpolate
+    - - linear
+    - - zoom
+    - 3
+    - 1
+    - 6
+    - 0
