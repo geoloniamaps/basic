@@ -26,15 +26,8 @@ paint:
     - interpolate
     - - linear
     - - zoom
-<<<<<<< HEAD
     - 4
     - '#f0762d'
     - 8
     - '#f3955d'
   line-width: !!inc/file layers/components/highway-road-width-casing.yml
-=======
-    - 5
-    - 0.6
-    - 11
-    - 1
->>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a

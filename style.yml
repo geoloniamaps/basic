@@ -83,8 +83,6 @@ layers:
   - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/highway-trunk.yml
   - !!inc/file layers/highway-motorway.yml
-  - !!inc/file layers/waterway-name.yml
-  - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/railway.yml
   - !!inc/file layers/railway-hatching.yml
   - !!inc/file layers/railway-subway.yml
@@ -103,7 +101,7 @@ layers:
   - !!inc/file layers/cablecar.yml
   - !!inc/file layers/cablecar-dash.yml
   - !!inc/file layers/boundary-land-level-2.yml
-  - !!inc/file layers/boundary-land-level-4.yml
+  # - !!inc/file layers/boundary-land-level-4.yml
   - !!inc/file layers/waterway-name.yml
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
@@ -145,8 +143,7 @@ layers:
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/oc-airport.yml
-  - !!inc/file layers/oc-label-pref-capital-ja.yml
-  - !!inc/file layers/oc-label-pref-ja.yml
-  - !!inc/file layers/oc-label-pref.yml
-  - !!inc/file layers/oc-label-capital.yml
-  - !!inc/file layers/oc-label-country.yml
+  - !!inc/file layers/place-city-pref-capital-ja.yml
+  - !!inc/file layers/place-city-pref-ja.yml
+  - !!inc/file layers/place-city-pref.yml
+  - !!inc/file layers/place-city-country.yml

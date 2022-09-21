@@ -3,17 +3,12 @@ type: line
 source: geolonia
 source-layer: boundary
 minzoom: 4
-<<<<<<< HEAD
-=======
-maxzoom: 14
->>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
 filter:
   - all
   - - '=='
     - - get
       - admin_level
     - 4
-<<<<<<< HEAD
   - - '!has'
     - 'maritime'
 layout:
@@ -27,38 +22,8 @@ paint:
     - 4
     - 0.2
     - 14
-=======
-  - - '!='
-    - - has
-      - jflag
-    - true
-  - - '=='
-    - - has
-      - maritime
-    - false
-layout:
-  line-join: round
-paint:
-  line-color:
-    stops:
-      - - 4
-        - 'rgba(102,102,102,0.7)'
-      - - 7
-        - 'rgba(136,136,136,0.7)'
-  line-dasharray:
-    - 3
     - 1
-    - 1
->>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
-    - 1
-  # line-dasharray:
-  #   stops:
-  #     - - 6
-  #       - [2, 2]
-  #     - - 14
-  #       - [1, 1]
   line-width:
-<<<<<<< HEAD
     - interpolate
     - - linear
     - - zoom
@@ -66,12 +31,3 @@ paint:
     - 1
     - 14
     - 2
-=======
-    stops:
-      - - 4
-        - 0.5
-      - - 7
-        - 1.8
-      - - 12
-        - 2
->>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a

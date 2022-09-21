@@ -2,11 +2,7 @@ id: place-city-capital
 type: symbol
 source: geolonia
 source-layer: place
-<<<<<<< HEAD
 minzoom: 6
-=======
-minzoom: 8
->>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
 filter:
   - all
   - - '=='
