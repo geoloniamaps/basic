@@ -20,7 +20,7 @@ layout:
   text-size: 18
   text-field: '{name}'
   text-max-width: 8
-  icon-image: star
+  icon-image: circle-double
   text-offset:
     - 0.4
     - -0.1
