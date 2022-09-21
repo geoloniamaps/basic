@@ -1,27 +1,26 @@
-id: water-name-ocean
+id: oc-waterway-name-ja
 type: symbol
 source: geolonia
-source-layer: water_name
-minzoom: 8
+source-layer: oc-waterway
+minzoom: 6
+maxzoom: 8
 filter:
   - all
   - - '=='
     - $type
-    - Point
-  - - '=='
-    - class
-    - ocean
-  - - '!='
-    - disputed
-    - japan_northern_territories
+    - LineString
+  - - has
+    - name
+  - - has
+    - jflag
 layout:
   text-font:
-    - Noto Sans Universal Regular
+    - Noto Sans Regular
   text-size: 14
   text-field: '{name}'
   text-max-width: 5
   text-rotation-alignment: map
-  symbol-placement: point
+  symbol-placement: line
   symbol-spacing: 350
   text-letter-spacing: 0.2
 paint:

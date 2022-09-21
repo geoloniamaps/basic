@@ -1,0 +1,31 @@
+id: oc-waterway-river-ja
+type: line
+source: geolonia
+source-layer: oc-waterway
+minzoom: 4
+maxzoom: 8
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - river
+  - - '!='
+    - - get
+      - brunnel
+    - tunnel
+  - - has
+    - jflag
+layout:
+  line-cap: round
+paint:
+  line-color: '#a0c8f0'
+  line-width:
+    - interpolate
+    - - exponential
+      - 1.2
+    - - zoom
+    - 10
+    - 0.8
+    - 20
+    - 6

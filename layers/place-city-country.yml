@@ -1,14 +1,23 @@
-id: oc-label-country
+id: place-city-country
 type: symbol
 source: geolonia
 source-layer: place
+<<<<<<< HEAD:layers/oc-label-country.yml
 minzoom: 0
 maxzoom: 6
+=======
+maxzoom: 8
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a:layers/place-city-country.yml
 filter:
-  - '=='
-  - - get
-    - class
-  - country
+  - all
+  - - '=='
+    - - 'get'
+      - 'class'
+    - 'country'
+  - - '=='
+    - - 'has'
+      - osm_id
+    - false
 layout:
   text-font:
     - Noto Sans Universal Regular

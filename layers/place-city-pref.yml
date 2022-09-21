@@ -1,9 +1,14 @@
-id: oc-label-pref
+id: place-city-pref
 type: symbol
 source: geolonia
 source-layer: place
+<<<<<<< HEAD:layers/oc-label-pref.yml
 minzoom: 4
 maxzoom: 6
+=======
+minzoom: 5
+maxzoom: 8
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a:layers/place-city-pref.yml
 filter:
   - all
   - - '=='

@@ -1,0 +1,31 @@
+id: tunnel-railway
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - tunnel
+  - - '=='
+    - class
+    - rail
+  - - '!='
+    - subclass
+    - subway
+paint:
+  line-color: '#A58043'
+  line-opacity: 0.4
+  line-width:
+    base: 1.4
+    stops:
+      - - 10
+        - 0.5
+      - - 18
+        - 2
+      - - 22
+        - 18
+  line-dasharray:
+    - 6
+    - 4

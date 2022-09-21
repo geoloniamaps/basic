@@ -2,8 +2,12 @@ id: oc-label-capital
 type: symbol
 source: geolonia
 source-layer: place
+<<<<<<< HEAD:layers/oc-label-capital.yml
 minzoom: 3
 maxzoom: 6
+=======
+minzoom: 6
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a:layers/place-city-rank2.yml
 filter:
   - all
   - - '=='
@@ -14,10 +18,20 @@ layout:
   icon-image: circle-double
   icon-size: 0.6
   text-anchor: top
-  text-offset:
-    - 0
-    - 0.2
+  text-variable-anchor:
+    - top
+    - left
+    - right
+  text-radial-offset:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 0.5
+    - 8
+    - 0.4
   text-font:
+<<<<<<< HEAD:layers/oc-label-capital.yml
     - Noto Sans Universal Regular
   text-size:
     stops:
@@ -25,6 +39,18 @@ layout:
         - 8
       - - 6
         - 20
+=======
+    - Noto Sans CJK JP Bold
+  text-size:
+    - interpolate
+    - - exponential
+      - 1.5
+    - - zoom
+    - 6
+    - 10
+    - 10
+    - 17
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a:layers/place-city-rank2.yml
   text-field: '{name}'
   text-max-width: 8
   visibility: visible
@@ -36,7 +62,14 @@ paint:
         - 1
       - - 12
         - 0
+<<<<<<< HEAD:layers/oc-label-capital.yml
   text-color: rgba(68, 68, 68, 1)
   text-halo-width: 1.5
   text-halo-color: rgba(255,255,255,0.8)
 
+=======
+  text-halo-blur: 0.5
+  text-color: 'rgba(71, 71, 71, 1)'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a:layers/place-city-rank2.yml

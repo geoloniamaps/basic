@@ -1,0 +1,26 @@
+name: pr
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Run tests
+        run: |
+          cd $GITHUB_WORKSPACE
+          npm install
+          npm run build
+        
+      - name: Action step
+        uses: geolonia/map-render-benchmark@refs/heads/main
+        with:
+          style: docs/style.json
+          center: 139.7671773,35.6810755
+          zooms: 5,7,11,14
+          production_style: https://geoloniamaps.github.io/basic/style.json

@@ -2,7 +2,11 @@ id: railway-hatching
 type: line
 source: geolonia
 source-layer: transportation
+<<<<<<< HEAD
 minzoom: 14
+=======
+minzoom: 8
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
 filter:
   - all
   - - '=='

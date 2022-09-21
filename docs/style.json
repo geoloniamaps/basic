@@ -2,6 +2,7 @@
   "version": 8,
   "name": "Geolonia Basic",
   "sources": {
+<<<<<<< HEAD
     "oceanus": {
       "type": "vector",
       "maxzoom": 5,
@@ -15,15 +16,32 @@
       "type": "vector",
       "minzoom": 6,
       "url": "https://tileserver-dev.geolonia.com/v3/tiles.json?key=YOUR-API-KEY"
+=======
+    "geolonia": {
+      "type": "vector",
+      "url": "https://tileserver.geolonia.com/v2_combined2/tiles.json?key=YOUR-API-KEY"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
     },
     "dem": {
       "type": "raster-dem",
       "url": "https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY",
       "attribution": "<a href=\"https://maps.gsi.go.jp/development/ichiran.html\" target=\"_blank\">© GSI Japan</a>"
+<<<<<<< HEAD
     }
   },
   "sprite": "https://geoloniamaps.github.io/basic/basic",
   "glyphs": "http://127.0.0.1:8080/{fontstack}/{range}.pbf",
+=======
+    },
+    "fudepoli": {
+      "type": "vector",
+      "url": "https://tileserver.geolonia.com/fudepoli_v0/tiles.json?key=YOUR-API-KEY",
+      "minzoom": 13
+    }
+  },
+  "sprite": "https://geoloniamaps.github.io/basic/basic",
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
   "layers": [
     {
       "id": "background",
@@ -60,6 +78,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landcover",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         "class",
@@ -78,6 +100,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "landcover",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         "class",
@@ -136,7 +162,22 @@
         "visibility": "visible"
       },
       "paint": {
+<<<<<<< HEAD
         "fill-color": "#bce398",
+=======
+        "fill-color": {
+          "stops": [
+            [
+              5,
+              "#a5d47b"
+            ],
+            [
+              8,
+              "#bce398"
+            ]
+          ]
+        },
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "fill-antialias": {
           "base": 1,
           "stops": [
@@ -157,6 +198,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "park",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         "class",
@@ -173,15 +218,24 @@
     {
       "id": "water-blur",
       "type": "line",
+<<<<<<< HEAD
       "source": "geolonia-water",
       "source-layer": "water",
       "layout": {
         "line-join": "round",
         "line-round-limit": 0.5,
+=======
+      "source": "geolonia",
+      "source-layer": "water",
+      "minzoom": 17,
+      "layout": {
+        "line-join": "round",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "visibility": "visible"
       },
       "paint": {
         "line-color": "#62cffc",
+<<<<<<< HEAD
         "line-width": 10,
         "line-translate": {
           "stops": [
@@ -194,6 +248,31 @@
             ],
             [
               17,
+=======
+        "line-width": {
+          "stops": [
+            [
+              17,
+              3
+            ],
+            [
+              20,
+              5
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              17,
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              20,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
               [
                 -2,
                 -2
@@ -201,6 +280,7 @@
             ]
           ]
         },
+<<<<<<< HEAD
         "line-opacity": {
           "stops": [
             [
@@ -214,6 +294,9 @@
           ]
         },
         "line-blur": 10
+=======
+        "line-blur": 2
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       }
     },
     {
@@ -221,6 +304,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "water",
+<<<<<<< HEAD
+=======
+      "minzoom": 17,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -239,6 +326,7 @@
       },
       "paint": {
         "line-color": "#62cffc",
+<<<<<<< HEAD
         "line-width": 10,
         "line-translate": {
           "stops": [
@@ -253,11 +341,39 @@
               17,
               [
                 0,
+=======
+        "line-width": {
+          "stops": [
+            [
+              17,
+              3
+            ],
+            [
+              20,
+              5
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              17,
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                -2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
                 -2
               ]
             ]
           ]
         },
+<<<<<<< HEAD
         "line-opacity": {
           "stops": [
             [
@@ -271,12 +387,19 @@
           ]
         },
         "line-blur": 10
+=======
+        "line-blur": 2
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       }
     },
     {
       "id": "water",
       "type": "fill",
+<<<<<<< HEAD
       "source": "geolonia-water",
+=======
+      "source": "geolonia",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "source-layer": "water",
       "layout": {
         "visibility": "visible"
@@ -290,6 +413,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "water",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -311,7 +438,11 @@
     {
       "id": "oc-ocean200",
       "type": "fill",
+<<<<<<< HEAD
       "source": "oceanus",
+=======
+      "source": "geolonia",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "source-layer": "oc-water",
       "maxzoom": 10,
       "filter": [
@@ -376,9 +507,15 @@
     {
       "id": "oc-glacier",
       "type": "fill",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-glacier",
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-glacier",
+      "maxzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "layout": {
         "visibility": "visible"
       },
@@ -387,6 +524,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "oc-forest",
       "type": "fill",
       "source": "oceanus",
@@ -412,6 +550,8 @@
       }
     },
     {
+=======
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "id": "hillshading",
       "source": "dem",
       "type": "hillshade",
@@ -435,10 +575,17 @@
     {
       "id": "oc-waterway-river-ja",
       "type": "line",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-waterway",
       "minzoom": 4,
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-waterway",
+      "minzoom": 4,
+      "maxzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -486,10 +633,16 @@
     {
       "id": "oc-waterway-river",
       "type": "line",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-waterway",
       "minzoom": 4,
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-waterway",
+      "minzoom": 4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -507,6 +660,17 @@
             "brunnel"
           ],
           "tunnel"
+<<<<<<< HEAD
+=======
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ]
       ],
       "layout": {
@@ -533,10 +697,17 @@
     {
       "id": "oc-waterway-name-ja",
       "type": "symbol",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-waterway",
       "minzoom": 6,
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-waterway",
+      "minzoom": 6,
+      "maxzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -555,7 +726,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -574,20 +749,41 @@
     {
       "id": "oc-waterway-name",
       "type": "symbol",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-waterway",
       "minzoom": 6,
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-waterway",
+      "minzoom": 6,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
           "has",
           "name"
+<<<<<<< HEAD
+=======
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ]
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -606,10 +802,17 @@
     {
       "id": "oc-lake-ja",
       "type": "fill",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-water",
       "minzoom": 4,
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-water",
+      "minzoom": 4,
+      "maxzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -635,10 +838,16 @@
     {
       "id": "oc-lake-blur",
       "type": "line",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-water",
       "minzoom": 4,
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-water",
+      "minzoom": 17,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -665,6 +874,7 @@
       },
       "paint": {
         "line-color": "#62cffc",
+<<<<<<< HEAD
         "line-width": 5,
         "line-translate": {
           "stops": [
@@ -679,11 +889,39 @@
               17,
               [
                 0,
+=======
+        "line-width": {
+          "stops": [
+            [
+              17,
+              3
+            ],
+            [
+              20,
+              5
+            ]
+          ]
+        },
+        "line-translate": {
+          "stops": [
+            [
+              17,
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              20,
+              [
+                -2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
                 -2
               ]
             ]
           ]
         },
+<<<<<<< HEAD
         "line-opacity": {
           "stops": [
             [
@@ -697,15 +935,24 @@
           ]
         },
         "line-blur": 10
+=======
+        "line-blur": 2
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       }
     },
     {
       "id": "oc-lake",
       "type": "fill",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-water",
       "minzoom": 4,
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-water",
+      "minzoom": 4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -715,6 +962,17 @@
             "class"
           ],
           "lakes"
+<<<<<<< HEAD
+=======
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ]
       ],
       "layout": {
@@ -725,6 +983,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "oc-highway-outer-ja",
       "type": "line",
       "source": "oceanus",
@@ -1048,6 +1307,12 @@
       "source": "oceanus",
       "source-layer": "oc-boundary",
       "maxzoom": 6,
+=======
+      "id": "boundary-land-level-0",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "boundary",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         [
@@ -1060,17 +1325,39 @@
         "line-join": "round"
       },
       "paint": {
+<<<<<<< HEAD
         "line-color": "#9e9cab",
         "line-width": 1,
+=======
+        "line-color": "#85848c",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.5,
+          6,
+          1.5
+        ],
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "line-blur": 0.4
       }
     },
     {
       "id": "oc-water-name-ocean",
       "type": "symbol",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-water_name",
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-water_name",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1091,7 +1378,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1110,10 +1401,16 @@
     {
       "id": "oc-water-name-other",
       "type": "symbol",
+<<<<<<< HEAD
       "source": "oceanus",
       "source-layer": "oc-water",
       "minzoom": 6,
       "maxzoom": 6,
+=======
+      "source": "geolonia",
+      "source-layer": "oc-water",
+      "minzoom": 6,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1130,7 +1427,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": [
           "interpolate",
@@ -1162,7 +1463,11 @@
     {
       "id": "nt-water-name-ocean",
       "type": "symbol",
+<<<<<<< HEAD
       "source": "oceanus",
+=======
+      "source": "geolonia",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "source-layer": "nt-water-name",
       "minzoom": 8,
       "filter": [
@@ -1175,7 +1480,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1194,7 +1503,11 @@
     {
       "id": "nt-water-name-river",
       "type": "symbol",
+<<<<<<< HEAD
       "source": "oceanus",
+=======
+      "source": "geolonia",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "source-layer": "nt-water-name",
       "minzoom": 13,
       "filter": [
@@ -1207,7 +1520,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1224,6 +1541,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "oc-label-country",
       "type": "symbol",
       "source": "oceanus",
@@ -1504,6 +1822,13 @@
       "source-layer": "oc-airport",
       "minzoom": 5,
       "maxzoom": 6,
+=======
+      "id": "oc-airport",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "oc-airport",
+      "minzoom": 5,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1513,12 +1838,27 @@
             "class"
           ],
           "airport"
+<<<<<<< HEAD
+=======
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ]
       ],
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-image": "airport",
@@ -1538,10 +1878,52 @@
       }
     },
     {
+<<<<<<< HEAD
+=======
+      "id": "farmland",
+      "type": "fill",
+      "source": "fudepoli",
+      "source-layer": "fudepoli",
+      "minzoom": 13,
+      "paint": {
+        "fill-color": [
+          "case",
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "field"
+          ],
+          "#F0E7D2",
+          "#E2EBCF"
+        ],
+        "fill-outline-color": [
+          "case",
+          [
+            "==",
+            [
+              "get",
+              "type"
+            ],
+            "field"
+          ],
+          "#eadcbb",
+          "#cedbb1"
+        ]
+      }
+    },
+    {
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "id": "landuse-commercial",
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1564,6 +1946,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1586,6 +1972,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "park",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1623,6 +2013,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         "class",
@@ -1637,6 +2031,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         "class",
@@ -1651,6 +2049,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         "class",
@@ -1665,6 +2067,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landuse",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         "class",
@@ -1724,6 +2130,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "waterway",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "!in",
         "class",
@@ -1756,6 +2166,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "waterway",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1795,6 +2209,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "waterway",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1829,6 +2247,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "waterway-name",
       "type": "symbol",
       "source": "geolonia",
@@ -1906,10 +2325,16 @@
       }
     },
     {
+=======
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "id": "water-name-ocean",
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "water_name",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1930,7 +2355,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -1951,6 +2380,10 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "water_name",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -1976,7 +2409,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": {
           "stops": [
@@ -2009,6 +2446,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2035,6 +2476,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "landcover",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2066,6 +2511,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2081,6 +2530,7 @@
       ],
       "paint": {
         "line-color": "#000000",
+<<<<<<< HEAD
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -2102,6 +2552,34 @@
             ]
           ]
         },
+=======
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0.4,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ],
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "line-translate": {
           "stops": [
             [
@@ -2151,6 +2629,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2239,6 +2721,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2259,6 +2745,7 @@
       },
       "paint": {
         "line-color": "#000000",
+<<<<<<< HEAD
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -2272,6 +2759,34 @@
             ]
           ]
         },
+=======
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0.4,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ],
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "line-translate": {
           "stops": [
             [
@@ -2321,6 +2836,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2341,6 +2860,7 @@
       },
       "paint": {
         "line-color": "#000000",
+<<<<<<< HEAD
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -2366,6 +2886,34 @@
             ]
           ]
         },
+=======
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0.4,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ],
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "line-translate": {
           "stops": [
             [
@@ -2415,6 +2963,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2500,6 +3052,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2519,6 +3075,7 @@
       },
       "paint": {
         "line-color": "#000000",
+<<<<<<< HEAD
         "line-width": {
           "base": 1.2,
           "stops": [
@@ -2544,6 +3101,34 @@
             ]
           ]
         },
+=======
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0.4,
+          9,
+          0.6,
+          12,
+          0.9,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ],
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "line-translate": {
           "stops": [
             [
@@ -2593,6 +3178,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2642,6 +3231,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2689,6 +3282,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2787,8 +3384,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -2811,6 +3413,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2839,8 +3445,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -2863,6 +3474,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2895,8 +3510,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -2919,6 +3539,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -2962,6 +3586,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3005,6 +3633,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3045,8 +3677,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -3069,6 +3706,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3097,8 +3738,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -3121,6 +3767,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3149,8 +3799,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -3243,6 +3898,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "aeroway-area",
       "type": "fill",
       "source": "geolonia",
@@ -3283,11 +3939,17 @@
       }
     },
     {
+=======
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "id": "aeroway-taxiway",
       "type": "line",
       "source": "geolonia",
       "source-layer": "aeroway",
+<<<<<<< HEAD
       "minzoom": 4,
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3341,7 +4003,11 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "aeroway",
+<<<<<<< HEAD
       "minzoom": 4,
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3432,6 +4098,10 @@
       "type": "fill",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "==",
         "$type",
@@ -3500,8 +4170,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -3633,7 +4308,11 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
       "min-zoom": 8,
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3665,8 +4344,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -3689,7 +4373,11 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
       "minzoom": 5,
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3732,8 +4420,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -3787,8 +4480,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -3811,7 +4509,11 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
       "minzoom": 4,
+=======
+      "minzoom": 5,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -3851,8 +4553,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -3876,7 +4583,11 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
+=======
+          5,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           0.6,
           11,
           1
@@ -4006,8 +4717,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -4135,6 +4851,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4166,8 +4886,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -4225,8 +4950,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -4284,8 +5014,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -4345,7 +5080,11 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
+=======
+          5,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           "#4ed19e",
           11,
           "#9be0c5"
@@ -4358,7 +5097,11 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
+=======
+          5,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           0.6,
           11,
           1
@@ -4372,8 +5115,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -4392,10 +5140,222 @@
       }
     },
     {
+<<<<<<< HEAD
+=======
+      "id": "waterway-name",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "waterway",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "symbol-placement": "line",
+        "text-letter-spacing": 0.2,
+        "symbol-spacing": 350
+      },
+      "paint": {
+        "text-color": "#65cbf9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      }
+    },
+    {
+      "id": "water-name-lakeline",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "water_name",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 14,
+        "text-field": "{name}",
+        "text-max-width": 5,
+        "text-rotation-alignment": "map",
+        "symbol-placement": "line",
+        "symbol-spacing": 350,
+        "text-letter-spacing": 0.2
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      }
+    },
+    {
+      "id": "railway",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ],
+        [
+          "!in",
+          "brunnel",
+          "tunnel"
+        ]
+      ],
+      "paint": {
+        "line-color": "#999999",
+        "line-width": {
+          "stops": [
+            [
+              10,
+              0.8
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              22,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-hatching",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ],
+        [
+          "!in",
+          "brunnel",
+          "tunnel"
+        ]
+      ],
+      "paint": {
+        "line-color": "#ffffff",
+        "line-dasharray": [
+          6,
+          4
+        ],
+        "line-width": {
+          "stops": [
+            [
+              10,
+              0.5
+            ],
+            [
+              18,
+              2
+            ],
+            [
+              22,
+              18
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-subway",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ],
+        [
+          "==",
+          "subclass",
+          "subway"
+        ]
+      ],
+      "paint": {
+        "line-offset": {
+          "stops": [
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1.5
+            ],
+            [
+              16,
+              2
+            ],
+            [
+              17,
+              8
+            ]
+          ]
+        },
+        "line-color": "#9dabdd",
+        "line-opacity": 1,
+        "line-width": 1.5
+      }
+    },
+    {
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "id": "bridge-motorway-link-casing",
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4424,8 +5384,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -4448,6 +5413,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4498,6 +5467,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4527,8 +5500,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -4551,6 +5529,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4579,8 +5561,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -4603,6 +5590,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4646,6 +5637,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4693,6 +5688,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4720,8 +5719,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -4744,6 +5748,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4793,6 +5801,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4821,8 +5833,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -4845,6 +5862,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4873,8 +5894,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -4897,6 +5923,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -4937,8 +5967,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.4,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.6,
           12,
@@ -4961,6 +5996,10 @@
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -5013,8 +6052,13 @@
           [
             "zoom"
           ],
+<<<<<<< HEAD
           8,
           0,
+=======
+          5,
+          0.2,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
           9,
           0.5,
           12,
@@ -5033,6 +6077,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "railway",
       "type": "line",
       "source": "geolonia",
@@ -5157,6 +6202,8 @@
       }
     },
     {
+=======
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "id": "cablecar",
       "type": "line",
       "source": "geolonia",
@@ -5225,6 +6272,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "id": "boundary-land-level-2",
       "type": "line",
       "source": "geolonia",
@@ -5248,24 +6296,70 @@
       }
     },
     {
+=======
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "id": "boundary-land-level-4",
       "type": "line",
       "source": "geolonia",
       "source-layer": "boundary",
+<<<<<<< HEAD
       "minzoom": 6,
+=======
+      "minzoom": 4,
+      "maxzoom": 14,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
           "==",
+<<<<<<< HEAD
           "admin_level",
           4
+=======
+          [
+            "get",
+            "admin_level"
+          ],
+          4
+        ],
+        [
+          "!=",
+          [
+            "has",
+            "jflag"
+          ],
+          true
+        ],
+        [
+          "==",
+          [
+            "has",
+            "maritime"
+          ],
+          false
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ]
       ],
       "layout": {
         "line-join": "round"
       },
       "paint": {
+<<<<<<< HEAD
         "line-color": "rgba(68,68,68,0.7)",
+=======
+        "line-color": {
+          "stops": [
+            [
+              4,
+              "rgba(102,102,102,0.7)"
+            ],
+            [
+              7,
+              "rgba(136,136,136,0.7)"
+            ]
+          ]
+        },
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "line-dasharray": [
           3,
           1,
@@ -5273,11 +6367,22 @@
           1
         ],
         "line-width": {
+<<<<<<< HEAD
           "base": 1.4,
           "stops": [
             [
               8,
               1.2
+=======
+          "stops": [
+            [
+              4,
+              0.5
+            ],
+            [
+              7,
+              1.8
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
             ],
             [
               12,
@@ -5313,7 +6418,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 12,
         "text-field": "{name}",
@@ -5365,7 +6474,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 11,
         "text-field": "{name}",
@@ -5530,7 +6643,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5617,7 +6734,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5686,7 +6807,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5757,7 +6882,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5831,7 +6960,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5899,7 +7032,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -5967,7 +7104,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6048,7 +7189,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6116,7 +7261,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6198,7 +7347,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans CJK JP Bold"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6271,7 +7424,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-image": "airport",
@@ -6319,7 +7476,11 @@
       "layout": {
         "text-padding": 2,
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-anchor": "top",
         "icon-anchor": "bottom",
@@ -6417,7 +7578,11 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans CJK JP Bold"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-offset": [
           0,
@@ -6437,7 +7602,11 @@
       "metadata": {},
       "source": "geolonia",
       "source-layer": "transportation_name",
+<<<<<<< HEAD
       "minzoom": 7,
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -6475,7 +7644,11 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans CJK JP Bold"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-offset": [
           0,
@@ -6495,7 +7668,11 @@
       "metadata": {},
       "source": "geolonia",
       "source-layer": "transportation_name",
+<<<<<<< HEAD
       "minzoom": 7,
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -6533,7 +7710,11 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans CJK JP Bold"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-offset": [
           0,
@@ -6550,7 +7731,11 @@
     {
       "id": "nt-label-small",
       "type": "symbol",
+<<<<<<< HEAD
       "source": "oceanus",
+=======
+      "source": "geolonia",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "source-layer": "nt-label",
       "minzoom": 8,
       "filter": [
@@ -6563,7 +7748,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": {
           "base": 1.2,
@@ -6591,7 +7780,11 @@
     {
       "id": "nt-label-large",
       "type": "symbol",
+<<<<<<< HEAD
       "source": "oceanus",
+=======
+      "source": "geolonia",
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "source-layer": "nt-label",
       "minzoom": 13,
       "filter": [
@@ -6611,7 +7804,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": {
           "base": 1.2,
@@ -6664,7 +7861,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": {
           "base": 1.2,
@@ -6730,7 +7931,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 12,
         "text-field": "{name}",
@@ -6761,6 +7966,10 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -6800,7 +8009,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 11,
         "text-field": "{name}",
@@ -6851,7 +8064,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -6915,7 +8132,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -6979,7 +8200,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7043,7 +8268,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7107,7 +8336,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7171,7 +8404,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7235,7 +8472,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 14,
         "text-field": "{name}",
@@ -7299,7 +8540,11 @@
           0.1
         ],
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans Regular"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 16,
         "text-field": "{name}",
@@ -7330,7 +8575,11 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
+<<<<<<< HEAD
       "minzoom": 8,
+=======
+      "minzoom": 6,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -7358,6 +8607,7 @@
         "icon-image": "circle-stroked",
         "icon-size": 0.8,
         "text-anchor": "top",
+<<<<<<< HEAD
         "text-offset": [
           0,
           0.2
@@ -7366,6 +8616,43 @@
           "Noto Sans Universal Regular"
         ],
         "text-size": 17,
+=======
+        "text-variable-anchor": [
+          "top",
+          "left",
+          "right"
+        ],
+        "text-radial-offset": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.5,
+          8,
+          0.4
+        ],
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "exponential",
+            1.5
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          10,
+          10,
+          17
+        ],
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         "text-field": "{name}",
         "text-max-width": 8,
         "visibility": "visible"
@@ -7384,9 +8671,16 @@
             ]
           ]
         },
+<<<<<<< HEAD
         "text-color": "rgba(68, 68, 68, 1)",
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
+=======
+        "text-halo-blur": 0.5,
+        "text-color": "rgba(71, 71, 71, 1)",
+        "text-halo-width": 1,
+        "text-halo-color": "#ffffff"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       }
     },
     {
@@ -7394,6 +8688,10 @@
       "type": "symbol",
       "source": "geolonia",
       "source-layer": "place",
+<<<<<<< HEAD
+=======
+      "minzoom": 8,
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
       "filter": [
         "all",
         [
@@ -7414,7 +8712,11 @@
       ],
       "layout": {
         "text-font": [
+<<<<<<< HEAD
           "Noto Sans Universal Regular"
+=======
+          "Noto Sans CJK JP Bold"
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
         ],
         "text-size": 18,
         "text-field": "{name}",
@@ -7433,6 +8735,163 @@
         "text-halo-width": 1.2,
         "text-halo-color": "rgba(255,255,255,0.8)"
       }
+<<<<<<< HEAD
     }
   ]
 }
+=======
+    },
+    {
+      "id": "place-city-pref-ja",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "place",
+      "minzoom": 5,
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "pref"
+        ],
+        [
+          "has",
+          "jflag"
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              5,
+              10
+            ],
+            [
+              8,
+              17
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(68, 68, 68, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "place-city-pref",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "place",
+      "minzoom": 5,
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "pref"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "jflag"
+          ],
+          false
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              5,
+              12
+            ],
+            [
+              8,
+              14
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(102, 102, 102, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    },
+    {
+      "id": "place-city-country",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "place",
+      "maxzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "country"
+        ],
+        [
+          "==",
+          [
+            "has",
+            "osm_id"
+          ],
+          false
+        ]
+      ],
+      "layout": {
+        "text-font": [
+          "Noto Sans CJK JP Bold"
+        ],
+        "text-size": {
+          "stops": [
+            [
+              0,
+              9
+            ],
+            [
+              8,
+              16
+            ]
+          ]
+        },
+        "text-field": "{name}",
+        "text-max-width": 8,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(68, 68, 68, 1)",
+        "text-halo-width": 1.2,
+        "text-halo-color": "rgba(255,255,255,0.8)"
+      }
+    }
+  ]
+}
+>>>>>>> c0f33d77cc9209808125537ad7e43e5d07fb7f7a
