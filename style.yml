@@ -18,7 +18,6 @@ glyphs: https://deploy-preview-12--geolonia-glyphs.netlify.app/{fontstack}/{rang
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/landcover-grass.yml
-  - !!inc/file layers/landcover-wood-blur.yml
   - !!inc/file layers/landcover-wood.yml
   - !!inc/file layers/landcover-grass-park.yml
   - !!inc/file layers/water-blur.yml
