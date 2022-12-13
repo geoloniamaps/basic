@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deploy Preview - Geolonia Map</title>
+  <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
   <style>
     html,
     body,
@@ -50,14 +51,15 @@
   ></div>
   <pre id="json" class="right"></pre>
 
-  <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>
+  <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
   <script>
 
     let mapRenderedTime = '';
 
-    const map = new geolonia.Map({
-      container: "#map",
+    const map = new maplibregl.Map({
+      container: "map",
       style: "./style.json",
+      hash: true,
     });
 
     map.on('load', () => {
