@@ -59,6 +59,7 @@
     const map = new maplibregl.Map({
       container: "map",
       style: "./style.json",
+      hash: true,
     });
 
     map.on('load', () => {
