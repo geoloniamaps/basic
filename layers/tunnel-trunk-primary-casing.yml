@@ -15,5 +15,5 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: '#e9ac77'
+  line-color: '#e5d237'
   line-width: !!inc/file layers/components/broad-road-width-casing.yml

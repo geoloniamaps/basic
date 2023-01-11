@@ -19,5 +19,5 @@ layout:
   line-cap: round
   line-join: round
 paint:
-  line-color: '#ffffff'
+  line-color: '#fccd40'
   line-width: !!inc/file layers/components/broad-road-width.yml
