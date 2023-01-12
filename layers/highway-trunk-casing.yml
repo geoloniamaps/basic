@@ -17,6 +17,5 @@ layout:
   line-join: round
   visibility: visible
 paint:
-    line-color: !!inc/file layers/components/trunk-casing-color.yml
-
+  line-color: !!inc/file layers/components/trunk-casing-color.yml
   line-width: !!inc/file layers/components/broad-road-width-casing.yml
