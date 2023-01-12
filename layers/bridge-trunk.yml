@@ -14,5 +14,5 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: "#fccd40"
+  line-color: !!inc/file layers/components/trunk-color.yml
   line-width: !!inc/file layers/components/broad-road-width.yml
