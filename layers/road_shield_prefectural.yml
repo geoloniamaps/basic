@@ -1,7 +1,7 @@
 id: road_shield_prefectural
 type: symbol
 metadata: {}
-source: geolonia
+source: naoki_test_20230112170850
 source-layer: transportation_name
 minzoom: 14
 filter:

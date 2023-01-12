@@ -8,6 +8,9 @@ sources:
   geolonia:
     type: vector
     url: https://tileserver.geolonia.com/v3/tiles.json?key=YOUR-API-KEY
+  naoki_test_20230112170850:
+    type: vector
+    url: https://tileserver.geolonia.com/naoki_test_20230112170850/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
