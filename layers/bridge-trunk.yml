@@ -1,0 +1,18 @@
+id: bridge-trunk
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - bridge
+  - - in
+    - class
+    - trunk
+layout:
+  line-join: round
+paint:
+  line-color: "#fccd40"
+  line-width: !!inc/file layers/components/broad-road-width.yml

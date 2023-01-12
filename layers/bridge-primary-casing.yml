@@ -1,0 +1,18 @@
+id: bridge-primary-casing
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - bridge
+  - - in
+    - class
+    - primary
+layout:
+  line-join: round
+paint:
+  line-color: '#e5d237'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

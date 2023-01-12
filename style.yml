@@ -45,7 +45,8 @@ layers:
   - !!inc/file layers/bridge-motorway-link-casing-blur.yml
   - !!inc/file layers/bridge-link-casing-blur.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing-blur.yml
-  - !!inc/file layers/bridge-trunk-primary-casing-blur.yml
+  - !!inc/file layers/bridge-primary-casing-blur.yml
+  - !!inc/file layers/bridge-trunk-casing-blur.yml
   - !!inc/file layers/bridge-path-casing-blur.yml
   - !!inc/file layers/bridge-motorway-casing-blur.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
@@ -86,13 +87,15 @@ layers:
   - !!inc/file layers/bridge-motorway-link-casing.yml
   - !!inc/file layers/bridge-link-casing.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing.yml
-  - !!inc/file layers/bridge-trunk-primary-casing.yml
+  - !!inc/file layers/bridge-primary-casing.yml
+  - !!inc/file layers/bridge-trunk-casing.yml
   - !!inc/file layers/bridge-path-casing.yml
   - !!inc/file layers/bridge-path.yml
   - !!inc/file layers/bridge-motorway-link.yml
   - !!inc/file layers/bridge-link.yml
   - !!inc/file layers/bridge-secondary-tertiary.yml
-  - !!inc/file layers/bridge-trunk-primary.yml
+  - !!inc/file layers/bridge-primary.yml
+  - !!inc/file layers/bridge-trunk.yml
   - !!inc/file layers/bridge-motorway-casing.yml
   - !!inc/file layers/bridge-motorway.yml
   - !!inc/file layers/cablecar.yml

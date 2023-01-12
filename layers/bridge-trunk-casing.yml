@@ -1,4 +1,4 @@
-id: bridge-trunk-primary
+id: bridge-trunk-casing
 type: line
 source: geolonia
 source-layer: transportation
@@ -15,5 +15,5 @@ filter:
 layout:
   line-join: round
 paint:
-  line-color: "#fccd40"
-  line-width: !!inc/file layers/components/broad-road-width.yml
+  line-color: '#e5d237'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
