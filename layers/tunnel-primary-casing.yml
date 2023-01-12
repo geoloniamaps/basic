@@ -1,4 +1,4 @@
-id: bridge-trunk-casing
+id: tunnel-primary-casing
 type: line
 source: geolonia
 source-layer: transportation
@@ -7,12 +7,12 @@ filter:
   - all
   - - '=='
     - brunnel
-    - bridge
+    - tunnel
   - - in
     - class
-    - trunk
+    - primary
 layout:
   line-join: round
 paint:
-  line-color: '#e5d237'
+  line-color: '#e9ac77'
   line-width: !!inc/file layers/components/broad-road-width-casing.yml

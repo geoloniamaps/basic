@@ -1,4 +1,4 @@
-id: tunnel-trunk-primary-casing
+id: tunnel-primary
 type: line
 source: geolonia
 source-layer: transportation
@@ -11,9 +11,8 @@ filter:
   - - in
     - class
     - primary
-    - trunk
 layout:
   line-join: round
 paint:
-  line-color: '#e5d237'
-  line-width: !!inc/file layers/components/broad-road-width-casing.yml
+  line-color: '#fff4c6'
+  line-width: !!inc/file layers/components/broad-road-width.yml
