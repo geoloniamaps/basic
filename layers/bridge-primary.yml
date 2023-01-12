@@ -1,4 +1,4 @@
-id: highway-trunk
+id: bridge-primary
 type: line
 source: geolonia
 source-layer: transportation
@@ -6,18 +6,13 @@ minzoom: 8
 filter:
   - all
   - - '=='
-    - $type
-    - LineString
-  - - '!in'
     - brunnel
     - bridge
-    - tunnel
   - - in
     - class
-    - trunk
+    - primary
 layout:
-  line-cap: round
   line-join: round
 paint:
-  line-color: !!inc/file layers/components/trunk-color.yml
+  line-color: "rgba(255, 255, 255, 1)"
   line-width: !!inc/file layers/components/broad-road-width.yml
