@@ -2,7 +2,7 @@ id: poi-mountain
 type: symbol
 source: naoki_test_20230113145005
 source-layer: mountain_peak
-minzoom: 8
+minzoom: 6
 filter:
   - all
   - - '=='
