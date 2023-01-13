@@ -149,3 +149,5 @@ layers:
   - !!inc/file layers/place-city-pref-ja.yml
   - !!inc/file layers/place-city-pref.yml
   - !!inc/file layers/place-city-country.yml
+  - !!inc/file layers/oc-label-capital.yml
+
