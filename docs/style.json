@@ -4,7 +4,7 @@
   "sources": {
     "geolonia": {
       "type": "vector",
-      "url": "https://tileserver-dev.geolonia.com/v3/tiles.json?key=YOUR-API-KEY"
+      "url": "https://tileserver.geolonia.com/v3/tiles.json?key=YOUR-API-KEY"
     },
     "dem": {
       "type": "raster-dem",
@@ -13,7 +13,7 @@
     }
   },
   "sprite": "https://geoloniamaps.github.io/basic-world/basic-world",
-  "glyphs": "https://deploy-preview-12--geolonia-glyphs.netlify.app/{fontstack}/{range}.pbf",
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -62,56 +62,6 @@
       "paint": {
         "fill-color": "#daeca9",
         "fill-opacity": 1
-      }
-    },
-    {
-      "id": "landcover-wood-blur",
-      "type": "line",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "minzoom": 8,
-      "filter": [
-        "==",
-        "class",
-        "wood"
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "#bce398",
-        "line-width": 5,
-        "line-translate": {
-          "stops": [
-            [
-              14,
-              [
-                0,
-                0
-              ]
-            ],
-            [
-              17,
-              [
-                0,
-                2
-              ]
-            ]
-          ]
-        },
-        "line-opacity": {
-          "stops": [
-            [
-              14,
-              0
-            ],
-            [
-              17,
-              0.4
-            ]
-          ]
-        },
-        "line-blur": 10
       }
     },
     {
@@ -1174,7 +1124,7 @@
       }
     },
     {
-      "id": "bridge-trunk-primary-casing-blur",
+      "id": "bridge-primary-casing-blur",
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
@@ -1189,7 +1139,99 @@
         [
           "in",
           "class",
-          "primary",
+          "primary"
+        ]
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.5,
+          12,
+          1.5,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ],
+        "line-translate": {
+          "stops": [
+            [
+              14,
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              17,
+              [
+                5,
+                2
+              ]
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              14,
+              0.2
+            ],
+            [
+              17,
+              0.8
+            ]
+          ]
+        },
+        "line-blur": {
+          "stops": [
+            [
+              14,
+              20
+            ],
+            [
+              17,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "bridge-trunk-casing-blur",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ],
+        [
+          "in",
+          "class",
           "trunk"
         ]
       ],
@@ -1616,7 +1658,7 @@
       }
     },
     {
-      "id": "tunnel-trunk-primary-casing",
+      "id": "tunnel-primary-casing",
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
@@ -1631,8 +1673,7 @@
         [
           "in",
           "class",
-          "primary",
-          "trunk"
+          "primary"
         ]
       ],
       "layout": {
@@ -1640,6 +1681,56 @@
       },
       "paint": {
         "line-color": "#e9ac77",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.5,
+          12,
+          1.5,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
+      }
+    },
+    {
+      "id": "tunnel-trunk-casing",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "tunnel"
+        ],
+        [
+          "in",
+          "class",
+          "trunk"
+        ]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#e5d237",
         "line-width": [
           "interpolate",
           [
@@ -1873,7 +1964,7 @@
       }
     },
     {
-      "id": "tunnel-trunk-primary",
+      "id": "tunnel-primary",
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
@@ -1888,8 +1979,7 @@
         [
           "in",
           "class",
-          "primary",
-          "trunk"
+          "primary"
         ]
       ],
       "layout": {
@@ -1897,6 +1987,56 @@
       },
       "paint": {
         "line-color": "#fff4c6",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.5,
+          12,
+          1.5,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
+      }
+    },
+    {
+      "id": "tunnel-trunk",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "tunnel"
+        ],
+        [
+          "in",
+          "class",
+          "trunk"
+        ]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fccd40",
         "line-width": [
           "interpolate",
           [
@@ -2538,7 +2678,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "line-color": "rgba(222, 222, 222, 1)",
+        "line-color": "#e5d237",
         "line-width": [
           "interpolate",
           [
@@ -3018,7 +3158,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "#fccd40",
         "line-width": [
           "interpolate",
           [
@@ -3446,7 +3586,7 @@
       }
     },
     {
-      "id": "bridge-trunk-primary-casing",
+      "id": "bridge-primary-casing",
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
@@ -3461,8 +3601,7 @@
         [
           "in",
           "class",
-          "primary",
-          "trunk"
+          "primary"
         ]
       ],
       "layout": {
@@ -3470,6 +3609,56 @@
       },
       "paint": {
         "line-color": "rgba(222, 222, 222, 1)",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.5,
+          12,
+          1.5,
+          14,
+          4,
+          16,
+          14,
+          18,
+          24,
+          19,
+          72,
+          20,
+          166
+        ]
+      }
+    },
+    {
+      "id": "bridge-trunk-casing",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ],
+        [
+          "in",
+          "class",
+          "trunk"
+        ]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#e5d237",
         "line-width": [
           "interpolate",
           [
@@ -3769,7 +3958,7 @@
       }
     },
     {
-      "id": "bridge-trunk-primary",
+      "id": "bridge-primary",
       "type": "line",
       "source": "geolonia",
       "source-layer": "transportation",
@@ -3784,8 +3973,7 @@
         [
           "in",
           "class",
-          "primary",
-          "trunk"
+          "primary"
         ]
       ],
       "layout": {
@@ -3793,6 +3981,56 @@
       },
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            0.9
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.5,
+          12,
+          1.5,
+          14,
+          3,
+          16,
+          10,
+          18,
+          20,
+          19,
+          68,
+          20,
+          160
+        ]
+      }
+    },
+    {
+      "id": "bridge-trunk",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          "brunnel",
+          "bridge"
+        ],
+        [
+          "in",
+          "class",
+          "trunk"
+        ]
+      ],
+      "layout": {
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#fccd40",
         "line-width": [
           "interpolate",
           [
@@ -6240,6 +6478,7 @@
       "source": "geolonia",
       "source-layer": "place",
       "minzoom": 6,
+      "maxzoom": 13,
       "filter": [
         "all",
         [

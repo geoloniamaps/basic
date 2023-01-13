@@ -48,18 +48,21 @@ layers:
   - !!inc/file layers/bridge-motorway-link-casing-blur.yml
   - !!inc/file layers/bridge-link-casing-blur.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing-blur.yml
-  - !!inc/file layers/bridge-trunk-primary-casing-blur.yml
+  - !!inc/file layers/bridge-primary-casing-blur.yml
+  - !!inc/file layers/bridge-trunk-casing-blur.yml
   - !!inc/file layers/bridge-path-casing-blur.yml
   - !!inc/file layers/bridge-motorway-casing-blur.yml
   - !!inc/file layers/tunnel-service-track-casing.yml
   - !!inc/file layers/tunnel-minor-casing.yml
   - !!inc/file layers/tunnel-secondary-tertiary-casing.yml
-  - !!inc/file layers/tunnel-trunk-primary-casing.yml
+  - !!inc/file layers/tunnel-primary-casing.yml
+  - !!inc/file layers/tunnel-trunk-casing.yml
   - !!inc/file layers/tunnel-motorway-casing.yml
   - !!inc/file layers/tunnel-service-track.yml
   - !!inc/file layers/tunnel-minor.yml
   - !!inc/file layers/tunnel-secondary-tertiary.yml
-  - !!inc/file layers/tunnel-trunk-primary.yml
+  - !!inc/file layers/tunnel-primary.yml
+  - !!inc/file layers/tunnel-trunk.yml
   - !!inc/file layers/tunnel-motorway.yml
   - !!inc/file layers/aeroway-taxiway-casing.yml
   - !!inc/file layers/aeroway-runway-casing.yml
@@ -89,13 +92,15 @@ layers:
   - !!inc/file layers/bridge-motorway-link-casing.yml
   - !!inc/file layers/bridge-link-casing.yml
   - !!inc/file layers/bridge-secondary-tertiary-casing.yml
-  - !!inc/file layers/bridge-trunk-primary-casing.yml
+  - !!inc/file layers/bridge-primary-casing.yml
+  - !!inc/file layers/bridge-trunk-casing.yml
   - !!inc/file layers/bridge-path-casing.yml
   - !!inc/file layers/bridge-path.yml
   - !!inc/file layers/bridge-motorway-link.yml
   - !!inc/file layers/bridge-link.yml
   - !!inc/file layers/bridge-secondary-tertiary.yml
-  - !!inc/file layers/bridge-trunk-primary.yml
+  - !!inc/file layers/bridge-primary.yml
+  - !!inc/file layers/bridge-trunk.yml
   - !!inc/file layers/bridge-motorway-casing.yml
   - !!inc/file layers/bridge-motorway.yml
   - !!inc/file layers/cablecar.yml
@@ -147,3 +152,5 @@ layers:
   - !!inc/file layers/place-city-pref-ja.yml
   - !!inc/file layers/place-city-pref.yml
   - !!inc/file layers/place-city-country.yml
+  - !!inc/file layers/oc-label-capital.yml
+
