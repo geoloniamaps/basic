@@ -1,4 +1,4 @@
-id: bridge-trunk-primary-casing
+id: bridge-trunk-casing
 type: line
 source: geolonia
 source-layer: transportation
@@ -10,10 +10,9 @@ filter:
     - bridge
   - - in
     - class
-    - primary
     - trunk
 layout:
   line-join: round
 paint:
-  line-color: rgba(222, 222, 222, 1)
+  line-color: !!inc/file layers/components/trunk-casing-color.yml
   line-width: !!inc/file layers/components/broad-road-width-casing.yml
