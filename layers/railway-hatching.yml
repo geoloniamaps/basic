@@ -2,7 +2,7 @@ id: railway-hatching
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 14
+minzoom: 16
 filter:
   - all
   - - '=='
@@ -18,7 +18,7 @@ paint:
     - 1.5
   line-width:
     stops:
-      - - 14
+      - - 16
         - 0.3
       - - 20
         - 4
@@ -26,7 +26,7 @@ paint:
     - interpolate
     - - linear
     - - zoom
-    - 14
+    - 16
     - 0.1
     - 20
     - 1
