@@ -12,9 +12,6 @@ sources:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
     attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
-  naoki_test_20230113145005:
-    type: vector
-    url: https://tileserver.geolonia.com/naoki_test_20230113145005/tiles.json?key=YOUR-API-KEY
 
 sprite: https://geoloniamaps.github.io/basic-world/basic-world
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
@@ -126,33 +123,33 @@ layers:
   - !!inc/file layers/poi-railway.yml
   - !!inc/file layers/poi-airport-primary.yml
   - !!inc/file layers/poi-mountain.yml
-  - !!inc/file layers/road_shield_prefectural.yml
-  - !!inc/file layers/road_shield_national.yml
-  - !!inc/file layers/road_shield_highway.yml
-  - !!inc/file layers/road_name-minor.yml
-  - !!inc/file layers/road_name.yml
-  - !!inc/file layers/nt-label-small.yml
-  - !!inc/file layers/nt-label-large.yml
-  - !!inc/file layers/place-island-name.yml
-  - !!inc/file layers/place-suburb.yml
-  - !!inc/file layers/place-village.yml
-  - !!inc/file layers/place-town.yml
-  - !!inc/file layers/place-city-small.yml
-  - !!inc/file layers/place-city-middle.yml
-  - !!inc/file layers/place-city-large.yml
-  - !!inc/file layers/place-city-state.yml
-  - !!inc/file layers/place-city-capital.yml
-  - !!inc/file layers/oc-boundary-land-level-1-ja.yml
-  - !!inc/file layers/oc-boundary-land-level-1.yml
-  - !!inc/file layers/oc-boundary-land-level-0.yml
-  - !!inc/file layers/oc-water-name-ocean.yml
-  - !!inc/file layers/oc-water-name-other.yml
-  - !!inc/file layers/nt-water-name-ocean.yml
-  - !!inc/file layers/nt-water-name-river.yml
-  - !!inc/file layers/oc-airport.yml
-  - !!inc/file layers/place-city-pref-capital-ja.yml
-  - !!inc/file layers/place-city-pref-ja.yml
-  - !!inc/file layers/place-city-pref.yml
-  - !!inc/file layers/place-city-country.yml
-  - !!inc/file layers/oc-label-capital.yml
+  # - !!inc/file layers/road_shield_prefectural.yml
+  # - !!inc/file layers/road_shield_national.yml
+  # - !!inc/file layers/road_shield_highway.yml
+  # - !!inc/file layers/road_name-minor.yml
+  # - !!inc/file layers/road_name.yml
+  # - !!inc/file layers/nt-label-small.yml
+  # - !!inc/file layers/nt-label-large.yml
+  # - !!inc/file layers/place-island-name.yml
+  # - !!inc/file layers/place-suburb.yml
+  # - !!inc/file layers/place-village.yml
+  # - !!inc/file layers/place-town.yml
+  # - !!inc/file layers/place-city-small.yml
+  # - !!inc/file layers/place-city-middle.yml
+  # - !!inc/file layers/place-city-large.yml
+  # - !!inc/file layers/place-city-state.yml
+  # - !!inc/file layers/place-city-capital.yml
+  # - !!inc/file layers/oc-boundary-land-level-1-ja.yml
+  # - !!inc/file layers/oc-boundary-land-level-1.yml
+  # - !!inc/file layers/oc-boundary-land-level-0.yml
+  # - !!inc/file layers/oc-water-name-ocean.yml
+  # - !!inc/file layers/oc-water-name-other.yml
+  # - !!inc/file layers/nt-water-name-ocean.yml
+  # - !!inc/file layers/nt-water-name-river.yml
+  # - !!inc/file layers/oc-airport.yml
+  # - !!inc/file layers/place-city-pref-capital-ja.yml
+  # - !!inc/file layers/place-city-pref-ja.yml
+  # - !!inc/file layers/place-city-pref.yml
+  # - !!inc/file layers/place-city-country.yml
+  # - !!inc/file layers/oc-label-capital.yml
 

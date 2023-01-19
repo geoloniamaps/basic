@@ -1,6 +1,6 @@
 id: poi-mountain
 type: symbol
-source: naoki_test_20230113145005
+source: geolonia
 source-layer: mountain_peak
 minzoom: 6
 filter:
