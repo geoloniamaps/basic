@@ -14,12 +14,14 @@ filter:
     - japan_northern_territories
 layout:
   icon-padding: 50
-  icon-image: circle
-  icon-size: 0.3
-  text-anchor: top
-  text-offset:
-    - 0
-    - 0.1
+  icon-image: circle-stroked
+  icon-size: 0.4
+  text-variable-anchor:
+    - top
+    - bottom
+    - left
+    - right
+  text-radial-offset: 0.3
   text-font:
     - Noto Sans Universal Regular
   text-size:
