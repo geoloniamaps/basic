@@ -3,7 +3,7 @@ type: symbol
 metadata: {}
 source: geolonia
 source-layer: transportation_name
-minzoom: 8
+minzoom: 6
 filter:
   - all
   - - <=
@@ -18,7 +18,14 @@ filter:
 layout:
   icon-image: default_{ref_length}
   icon-rotation-alignment: viewport
-  icon-padding: 30
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 30
+    - 8
+    - 10
   symbol-placement:
     stops:
       - - 10

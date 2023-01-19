@@ -3,7 +3,7 @@ type: symbol
 metadata: {}
 source: geolonia
 source-layer: transportation_name
-minzoom: 8
+minzoom: 6
 filter:
   - all
   - - <=
@@ -25,7 +25,14 @@ layout:
       - - 11
         - line
   symbol-spacing: 500
-  icon-padding: 50
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 100
+    - 8
+    - 40
   text-field: '{ref}'
   text-font:
     - Noto Sans Universal Regular
