@@ -23,7 +23,7 @@ layout:
     - right
   text-radial-offset: 0.3
   text-font:
-    - Noto Sans Universal Regulargit a
+    - Noto Sans Universal Regular
   text-size:
     - interpolate
     - - linear
