@@ -20,16 +20,15 @@ filter:
     - disputed
     - japan_northern_territories
 layout:
-  icon-image: circle
+  icon-image: circle-stroked
   icon-size: 0.5
   icon-padding: 40
-  text-anchor: top
-  text-offset:
-    stops:
-      - - 6
-        - [0, 0.2]
-      - - 12
-        - [0, 0]
+  text-variable-anchor:
+    - top
+    - bottom
+    - left
+    - right
+  text-radial-offset: 0.3
   text-font:
     - Noto Sans Universal Regular
   text-size:

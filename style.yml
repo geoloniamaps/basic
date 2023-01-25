@@ -121,7 +121,6 @@ layers:
   - !!inc/file layers/poi-z14.yml
   - !!inc/file layers/poi-z12.yml
   - !!inc/file layers/poi-railway.yml
-  - !!inc/file layers/poi-airport-primary.yml
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
@@ -147,6 +146,8 @@ layers:
   - !!inc/file layers/nt-water-name-ocean.yml
   - !!inc/file layers/nt-water-name-river.yml
   - !!inc/file layers/oc-airport.yml
+  - !!inc/file layers/poi-airport.yml
+  - !!inc/file layers/poi-airport-primary.yml
   - !!inc/file layers/place-city-pref-capital-ja.yml
   - !!inc/file layers/place-city-pref-ja.yml
   - !!inc/file layers/place-city-pref.yml

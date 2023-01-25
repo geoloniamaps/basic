@@ -1,4 +1,4 @@
-id: poi-airport-primary
+id: poi-airport
 type: symbol
 source: geolonia
 source-layer: aerodrome_label
@@ -8,9 +8,6 @@ filter:
   - - has
     - iata
   - - '!='
-    - class
-    - military
-  - - '!='
     - disputed
     - japan_northern_territories
 layout:
@@ -18,7 +15,7 @@ layout:
   text-font:
     - Noto Sans Universal Regular
   text-anchor: top
-  icon-image: airport
+  icon-image: circle-stroked
   text-field: '{name}'
   text-offset:
     - 0
@@ -26,7 +23,7 @@ layout:
   text-size: 12
   text-max-width: 9
   visibility: visible
-  icon-size: 1
+  icon-size: 0.6
 paint:
   text-halo-blur: 0.5
   text-color: '#666'

@@ -2,7 +2,7 @@ id: highway-trunk-casing
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 8
+minzoom: 5
 filter:
   - all
   - - '!in'
