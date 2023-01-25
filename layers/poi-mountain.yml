@@ -2,7 +2,7 @@ id: poi-mountain
 type: symbol
 source: geolonia
 source-layer: mountain_peak
-minzoom: 8
+minzoom: 6
 filter:
   - all
   - - '=='

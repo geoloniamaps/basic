@@ -7,11 +7,12 @@ name: $name
 sources:
   geolonia:
     type: vector
-    url: https://tileserver.geolonia.com/v3/tiles.json?key=YOUR-API-KEY
+    url: https://tileserver-dev.geolonia.com/v3/tiles.json?key=YOUR-API-KEY
   dem:
     type: raster-dem
     url: https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY
     attribution: <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">© GSI Japan</a>
+
 sprite: https://geoloniamaps.github.io/basic-world/basic-world
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
@@ -124,6 +125,7 @@ layers:
   - !!inc/file layers/road_shield_prefectural.yml
   - !!inc/file layers/road_shield_national.yml
   - !!inc/file layers/road_shield_highway.yml
+  - !!inc/file layers/poi-mountain.yml
   - !!inc/file layers/road_name-minor.yml
   - !!inc/file layers/road_name.yml
   - !!inc/file layers/nt-label-small.yml

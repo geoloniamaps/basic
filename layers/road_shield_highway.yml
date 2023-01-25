@@ -18,8 +18,15 @@ filter:
 layout:
   icon-image: default_{ref_length}
   icon-rotation-alignment: viewport
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 30
+    - 8
+    - 10
   symbol-placement:
-    base: 1
     stops:
       - - 10
         - point
@@ -33,5 +40,5 @@ layout:
     - 0
     - 0
   text-rotation-alignment: viewport
-  text-size: 10
-  icon-size: 1
+  text-size: 9
+  icon-size: 0.7

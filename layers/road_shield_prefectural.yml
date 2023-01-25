@@ -37,5 +37,5 @@ layout:
     - 0
     - 0
   text-rotation-alignment: viewport
-  text-size: 10
-  icon-size: 1
+  text-size: 8
+  icon-size: 0.6

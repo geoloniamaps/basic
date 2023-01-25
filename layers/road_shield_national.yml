@@ -19,13 +19,20 @@ layout:
   icon-image: default_{ref_length}
   icon-rotation-alignment: viewport
   symbol-placement:
-    base: 1
     stops:
       - - 10
         - point
       - - 11
         - line
   symbol-spacing: 500
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 100
+    - 8
+    - 40
   text-field: '{ref}'
   text-font:
     - Noto Sans Universal Regular
@@ -33,5 +40,5 @@ layout:
     - 0
     - 0
   text-rotation-alignment: viewport
-  text-size: 10
-  icon-size: 1
+  text-size: 8
+  icon-size: 0.6
