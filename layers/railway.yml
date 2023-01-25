@@ -8,9 +8,6 @@ filter:
   - - '=='
     - class
     - rail
-  - - '!in'
-    - brunnel
-    - tunnel
 paint:
   line-color: '#b3b3b3'
   line-width: 1
