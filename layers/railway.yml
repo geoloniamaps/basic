@@ -8,24 +8,14 @@ filter:
   - - '=='
     - class
     - rail
-  - - '!in'
-    - brunnel
-    - tunnel
 paint:
-  line-color: '#999999'
-  line-width:
-    stops:
-      - - 9
-        - 0.1
-      - - 14
-        - 0.1
-      - - 15
-        - 1
+  line-color: '#b3b3b3'
+  line-width: 1
   line-opacity:
     - interpolate
     - - linear
     - - zoom
     - 9
-    - 0.1
+    - 0.4
     - 14
     - 1

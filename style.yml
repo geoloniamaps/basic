@@ -109,6 +109,8 @@ layers:
   - !!inc/file layers/water-name-lakeline.yml
   - !!inc/file layers/water-name-ocean.yml
   - !!inc/file layers/water-name-other.yml
+  - !!inc/file layers/railway-subway-name.yml
+  - !!inc/file layers/railway-name.yml
   - !!inc/file layers/road_oneway.yml
   - !!inc/file layers/road_oneway_opposite.yml
   - !!inc/file layers/poi-worship.yml
