@@ -2,7 +2,7 @@ id: highway-primary
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 8
+minzoom: 10 # TODO: z10 未満は線がぶつ切れになる
 filter:
   - all
   - - '=='
@@ -19,5 +19,5 @@ layout:
   line-cap: round
   line-join: round
 paint:
-  line-color: '#fff'
+  line-color: '#ffffff'
   line-width: !!inc/file layers/components/broad-road-width.yml

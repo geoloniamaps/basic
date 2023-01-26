@@ -2,7 +2,7 @@ id: highway-secondary-tertiary-casing
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 8
+minzoom: 11
 filter:
   - all
   - - '!in'

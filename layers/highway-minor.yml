@@ -2,7 +2,7 @@ id: highway-minor
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 11
+minzoom: 13
 filter:
   - all
   - - '=='

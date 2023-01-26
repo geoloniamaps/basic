@@ -2,7 +2,7 @@ id: bridge-primary
 type: line
 source: geolonia
 source-layer: transportation
-minzoom: 8
+minzoom: 10 # TODO: z10 未満は線がぶつ切れになる
 filter:
   - all
   - - '=='
