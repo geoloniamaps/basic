@@ -72,16 +72,16 @@ layers:
   - !!inc/file layers/highway-motorway-link-casing.yml
   - !!inc/file layers/highway-link-casing.yml
   - !!inc/file layers/highway-minor-casing.yml
-  - !!inc/file layers/highway-secondary-tertiary-casing.yml
-  - !!inc/file layers/highway-primary-casing.yml
+  # - !!inc/file layers/highway-secondary-tertiary-casing.yml
+  # - !!inc/file layers/highway-primary-casing.yml
   - !!inc/file layers/highway-trunk-casing.yml
   - !!inc/file layers/highway-motorway-casing.yml
   - !!inc/file layers/highway-path.yml
   - !!inc/file layers/highway-motorway-link.yml
   - !!inc/file layers/highway-link.yml
   - !!inc/file layers/highway-minor.yml
-  - !!inc/file layers/highway-secondary-tertiary.yml
-  - !!inc/file layers/highway-primary.yml
+  # - !!inc/file layers/highway-secondary-tertiary.yml
+  # - !!inc/file layers/highway-primary.yml
   - !!inc/file layers/highway-trunk.yml
   - !!inc/file layers/highway-motorway.yml
   - !!inc/file layers/railway.yml
@@ -89,15 +89,15 @@ layers:
   - !!inc/file layers/railway-subway.yml
   - !!inc/file layers/bridge-motorway-link-casing.yml
   - !!inc/file layers/bridge-link-casing.yml
-  - !!inc/file layers/bridge-secondary-tertiary-casing.yml
-  - !!inc/file layers/bridge-primary-casing.yml
+  # - !!inc/file layers/bridge-secondary-tertiary-casing.yml
+  # - !!inc/file layers/bridge-primary-casing.yml
   - !!inc/file layers/bridge-trunk-casing.yml
   - !!inc/file layers/bridge-path-casing.yml
   - !!inc/file layers/bridge-path.yml
   - !!inc/file layers/bridge-motorway-link.yml
   - !!inc/file layers/bridge-link.yml
-  - !!inc/file layers/bridge-secondary-tertiary.yml
-  - !!inc/file layers/bridge-primary.yml
+  # - !!inc/file layers/bridge-secondary-tertiary.yml
+  # - !!inc/file layers/bridge-primary.yml
   - !!inc/file layers/bridge-trunk.yml
   - !!inc/file layers/bridge-motorway-casing.yml
   - !!inc/file layers/bridge-motorway.yml
